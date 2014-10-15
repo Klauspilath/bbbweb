@@ -1,0 +1,41 @@
+@import "global-vars";
+
+.yellow-fill{
+	fill:$yellow;
+}
+
+.white-fill {
+	fill:$bright;
+}
+
+.grey-fill{
+  fill:$grey;
+}
+
+.hover-black:hover{
+	fill:$dark-color;
+}
+
+.hover-yellow:hover{
+	fill:$yellow;
+}
+
+.hover-white:hover {
+	fill: $bright;
+}
+
+.hover-semi-trans{
+    -webkit-transition: opacity 200ms;
+    -moz-transition: opacity 200ms;
+    -ms-transition: opacity 200ms;
+    -o-transition: opacity 200ms;
+    transition: opacity 200ms;
+}
+
+.hover-semi-trans:hover{
+    opacity: $semi-opacity;
+}
+
+svg{
+	cursor:pointer;
+}
