@@ -1,12 +1,75 @@
 {% extends "base.html" %}
-{% load i18n %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
 
-{% block meta_title %}{% trans "Home" %}{% endblock %}
-{% block title %}{% trans "Home" %}{% endblock %}
-
-{% block breadcrumb_menu %}
-<li class="active">{% trans "Home" %}</li>
-{% endblock %}
+{#{% block meta_title %}{% trans "Home" %}{% endblock %}#}
+{#{% block title %}{% trans "Home" %}{% endblock %}#}
+{##}
+{#{% block breadcrumb_menu %}#}
+{#<li class="active">{% trans "Home" %}</li>#}
+{#{% endblock %}#}
 
 {% block main %}
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{% static "img/rotate-1.jpg" %}" class="img-responsive" alt= />
+
+                <div class="carousel-caption">
+                    Pineapple Express
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static "img/rotate-2.jpg" %}" class="img-responsive" alt= />
+
+                <div class="carousel-caption">
+                    caption 2
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static "img/rotate-3.jpg" %}" class="img-responsive" alt= />
+
+                <div class="carousel-caption">
+                    caption 3
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static "img/rotate-4.jpg" %}" class="img-responsive" alt= />
+
+                <div class="carousel-caption">
+                    caption 4
+                </div>
+            </div>
+            <div class="item">
+                <img src="{% static "img/rotate-5.jpg" %}" class="img-responsive" alt= />
+
+                <div class="carousel-caption">
+                    caption 5
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content bg-white">
+        <h1>
+            This is Beach Blanket Babylon!
+        </h1>
+
+        <p class="presentation-copy">
+            <em>Steve Silver's Beach Blanket Babylon</em> is the world's longest running musical revue. Packed with hilarious
+            spoofs of pop culture & political characters, spectacular costumes, outrageously gigantic hats and one
+            show-stopping number after another, the show continues to dazzle audiences at Club Fugazi in San
+            Francisco's North Beach.
+        </p>
+    </section>
+
+
 {% endblock %}

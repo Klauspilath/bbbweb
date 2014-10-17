@@ -19,7 +19,7 @@
         class="dropdown-toggle disabled" data-toggle="dropdown"
         {% endif %}>
             {{ page.title }}
-            {% if page.has_children_in_menu %}<b class="caret"></b>{% endif %}
+            {% if page.has_children_in_menu %}{% endif %}
         </a>
         {% if page.has_children_in_menu %}{% page_menu page %}{% endif %}
     </li>

@@ -4,174 +4,98 @@ body {
   font-weight: normal;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  line-height: initial;
 }
 
-/* line 11, ../../sass/custom.scss */
-.screen {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+/* line 16, ../../sass/custom.scss */
+header {
+  text-align: center;
 }
 
-/* line 18, ../../sass/custom.scss */
-footer {
-  background-color: #bb281f;
-  border: 0;
-  margin-top: 15px;
-  padding: 15px 0 30px;
-}
-
-/* line 26, ../../sass/custom.scss */
-.navbar-default {
-  background-color: #000000;
-  border-color: initial;
-  border: 0;
-}
-
-/* line 32, ../../sass/custom.scss */
-.navbar {
-  border-radius: 0;
-  border: 0;
-}
-
-/* line 37, ../../sass/custom.scss */
-.navbar-default .navbar-nav > li > a {
-  color: #ffffff;
-}
-
-/* line 41, ../../sass/custom.scss */
+/* line 20, ../../sass/custom.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 46, ../../sass/custom.scss */
+/* line 25, ../../sass/custom.scss */
+h1 {
+  font-family: 'Knockout 49 A', 'Knockout 49 B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 58px;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 31, ../../sass/custom.scss */
 a {
   color: #ffffff;
 }
 
-/* line 50, ../../sass/custom.scss */
+/* line 35, ../../sass/custom.scss */
 a:hover {
   text-decoration: none;
   color: #000000;
 }
 
-/* line 55, ../../sass/custom.scss */
+/* line 40, ../../sass/custom.scss */
 .white {
   color: #ffffff;
 }
 
-/* line 59, ../../sass/custom.scss */
+/* line 44, ../../sass/custom.scss */
 .click {
   cursor: pointer;
 }
 
-/* line 63, ../../sass/custom.scss */
-.light-100 {
-  font-size: 24px;
-}
-
-/* line 68, ../../sass/custom.scss */
-.small-300 {
-  font-size: 16px;
-}
-
-/* line 73, ../../sass/custom.scss */
-.light-300 {
-  font-size: 20px;
-}
-
-/* line 78, ../../sass/custom.scss */
-.medium-300 {
-  font-size: 36px;
-}
-
-/* line 83, ../../sass/custom.scss */
-.large-300 {
-  font-size: 72px;
-  line-height: 82px;
-}
-
-/* line 89, ../../sass/custom.scss */
-.small-700 {
-  font-size: 18px;
-}
-
-/* line 94, ../../sass/custom.scss */
-.light-900 {
-  font-size: 24px;
-}
-
-/* line 99, ../../sass/custom.scss */
-.small-900 {
-  font-size: 16px;
-}
-
-/* line 104, ../../sass/custom.scss */
-.left {
-  text-align: left;
-}
-
-/* line 108, ../../sass/custom.scss */
-.center {
-  text-align: center;
-}
-
-/* line 113, ../../sass/custom.scss */
-ul.small-300 li {
-  list-style: none;
-}
-
-/* line 117, ../../sass/custom.scss */
-ul.small-300 {
-  padding-left: 0px;
-}
-
-/* line 125, ../../sass/custom.scss */
+/* line 48, ../../sass/custom.scss */
 .white-text {
   color: #ffffff !important;
 }
 
-/* line 129, ../../sass/custom.scss */
+/* line 52, ../../sass/custom.scss */
 .dark-text {
   color: #000000;
 }
 
-/* line 133, ../../sass/custom.scss */
+/* line 56, ../../sass/custom.scss */
 .dark-grey-text {
   color: #666;
 }
 
-/* line 136, ../../sass/custom.scss */
+/* line 60, ../../sass/custom.scss */
 .grey-text {
   color: #a2a2a2;
 }
 
-/* line 141, ../../sass/custom.scss */
+/* line 64, ../../sass/custom.scss */
 .bg-white {
   background-color: #ffffff;
 }
 
-/* line 145, ../../sass/custom.scss */
+/* line 68, ../../sass/custom.scss */
 .opacity-fifty {
   opacity: 0.5;
 }
 
-/* line 149, ../../sass/custom.scss */
+/* line 72, ../../sass/custom.scss */
 .opacity-eighty {
   opacity: 0.8;
 }
 
-/* line 153, ../../sass/custom.scss */
+/* line 76, ../../sass/custom.scss */
 .bg-clear {
   background-color: initial !important;
 }
 
-/* line 157, ../../sass/custom.scss */
+/* line 80, ../../sass/custom.scss */
 .bg-black {
   background-color: #000000 !important;
 }
 
-/* line 161, ../../sass/custom.scss */
+/* line 84, ../../sass/custom.scss */
 .vertical-center {
   top: 50%;
   transform: translateY(-50%);
@@ -179,7 +103,7 @@ ul.small-300 {
   position: absolute;
 }
 
-/* line 168, ../../sass/custom.scss */
+/* line 91, ../../sass/custom.scss */
 .zero-table * {
   border: none;
   border-collapse: collapse;
@@ -189,12 +113,219 @@ ul.small-300 {
   line-height: 0px;
 }
 
-/* line 177, ../../sass/custom.scss */
+/* line 100, ../../sass/custom.scss */
 .hover-black:hover {
   color: #000000 !important;
 }
 
-/* line 181, ../../sass/custom.scss */
+/* line 104, ../../sass/custom.scss */
 .hover-white:hover {
   color: #ffffff !important;
+}
+
+/* line 108, ../../sass/custom.scss */
+.screen {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 115, ../../sass/custom.scss */
+footer {
+  background-color: #bb281f;
+  border: 0;
+  margin-top: 15px;
+  padding: 15px 0 30px;
+}
+
+/* line 122, ../../sass/custom.scss */
+#logo {
+  margin: 10px 20px 3px 10px;
+}
+
+/* line 126, ../../sass/custom.scss */
+#icons {
+  margin-bottom: -38px;
+}
+
+/* line 130, ../../sass/custom.scss */
+.content {
+  padding: 50px;
+}
+
+/* line 134, ../../sass/custom.scss */
+.copy {
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+}
+
+/* line 138, ../../sass/custom.scss */
+.copy p em {
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* line 142, ../../sass/custom.scss */
+.presentation-copy {
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  margin-top: 25px;
+}
+
+/* line 147, ../../sass/custom.scss */
+.presentation-copy p em {
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: italic;
+  font-size: 24px;
+}
+
+/* line 152, ../../sass/custom.scss */
+.row {
+  margin: 0;
+}
+
+/* line 156, ../../sass/custom.scss */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border-color: initial;
+}
+
+/* line 160, ../../sass/custom.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+/* line 164, ../../sass/custom.scss */
+.navbar {
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  height: 40px;
+  min-height: 40px;
+  font-family: 'Knockout 49 A', 'Knockout 49 B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+  z-index: 100;
+}
+
+/* line 174, ../../sass/custom.scss */
+.navbar-default {
+  background-color: #000000;
+  border-color: initial;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 181, ../../sass/custom.scss */
+  .navbar-nav > li > a {
+    padding: 0;
+  }
+
+  /* line 185, ../../sass/custom.scss */
+  .navbar-nav {
+    margin: 0;
+    margin-left: 25%;
+    float: initial;
+  }
+}
+/* line 192, ../../sass/custom.scss */
+.navbar-nav > li > a {
+  padding: 0;
+  line-height: initial;
+}
+
+/* line 197, ../../sass/custom.scss */
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 8.5px 15px;
+}
+
+/* line 203, ../../sass/custom.scss */
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  z-index: 1000;
+  float: left;
+  min-width: 160px;
+  padding: 0;
+  margin: 0;
+  font-size: 19px;
+  list-style: none;
+  background-color: #bb281f;
+  border: 0;
+  border-radius: initial;
+  -webkit-box-shadow: initial;
+  box-shadow: initial;
+  background-clip: initial;
+}
+
+/* line 222, ../../sass/custom.scss */
+.dropdown-menu > li > a {
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* line 227, ../../sass/custom.scss */
+.navbar-default .navbar-nav > li > a:hover {
+  color: #bb281f;
+}
+
+/* line 231, ../../sass/custom.scss */
+.carousel-indicators {
+  left: 50px;
+  bottom: 140px;
+  text-align: initial;
+  margin-left: initial;
+}
+
+/* line 238, ../../sass/custom.scss */
+.carousel-indicators li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 1px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 14px;
+}
+
+/* line 249, ../../sass/custom.scss */
+.carousel-indicators .active {
+  background-color: #bb281f;
+  border: 1px solid #bb281f;
+  width: 15px;
+  height: 15px;
+}
+
+/* line 256, ../../sass/custom.scss */
+.carousel-caption {
+  position: absolute;
+  bottom: 180px;
+  left: 52px;
+  z-index: 10;
+  color: #ffffff;
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  right: initial !important;
+  text-align: initial;
+  text-shadow: initial;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  /* line 271, ../../sass/custom.scss */
+  #icons {
+    display: none;
+  }
 }

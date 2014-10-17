@@ -6,3 +6,44 @@ $left-margin: 100px;
 $right-margin: 100px;
 $dark-color: #000000;
 $bright:#ffffff;
+
+@mixin knockout-49($size) {
+	font-family: 'Knockout 49 A', 'Knockout 49 B';
+	font-weight: 400;
+	font-style: normal;
+	font-size: $size;
+}
+
+@mixin knockout-29($size){
+	font-family: 'Knockout 29 A', 'Knockout 29 B';
+	font-weight: 400;
+	font-style: normal;
+	font-size: $size;
+}
+
+@mixin verlag-light($size){
+	font-family: 'Verlag A', 'Verlag B';
+	font-weight: 300;
+	font-style: normal;
+	font-size: $size;
+}
+
+@mixin verlag-light-italic($size){
+	font-family: 'Verlag A', 'Verlag B';
+	font-weight: 300;
+	font-style: italic;
+	font-size: $size;
+}
+@mixin verlag-book($size){
+	font-family: 'Verlag A', 'Verlag B';
+	font-weight: 400;
+	font-style: normal;
+	font-size: $size;
+}
+
+@mixin verlag-book-italic($size){
+	font-family: 'Verlag A', 'Verlag B';
+	font-weight: 400;
+	font-style: italic;
+	font-size: $size;
+}

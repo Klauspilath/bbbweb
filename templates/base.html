@@ -30,37 +30,30 @@
 </head>
 <body id="{% block body_id %}body{% endblock %}">
     <div class="screen">
-        <div class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">{% trans "Toggle Navigation" %}</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    {% page_menu "pages/menus/dropdown.html" %}
+        <header>
+            <a href="/"><img id="logo" src="{% static "img/logo.png" %}"></a>
+            <img id="icons" src="{% static "img/head-icons.png" %}">
+        </header>
+        <nav>
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">{% trans "Toggle Navigation" %}</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        {% page_menu "pages/menus/dropdown.html" %}
+                    </div>
                 </div>
             </div>
+        </nav>
+        <div class="container-fluid">
+            {% block main %}{% endblock %}
         </div>
-        <div class="container-fluid bg-white">
-            <div class="row">
-                <div class="col-md-7 middle">
-                    {% block main %}{% endblock %}
-                </div>
-            </div>
-
-    {#    #}
-    {#        {% nevercache %}#}
-    {#        #}
-    {#        {% endnevercache %}#}
-
-            {% block title %}{% endblock %}</h1>
-
-        </div>
-
         <footer>
             <div class="container-fluid">
             {% page_menu "pages/menus/footer.html" %}
