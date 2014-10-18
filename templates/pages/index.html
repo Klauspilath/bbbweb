@@ -1,10 +1,35 @@
-{% extends "pages/richtextpage.html" %}
-
+{% extends "base.html" %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
 {% block main %}
-<!--
-This template is provided as a custom template for the homepage, for
-when it is configured as an editable page in the navigation tree. Feel
-free to modify it.
--->
-{{ block.super }}
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+             {% with page.gallery.images.all as images %}
+                {% for image in images %}
+                    <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.counter|add:"-1"}}" {% if forloop.first %}class="active" {% endif %}></li>
+                {% endfor %}
+            {% endwith %}
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            {% with page.gallery.images.all as images %}
+                {% for image in images %}
+                    <div class="item {% if forloop.first %}active{% endif %}">
+                        <img class="img-responsive" src="{{ image.file.url }}">
+                        <div class="carousel-caption">
+                           {{ image.description }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
+    </div>
+    <section class="content bg-white">
+        <h1>
+            {{ page.title }}
+        </h1>
+         {% editable page.gallery.content %}
+            {{ page.gallery.content|safe }}
+         {% endeditable %}
+    </section>
 {% endblock %}

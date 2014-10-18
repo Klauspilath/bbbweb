@@ -51,12 +51,12 @@ from __future__ import absolute_import, unicode_literals
 # field instance. When specifying the field class, the path
 # ``django.models.db.`` can be omitted for regular Django model fields.
 #
-# EXTRA_MODEL_FIELDS = (
+#EXTRA_MODEL_FIELDS = (
 #     (
 #         # Dotted path to field.
 #         "mezzanine.blog.models.BlogPost.image",
 #         # Dotted path to field class.
-#         "somelib.fields.ImageField",
+#         "GalleryAdmin",
 #         # Positional args for field class.
 #         ("Image",),
 #         # Keyword args for field class.
@@ -69,7 +69,17 @@ from __future__ import absolute_import, unicode_literals
 #         ("Another name",),
 #         {"blank": True, "default": 1},
 #     ),
-# )
+
+    # (
+    #     "mezzanine.galleries.models.Gallery",
+    #     "mezzanine.galleries.models.GalleryAdmin",
+    #     ("Gallery",),
+    #     {"blank": True, "upload_to": "media"}
+    # ),
+
+
+
+#)
 
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
@@ -246,8 +256,10 @@ INSTALLED_APPS = (
     "mezzanine.blog",
     "mezzanine.forms",
     "mezzanine.pages",
-    "mezzanine.galleries",
     "mezzanine.twitter",
+    "bbb.galleries",
+    "bbb.templatetags",
+
     #"mezzanine.accounts",
     #"mezzanine.mobile",
 )

@@ -1,0 +1,6 @@
+{% load mezzanine_tags keyword_tags %}
+<ul>
+{% for image in gallery.images.all %}
+    <li> {{ image.file.url }}, {{image.description}} </li>
+{% endfor %}
+</ul>
