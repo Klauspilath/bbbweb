@@ -5,15 +5,15 @@
 // Reset and dependencies
 @import "normalize";
 @import "print";
-@import "glyphicons";
+//@import "glyphicons";
 
 // Core CSS
 @import "scaffolding";
 @import "type";
-@import "code";
+//@import "code";
 @import "grid";
-@import "tables";
-//@import "forms";
+//@import "tables";
+@import "forms";
 @import "buttons";
 
 // Components
@@ -24,12 +24,12 @@
 @import "navs";
 @import "navbar";
 //@import "breadcrumbs";
-@import "pagination";
-@import "pager";
+//@import "pagination";
+//@import "pager";
 @import "labels";
 //@import "badges";
 //@import "jumbotron";
-@import "thumbnails";
+//@import "thumbnails";
 //@import "alerts";
 //@import "progress-bars";
 @import "media";
@@ -43,7 +43,7 @@
 //@import "modals";
 //@import "tooltip";
 //@import "popovers";
-//@import "carousel";
+@import "carousel";
 
 // Utility classes
 @import "utilities";

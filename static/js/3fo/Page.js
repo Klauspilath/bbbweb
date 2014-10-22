@@ -53,7 +53,7 @@ $(function() {
 
 	TFO.__PageInstance.prototype.setCaptions = function(){
 
-		if(TFO.globals.constants.IS_HOME) {
+		if(TFO.globals.constants.IS_MOBILE) {
 			$('.carousel-caption').css("display","none");
 		}
 	};

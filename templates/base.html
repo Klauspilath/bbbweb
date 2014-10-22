@@ -10,7 +10,7 @@
 <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
 {% compress css %}
 <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7494932/640386/css/fonts.css" />
-<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.css" %}">
 <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
 <link rel="stylesheet" href="{% static "css/styles.css" %}">
 {% block extra_css %}{% endblock %}
@@ -20,6 +20,27 @@
 <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
 <script src="{% static "js/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
+<script src="{% static "js/modernizer/modernizr.js" %}"></script>
+    <script>
+        $(function(){
+            if (typeof TFO === 'undefined') {
+                //console.log('TFO does not exist');
+                TFO = {};
+            }
+
+            TFO.globals = function() { };
+            TFO.globals.constants = {};
+            if (Modernizr.touch && window.navigator.userAgent.indexOf('Windows NT') < 0) {
+                TFO.globals.constants.IS_DESKTOP = false;
+                TFO.globals.constants.IS_MOBILE = true;
+            } else {
+                TFO.globals.constants.IS_DESKTOP = true;
+                TFO.globals.constants.IS_MOBILE = false;
+            }
+
+            TFO.globals.constants.IS_HOME = false;
+        });
+    </script>
 {% block extra_js %}{% endblock %}
 {% endcompress %}
 <!--[if lt IE 9]>

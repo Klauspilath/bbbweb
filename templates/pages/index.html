@@ -4,6 +4,7 @@
 {% block extra_head %}
     <script language="JavaScript">
         $(function(){
+
             TFO.globals.constants.IS_HOME = true;
         });
     </script>
@@ -34,7 +35,9 @@
     </div>
     <section class="content bg-white">
         <h1>
-            {{ page.title }}
+            {% editable page.title%}
+                {{ page.title | safe }}
+            {% endeditable %}
         </h1>
          {% editable page.gallery.content %}
             {{ page.gallery.content|safe }}

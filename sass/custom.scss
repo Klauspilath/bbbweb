@@ -1,3 +1,4 @@
+@import "bootstrap/variables";
 @import "global-vars";
 
 body {
@@ -127,7 +128,7 @@ footer {
 	margin-bottom: -38px;
 }
 
-.content{
+.content {
 	padding: 50px;
 }
 
@@ -153,51 +154,8 @@ footer {
 	margin: 0;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-	border-color: $reset;
-}
-
-.navbar-default .navbar-nav > li > a {
-	color: $bright;
-}
-
-.navbar {
-	border-radius: 0;
-	border: 0;
-	margin: 0;
-	height: 40px;
-	min-height: 40px;
-	@include knockout-49(19px);
-	z-index: 100;
-}
-
-.navbar-default {
-	background-color: $dark-color;
-	border-color: $reset;
-	border: 0;
-}
-
-@media (min-width: 768px) {
-	.navbar-nav > li > a {
-		padding: 0;
-	}
-
-	.navbar-nav {
-		margin: 0;
-		margin-left: 25%;
-		float: $reset;
-	}
-}
-
-.navbar-nav > li > a {
+.container-fluid{
 	padding: 0;
-	line-height: $reset;
-}
-
-.nav > li > a {
-	position: relative;
-	display: block;
-	padding: 8.5px 15px;
 }
 
 .dropdown-menu {
@@ -224,13 +182,180 @@ footer {
 	text-transform: uppercase;
 }
 
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
+	background-color: inherit;
+	color: $dark-color;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: $reset;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: $bright;
+}
+
+.navbar-header {
+	height: 40px;
+}
+
+.nav > li {
+	//position: relative;
+	display: inline-block;
+}
+
+.navbar-nav{
+	margin-left: auto;
+	margin-right: auto;
+	width: 515px;
+}
+
+.navbar {
+	border-radius: 0;
+	border: 0;
+	margin: 0;
+	min-height: 40px;
+	@include knockout-49(19px);
+	z-index: 100;
+}
+
+.navbar-default {
+	background-color: $dark-color;
+	border-color: $reset;
+	border: 0;
+}
+
+.navbar-nav > li > a {
+	padding: 0;
+	line-height: $reset;
+}
+
+.nav > li > a {
+	position: relative;
+	display: inline-block;
+	padding: 8.5px 15px;
+}
+
+li.open > a{
+	color: $red !important;
+}
+
 .navbar-default .navbar-nav > li > a:hover {
 	color: $red;
 }
 
+.navbar-toggle {
+	height: 40px;
+}
+
+.nav > li > a.dropdown-toggle:hover {
+	background-color: inherit;
+	color: $red;
+}
+
+
+@media (max-width: 768px) {
+
+	#icons {
+		display: none;
+	}
+
+	.nav > li {
+	position: relative;
+	display: block;
+}
+
+}
+
+.editable-link, .editable-form {
+	font-family: sans-serif;
+}
+
+.navbar-toggle {
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.nav-footer {
+	margin: 0 auto;
+	display: initial;
+	@include verlag-book(12px)
+}
+
+.nav-footer ul {
+	margin-left: 10px;
+	vertical-align: top;
+	width: $reset;
+}
+
+// Dropdown menu items
+.navbar-nav {
+	// Remove background color from open dropdown
+	> .open > a {
+		&,
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			color: $red;
+		}
+	}
+
+	@media (max-width: 768px) {
+		// Dropdowns get custom display when collapsed
+		.open .dropdown-menu {
+			> li > a {
+				color: $dark-color;
+				&:hover,
+				&:focus {
+					background-color: $reset;
+					color: $dark-color;
+				}
+			}
+			> .active > a {
+				&,
+				&:hover,
+				&:focus {
+					background-color: $dark-color;
+					color: $dark-color;
+				}
+			}
+			> .disabled > a {
+				&,
+				&:hover,
+				&:focus {
+					background-color: $reset;
+					color: $dark-color;
+				}
+			}
+		}
+	}
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav >
+.active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	background-color: none;
+	color: $red;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: none;
+}
+
+.dropdown .open{
+	background-color: $dark-color !important;
+}
+
+.open > a :hover{
+	background-color: $dark-color;
+}
+
+
 .carousel-indicators {
 	left: 50px;
-	bottom: 140px;
+	bottom: 20%;
 	text-align: $reset;
 	margin-left: $reset;
 }
@@ -255,10 +380,10 @@ footer {
 
 .carousel-caption {
 	position: absolute;
-	bottom: 180px;
+	bottom: 26%;
 	left: 52px;
 	z-index: 10;
-	color: #ffffff;
+	color: $bright;
 	@include verlag-light(16px);
 	right: $reset !important;
 	text-align: $reset;
@@ -266,18 +391,49 @@ footer {
 	padding: 0 !important;
 }
 
-@media (max-width: 768px) {
+	@media (max-width: $screen-sm-min) {
+		.navbar-default .navbar-collapse {
+			background-color: $red;
+		}
 
-	#icons{
-		display: none;
+		.carousel-indicators {
+			/* left: 50px; */
+			bottom: 2%;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			width: 100%;
+		}
+
+		.carousel-caption {
+			display: none;
+		}
+
+
+		.navbar-nav > li > a {
+			//padding: 0;
+			font-size: 35px;
+		}
+
+		.navbar-nav {
+			margin: 0;
+			margin-left: 25%;
+			float: $reset;
+		}
+
+		.nav > li > a.dropdown-toggle:hover {
+			background-color: inherit;
+			color: $dark-color;
+		}
+
+		li.open > a{
+			color: $dark-color !important;
+
+		.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+
+		}
+
 	}
+
+
 }
-
-
-
-
-
-
-
-
-
