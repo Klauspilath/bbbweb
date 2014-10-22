@@ -5,18 +5,8 @@ $(function() {
 	}
 
 	TFO.__PageInstance = function () {
-		this.content = $('#threefo-content');
-		this.header = $('#static-header');
-		this.footer = $('#static-footer');
-		this.heroText = $('#hero-text');
-		this.logo = $("#logo");
-		this.state = '';
-		//this.footer.hide();
-		this.initScroll();
-		this.initResize();
-		this.setContentNav();
-        this.initNavOverlay();
-		this.initCollapsibleContent();
+		this.initNavOverlay();
+		this.setCaptions();
 	};
 
 	TFO.__PageInstance.prototype.initNavOverlay = function () {
@@ -60,81 +50,12 @@ $(function() {
 		this.state = state;
 	};
 
-	TFO.__PageInstance.prototype.initResize = function(){
-		var sh = $("#static-header");
-		var srh = $(".static-rotation-header");
 
-		if(srh.length > 0)
-			sh = srh;
-
-		if(TFO.globals.constants.IS_HOME){
-			$(sh).css("max-height", $(window).height()); //- $(window).height() * 0.15);
-		} else {
-			$(sh).css("max-height", $(window).height() - $(window).height() * 0.15);
-		}
-
-		$(window).resize(function(){
-
-			if(TFO.globals.constants.IS_HOME){
-			 	$(sh).css("max-height", $(window).height()); //- $(window).height() * 0.15);
-			} else {
-				$(sh).css("max-height", $(window).height() - $(window).height() * 0.15);
-			}
-
-			$(sh).css("background-position",  "30% 5%");
-			$(sh).css("min-width", $(window).width());
-
-			if(($(window).scrollTop() === 0)){
-				TFO.Page.setContentNav();
-			}
-		});
-	};
-
-	TFO.__PageInstance.prototype.setContentNav = function(){
-		var hBase = 185;
+	TFO.__PageInstance.prototype.setCaptions = function(){
 
 		if(TFO.globals.constants.IS_HOME) {
-			hBase = 100;
+			$('.carousel-caption').css("display","none");
 		}
-		console.log("hBase:" + hBase);
-
-		$('.top-container').css('margin-top',$(window).height() - hBase + 'px' );
-	};
-
-	TFO.__PageInstance.prototype.initCollapsibleContent = function(){
-
-		$('.view-toggle').on('click', function(e) {
-			e.preventDefault();
-			var cc = $('.collapsible');
-			if(cc.hasClass('collapse')){
-				$(e.currentTarget).find(".view-more-name").text('less');
-			} else {
-				$(e.currentTarget).find(".view-more-name").text('more');
-			}
-
-			cc.collapse('toggle');
-		});
-	};
-
-	TFO.__PageInstance.prototype.initScroll = function(){
-		$(window).scroll(function() {
-
-			var p = TFO.Page;
-			var opacity = 1 - ($(window).scrollTop() * 0.00169999999);
-			var header_opacity = 1 - ($(window).scrollTop() * 0.0020999999);
-
-			p.heroText.css('opacity', opacity);
-			p.logo.css('opacity', header_opacity);
-			//console.log(opacity);
-			//console.log(p.content.offset().top - $(window).scrollTop());
-
-			if ((p.content.offset().top - $(window).scrollTop()) < 0) {
-				if(p.header.css('display') !== 'none')
-					p.header.hide();
-			} else if (p.header.css('display') === 'none') {
-				p.header.show();
-			}
-		});
 	};
 
 	//create instance

@@ -70,16 +70,51 @@ from __future__ import absolute_import, unicode_literals
 #         {"blank": True, "default": 1},
 #     ),
 
-    # (
-    #     "mezzanine.galleries.models.Gallery",
-    #     "mezzanine.galleries.models.GalleryAdmin",
-    #     ("Gallery",),
-    #     {"blank": True, "upload_to": "media"}
-    # ),
-
-
-
 #)
+#
+
+EXTRA_MODEL_FIELDS = (
+    (
+        "mezzanine.pages.models.Page.featured_image",
+        "ImageField",
+        ("Hero image",),
+        {"blank": True,
+         "null": True,
+         "upload_to": "page_header",
+         },
+    ),
+
+    (
+        "mezzanine.pages.models.Page.silhouette_image",
+        "ImageField",
+        ("Quote Background Image",),
+        {"blank": True,
+         "null": True,
+         "upload_to": "page_silhouette",
+         },
+    ),
+
+    (
+        "mezzanine.pages.models.Page.quote_text",
+        "CharField",
+        ("Quote Text",),
+        {"blank": True,
+         "null": True,
+         "max_length": 255,
+         },
+    ),
+
+    (
+        "mezzanine.pages.models.Page.quote_byline",
+        "CharField",
+        ("By-line",),
+        {"blank": True,
+         "null": True,
+         "max_length": 255,
+         },
+    ),
+
+)
 
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
@@ -172,22 +207,45 @@ FILE_UPLOAD_PERMISSIONS = 0o644
 # DATABASES #
 #############
 
-DATABASES = {
-    "default": {
-        # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
-        "ENGINE": "django.db.backends.",
-        # DB name or path to database file if using sqlite3.
-        "NAME": "",
-        # Not used with sqlite3.
-        "USER": "",
-        # Not used with sqlite3.
-        "PASSWORD": "",
-        # Set to empty string for localhost. Not used with sqlite3.
-        "HOST": "",
-        # Set to empty string for default. Not used with sqlite3.
-        "PORT": "",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+#         "ENGINE": "django.db.backends.",
+#         # DB name or path to database file if using sqlite3.
+#         "NAME": "",
+#         # Not used with sqlite3.
+#         "USER": "",
+#         # Not used with sqlite3.
+#         "PASSWORD": "",
+#         # Set to empty string for localhost. Not used with sqlite3.
+#         "HOST": "",
+#         # Set to empty string for default. Not used with sqlite3.
+#         "PORT": "",
+#     }
+# }
+
+# DATABASES = {
+#     "default": {
+#         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+#         "ENGINE": "mysql_cymysql",
+#         # DB name or path to database file if using sqlite3.
+#         "NAME": "bbbmzdb",
+#         # Not used with sqlite3.
+#         "USER": "bbbdb",
+#         # Not used with sqlite3.
+#         "PASSWORD": "bbbdbp4ss#",
+#         # Set to empty string for localhost. Not used with sqlite3.
+#         "HOST": "127.0.0.1",
+#         # Set to empty string for default. Not used with sqlite3.
+#         "PORT": "3306",
+#     }
+# }
+#
+# SOUTH_DATABASE_ADAPTERS = {'default': 'south.db.mysql'}
+#
+#
+#
+#
 
 
 #########
@@ -259,6 +317,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "bbb.galleries",
     "bbb.templatetags",
+    "bbb",
 
     #"mezzanine.accounts",
     #"mezzanine.mobile",
