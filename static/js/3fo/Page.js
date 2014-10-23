@@ -5,8 +5,9 @@ $(function() {
 	}
 
 	TFO.__PageInstance = function () {
-		this.initNavOverlay();
+		//this.initNavOverlay();
 		this.setCaptions();
+		this.setNavigationEvents();
 	};
 
 	TFO.__PageInstance.prototype.initNavOverlay = function () {
@@ -42,6 +43,19 @@ $(function() {
 		});
 	};
 
+	TFO.__PageInstance.prototype.setNavigationEvents = function(){
+		var $dropdowns = $('li.dropdown');
+
+		$dropdowns.on('mouseenter', function() // Mouseenter (used with .hover()) does not trigger when user enters from outside document window
+        {
+			var sc = $('.screen');
+			var bg = $(this).children(".nav-background");
+			if(sc.offset().left == bg.offset().left) return;
+        	var bgl = sc.offset().left -  bg.offset().left;
+			bg.css("left", bgl + "px");
+        })
+	};
+
 	TFO.__PageInstance.prototype.getState = function(){
 		return this.state;
 	};
@@ -50,10 +64,9 @@ $(function() {
 		this.state = state;
 	};
 
-
 	TFO.__PageInstance.prototype.setCaptions = function(){
 
-		if(TFO.globals.constants.IS_MOBILE) {
+		if(TFO.globals.constants.IS_MOBILE && TFO.globals.constants.IS_HOME){
 			$('.carousel-caption').css("display","none");
 		}
 	};

@@ -216,64 +216,74 @@ footer {
   background-clip: initial;
 }
 
-/* line 181, ../../sass/custom.scss */
+/* line 180, ../../sass/custom.scss */
+.dropdown-submenu > a:after {
+  border: 0;
+}
+
+/* line 184, ../../sass/custom.scss */
 .dropdown-menu > li > a {
   color: #ffffff;
   text-transform: uppercase;
 }
 
-/* line 186, ../../sass/custom.scss */
-#nav-background {
+/* line 189, ../../sass/custom.scss */
+.nav-background {
   height: 250px;
   position: absolute;
-  width: 2000px;
-  left: -800px;
+  width: 1000px;
   background-color: #bb281f;
   z-index: 2;
   opacity: 0.8;
   display: none;
 }
 
+/* line 198, ../../sass/custom.scss */
+.dropdown-image {
+  float: right;
+  margin-top: 3px;
+}
+
 @media (min-width: 768px) {
-  /* line 198, ../../sass/custom.scss */
-  .navbar-nav > li.dropdown:hover > #nav-background {
+  /* line 204, ../../sass/custom.scss */
+  .navbar-nav > li.dropdown:hover > .nav-background {
     display: block;
   }
 }
-/* line 203, ../../sass/custom.scss */
+/* line 209, ../../sass/custom.scss */
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   background-color: inherit;
   color: #000000;
 }
 
-/* line 208, ../../sass/custom.scss */
+/* line 214, ../../sass/custom.scss */
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: initial;
 }
 
-/* line 212, ../../sass/custom.scss */
+/* line 218, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
 }
 
-/* line 216, ../../sass/custom.scss */
+/* line 222, ../../sass/custom.scss */
 .navbar-header {
   height: 40px;
 }
 
-/* line 220, ../../sass/custom.scss */
+/* line 226, ../../sass/custom.scss */
 .nav > li {
   display: inline-block;
 }
 
-/* line 225, ../../sass/custom.scss */
+/* line 231, ../../sass/custom.scss */
 .navbar-nav {
   margin-left: auto;
   margin-right: auto;
   width: 515px;
 }
 
-/* line 231, ../../sass/custom.scss */
+/* line 237, ../../sass/custom.scss */
 .navbar {
   border-radius: 0;
   border: 0;
@@ -286,65 +296,65 @@ footer {
   z-index: 100;
 }
 
-/* line 240, ../../sass/custom.scss */
+/* line 246, ../../sass/custom.scss */
 .navbar-default {
   background-color: #000000;
   border-color: initial;
   border: 0;
 }
 
-/* line 246, ../../sass/custom.scss */
+/* line 252, ../../sass/custom.scss */
 .navbar-nav > li > a {
   padding: 0;
   line-height: initial;
 }
 
-/* line 251, ../../sass/custom.scss */
+/* line 257, ../../sass/custom.scss */
 .nav > li > a {
   position: relative;
   display: inline-block;
   padding: 8.5px 15px;
 }
 
-/* line 257, ../../sass/custom.scss */
+/* line 263, ../../sass/custom.scss */
 li.open > a {
   color: #bb281f !important;
 }
 
-/* line 261, ../../sass/custom.scss */
+/* line 267, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a:hover {
   color: #bb281f;
 }
 
-/* line 265, ../../sass/custom.scss */
+/* line 271, ../../sass/custom.scss */
 .navbar-toggle {
   height: 40px;
 }
 
-/* line 269, ../../sass/custom.scss */
+/* line 275, ../../sass/custom.scss */
 .nav > li > a.dropdown-toggle:hover {
   background-color: inherit;
   color: #bb281f;
 }
 
 @media (max-width: 768px) {
-  /* line 276, ../../sass/custom.scss */
+  /* line 282, ../../sass/custom.scss */
   #icons {
     display: none;
   }
 
-  /* line 280, ../../sass/custom.scss */
+  /* line 286, ../../sass/custom.scss */
   .nav > li {
     position: relative;
     display: block;
   }
 }
-/* line 287, ../../sass/custom.scss */
+/* line 293, ../../sass/custom.scss */
 .editable-link, .editable-form {
   font-family: sans-serif;
 }
 
-/* line 291, ../../sass/custom.scss */
+/* line 297, ../../sass/custom.scss */
 .navbar-toggle {
   padding: 0;
   border: 0;
@@ -353,7 +363,7 @@ li.open > a {
   margin-bottom: 0px;
 }
 
-/* line 299, ../../sass/custom.scss */
+/* line 305, ../../sass/custom.scss */
 .nav-footer {
   margin: 0 auto;
   display: initial;
@@ -363,63 +373,63 @@ li.open > a {
   font-size: 12px;
 }
 
-/* line 305, ../../sass/custom.scss */
+/* line 311, ../../sass/custom.scss */
 .nav-footer ul {
   margin-left: 10px;
   vertical-align: top;
   width: initial;
 }
 
-/* line 315, ../../sass/custom.scss */
+/* line 321, ../../sass/custom.scss */
 .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
   background-color: transparent;
   color: #bb281f;
 }
 @media (max-width: 768px) {
-  /* line 326, ../../sass/custom.scss */
+  /* line 332, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > li > a {
     color: #000000;
   }
-  /* line 328, ../../sass/custom.scss */
+  /* line 334, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
     background-color: initial;
     color: #000000;
   }
-  /* line 335, ../../sass/custom.scss */
+  /* line 341, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .active > a, .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-nav .open .dropdown-menu > .active > a:focus {
     background-color: #000000;
     color: #000000;
   }
-  /* line 343, ../../sass/custom.scss */
+  /* line 349, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     background-color: initial;
     color: #000000;
   }
 }
 
-/* line 354, ../../sass/custom.scss */
+/* line 360, ../../sass/custom.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav >
 .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: none;
   color: #bb281f;
 }
 
-/* line 360, ../../sass/custom.scss */
+/* line 366, ../../sass/custom.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: none;
 }
 
-/* line 364, ../../sass/custom.scss */
+/* line 370, ../../sass/custom.scss */
 .dropdown .open {
   background-color: #000000 !important;
 }
 
-/* line 368, ../../sass/custom.scss */
+/* line 374, ../../sass/custom.scss */
 .open > a :hover {
   background-color: #000000;
 }
 
-/* line 372, ../../sass/custom.scss */
+/* line 378, ../../sass/custom.scss */
 .carousel-indicators {
   left: 50px;
   bottom: 20%;
@@ -427,7 +437,7 @@ li.open > a {
   margin-left: initial;
 }
 
-/* line 379, ../../sass/custom.scss */
+/* line 385, ../../sass/custom.scss */
 .carousel-indicators li {
   display: inline-block;
   width: 14px;
@@ -439,7 +449,7 @@ li.open > a {
   border-radius: 14px;
 }
 
-/* line 390, ../../sass/custom.scss */
+/* line 396, ../../sass/custom.scss */
 .carousel-indicators .active {
   background-color: #bb281f;
   border: 1px solid #bb281f;
@@ -447,7 +457,7 @@ li.open > a {
   height: 15px;
 }
 
-/* line 397, ../../sass/custom.scss */
+/* line 403, ../../sass/custom.scss */
 .carousel-caption {
   position: absolute;
   bottom: 26%;
@@ -465,14 +475,14 @@ li.open > a {
 }
 
 @media (max-width: 768px) {
-  /* line 411, ../../sass/custom.scss */
+  /* line 417, ../../sass/custom.scss */
   .navbar-default .navbar-collapse {
     background-color: #bb281f;
     position: absolute;
     z-index: 3;
   }
 
-  /* line 417, ../../sass/custom.scss */
+  /* line 423, ../../sass/custom.scss */
   .carousel-indicators {
     /* left: 50px; */
     bottom: 2%;
@@ -482,30 +492,30 @@ li.open > a {
     width: 100%;
   }
 
-  /* line 426, ../../sass/custom.scss */
+  /* line 432, ../../sass/custom.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 430, ../../sass/custom.scss */
+  /* line 436, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 35px;
   }
 
-  /* line 435, ../../sass/custom.scss */
+  /* line 441, ../../sass/custom.scss */
   .navbar-nav {
     margin: 0;
     margin-left: 25%;
     float: initial;
   }
 
-  /* line 441, ../../sass/custom.scss */
+  /* line 447, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
     color: #000000;
   }
 
-  /* line 446, ../../sass/custom.scss */
+  /* line 452, ../../sass/custom.scss */
   li.open > a {
     color: #000000 !important;
   }

@@ -175,7 +175,10 @@ footer {
 	-webkit-box-shadow: $reset;
 	box-shadow: $reset;
 	background-clip: $reset;
+}
 
+.dropdown-submenu > a:after {
+	border: 0;
 }
 
 .dropdown-menu > li > a {
@@ -183,19 +186,22 @@ footer {
 	text-transform: uppercase;
 }
 
-#nav-background {
+.nav-background {
 	height: 250px;
 	position: absolute;
-	width: 2000px;
-	left: -800px;
+	width: 1000px;
 	background-color: $red;
 	z-index: 2;
 	opacity: 0.8;
 	display: none;
 }
+.dropdown-image {
+	float: right;
+	margin-top: 3px;
+}
 
 @media (min-width: 768px){
-	.navbar-nav > li.dropdown:hover > #nav-background {
+	.navbar-nav > li.dropdown:hover > .nav-background {
 		display: block;
 	}
 }

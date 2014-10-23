@@ -1,4 +1,4 @@
-{% load i18n future pages_tags %}
+{% load i18n future pages_tags staticfiles %}
 {% spaceless %}
 {% if page_branch_in_menu %}
 
@@ -41,7 +41,8 @@
         {% endif %}
         {% endfor %}
     </ul>
-    <div id="nav-background">
+    <div class="nav-background">
+       <img class="dropdown-image" src="{% static "media/" %}{{ page.link.feature_image}}">
     </div>
 {% endif %}
 

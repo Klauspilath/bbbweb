@@ -74,6 +74,18 @@ from __future__ import absolute_import, unicode_literals
 #
 
 EXTRA_MODEL_FIELDS = (
+
+    (
+        "mezzanine.pages.models.Link.feature_image",
+        "ImageField",
+        ("Navigation Section Image",),
+        {"blank": True,
+         "null": True,
+         "upload_to": "navigation_images",
+        },
+    ),
+
+
     (
         "mezzanine.pages.models.Page.featured_image",
         "ImageField",
