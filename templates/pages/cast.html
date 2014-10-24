@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% block main %}
+    <img src="{% static "media/" %}{{page.gallery.hero_image}}" />
+    <h1>
+        {% editable page.title%}
+            {{ page.title|safe }}
+        {% endeditable %}
+    </h1>
+    <div class="row">
+        {% with page.gallery.images.all as images %}
+            {% for image in images %}
+                <div class="col-xs-6 col-sm-4">
+                    <img class="img-responsive" src="{{ image.file.url }}">
+                    <div class="cast-member-name">
+                       {{ image.description }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endwith %}
+    </div>
+{% endblock %}

@@ -85,7 +85,6 @@ EXTRA_MODEL_FIELDS = (
         },
     ),
 
-
     (
         "mezzanine.pages.models.Page.featured_image",
         "ImageField",
@@ -124,6 +123,16 @@ EXTRA_MODEL_FIELDS = (
          "null": True,
          "max_length": 255,
          },
+    ),
+
+    (
+        "mezzanine.galleries.models.Gallery.hero_image",
+        "ImageField",
+        ("Hero image",),
+        {"blank": True,
+         "null": True,
+         "upload_to": "page_header",
+        },
     ),
 
 )

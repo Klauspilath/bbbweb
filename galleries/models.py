@@ -48,6 +48,10 @@ class Gallery(Page, RichText):
         help_text=_("Upload a zip file containing images, and "
                     "they'll be imported into this gallery."))
 
+    hero_image = models.ImageField(verbose_name=_("Header Image"), blank=True,
+                                  upload_to=upload_to("galleries.Gallery.hero_image", "galleries"),
+                                  help_text=_("Hero image"))
+
     class Meta:
         verbose_name = _("Gallery")
         verbose_name_plural = _("Galleries")
