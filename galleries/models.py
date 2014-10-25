@@ -11,6 +11,7 @@ from django.core.files.base import ContentFile
 from django.core.files.storage import default_storage
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
+
 try:
     from django.utils.encoding import force_text
 except ImportError:
@@ -44,13 +45,15 @@ class Gallery(Page, RichText):
     """
 
     zip_import = models.FileField(verbose_name=_("Zip import"), blank=True,
-        upload_to=upload_to("galleries.Gallery.zip_import", "galleries"),
-        help_text=_("Upload a zip file containing images, and "
-                    "they'll be imported into this gallery."))
+                                  upload_to=upload_to("galleries.Gallery.zip_import", "galleries"),
+                                  help_text=_("Upload a zip file containing images, and "
+                                              "they'll be imported into this gallery."))
 
-    hero_image = models.ImageField(verbose_name=_("Header Image"), blank=True,
-                                  upload_to=upload_to("galleries.Gallery.hero_image", "galleries"),
-                                  help_text=_("Hero image"))
+    hero_image = FileField(verbose_name=_("Header Image"), blank=True,
+                           max_length=255, null=True,
+                           format="Image",
+                           upload_to=upload_to("galleries.Gallery.hero_image", "galleries"),
+                           help_text=_("Hero Image"))
 
     class Meta:
         verbose_name = _("Gallery")
@@ -68,6 +71,7 @@ class Gallery(Page, RichText):
                 data = zip_file.read(name)
                 try:
                     from PIL import Image
+
                     image = Image.open(BytesIO(data))
                     image.load()
                     image = Image.open(BytesIO(data))
@@ -92,6 +96,7 @@ class Gallery(Page, RichText):
                     saved_path = default_storage.save(path, ContentFile(data))
                 except UnicodeEncodeError:
                     from warnings import warn
+
                     warn("A file was saved that contains unicode "
                          "characters in its path, but somehow the current "
                          "locale does not support utf-8. You may need to set "
@@ -112,12 +117,17 @@ class Gallery(Page, RichText):
 
 @python_2_unicode_compatible
 class GalleryImage(Orderable):
-
     gallery = models.ForeignKey("Gallery", related_name="images")
+
     file = FileField(_("File"), max_length=200, format="Image",
-        upload_to=upload_to("galleries.GalleryImage.file", "galleries"))
+                     upload_to=upload_to("galleries.GalleryImage.file", "galleries"))
+
     description = models.CharField(_("Description"), max_length=1000,
-                                                           blank=True)
+                                   blank=True)
+
+    linkout = models.CharField(max_length=200, verbose_name='Link URL')
+
+    group = models.CharField(max_length=200, verbose_name='Group')
 
     class Meta:
         verbose_name = _("Image")

@@ -77,31 +77,37 @@ EXTRA_MODEL_FIELDS = (
 
     (
         "mezzanine.pages.models.Link.feature_image",
-        "ImageField",
+        "mezzanine.core.fields.FileField",
         ("Navigation Section Image",),
         {"blank": True,
          "null": True,
          "upload_to": "navigation_images",
+         "format": "Image",
+         "max_length": 255,
         },
     ),
 
     (
         "mezzanine.pages.models.Page.featured_image",
-        "ImageField",
+        "mezzanine.core.fields.FileField",
         ("Hero image",),
         {"blank": True,
          "null": True,
          "upload_to": "page_header",
+         "format": "Image",
+         "max_length": 255,
          },
     ),
 
     (
         "mezzanine.pages.models.Page.silhouette_image",
-        "ImageField",
+        "mezzanine.core.fields.FileField",
         ("Quote Background Image",),
         {"blank": True,
          "null": True,
          "upload_to": "page_silhouette",
+         "format": "Image",
+         "max_length": 255,
          },
     ),
 
@@ -127,11 +133,13 @@ EXTRA_MODEL_FIELDS = (
 
     (
         "mezzanine.galleries.models.Gallery.hero_image",
-        "ImageField",
+        "mezzanine.core.fields.FileField",
         ("Hero image",),
         {"blank": True,
          "null": True,
          "upload_to": "page_header",
+         "format": "Image",
+         "max_length": 255,
         },
     ),
 
@@ -338,6 +346,7 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     "bbb.galleries",
     "bbb.templatetags",
+    #"bbb.mezzanine_people",
     "bbb",
 
     #"mezzanine.accounts",
