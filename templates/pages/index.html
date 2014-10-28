@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 
-{% block extra_head %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static "css/carousel.css" %}"/>
+{% endblock %}
+
+{% block extra_js %}
     <script language="JavaScript">
         $(function(){
-
             TFO.globals.constants.IS_HOME = true;
         });
     </script>
 {% endblock %}
+
+{% block extra_head %}{% endblock %}
 {% block main %}
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->

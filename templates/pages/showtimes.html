@@ -1,0 +1,160 @@
+{% extends "pages/secondary_base.html" %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static "css/showtimes.css" %}"/>
+{% endblock %}
+{% block main %}
+    <img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
+    <section class="content bg-white">
+        <div class="row">
+            <h1>
+                {% editable page.title %}
+                    {{ page.title|safe }}
+                {% endeditable %}
+            </h1>
+
+            <p class="showtimes-title">
+                Current showtimes through November 23rd
+            </p>
+
+            <div class="row">
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Wed</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Thu</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Fri</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Sat</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Sun</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>8:00pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>8:00pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>8:00pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>6:30pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>2:00pm <br/>(matinee)</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-sm-2 time-of-day">
+
+                </div>
+                <div class=" col-sm-2 time-of-day">
+
+                </div>
+                <div class=" col-sm-2 time-of-day">
+
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>9:30pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>5:00pm<br/>(matinee)</p>
+                </div>
+            </div>
+
+            <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+                {% editable page.quote_text %}
+                    {{ page.quote_text|safe }}
+                {% endeditable %}
+                <p class="byline">
+                    {% editable page.quote_byline %}
+                        {{ page.quote_byline|safe }}
+                    {% endeditable %}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+
+            <p class="showtimes-title">
+                Showtimes after November 23rd
+            </p>
+
+            <div class="row">
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Wed</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Thu</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Fri</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Sat</p>
+                </div>
+                <div class="bg-red col-sm-2 day-of-week">
+                    <p>Sun</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>5:00pm<br/>(matinee)</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>8:00pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>6:30pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>6:30pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>2:00pm <br/>(matinee)</p>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    8:00pm
+                </div>
+                <div class="col-sm-2 time-of-day">
+
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    9:30pm
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>9:30pm</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 time-of-day">
+                    <p>5:00pm<br/>(matinee)</p>
+                </div>
+            </div>
+
+            <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+                {% editable page.quote_text %}
+                    {{ page.quote_text|safe }}
+                {% endeditable %}
+                <p class="byline">
+                    {% editable page.quote_byline %}
+                        {{ page.quote_byline|safe }}
+                    {% endeditable %}
+                </p>
+            </div>
+        </div>
+
+
+
+    </section>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+@import "custom";
+
+@mixin cal-day {
+	width: 111px;
+	height: 111px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	display: table;
+
+}
+
+.day-of-week {
+	@include cal-day;
+	@include knockout-49(34px);
+	@include white;
+}
+
+h1 {
+	margin-bottom: 25px;
+}
+
+.day-of-week p, .time-of-day p {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.content {
+	position: absolute;
+}
+
+section.content > div {
+	width: 900px;
+}
+
+section > div > div.row {
+	position: relative;
+	float: left;
+	top: 0px;
+}
+
+#quote {
+	top: 180px;
+	text-align: center;
+	z-index: 10;
+	position: absolute;
+	width: 280px;
+}
+
+.showtimes-title {
+	@include knockout-49(34px);
+
+}
+
+.time-of-day {
+	@include cal-day;
+	@include verlag-light(24px);
+	@include dark-text;
+
+}

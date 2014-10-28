@@ -1,0 +1,61 @@
+/* line 5, ../../sass/carousel.scss */
+.carousel-indicators {
+  left: 50px;
+  bottom: 20%;
+  text-align: initial;
+  margin-left: initial;
+}
+
+/* line 12, ../../sass/carousel.scss */
+.carousel-indicators li {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 1px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 14px;
+}
+
+/* line 23, ../../sass/carousel.scss */
+.carousel-indicators .active {
+  background-color: #bb281f;
+  border: 1px solid #bb281f;
+  width: 15px;
+  height: 15px;
+}
+
+/* line 30, ../../sass/carousel.scss */
+.carousel-caption {
+  position: absolute;
+  bottom: 26%;
+  left: 52px;
+  z-index: 10;
+  color: #ffffff;
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
+  right: initial !important;
+  text-align: initial;
+  text-shadow: initial;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  /* line 46, ../../sass/carousel.scss */
+  .carousel-indicators {
+    /* left: 50px; */
+    bottom: 2%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  /* line 55, ../../sass/carousel.scss */
+  .carousel-caption {
+    display: none;
+  }
+}

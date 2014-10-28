@@ -494,3 +494,78 @@ li.open > a {
     color: #000000 !important;
   }
 }
+/* line 13, ../../sass/showtimes.scss */
+.day-of-week {
+  width: 111px;
+  height: 111px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: table;
+  font-family: 'Knockout 49 A', 'Knockout 49 B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 34px;
+  color: #ffffff;
+}
+
+/* line 19, ../../sass/showtimes.scss */
+h1 {
+  margin-bottom: 25px;
+}
+
+/* line 23, ../../sass/showtimes.scss */
+.day-of-week p, .time-of-day p {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 29, ../../sass/showtimes.scss */
+.content {
+  position: absolute;
+}
+
+/* line 33, ../../sass/showtimes.scss */
+section.content > div {
+  width: 900px;
+}
+
+/* line 37, ../../sass/showtimes.scss */
+section > div > div.row {
+  position: relative;
+  float: left;
+  top: 0px;
+}
+
+/* line 43, ../../sass/showtimes.scss */
+#quote {
+  top: 180px;
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  width: 280px;
+}
+
+/* line 51, ../../sass/showtimes.scss */
+.showtimes-title {
+  font-family: 'Knockout 49 A', 'Knockout 49 B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 34px;
+}
+
+/* line 56, ../../sass/showtimes.scss */
+.time-of-day {
+  width: 111px;
+  height: 111px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: table;
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  color: #000000;
+}

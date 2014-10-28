@@ -41,9 +41,11 @@
         {% endif %}
         {% endfor %}
     </ul>
+    {% if branch_level == 1 %}
     <div class="nav-background">
        <img class="dropdown-image" src="{% static "media/" %}{{ page.link.feature_image}}">
     </div>
+    {% endif %}
 {% endif %}
 
 {% endif %}

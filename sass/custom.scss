@@ -1,5 +1,6 @@
 @import "bootstrap/variables";
 @import "global-vars";
+@import "fonts";
 
 body {
 	//background-color: $body-bg;
@@ -39,7 +40,7 @@ a:hover {
 	color: $dark-color;
 }
 
-.white {
+@mixin white {
 	color: $bright;
 }
 
@@ -51,7 +52,7 @@ a:hover {
 	color: $bright !important;
 }
 
-.dark-text {
+@mixin dark-text {
 	color: $dark-color;
 }
 
@@ -65,6 +66,14 @@ a:hover {
 
 .bg-white {
 	background-color: $bright;
+}
+
+.bg-red {
+	background-color: $red;
+}
+
+.bg-light-grey{
+	background-color: $gray-light;
 }
 
 .opacity-fifty {
@@ -83,7 +92,7 @@ a:hover {
 	background-color: $dark-color !important;
 }
 
-.vertical-center {
+@mixin vertical-center {
 	top: 50%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
@@ -150,6 +159,25 @@ footer {
 .presentation-copy p em {
 	@include verlag-light-italic(24px);
 }
+
+#quote{
+	@include knockout-49(38px);
+	width: 350px;
+	color: $red;
+	background-repeat:no-repeat;
+	background-position: center;
+	top: 123px;
+	text-align: center;
+	right: 25px;
+	z-index: 10;
+	position: absolute;
+}
+
+#quote p.byline {
+	@include knockout-29(16px);
+	color: $dark-color;
+}
+
 
 //bootstrap customizations
 .row {
@@ -374,44 +402,6 @@ li.open > a {
 
 .open > a :hover {
 	background-color: $dark-color;
-}
-
-.carousel-indicators {
-	left: 50px;
-	bottom: 20%;
-	text-align: $reset;
-	margin-left: $reset;
-}
-
-.carousel-indicators li {
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	margin: 1px;
-	cursor: pointer;
-	background-color: $bright;
-	border: 1px solid $bright;
-	border-radius: 14px;
-}
-
-.carousel-indicators .active {
-	background-color: $red;
-	border: 1px solid $red;
-	width: 15px;
-	height: 15px;
-}
-
-.carousel-caption {
-	position: absolute;
-	bottom: 26%;
-	left: 52px;
-	z-index: 10;
-	color: $bright;
-	@include verlag-light(16px);
-	right: $reset !important;
-	text-align: $reset;
-	text-shadow: $reset;
-	padding: 0 !important;
 }
 
 @media (max-width: $screen-sm-min) {
