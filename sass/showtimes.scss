@@ -7,13 +7,12 @@
 	margin-bottom: 10px;
 	text-align: center;
 	display: table;
-
 }
 
 .day-of-week {
 	@include cal-day;
 	@include knockout-49(34px);
-	@include white;
+	@include white-text;
 }
 
 h1 {
@@ -27,11 +26,12 @@ h1 {
 }
 
 .content {
-	position: absolute;
+	//position: absolute;
 }
 
 section.content > div {
-	width: 900px;
+	max-width: 900px;
+	min-width: 366px;
 }
 
 section > div > div.row {
@@ -41,15 +41,18 @@ section > div > div.row {
 }
 
 #quote {
-	top: 180px;
 	text-align: center;
 	z-index: 10;
-	position: absolute;
+	position: initial;
 	width: 280px;
+	float: right;
+	margin-top: 140px;
+	margin-right: -13px
 }
 
 .showtimes-title {
 	@include knockout-49(34px);
+	margin-top: 42px;
 
 }
 
@@ -59,3 +62,16 @@ section > div > div.row {
 	@include dark-text;
 
 }
+
+@media (max-width: 972px) {
+	#quote {
+		display: none;
+	}
+}
+
+a.ticket-links {
+	@include verlag-light(20px);
+	@include red-text();
+}
+
+a:hover{}

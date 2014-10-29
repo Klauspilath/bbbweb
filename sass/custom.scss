@@ -40,15 +40,20 @@ a:hover {
 	color: $dark-color;
 }
 
-@mixin white {
+@mixin white-text {
 	color: $bright;
+}
+
+@mixin red-text {
+	color:$red;
+
 }
 
 .click {
 	cursor: pointer;
 }
 
-.white-text {
+.white-text-force {
 	color: $bright !important;
 }
 
@@ -92,12 +97,14 @@ a:hover {
 	background-color: $dark-color !important;
 }
 
-@mixin vertical-center {
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	position: absolute;
-}
+// use table/table-cell/vertical-align instead.
+
+//@mixin vertical-center {
+//	top: 50%;
+//	transform: translateY(-50%);
+//	-webkit-transform: translateY(-50%);
+//	position: absolute;
+//}
 
 .zero-table * {
 	border: none;
@@ -117,7 +124,6 @@ a:hover {
 }
 
 .screen {
-
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
@@ -160,6 +166,7 @@ footer {
 	@include verlag-light-italic(24px);
 }
 
+//basically on most pages
 #quote{
 	@include knockout-49(38px);
 	width: 350px;
@@ -319,6 +326,7 @@ li.open > a {
 
 }
 
+//inline editing buttons and form - prevent font inheritance
 .editable-link, .editable-form {
 	font-family: sans-serif;
 }

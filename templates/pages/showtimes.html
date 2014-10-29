@@ -1,6 +1,5 @@
 {% extends "pages/secondary_base.html" %}
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
-
 {% block extra_css %}
     <link rel="stylesheet" href="{% static "css/showtimes.css" %}"/>
 {% endblock %}
@@ -8,16 +7,24 @@
     <img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
     <section class="content bg-white">
         <div class="row">
+             <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+                {% editable page.quote_text %}
+                    {{ page.quote_text|safe }}
+                {% endeditable %}
+                <p class="byline">
+                    {% editable page.quote_byline %}
+                        {{ page.quote_byline|safe }}
+                    {% endeditable %}
+                </p>
+            </div>
             <h1>
                 {% editable page.title %}
                     {{ page.title|safe }}
                 {% endeditable %}
             </h1>
-
             <p class="showtimes-title">
                 Current showtimes through November 23rd
             </p>
-
             <div class="row">
                 <div class="bg-red col-sm-2 day-of-week">
                     <p>Wed</p>
@@ -70,24 +77,11 @@
                     <p>5:00pm<br/>(matinee)</p>
                 </div>
             </div>
-
-            <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
-                {% editable page.quote_text %}
-                    {{ page.quote_text|safe }}
-                {% endeditable %}
-                <p class="byline">
-                    {% editable page.quote_byline %}
-                        {{ page.quote_byline|safe }}
-                    {% endeditable %}
-                </p>
-            </div>
         </div>
         <div class="row">
-
             <p class="showtimes-title">
                 Showtimes after November 23rd
             </p>
-
             <div class="row">
                 <div class="bg-red col-sm-2 day-of-week">
                     <p>Wed</p>
@@ -120,7 +114,6 @@
                 </div>
                 <div class="bg-light-grey col-sm-2 time-of-day">
                     <p>2:00pm <br/>(matinee)</p>
-
                 </div>
             </div>
             <div class="row">
@@ -128,7 +121,6 @@
                     8:00pm
                 </div>
                 <div class="col-sm-2 time-of-day">
-
                 </div>
                 <div class="bg-light-grey col-sm-2 time-of-day">
                     9:30pm
@@ -140,21 +132,24 @@
                     <p>5:00pm<br/>(matinee)</p>
                 </div>
             </div>
-
-            <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
-                {% editable page.quote_text %}
-                    {{ page.quote_text|safe }}
-                {% endeditable %}
-                <p class="byline">
-                    {% editable page.quote_byline %}
-                        {{ page.quote_byline|safe }}
-                    {% endeditable %}
-                </p>
-            </div>
         </div>
-
-
-
+        <div class="row">
+            <p class="showtimes-title">
+                Our Holiday Show goes on sale Monday, September 8th
+            </p>
+            <p>
+                <a  href=""><img src="{% static "img/finger-red.png" %}" /></a>
+                <a class="ticket-links hover-black"  href="">view our holiday calendar</a>
+            </p>
+        </div>
+        <div class="row">
+            <p class="showtimes-title">
+                New Year’s Eve tickets go on sale Monday, November 3rd
+            </p>
+            <p>
+                <a href=""><img src="{% static "img/finger-red.png" %}" /></a>
+                <a class="ticket-links hover-black" href="">view new year’s eve info and ticket prices</a>
+            </p>
+        </div>
     </section>
-
 {% endblock %}
