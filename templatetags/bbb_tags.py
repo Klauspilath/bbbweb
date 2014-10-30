@@ -12,3 +12,6 @@ def get_gallery(name):
     return {"gallery": gallery}
 
 
+@register.inclusion_tag('includes/bbb/get-tickets-button.html')
+def get_tickets_button():
+    return

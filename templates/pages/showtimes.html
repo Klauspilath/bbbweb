@@ -1,5 +1,5 @@
 {% extends "pages/secondary_base.html" %}
-{% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
 {% block extra_css %}
     <link rel="stylesheet" href="{% static "css/showtimes.css" %}"/>
 {% endblock %}
@@ -151,5 +151,6 @@
                 <a class="ticket-links hover-black" href="">view new year’s eve info and ticket prices</a>
             </p>
         </div>
+        {% get_tickets_button %}
     </section>
 {% endblock %}

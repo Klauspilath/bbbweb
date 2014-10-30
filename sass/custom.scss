@@ -185,6 +185,16 @@ footer {
 	color: $dark-color;
 }
 
+div.get-tickets-button{
+	background-color: $red;
+	border-radius: 10px;
+	border: 1px solid $red;
+	@include knockout-49(26px);
+	@include white-text;
+	width: 232px !important;
+	min-width: 232px !important;
+
+}
 
 //bootstrap customizations
 .row {
