@@ -1,65 +1,65 @@
-/* line 5, ../../sass/galleries.scss */
-.carousel-indicators {
-  left: 50px;
-  bottom: 20%;
-  text-align: initial;
-  margin-left: initial;
-}
-
-/* line 12, ../../sass/galleries.scss */
-.carousel-indicators li {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  margin: 1px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 14px;
-}
-
-/* line 23, ../../sass/galleries.scss */
-.carousel-indicators .active {
-  background-color: #bb281f;
-  border: 1px solid #bb281f;
-  width: 15px;
-  height: 15px;
-}
-
-/* line 30, ../../sass/galleries.scss */
+/* line 6, ../../sass/galleries.scss */
 .carousel-caption {
   position: absolute;
-  bottom: 26%;
-  left: 52px;
-  z-index: 10;
+  bottom: 0px;
+  left: 0px;
+  z-index: 1;
   color: #ffffff;
   font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
   right: initial !important;
   text-align: initial;
   text-shadow: initial;
-  padding: 0 !important;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 4px 0 0 20px;
 }
 
 @media (max-width: 768px) {
-  /* line 46, ../../sass/galleries.scss */
-  .carousel-indicators {
-    /* left: 50px; */
-    bottom: 2%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-
-  /* line 55, ../../sass/galleries.scss */
+  /* line 24, ../../sass/galleries.scss */
   .carousel-caption {
     display: none;
   }
 }
-/* line 61, ../../sass/galleries.scss */
+/* line 29, ../../sass/galleries.scss */
 .carousel-control.right, .carousel-control.left {
   background-image: none;
+}
+
+/* line 33, ../../sass/galleries.scss */
+.gallery-nav-icon-left {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: absolute;
+  left: 20px;
+}
+
+/* line 38, ../../sass/galleries.scss */
+.gallery-nav-icon-right {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: absolute;
+  right: 20px;
+}
+
+/* line 43, ../../sass/galleries.scss */
+.semi-trans {
+  background-color: #000000;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  height: 125px;
+  width: 167px;
+  position: absolute;
+  top: 0px;
+}
+
+/* line 52, ../../sass/galleries.scss */
+.hover-clear:hover {
+  opacity: 0;
+  filter: alpha(opacity=0);
 }

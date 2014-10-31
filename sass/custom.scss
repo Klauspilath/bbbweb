@@ -40,14 +40,6 @@ a:hover {
 	color: $dark-color;
 }
 
-@mixin white-text {
-	color: $bright;
-}
-
-@mixin red-text {
-	color:$red;
-
-}
 
 .click {
 	cursor: pointer;
@@ -55,10 +47,6 @@ a:hover {
 
 .white-text-force {
 	color: $bright !important;
-}
-
-@mixin dark-text {
-	color: $dark-color;
 }
 
 .dark-grey-text {
@@ -438,7 +426,6 @@ li.open > a {
 	}
 
 	.carousel-indicators {
-		/* left: 50px; */
 		bottom: 2%;
 		text-align: center;
 		margin-left: auto;
@@ -451,7 +438,6 @@ li.open > a {
 	}
 
 	.navbar-nav > li > a {
-		//padding: 0;
 		font-size: 35px;
 	}
 

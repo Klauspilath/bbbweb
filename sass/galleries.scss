@@ -1,63 +1,55 @@
 @import "bootstrap/variables";
 @import "global-vars";
 @import "fonts";
-
-.carousel-indicators {
-	left: 50px;
-	bottom: 20%;
-	text-align: $reset;
-	margin-left: $reset;
-}
-
-.carousel-indicators li {
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	margin: 1px;
-	cursor: pointer;
-	background-color: $bright;
-	border: 1px solid $bright;
-	border-radius: 14px;
-}
-
-.carousel-indicators .active {
-	background-color: $red;
-	border: 1px solid $red;
-	width: 15px;
-	height: 15px;
-}
+@import "bootstrap/mixins/opacity";
 
 .carousel-caption {
 	position: absolute;
-	bottom: 26%;
-	left: 52px;
-	z-index: 10;
+	bottom: 0px;
+	left: 0px;
+	z-index: 1;
 	color: $bright;
-	@include verlag-light(16px);
+	@include verlag-book(18px);
 	right: $reset !important;
 	text-align: $reset;
 	text-shadow: $reset;
-	padding: 0 !important;
+	height: 30px;
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	padding: 4px 0 0 20px;
 }
 
-
-@media (max-width: $screen-sm-min){
-
-	.carousel-indicators {
-		/* left: 50px; */
-		bottom: 2%;
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-	}
+@media (max-width: $screen-sm-min) {
 
 	.carousel-caption {
 		display: none;
 	}
-
 }
 
-.carousel-control.right, .carousel-control.left{
+.carousel-control.right, .carousel-control.left {
 	background-image: none;
+}
+
+.gallery-nav-icon-left {
+	@include vertical-center;
+	left: 20px;
+}
+
+.gallery-nav-icon-right {
+	@include vertical-center;
+	right: 20px;
+}
+
+.semi-trans {
+	background-color: $dark-color;
+	@include opacity(0.6);
+	height: 125px;
+	width: 167px;
+	position: absolute;
+	top: 0px;
+}
+
+.hover-clear:hover {
+	@include opacity(0);
+
 }
