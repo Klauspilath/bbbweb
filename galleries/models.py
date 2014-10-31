@@ -125,9 +125,9 @@ class GalleryImage(Orderable):
     description = models.CharField(_("Description"), max_length=1000,
                                    blank=True)
 
-    linkout = models.CharField(max_length=200, verbose_name='Link URL')
+    linkout = models.CharField(max_length=200, verbose_name='Link URL', blank=True)
 
-    group = models.CharField(max_length=200, verbose_name='Group')
+    group = models.CharField(max_length=200, verbose_name='Group', blank=True)
 
     class Meta:
         verbose_name = _("Image")

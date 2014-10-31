@@ -1,0 +1,63 @@
+@import "bootstrap/variables";
+@import "global-vars";
+@import "fonts";
+
+.carousel-indicators {
+	left: 50px;
+	bottom: 20%;
+	text-align: $reset;
+	margin-left: $reset;
+}
+
+.carousel-indicators li {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 1px;
+	cursor: pointer;
+	background-color: $bright;
+	border: 1px solid $bright;
+	border-radius: 14px;
+}
+
+.carousel-indicators .active {
+	background-color: $red;
+	border: 1px solid $red;
+	width: 15px;
+	height: 15px;
+}
+
+.carousel-caption {
+	position: absolute;
+	bottom: 26%;
+	left: 52px;
+	z-index: 10;
+	color: $bright;
+	@include verlag-light(16px);
+	right: $reset !important;
+	text-align: $reset;
+	text-shadow: $reset;
+	padding: 0 !important;
+}
+
+
+@media (max-width: $screen-sm-min){
+
+	.carousel-indicators {
+		/* left: 50px; */
+		bottom: 2%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	.carousel-caption {
+		display: none;
+	}
+
+}
+
+.carousel-control.right, .carousel-control.left{
+	background-image: none;
+}

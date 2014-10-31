@@ -180,7 +180,7 @@ footer {
 	position: absolute;
 }
 
-#quote p.byline {
+.byline {
 	@include knockout-29(16px);
 	color: $dark-color;
 }
@@ -193,8 +193,16 @@ div.get-tickets-button{
 	@include white-text;
 	width: 232px !important;
 	min-width: 232px !important;
-
+	padding: 5px;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
 }
+
+div.get-tickets-button img{
+	margin-bottom: 2px;
+	margin-right: 2px;
+}
+
 
 //bootstrap customizations
 .row {
