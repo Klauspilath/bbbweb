@@ -1,4 +1,6 @@
-@import "custom";
+@import "bootstrap/variables";
+@import "global-vars";
+@import "fonts";
 
 @mixin cal-day {
 	width: 111px;

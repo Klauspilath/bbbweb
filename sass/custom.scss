@@ -125,6 +125,24 @@ footer {
 	padding: 15px 0 30px;
 }
 
+#footer-get-tickets{
+	text-transform: uppercase;
+	margin-top: 60px;
+	text-align: center;
+}
+
+#footer-get-tickets > p  > a {
+	@include knockout-49(28px);
+	color: $dark-color;
+
+}
+
+#footer-get-tickets > span > a{
+	@include knockout-29(14px);
+	color: $bright;
+}
+
+
 #logo {
 	margin: 10px 20px 3px 10px;
 }
@@ -348,13 +366,15 @@ li.open > a {
 .nav-footer {
 	margin: 0 auto;
 	display: initial;
-	@include verlag-book(12px)
+	@include verlag-book(12px);
+	text-transform: uppercase;
 }
 
 .nav-footer ul {
-	margin-left: 10px;
+	margin-left: 0px;
 	vertical-align: top;
 	width: $reset;
+	margin-right: 10px;
 }
 
 // Dropdown menu items

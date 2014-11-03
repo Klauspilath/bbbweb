@@ -77,17 +77,17 @@
         </div>
         <footer>
             <div class="container-fluid">
-            {% page_menu "pages/menus/footer.html" %}
-                <div class="row">
-                    <p class="site-info text-center">
-{#                        {% ifinstalled mezzanine.mobile %}#}
-{#                        <a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>#}
-{#                        {% endifinstalled %}#}
+                {% page_menu "pages/menus/footer.html" %}
+                <div id="footer-get-tickets" class="row">
+                    <p>
+                        <a href="/tickets">Get Tickets Now!</a>
                     </p>
+                    <span><a href="/tickets">Click Here</a></span>
                 </div>
             </div>
         </footer>
         {% include "includes/footer_scripts.html" %}
+
     </div>
     {% editable_loader %}
 </body>
