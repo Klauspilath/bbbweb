@@ -605,3 +605,8 @@ a.ticket-links {
   font-size: 20px;
   color: #bb281f;
 }
+
+/* line 79, ../../sass/showtimes.scss */
+.get-tickets-button {
+  margin-top: 75px;
+}
