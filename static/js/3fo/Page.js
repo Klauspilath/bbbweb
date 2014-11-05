@@ -46,8 +46,9 @@ $(function() {
 	TFO.__PageInstance.prototype.setNavigationEvents = function(){
 		var $dropdowns = $('li.dropdown');
 
-		$dropdowns.on('mouseenter', function() // Mouseenter (used with .hover()) does not trigger when user enters from outside document window
-        {
+		// Mouseenter (used with .hover()) does not trigger when user enters from outside document window
+
+		$dropdowns.on('mouseenter', function(){
 			var sc = $('.screen');
 			var bg = $(this).children(".nav-background");
 			if(sc.offset().left == bg.offset().left) return;
@@ -73,5 +74,4 @@ $(function() {
 
 	//create instance
 	TFO.Page = new TFO.__PageInstance();
-	//window.onload(TFO.Page.initCollapsibleContent());
 });

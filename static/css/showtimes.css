@@ -58,7 +58,7 @@ section > div > div.row {
   margin-top: 42px;
 }
 
-/* line 61, ../../sass/showtimes.scss */
+/* line 60, ../../sass/showtimes.scss */
 .time-of-day {
   width: 111px;
   height: 111px;
@@ -74,12 +74,12 @@ section > div > div.row {
 }
 
 @media (max-width: 972px) {
-  /* line 69, ../../sass/showtimes.scss */
+  /* line 68, ../../sass/showtimes.scss */
   #quote {
     display: none;
   }
 }
-/* line 74, ../../sass/showtimes.scss */
+/* line 73, ../../sass/showtimes.scss */
 a.ticket-links {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -88,7 +88,7 @@ a.ticket-links {
   color: #bb281f;
 }
 
-/* line 81, ../../sass/showtimes.scss */
+/* line 80, ../../sass/showtimes.scss */
 .get-tickets-button {
   margin-top: 75px;
 }

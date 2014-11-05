@@ -85,14 +85,6 @@ a:hover {
 	background-color: $dark-color !important;
 }
 
-// use table/table-cell/vertical-align instead.
-
-//@mixin vertical-center {
-//	top: 50%;
-//	transform: translateY(-50%);
-//	-webkit-transform: translateY(-50%);
-//	position: absolute;
-//}
 
 .zero-table * {
 	border: none;
@@ -111,7 +103,7 @@ a:hover {
 	color: $bright !important;
 }
 
-.screen {
+#screen {
 	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
@@ -208,7 +200,6 @@ div.get-tickets-button img{
 	margin-bottom: 2px;
 	margin-right: 2px;
 }
-
 
 //bootstrap customizations
 .row {

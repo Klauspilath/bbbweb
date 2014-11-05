@@ -49,17 +49,30 @@
 
 /* line 43, ../../sass/galleries.scss */
 .semi-trans {
-  background-color: #000000;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
-/* line 52, ../../sass/galleries.scss */
-.hover-clear:hover {
-  opacity: 0;
-  filter: alpha(opacity=0);
+/* line 51, ../../sass/galleries.scss */
+.hover-clear:hover, .selected {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 55, ../../sass/galleries.scss */
+.thumb-image {
+  display: table-cell;
+  background-color: #000000;
+  position: relative;
+  float: left;
+}
+
+/* line 62, ../../sass/galleries.scss */
+#thumbnails {
+  overflow-x: visible;
+  display: block;
+  position: relative;
+  width: 2500px;
+  height: 150px;
+  font-size: 0px;
 }
