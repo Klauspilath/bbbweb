@@ -34,7 +34,7 @@
         {% with page.gallery.images.all as images %}
             {% for image in images %}
                 <div class="thumb-image">
-                    <a data-target="#carousel-gallery" data-slide-to="{{forloop.counter0}}" class="thumbnail slide-{{ image.id }}">
+                    <a id="thumb-{{ image.id }}" data-target="#carousel-gallery" data-slide-to="{{forloop.counter0}}" class="thumbnail slide-{{ image.id }}">
                         <img class="img-responsive semi-trans hover-clear" src="{{ MEDIA_URL }}{% thumbnail image.file 200 150 %}" alt="{{ image.description }}">
                     </a>
                 </div>

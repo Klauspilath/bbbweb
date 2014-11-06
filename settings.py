@@ -316,6 +316,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 # Package/module name to import the root urlpatterns from for the project.
 ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 
+
 # Put strings here, like "/home/html/django_templates"
 # or "C:/www/django/templates".
 # Always use forward slashes, even on Windows.
@@ -343,7 +344,7 @@ INSTALLED_APPS = (
     "mezzanine.blog",
     "mezzanine.forms",
     "mezzanine.pages",
-    "mezzanine.twitter",
+    #"mezzanine.twitter",
     "bbb.galleries",
     "bbb.templatetags",
     #"bbb.mezzanine_people",

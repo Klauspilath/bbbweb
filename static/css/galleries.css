@@ -47,13 +47,13 @@
   filter: alpha(opacity=50);
 }
 
-/* line 51, ../../sass/galleries.scss */
+/* line 47, ../../sass/galleries.scss */
 .hover-clear:hover, .selected {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
-/* line 55, ../../sass/galleries.scss */
+/* line 51, ../../sass/galleries.scss */
 .thumb-image {
   display: table-cell;
   background-color: #000000;
@@ -61,7 +61,7 @@
   float: left;
 }
 
-/* line 62, ../../sass/galleries.scss */
+/* line 58, ../../sass/galleries.scss */
 #thumbnails {
   overflow-x: visible;
   display: block;
