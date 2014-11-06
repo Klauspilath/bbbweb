@@ -17,31 +17,37 @@
 {% endcompress %}
 
 {% compress js %}
-<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
-<script src="{% static "js/bootstrap.js" %}"></script>
+
+<script src="{% static "js/jquery-2.1.1.min.js"%}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
 <script src="{% static "js/bootstrap-extras.js" %}"></script>
 <script src="{% static "js/modernizer/modernizr.js" %}"></script>
-    <script>
-        $(function(){
-            if (typeof TFO === 'undefined') {
-                //console.log('TFO does not exist');
-                TFO = {};
-            }
+<script>
+$(function(){
+    if (typeof TFO === 'undefined') {
+        //console.log('TFO does not exist');
+        TFO = {};
+    }
 
-            TFO.globals = function() { };
-            TFO.globals.constants = {};
-            if (Modernizr.touch && window.navigator.userAgent.indexOf('Windows NT') < 0) {
-                TFO.globals.constants.IS_DESKTOP = false;
-                TFO.globals.constants.IS_MOBILE = true;
-            } else {
-                TFO.globals.constants.IS_DESKTOP = true;
-                TFO.globals.constants.IS_MOBILE = false;
-            }
+    TFO.globals = function() { };
+    TFO.globals.constants = {};
+    if (Modernizr.touch && window.navigator.userAgent.indexOf('Windows NT') < 0) {
+        TFO.globals.constants.IS_DESKTOP = false;
+        TFO.globals.constants.IS_MOBILE = true;
+    } else {
+        TFO.globals.constants.IS_DESKTOP = true;
+        TFO.globals.constants.IS_MOBILE = false;
+    }
 
-            TFO.globals.constants.IS_HOME = false;
-        });
-    </script>
+    TFO.globals.constants.IS_HOME = false;
+});
+</script>
 {% block extra_js %}{% endblock %}
+{% if user.is_staff %}
+<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}">
+    jQuery.noConflict();
+</script>
+{% endif %}
 {% endcompress %}
 <!--[if lt IE 9]>
 <script src="{% static "js/html5shiv.js" %}"></script>

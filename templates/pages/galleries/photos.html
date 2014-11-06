@@ -8,10 +8,10 @@
         <div class="carousel-inner" role="listbox">
             {% with page.gallery.images.all as images %}
                 {% for image in images %}
-                    <div class="item {% if forloop.first %}active{% endif %}">
+                    <div id="slide-{{ image.id }}" class="item item-div {% if forloop.first %}active{% endif %}">
                         <img class="img-responsive" src="{{ image.file.url }}">
 
-                        <div class="carousel-caption">
+                        <div class="carousel-caption show">
                             {{ image.description }}
                         </div>
                     </div>
@@ -34,8 +34,8 @@
         {% with page.gallery.images.all as images %}
             {% for image in images %}
                 <div class="thumb-image">
-                    <a data-target="#carousel-gallery" data-slide-to="{{forloop.counter0}}" class="thumbnail" rel="#image-{{ image.id }}" title="{{ image.description }}">
-                        <img class="img-responsive semi-trans hover-clear" src="{{ MEDIA_URL }}{% thumbnail image.file 200 150 %}">
+                    <a data-target="#carousel-gallery" data-slide-to="{{forloop.counter0}}" class="thumbnail slide-{{ image.id }}">
+                        <img class="img-responsive semi-trans hover-clear" src="{{ MEDIA_URL }}{% thumbnail image.file 200 150 %}" alt="{{ image.description }}">
                     </a>
                 </div>
             {% endfor %}

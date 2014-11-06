@@ -18,12 +18,6 @@
   padding: 4px 0 0 20px;
 }
 
-@media (max-width: 768px) {
-  /* line 24, ../../sass/galleries.scss */
-  .carousel-caption {
-    display: none;
-  }
-}
 /* line 29, ../../sass/galleries.scss */
 .carousel-control.right, .carousel-control.left {
   background-image: none;
