@@ -49,7 +49,7 @@ $(function() {
 		// Mouseenter (used with .hover()) does not trigger when user enters from outside document window
 
 		$dropdowns.on('mouseenter', function(){
-			var sc = $('.screen');
+			var sc = $('#screen');
 			var bg = $(this).children(".nav-background");
 			if(sc.offset().left == bg.offset().left) return;
         	var bgl = sc.offset().left -  bg.offset().left;
