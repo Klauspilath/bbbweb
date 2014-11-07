@@ -9,7 +9,6 @@ $(function () {
 	TFO.__GalleryInstance = function () {
 		this.initializeResizeListener();
 		this.initializeSlideListener();
-
 	};
 
 	TFO.__GalleryInstance.prototype.THUMBNAIL_WIDTH = 200;
@@ -21,7 +20,7 @@ $(function () {
 	TFO.__GalleryInstance.prototype.SMALL_THUMBS_PER_SLIDE = 3;
 	TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_FORWARD = 'left';
 	TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_BACK = 'right';
-	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE = 'data-starts-slide';
+	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE = 'data-moves-slide';
 	TFO.__GalleryInstance.prototype.currentMaxThumbs = TFO.__GalleryInstance.prototype.MAX_THUMBS_PER_SLIDE;
 
 	TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
@@ -53,7 +52,6 @@ $(function () {
 
 			clearTimeout(timer);
 			window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 1000);
-
 		});
 	};
 
@@ -104,7 +102,7 @@ $(function () {
 			$('.thumbnail.' + activeId + '> img').toggleClass('semi-trans');
 			$('.thumbnail.' + $(thumb).attr('id') + '> img').toggleClass('semi-trans');
 
-			if (t.attr(TFO.Gallery.DATA_ATTRIBUTE)) {
+			if (t.attr(TFO.Gallery.DATA_ATTRIBUTE) === "true") {
 				TFO.Gallery.shiftThumbs(direction, thumb);
 			}
 		});
@@ -124,8 +122,8 @@ $(function () {
 		 at the end, the navigation will only slide to a position where the very
 		 last image is visible in the last position.
 
-		 shift the thumb slider to the left edge of the window (or the screen element?).
-		 */
+		 shift the thumb slider to the left edge of the screen element.
+		*/
 
 		console.log(direction + ':' + $(target).attr('id'));
 
@@ -138,7 +136,6 @@ $(function () {
 		if (direction === this.DIRECTION_THUMBSTRIP_BACK) {
 			$('#thumbnails').animate({ 'left': '+=' + -1 * -(s.width()) + 'px'}, 'slow');
 		}
-
 	};
 
 	/*create instance*/
