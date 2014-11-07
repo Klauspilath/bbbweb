@@ -28,7 +28,7 @@ h1{
         {% with page.gallery.images.all as images %}
             {% for image in images %}
                 <div class="col-xs-6 col-sm-4">
-                    <img class="img-responsive" src="{{ image.file.url }}">
+                    <img class="img-responsive" src="{{ MEDIA_URL }}{% thumbnail image.file 300 300 %}">
                     <div class="cast-member-name">
                        {{ image.description }}
                     </div>
