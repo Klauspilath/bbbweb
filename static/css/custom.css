@@ -8,19 +8,28 @@ body {
   padding: 0;
   line-height: initial;
   color: #000000;
+  font-family: 'Verlag A', 'Verlag B';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
 }
 
-/* line 19, ../../sass/custom.scss */
+/* line 20, ../../sass/custom.scss */
 header {
   text-align: center;
 }
 
-/* line 23, ../../sass/custom.scss */
+/* line 24, ../../sass/custom.scss */
 h3 {
-  font-size: 24px;
+  font-family: 'Knockout 49 A', 'Knockout 49 B';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 34px;
+  padding: 0;
+  margin: -8px 0 0;
 }
 
-/* line 28, ../../sass/custom.scss */
+/* line 30, ../../sass/custom.scss */
 h1 {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -30,73 +39,100 @@ h1 {
   margin: 0;
 }
 
-/* line 34, ../../sass/custom.scss */
+/* line 36, ../../sass/custom.scss */
+p {
+  margin: 5px 0 0 0px;
+}
+
+/* line 40, ../../sass/custom.scss */
 a {
   color: #ffffff;
 }
 
-/* line 38, ../../sass/custom.scss */
+/* line 44, ../../sass/custom.scss */
 a:hover {
   text-decoration: none;
   color: #000000;
 }
 
-/* line 44, ../../sass/custom.scss */
+/* line 49, ../../sass/custom.scss */
 .click {
   cursor: pointer;
 }
 
-/* line 48, ../../sass/custom.scss */
+/* line 53, ../../sass/custom.scss */
 .white-text-force {
   color: #ffffff !important;
 }
 
-/* line 52, ../../sass/custom.scss */
+/* line 57, ../../sass/custom.scss */
 .dark-grey-text {
   color: #666;
 }
 
-/* line 56, ../../sass/custom.scss */
+/* line 61, ../../sass/custom.scss */
 .grey-text {
   color: #a2a2a2;
 }
 
-/* line 60, ../../sass/custom.scss */
+/* line 65, ../../sass/custom.scss */
 .bg-white {
   background-color: #ffffff;
 }
 
-/* line 64, ../../sass/custom.scss */
+/* line 69, ../../sass/custom.scss */
 .bg-red {
   background-color: #bb281f;
 }
 
-/* line 68, ../../sass/custom.scss */
+/* line 73, ../../sass/custom.scss */
 .bg-light-grey {
   background-color: #ebebeb;
 }
 
-/* line 72, ../../sass/custom.scss */
+/* line 77, ../../sass/custom.scss */
 .opacity-fifty {
   opacity: 0.5;
 }
 
-/* line 76, ../../sass/custom.scss */
+/* line 81, ../../sass/custom.scss */
 .opacity-eighty {
   opacity: 0.8;
 }
 
-/* line 80, ../../sass/custom.scss */
+/* line 85, ../../sass/custom.scss */
 .bg-clear {
   background-color: initial !important;
 }
 
-/* line 84, ../../sass/custom.scss */
+/* line 89, ../../sass/custom.scss */
 .bg-black {
   background-color: #000000 !important;
 }
 
-/* line 89, ../../sass/custom.scss */
+/* line 93, ../../sass/custom.scss */
+.hover-black:hover {
+  color: #000000 !important;
+}
+
+/* line 97, ../../sass/custom.scss */
+.hover-white:hover {
+  color: #ffffff !important;
+}
+
+/* line 101, ../../sass/custom.scss */
+.page-title {
+  margin-bottom: 60px;
+}
+
+/* line 105, ../../sass/custom.scss */
+table {
+  padding: 0;
+  margin: 0;
+  max-width: 900px;
+}
+
+/* line 111, ../../sass/custom.scss */
 .zero-table * {
   border: none;
   border-collapse: collapse;
@@ -106,17 +142,24 @@ a:hover {
   line-height: 0px;
 }
 
-/* line 98, ../../sass/custom.scss */
-.hover-black:hover {
-  color: #000000 !important;
+/* line 120, ../../sass/custom.scss */
+section.content td {
+  padding-bottom: 30px;
+  padding-right: 30px;
 }
 
-/* line 102, ../../sass/custom.scss */
-.hover-white:hover {
-  color: #ffffff !important;
+/* line 124, ../../sass/custom.scss */
+#screen > div > section > div > table > tbody > tr > td:nth-child(1) {
+  max-width: 300px;
+  min-width: 180px;
 }
 
-/* line 106, ../../sass/custom.scss */
+/* line 129, ../../sass/custom.scss */
+#screen > div > section > div > table > tbody > tr > td:nth-child(2) {
+  max-width: 600px;
+}
+
+/* line 133, ../../sass/custom.scss */
 #screen {
   max-width: 1000px;
   margin-left: auto;
@@ -124,7 +167,7 @@ a:hover {
   overflow: hidden;
 }
 
-/* line 113, ../../sass/custom.scss */
+/* line 140, ../../sass/custom.scss */
 footer {
   background-color: #bb281f;
   border: 0;
@@ -132,14 +175,14 @@ footer {
   padding: 15px 0 30px;
 }
 
-/* line 120, ../../sass/custom.scss */
+/* line 147, ../../sass/custom.scss */
 #footer-get-tickets {
   text-transform: uppercase;
   margin-top: 60px;
   text-align: center;
 }
 
-/* line 126, ../../sass/custom.scss */
+/* line 153, ../../sass/custom.scss */
 #footer-get-tickets > p > a {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -148,7 +191,7 @@ footer {
   color: #000000;
 }
 
-/* line 132, ../../sass/custom.scss */
+/* line 159, ../../sass/custom.scss */
 #footer-get-tickets > span > a {
   font-family: 'Knockout 29 A', 'Knockout 29 B';
   font-weight: 400;
@@ -157,22 +200,22 @@ footer {
   color: #ffffff;
 }
 
-/* line 138, ../../sass/custom.scss */
+/* line 164, ../../sass/custom.scss */
 #logo {
   margin: 10px 20px 3px 10px;
 }
 
-/* line 142, ../../sass/custom.scss */
+/* line 168, ../../sass/custom.scss */
 #icons {
   margin-bottom: -38px;
 }
 
-/* line 146, ../../sass/custom.scss */
+/* line 172, ../../sass/custom.scss */
 .content {
   padding: 50px;
 }
 
-/* line 150, ../../sass/custom.scss */
+/* line 176, ../../sass/custom.scss */
 .copy {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -180,7 +223,7 @@ footer {
   font-size: 20px;
 }
 
-/* line 154, ../../sass/custom.scss */
+/* line 180, ../../sass/custom.scss */
 .copy p em {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -188,7 +231,7 @@ footer {
   font-size: 20px;
 }
 
-/* line 158, ../../sass/custom.scss */
+/* line 184, ../../sass/custom.scss */
 .presentation-copy {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -197,7 +240,7 @@ footer {
   margin-top: 25px;
 }
 
-/* line 163, ../../sass/custom.scss */
+/* line 189, ../../sass/custom.scss */
 .presentation-copy p em {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -205,24 +248,22 @@ footer {
   font-size: 24px;
 }
 
-/* line 168, ../../sass/custom.scss */
+/* line 194, ../../sass/custom.scss */
 #quote {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
   font-style: normal;
   font-size: 38px;
-  width: 350px;
   color: #bb281f;
-  background-repeat: no-repeat;
-  background-position: center;
-  top: 123px;
+  background: no-repeat top;
   text-align: center;
-  right: 25px;
-  z-index: 10;
-  position: absolute;
+  width: 280px;
+  height: 220px;
+  float: right;
+  padding-top: 52px;
 }
 
-/* line 181, ../../sass/custom.scss */
+/* line 205, ../../sass/custom.scss */
 .byline {
   font-family: 'Knockout 29 A', 'Knockout 29 B';
   font-weight: 400;
@@ -231,7 +272,7 @@ footer {
   color: #000000;
 }
 
-/* line 186, ../../sass/custom.scss */
+/* line 210, ../../sass/custom.scss */
 div.get-tickets-button {
   background-color: #bb281f;
   border-radius: 10px;
@@ -248,23 +289,23 @@ div.get-tickets-button {
   letter-spacing: 0.8px;
 }
 
-/* line 199, ../../sass/custom.scss */
+/* line 223, ../../sass/custom.scss */
 div.get-tickets-button img {
   margin-bottom: 2px;
   margin-right: 2px;
 }
 
-/* line 205, ../../sass/custom.scss */
+/* line 229, ../../sass/custom.scss */
 .row {
   margin: 0;
 }
 
-/* line 209, ../../sass/custom.scss */
+/* line 233, ../../sass/custom.scss */
 .container-fluid {
   padding: 0;
 }
 
-/* line 213, ../../sass/custom.scss */
+/* line 237, ../../sass/custom.scss */
 .dropdown-menu {
   position: absolute;
   left: 0;
@@ -283,18 +324,18 @@ div.get-tickets-button img {
   background-clip: initial;
 }
 
-/* line 231, ../../sass/custom.scss */
+/* line 255, ../../sass/custom.scss */
 .dropdown-submenu > a:after {
   border: 0;
 }
 
-/* line 235, ../../sass/custom.scss */
+/* line 259, ../../sass/custom.scss */
 .dropdown-menu > li > a {
   color: #ffffff;
   text-transform: uppercase;
 }
 
-/* line 240, ../../sass/custom.scss */
+/* line 264, ../../sass/custom.scss */
 .nav-background {
   height: 250px;
   position: absolute;
@@ -305,52 +346,53 @@ div.get-tickets-button img {
   display: none;
 }
 
-/* line 249, ../../sass/custom.scss */
+/* line 274, ../../sass/custom.scss */
 .dropdown-image {
   float: right;
   margin-top: 3px;
 }
 
 @media (min-width: 768px) {
-  /* line 255, ../../sass/custom.scss */
+  /* line 280, ../../sass/custom.scss */
   .navbar-nav > li.dropdown:hover > .nav-background {
     display: block;
   }
 }
-/* line 260, ../../sass/custom.scss */
+/* line 285, ../../sass/custom.scss */
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   background-color: inherit;
   color: #000000;
 }
 
-/* line 265, ../../sass/custom.scss */
+/* line 290, ../../sass/custom.scss */
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
   border-color: initial;
 }
 
-/* line 269, ../../sass/custom.scss */
+/* line 294, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
 }
 
-/* line 273, ../../sass/custom.scss */
+/* line 298, ../../sass/custom.scss */
 .navbar-header {
   height: 40px;
+  margin: 0 !important;
 }
 
-/* line 277, ../../sass/custom.scss */
+/* line 303, ../../sass/custom.scss */
 .nav > li {
   display: inline-block;
 }
 
-/* line 282, ../../sass/custom.scss */
+/* line 308, ../../sass/custom.scss */
 .navbar-nav {
   margin-left: auto;
   margin-right: auto;
   width: 515px;
 }
 
-/* line 288, ../../sass/custom.scss */
+/* line 314, ../../sass/custom.scss */
 .navbar {
   border-radius: 0;
   border: 0;
@@ -363,65 +405,65 @@ div.get-tickets-button img {
   z-index: 100;
 }
 
-/* line 297, ../../sass/custom.scss */
+/* line 323, ../../sass/custom.scss */
 .navbar-default {
   background-color: #000000;
   border-color: initial;
   border: 0;
 }
 
-/* line 303, ../../sass/custom.scss */
+/* line 329, ../../sass/custom.scss */
 .navbar-nav > li > a {
   padding: 0;
   line-height: initial;
 }
 
-/* line 308, ../../sass/custom.scss */
+/* line 334, ../../sass/custom.scss */
 .nav > li > a {
   position: relative;
   display: inline-block;
   padding: 8.5px 15px;
 }
 
-/* line 314, ../../sass/custom.scss */
+/* line 340, ../../sass/custom.scss */
 li.open > a {
   color: #bb281f !important;
 }
 
-/* line 318, ../../sass/custom.scss */
+/* line 344, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a:hover {
   color: #bb281f;
 }
 
-/* line 322, ../../sass/custom.scss */
+/* line 348, ../../sass/custom.scss */
 .navbar-toggle {
   height: 40px;
 }
 
-/* line 326, ../../sass/custom.scss */
+/* line 352, ../../sass/custom.scss */
 .nav > li > a.dropdown-toggle:hover {
   background-color: inherit;
   color: #bb281f;
 }
 
 @media (max-width: 768px) {
-  /* line 333, ../../sass/custom.scss */
+  /* line 359, ../../sass/custom.scss */
   #icons {
     display: none;
   }
 
-  /* line 337, ../../sass/custom.scss */
+  /* line 363, ../../sass/custom.scss */
   .nav > li {
     position: relative;
     display: block;
   }
 }
-/* line 345, ../../sass/custom.scss */
+/* line 371, ../../sass/custom.scss */
 .editable-link, .editable-form {
   font-family: sans-serif;
 }
 
-/* line 349, ../../sass/custom.scss */
+/* line 375, ../../sass/custom.scss */
 .navbar-toggle {
   padding: 0;
   border: 0;
@@ -430,7 +472,7 @@ li.open > a {
   margin-bottom: 0px;
 }
 
-/* line 357, ../../sass/custom.scss */
+/* line 383, ../../sass/custom.scss */
 .nav-footer {
   margin: 0 auto;
   display: initial;
@@ -441,7 +483,7 @@ li.open > a {
   text-transform: uppercase;
 }
 
-/* line 364, ../../sass/custom.scss */
+/* line 390, ../../sass/custom.scss */
 .nav-footer ul {
   margin-left: 0px;
   vertical-align: top;
@@ -449,64 +491,64 @@ li.open > a {
   margin-right: 10px;
 }
 
-/* line 375, ../../sass/custom.scss */
+/* line 401, ../../sass/custom.scss */
 .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
   background-color: transparent;
   color: #bb281f;
 }
 @media (max-width: 768px) {
-  /* line 386, ../../sass/custom.scss */
+  /* line 412, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > li > a {
     color: #000000;
   }
-  /* line 388, ../../sass/custom.scss */
+  /* line 414, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
     background-color: initial;
     color: #000000;
   }
-  /* line 395, ../../sass/custom.scss */
+  /* line 421, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .active > a, .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-nav .open .dropdown-menu > .active > a:focus {
     background-color: #000000;
     color: #000000;
   }
-  /* line 403, ../../sass/custom.scss */
+  /* line 429, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     background-color: initial;
     color: #000000;
   }
 }
 
-/* line 414, ../../sass/custom.scss */
+/* line 440, ../../sass/custom.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav >
 .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: none;
   color: #bb281f;
 }
 
-/* line 420, ../../sass/custom.scss */
+/* line 446, ../../sass/custom.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: none;
 }
 
-/* line 424, ../../sass/custom.scss */
+/* line 450, ../../sass/custom.scss */
 .dropdown .open {
   background-color: #000000 !important;
 }
 
-/* line 428, ../../sass/custom.scss */
+/* line 454, ../../sass/custom.scss */
 .open > a :hover {
   background-color: #000000;
 }
 
 @media (max-width: 768px) {
-  /* line 433, ../../sass/custom.scss */
+  /* line 459, ../../sass/custom.scss */
   .navbar-default .navbar-collapse {
     background-color: #bb281f;
     position: absolute;
     z-index: 3;
   }
 
-  /* line 439, ../../sass/custom.scss */
+  /* line 465, ../../sass/custom.scss */
   .carousel-indicators {
     bottom: 2%;
     text-align: center;
@@ -515,30 +557,30 @@ li.open > a {
     width: 100%;
   }
 
-  /* line 447, ../../sass/custom.scss */
+  /* line 473, ../../sass/custom.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 451, ../../sass/custom.scss */
+  /* line 477, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 35px;
   }
 
-  /* line 455, ../../sass/custom.scss */
+  /* line 481, ../../sass/custom.scss */
   .navbar-nav {
     margin: 0;
     margin-left: 25%;
     float: initial;
   }
 
-  /* line 461, ../../sass/custom.scss */
+  /* line 487, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
     color: #000000;
   }
 
-  /* line 466, ../../sass/custom.scss */
+  /* line 492, ../../sass/custom.scss */
   li.open > a {
     color: #000000 !important;
   }

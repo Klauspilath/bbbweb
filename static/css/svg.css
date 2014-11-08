@@ -5,7 +5,7 @@
 
 /* line 7, ../../sass/svg.scss */
 .white-fill {
-  fill: white;
+  fill: #ffffff;
 }
 
 /* line 11, ../../sass/svg.scss */
@@ -15,7 +15,7 @@
 
 /* line 15, ../../sass/svg.scss */
 .hover-black:hover {
-  fill: black;
+  fill: #000000;
 }
 
 /* line 19, ../../sass/svg.scss */
@@ -25,7 +25,7 @@
 
 /* line 23, ../../sass/svg.scss */
 .hover-white:hover {
-  fill: white;
+  fill: #ffffff;
 }
 
 /* line 27, ../../sass/svg.scss */

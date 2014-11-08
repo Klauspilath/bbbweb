@@ -12,6 +12,7 @@ body {
 	padding: 0;
 	line-height: $reset;
 	color: $dark-color;
+	@include verlag-light(20px);
 }
 
 //customizations
@@ -21,14 +22,19 @@ header {
 }
 
 h3 {
-	//font-family: $m-100;
-	font-size: 24px;
+	@include knockout-49(34px);
+	padding: 0;
+	margin: -8px 0 0;
 }
 
 h1 {
 	@include knockout-49(58px);
 	padding: 0;
 	margin: 0;
+}
+
+p {
+	margin: 5px 0 0 0px;
 }
 
 a {
@@ -39,7 +45,6 @@ a:hover {
 	text-decoration: none;
 	color: $dark-color;
 }
-
 
 .click {
 	cursor: pointer;
@@ -65,7 +70,7 @@ a:hover {
 	background-color: $red;
 }
 
-.bg-light-grey{
+.bg-light-grey {
 	background-color: $gray-light;
 }
 
@@ -85,6 +90,23 @@ a:hover {
 	background-color: $dark-color !important;
 }
 
+.hover-black:hover {
+	color: $dark-color !important;
+}
+
+.hover-white:hover {
+	color: $bright !important;
+}
+
+.page-title {
+	margin-bottom: 60px;
+}
+
+table {
+	padding: 0;
+	margin: 0;
+	max-width: 900px;
+}
 
 .zero-table * {
 	border: none;
@@ -95,12 +117,17 @@ a:hover {
 	line-height: 0px;
 }
 
-.hover-black:hover {
-	color: $dark-color !important;
+section.content td {
+	padding-bottom: 30px;
+	padding-right: 30px;
+}
+#screen > div > section > div > table > tbody > tr > td:nth-child(1){
+	max-width: 300px;
+	min-width: 180px;
 }
 
-.hover-white:hover {
-	color: $bright !important;
+#screen > div > section > div > table > tbody > tr > td:nth-child(2){
+	max-width: 600px;
 }
 
 #screen {
@@ -117,23 +144,22 @@ footer {
 	padding: 15px 0 30px;
 }
 
-#footer-get-tickets{
+#footer-get-tickets {
 	text-transform: uppercase;
 	margin-top: 60px;
 	text-align: center;
 }
 
-#footer-get-tickets > p  > a {
+#footer-get-tickets > p > a {
 	@include knockout-49(28px);
 	color: $dark-color;
 
 }
 
-#footer-get-tickets > span > a{
+#footer-get-tickets > span > a {
 	@include knockout-29(14px);
 	color: $bright;
 }
-
 
 #logo {
 	margin: 10px 20px 3px 10px;
@@ -165,17 +191,15 @@ footer {
 }
 
 //basically on most pages
-#quote{
+#quote {
 	@include knockout-49(38px);
-	width: 350px;
 	color: $red;
-	background-repeat:no-repeat;
-	background-position: center;
-	top: 123px;
+	background: no-repeat top;
 	text-align: center;
-	right: 25px;
-	z-index: 10;
-	position: absolute;
+	width: 280px;
+	height: 220px;
+	float: right;
+	padding-top: 52px;
 }
 
 .byline {
@@ -183,7 +207,7 @@ footer {
 	color: $dark-color;
 }
 
-div.get-tickets-button{
+div.get-tickets-button {
 	background-color: $red;
 	border-radius: 10px;
 	border: 1px solid $red;
@@ -196,7 +220,7 @@ div.get-tickets-button{
 	letter-spacing: 0.8px;
 }
 
-div.get-tickets-button img{
+div.get-tickets-button img {
 	margin-bottom: 2px;
 	margin-right: 2px;
 }
@@ -246,12 +270,13 @@ div.get-tickets-button img{
 	opacity: 0.9;
 	display: none;
 }
+
 .dropdown-image {
 	float: right;
 	margin-top: 3px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 	.navbar-nav > li.dropdown:hover > .nav-background {
 		display: block;
 	}
@@ -272,6 +297,7 @@ div.get-tickets-button img{
 
 .navbar-header {
 	height: 40px;
+	margin: 0 !important;
 }
 
 .nav > li {

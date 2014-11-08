@@ -42,16 +42,6 @@ section > div > div.row {
 	top: 0px;
 }
 
-#quote {
-	text-align: center;
-	z-index: 10;
-	position: initial;
-	width: 280px;
-	float: right;
-	margin-top: 140px;
-	margin-right: -13px
-}
-
 .showtimes-title {
 	@include knockout-49(34px);
 	margin-top: 42px;

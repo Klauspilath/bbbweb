@@ -1,11 +1,40 @@
 {% extends "pages/page.html" %}
-
-{% load mezzanine_tags %}
+{% load mezzanine_tags staticfiles %}
 
 {% block main %}{{ block.super }}
-
-{% editable page.richtextpage.content %}
-{{ page.richtextpage.content|richtext_filters|safe }}
-{% endeditable %}
-
+    <section class="content bg-white">
+        <div class="row">
+            <h1 class="page-title">
+                {% editable page.title %}
+                    {{ page.title|safe }}
+                {% endeditable %}
+            </h1>
+            <div class="row">
+                {% if page.silhouette_image %}
+                    <div class="col-xs-12 col-sm-7">
+                        {% editable page.richtextpage.content %}
+                            {{ page.richtextpage.content|richtext_filters|safe }}
+                        {% endeditable %}
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <div id="quote"
+                             style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+                            {% editable page.quote_text %}
+                                {{ page.quote_text|safe }}
+                            {% endeditable %}
+                            <p class="byline">
+                                {% editable page.quote_byline %}
+                                    {{ page.quote_byline|safe }}
+                                {% endeditable %}
+                            </p>
+                        </div>
+                    </div>
+                {% else %}
+                    {% editable page.richtextpage.content %}
+                        {{ page.richtextpage.content|richtext_filters|safe }}
+                    {% endeditable %}
+                {% endif %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

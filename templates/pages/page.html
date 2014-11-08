@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load mezzanine_tags keyword_tags %}
+{% load mezzanine_tags keyword_tags staticfiles %}
 
 {% block meta_title %}{{ page.meta_title }}{% endblock %}
 
@@ -15,11 +15,7 @@
     {{ page.description }}
 {% endmetablock %}{% endblock %}
 
-{% block title %}
-    {% editable page.title %}{{ page.title }}{% endeditable %}
+
+{% block main %}
+<img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
 {% endblock %}
-
-
-
-
-{% block main %}{% endblock %}

@@ -39,17 +39,6 @@ section > div > div.row {
 }
 
 /* line 45, ../../sass/showtimes.scss */
-#quote {
-  text-align: center;
-  z-index: 10;
-  position: initial;
-  width: 280px;
-  float: right;
-  margin-top: 140px;
-  margin-right: -13px;
-}
-
-/* line 55, ../../sass/showtimes.scss */
 .showtimes-title {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -58,7 +47,7 @@ section > div > div.row {
   margin-top: 42px;
 }
 
-/* line 60, ../../sass/showtimes.scss */
+/* line 50, ../../sass/showtimes.scss */
 .time-of-day {
   width: 111px;
   height: 111px;
@@ -74,12 +63,12 @@ section > div > div.row {
 }
 
 @media (max-width: 972px) {
-  /* line 68, ../../sass/showtimes.scss */
+  /* line 58, ../../sass/showtimes.scss */
   #quote {
     display: none;
   }
 }
-/* line 73, ../../sass/showtimes.scss */
+/* line 63, ../../sass/showtimes.scss */
 a.ticket-links {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -88,7 +77,7 @@ a.ticket-links {
   color: #bb281f;
 }
 
-/* line 80, ../../sass/showtimes.scss */
+/* line 70, ../../sass/showtimes.scss */
 .get-tickets-button {
   margin-top: 75px;
 }
