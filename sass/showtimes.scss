@@ -11,9 +11,15 @@
 	display: table;
 }
 
-.day-of-week {
+.column-header {
 	@include cal-day;
 	@include knockout-49(34px);
+	@include white-text;
+}
+
+.row-header{
+	@include cal-day;
+	@include knockout-49(24);
 	@include white-text;
 }
 
@@ -21,7 +27,7 @@ h1 {
 	margin-bottom: 25px;
 }
 
-.day-of-week p, .time-of-day p {
+.column-header p, .grey-cell p, .row-header p {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
@@ -47,11 +53,10 @@ section > div > div.row {
 	margin-top: 42px;
 }
 
-.time-of-day {
+.grey-cell {
 	@include cal-day;
 	@include verlag-light(24px);
 	@include dark-text;
-
 }
 
 @media (max-width: 972px) {

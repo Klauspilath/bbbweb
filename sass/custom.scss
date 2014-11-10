@@ -41,6 +41,9 @@ a {
 	color: $bright;
 }
 
+a.red{
+	@include red-text();
+}
 a:hover {
 	text-decoration: none;
 	color: $dark-color;
