@@ -12,187 +12,193 @@
     <img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
     <section class="content bg-white">
     <div class="row">
-        <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
-            {% editable page.quote_text %}
-                {{ page.quote_text|safe }}
-            {% endeditable %}
-            <p class="byline">
-                {% editable page.quote_byline %}
-                    {{ page.quote_byline|safe }}
+        {% if page.quote_text != "" %}
+            <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+                {% editable page.quote_text %}
+                    {{ page.quote_text|safe }}
                 {% endeditable %}
-            </p>
-        </div>
+                <p class="byline">
+                    {% editable page.quote_byline %}
+                        {{ page.quote_byline|safe }}
+                    {% endeditable %}
+                </p>
+            </div>
+        {% endif %}
+
         <h1>
             {% editable page.title %}
                 How to Get Tickets {#{{ page.title|safe }}#}
             {% endeditable %}
         </h1>
 
-        <p class="showtimes-title">
-            Ticket Prices
-        </p>
 
-        <div class="row">
-            <div class="bg-red col-sm-2 column-header">
-                <p>Section</p>
-            </div>
-            <div class="bg-red col-sm-2 column-header">
-                <p>Wed/Thu</p>
-            </div>
-            <div class="bg-red col-sm-2 column-header">
-                <p>Fri</p>
-            </div>
-            <div class="bg-red col-sm-2 column-header">
-                <p>Sat</p>
-            </div>
-            <div class="bg-red col-sm-2 column-header">
-                <p>Sun</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="bg-red col-sm-2 row-header">
-                <p>Front Cab</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$48</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$59</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$59</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$56</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="bg-red bg-red col-sm-2 row-header">
-                <p>Rear Cab</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$46</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$56</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$56</p>
-            </div>
-            <div class="bg-light-grey col-sm-2 grey-cell">
-                <p>$53</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="bg-red col-sm-2 row-header">
-            <p>
-                Premium Seating <br/>
-                Magnin Box*
+        <div class="price-grid">
+            <p class="showtimes-title">
+                Ticket Prices
             </p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$100</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$130</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$130</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$100</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="bg-red col-sm-2 row-header">
-            <p>Premium Seating Center Side Boxes*</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$70</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$70</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$80</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$70</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="bg-red col-sm-2 row-header">
-            <p>Center Balcony</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$48</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$59</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$59</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$56</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="bg-red col-sm-2 row-header">
-            <p>Rear Balcony</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$25</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$25</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$48</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$25</p>
-        </div>
-    </div>
-    <div class="row">
-        <p class="showtimes-title">
-            For the Holiday Shows only, we have added a Very Special seating section
-        </p>
-    </div>
-    <div class="row">
-        <div class="bg-red col-sm-2 column-header">
-            <p>Section</p>
-        </div>
-        <div class="bg-red col-sm-2 column-header">
-            <p>Wed/Thu</p>
-        </div>
-        <div class="bg-red col-sm-2 column-header">
-            <p>Fri</p>
-        </div>
-        <div class="bg-red col-sm-2 column-header">
-            <p>Sat</p>
-        </div>
-        <div class="bg-red col-sm-2 column-header">
-            <p>Sun</p>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="bg-red col-sm-2 row-header">
-            <p>Front Cab</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$48</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$59</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$59</p>
-        </div>
-        <div class="bg-light-grey col-sm-2 grey-cell">
-            <p>$56</p>
+            <div class="col-xs-12">
+                <div class="bg-red col-xs-4 row-header">
+                    <p>Section</p>
+                </div>
+                <div class="bg-red col-xs-2 column-header">
+                    <p>Wed/Thu</p>
+                </div>
+                <div class="bg-red col-xs-2 column-header">
+                    <p>Fri</p>
+                </div>
+                <div class="bg-red col-xs-2 column-header">
+                    <p>Sat</p>
+                </div>
+                <div class="bg-red col-xs-2 column-header">
+                    <p>Sun</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>Front Cab</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$48</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$59</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$59</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$56</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>Rear Cab</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$46</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$56</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$56</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$53</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>
+                        Premium Seating
+                        Magnin Box*
+                    </p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$100</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$130</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$130</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$100</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>Premium Seating Center Side Boxes*</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$70</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$70</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$80</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$70</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>Center Balcony</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$48</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$59</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$59</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$56</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>Rear Balcony</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$25</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$25</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$48</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$25</p>
+                </div>
+            </div>
+            <div class="row">
+                <p class="showtimes-title">
+                    For the Holiday Shows only, we have added a Very Special seating section
+                </p>
+            </div>
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>Section</p>
+                </div>
+                <div class="bg-red col-sm-2 column-header">
+                    <p>Wed/Thu</p>
+                </div>
+                <div class="bg-red col-sm-2 column-header">
+                    <p>Fri</p>
+                </div>
+                <div class="bg-red col-sm-2 column-header">
+                    <p>Sat</p>
+                </div>
+                <div class="bg-red col-sm-2 column-header">
+                    <p>Sun</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-red col-sm-2 row-header">
+                    <p>Front Cab</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$48</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$59</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$59</p>
+                </div>
+                <div class="bg-light-grey col-sm-2 grey-cell">
+                    <p>$56</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">

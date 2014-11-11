@@ -7,6 +7,7 @@
     <img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
     <section class="content bg-white">
         <div class="row">
+             {% if page.quote_text != ""%}
              <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
                 {% editable page.quote_text %}
                     {{ page.quote_text|safe }}
@@ -17,10 +18,11 @@
                     {% endeditable %}
                 </p>
             </div>
-            <h1>
-                {% editable page.title %}
-                    {{ page.title|safe }}
-                {% endeditable %}
+            {% endif %}
+            <h1>When is the Show?
+{#                {% editable page.title %}#}
+{#                    {{ page.title|safe }}#}
+{#                {% endeditable %}#}
             </h1>
             <p class="showtimes-title">
                 Current showtimes through November 23rd
@@ -44,13 +46,13 @@
             </div>
             <div class="row">
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    <p>8:00pm</p>
+                    <p>8:00pm 21+</p>
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    <p>8:00pm</p>
+                    <p>8:00pm 21+</p>
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    <p>8:00pm</p>
+                    <p>8:00pm 21+</p>
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
                     <p>6:30pm</p>
@@ -71,7 +73,7 @@
 
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    <p>9:30pm</p>
+                    <p>9:30pm 21+</p>
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
                     <p>5:00pm<br/>(matinee)</p>
@@ -104,7 +106,7 @@
                     <p>5:00pm<br/>(matinee)</p>
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    <p>8:00pm</p>
+                    <p>8:00pm 21+</p>
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
                     <p>6:30pm</p>
@@ -118,15 +120,15 @@
             </div>
             <div class="row">
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    8:00pm
+                    8:00pm 21+
                 </div>
                 <div class="col-sm-2 grey-cell">
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    9:30pm
+                    9:30pm 21+
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
-                    <p>9:30pm</p>
+                    <p>9:30pm 21+</p>
                 </div>
                 <div class="bg-light-grey col-sm-2 grey-cell">
                     <p>5:00pm<br/>(matinee)</p>
@@ -147,8 +149,8 @@
                 New Year’s Eve tickets go on sale Monday, November 3rd
             </p>
             <p>
-                <a href=""><img src="{% static "img/finger-red.png" %}" /></a>
-                <a class="ticket-links hover-black" href="">view new year’s eve info and ticket prices</a>
+                <a href="/tickets"><img src="{% static "img/finger-red.png" %}" /></a>
+                <a href="/tickets" class="ticket-links hover-black">View Ticket Prices</a>
             </p>
         </div>
         {% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank"%}

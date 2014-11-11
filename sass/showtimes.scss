@@ -3,7 +3,7 @@
 @import "fonts";
 
 @mixin cal-day {
-	width: 111px;
+	max-width: 111px;
 	height: 111px;
 	margin-right: 10px;
 	margin-bottom: 10px;
@@ -19,7 +19,7 @@
 
 .row-header{
 	@include cal-day;
-	@include knockout-49(24);
+	@include knockout-49(24px);
 	@include white-text;
 }
 
@@ -38,7 +38,7 @@ h1 {
 }
 
 section.content > div {
-	max-width: 900px;
+	//max-width: 900px;
 	min-width: 366px;
 }
 

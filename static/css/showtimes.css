@@ -1,6 +1,6 @@
 /* line 14, ../../sass/showtimes.scss */
 .column-header {
-  width: 111px;
+  max-width: 111px;
   height: 111px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -15,7 +15,7 @@
 
 /* line 20, ../../sass/showtimes.scss */
 .row-header {
-  width: 111px;
+  max-width: 111px;
   height: 111px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -24,7 +24,7 @@
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
   font-style: normal;
-  font-size: 24;
+  font-size: 24px;
   color: #ffffff;
 }
 
@@ -42,7 +42,6 @@ h1 {
 
 /* line 40, ../../sass/showtimes.scss */
 section.content > div {
-  max-width: 900px;
   min-width: 366px;
 }
 
@@ -64,7 +63,7 @@ section > div > div.row {
 
 /* line 56, ../../sass/showtimes.scss */
 .grey-cell {
-  width: 111px;
+  max-width: 111px;
   height: 111px;
   margin-right: 10px;
   margin-bottom: 10px;
