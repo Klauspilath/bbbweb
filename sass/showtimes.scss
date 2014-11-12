@@ -2,67 +2,29 @@
 @import "global-vars";
 @import "fonts";
 
-@mixin grid-cell {
+@mixin cal-day {
+	width: 111px;
 	height: 111px;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	text-align: center;
-	min-width: 100% !important;
+	display: table;
+}
+
+.column-header {
+	@include cal-day;
+	@include knockout-49(34px);
+	@include white-text;
 }
 
 h1 {
 	margin-bottom: 25px;
 }
 
-table.pricing-grid {
-	width: 100%;
-	border-spacing: 10px 10px;
-}
-
-td {
-	border: solid 10px $bright;
-}
-
-td > p {
-	margin: 0px 0 0 0px;
-}
-
-section.content td {
-	padding: 0;
-}
-
-
-
-.column-header {
-	@include grid-cell;
-	@include knockout-49(34px);
-	@include white-text;
-	max-width: 120px !important;
-	width: 120px;
-}
-
-.section-column-header{
-	@include grid-cell;
-	@include knockout-49(34px);
-	@include white-text;
-	width: 222px !important;
-	max-width: 222px !important;
-}
-
-
-.row-header{
-	@include grid-cell;
-	@include knockout-49(24px);
-	@include white-text;
-	width: 222px !important;
-	max-width: 222px !important;
-}
-
-.column-header p, .grey-cell p, .row-header p {
+.column-header p, .grey-cell p {
+	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	padding-right: 10px;
-	padding-left: 10px;
 }
 
 .content {
@@ -70,7 +32,7 @@ section.content td {
 }
 
 section.content > div {
-	//max-width: 900px;
+	max-width: 900px;
 	min-width: 366px;
 }
 
@@ -80,15 +42,27 @@ section > div > div.row {
 	top: 0px;
 }
 
+#quote {
+	text-align: center;
+	z-index: 10;
+	position: initial;
+	width: 280px;
+	float: right;
+	margin-top: 140px;
+	margin-right: -13px
+}
+
 .showtimes-title {
 	@include knockout-49(34px);
 	margin-top: 42px;
+
 }
 
 .grey-cell {
-	@include grid-cell;
+	@include cal-day;
 	@include verlag-light(24px);
 	@include dark-text;
+
 }
 
 @media (max-width: 972px) {
@@ -103,7 +77,3 @@ a.ticket-links {
 }
 
 a:hover{}
-
-.get-tickets-button {
-	margin-top: 75px;
-}

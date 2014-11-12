@@ -1,0 +1,106 @@
+@import "bootstrap/variables";
+@import "global-vars";
+@import "fonts";
+
+@mixin grid-cell {
+	height: 111px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	min-width: 100% !important;
+}
+
+h1 {
+	margin-bottom: 25px;
+}
+
+table.pricing-grid {
+	width: 100%;
+	border-spacing: 10px 10px;
+}
+
+td {
+	border: solid 10px $bright;
+}
+
+td > p {
+	margin: 0px 0 0 0px;
+}
+
+section.content td {
+	padding: 0;
+}
+
+.column-header {
+	@include grid-cell;
+	@include knockout-49(34px);
+	@include white-text;
+	max-width: 120px !important;
+	width: 120px;
+}
+
+.section-column-header{
+	@include grid-cell;
+	@include knockout-49(34px);
+	@include white-text;
+	width: 222px !important;
+	max-width: 222px !important;
+}
+
+.row-header{
+	@include grid-cell;
+	@include knockout-49(24px);
+	@include white-text;
+	width: 222px !important;
+	max-width: 222px !important;
+}
+
+.column-header p, .grey-cell p, .row-header p {
+	vertical-align: middle;
+	text-align: center;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.content {
+	//position: absolute;
+}
+
+section.content > div {
+	//max-width: 900px;
+	min-width: 366px;
+}
+
+section > div > div.row {
+	position: relative;
+	float: left;
+	top: 0px;
+}
+
+.showtimes-title {
+	@include knockout-49(34px);
+	margin-top: 42px;
+}
+
+.grey-cell {
+	@include grid-cell;
+	@include verlag-light(24px);
+	@include dark-text;
+}
+
+@media (max-width: 972px) {
+	#quote {
+		display: none;
+	}
+}
+
+a.ticket-links {
+	@include verlag-light(20px);
+	@include red-text();
+}
+
+a:hover{}
+
+.get-tickets-button {
+	margin-top: 75px;
+}

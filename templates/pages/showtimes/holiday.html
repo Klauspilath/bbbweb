@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static "css/showtimes.css" %}"/>
+	<style>
+		.get-tickets-button {
+			margin-top: 35px;
+		}
+	</style>
+{% endblock %}
+{% block main %}
+	<img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
+	<section class="content bg-white">
+	<div class="row">
+	{% if page.quote_text != "" %}
+		<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+			{% editable page.quote_text %}
+				{{ page.quote_text|safe }}
+			{% endeditable %}
+			<p class="byline">
+				{% editable page.quote_byline %}
+					{{ page.quote_byline|safe }}
+				{% endeditable %}
+			</p>
+		</div>
+	{% endif %}
+
+	<h1>
+		{% editable page.title %}
+			The Beach Blanket Babylon 2014 Holiday Calendar  {#{{ page.title|safe }}#}
+		{% endeditable %}
+	</h1>
+
+	<p>
+		WE HAVE ONCE AGAIN ADDED A VERY POPULAR SPECIAL SEATING SECTION JUST FOR THE HOLIDAY SHOWS, ONE OF THE PREMIER BAY AREA ENTERTAINMENT ACTIVITIES IN SAN FRANCISCO
+	</p>
+
+
+
+	<p class="showtimes-title">
+		For the Holiday Shows only, we have added a Very Special seating section
+	</p>
+	<table class="pricing-grid">
+		<tbody>
+		<tr>
+			<td class="bg-red section-column-header"><p>Section</p></td>
+			<td class="bg-red column-header"><p>Wed/Thu</p></td>
+			<td class="bg-red column-header"><p>Fri</p></td>
+			<td class="bg-red column-header"><p>Sat</p></td>
+			<td class="bg-red column-header"><p>Sun</p></td>
+		</tr>
+		<tr>
+			<td class="bg-red row-header"><p>Front Cab</p></td>
+			<td class="bg-light-grey grey-cell"><p>$48</p></td>
+			<td class="bg-light-grey grey-cell"><p>$59</p></td>
+			<td class="bg-light-grey grey-cell"><p>$59</p></td>
+			<td class="bg-light-grey grey-cell"><p>$56</p></td>
+		</tr>
+		</tbody>
+	</table>
+	</div>
+	<div class="row">
+		<p class="showtimes-title">
+			Floorplan
+		</p>
+
+		<p>
+			<a href=""><img src="{% static "img/finger-red.png" %}"/></a>
+			<a class="ticket-links hover-black" href="">View the sections</a>
+		</p>
+	</div>
+	<div class="row">
+
+		<h3 style="margin-top: 20px">For accessibility information call 415.421.4222 or email the Box Office</h3>
+
+	</div>
+	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
+	<p style="margin-bottom: 30px">
+		{% editable page.richtextpage.content %}
+			{{ page.richtextpage.content|richtext_filters|safe }}
+		{% endeditable %}
+	</p>
+	</section>
+{% endblock %}
