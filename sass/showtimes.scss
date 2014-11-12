@@ -2,35 +2,67 @@
 @import "global-vars";
 @import "fonts";
 
-@mixin cal-day {
-	max-width: 111px;
+@mixin grid-cell {
 	height: 111px;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	text-align: center;
-	display: table;
-}
-
-.column-header {
-	@include cal-day;
-	@include knockout-49(34px);
-	@include white-text;
-}
-
-.row-header{
-	@include cal-day;
-	@include knockout-49(24px);
-	@include white-text;
+	min-width: 100% !important;
 }
 
 h1 {
 	margin-bottom: 25px;
 }
 
+table.pricing-grid {
+	width: 100%;
+	border-spacing: 10px 10px;
+}
+
+td {
+	border: solid 10px $bright;
+}
+
+td > p {
+	margin: 0px 0 0 0px;
+}
+
+section.content td {
+	padding: 0;
+}
+
+
+
+.column-header {
+	@include grid-cell;
+	@include knockout-49(34px);
+	@include white-text;
+	max-width: 120px !important;
+	width: 120px;
+}
+
+.section-column-header{
+	@include grid-cell;
+	@include knockout-49(34px);
+	@include white-text;
+	width: 222px !important;
+	max-width: 222px !important;
+}
+
+
+.row-header{
+	@include grid-cell;
+	@include knockout-49(24px);
+	@include white-text;
+	width: 222px !important;
+	max-width: 222px !important;
+}
+
 .column-header p, .grey-cell p, .row-header p {
-	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .content {
@@ -54,7 +86,7 @@ section > div > div.row {
 }
 
 .grey-cell {
-	@include cal-day;
+	@include grid-cell;
 	@include verlag-light(24px);
 	@include dark-text;
 }
