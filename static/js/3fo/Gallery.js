@@ -140,8 +140,9 @@ $( window ).load(function () {
 
 	/*create instance*/
 	TFO.Gallery = new TFO.__GalleryInstance();
-	TFO.Gallery.setThumbnailListeners();
     console.log('window totally loaded.');
+    $(window).trigger('resize');
+    console.log('resize triggered.');
 });
 
 
