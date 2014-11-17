@@ -29,10 +29,9 @@
 				WE HAVE ONCE AGAIN ADDED A VERY POPULAR SPECIAL SEATING SECTION JUST FOR THE HOLIDAY SHOWS, ONE OF THE
 				PREMIER BAY AREA ENTERTAINMENT ACTIVITIES IN SAN FRANCISCO
 			</p>
-			{% include "includes/bbb/pricing-grid.html.html" %}
+			{% include "includes/bbb/pricing-grid.html" %}
 			{% include "includes/bbb/special-seatingrid.html" %}
-			<p>* All sections are General Admission ( first come/ first seated) except for Magnin, Center & Side Box and
-				Center Balcony seats</p>
+
 		</div>
 		<div class="row">
 			<p class="showtimes-title">
@@ -43,33 +42,7 @@
 				<a class="ticket-links hover-black" href="">View the sections</a>
 			</p>
 		</div>
-		<div class="row">
-			<h3 style="margin-top: 20px">For accessibility information call 415.421.4222 or email the Box Office</h3>
-		</div>
-
-		<div class="row">
-			<p>
-				For accessibility information call 415.421.4222 or email the Box Office
-			</p>
-				We regret that a credit card with an alphanumeric Zip Code can not be used on this site. Please use
-				Charge by phone instead.<br/>
-				CHARGE BY PHONE 415.421.4222 (Box Office phone lines open Monday-Sunday 10am to 6pm)
-				FAX YOUR ORDER 415.421.4817
-			<p>
-				Persons under 21 not admitted to evening performances. Alcohol is not served during matinees. Valid
-				government-issued photo I.D. required. Minors welcome to Sunday matinees at 2 & 5pm. No infants at any
-				show please. No refunds, exchanges or cancellations.
-			</p>
-
-			<p>
-				Our service charge is $4 per ticket for telephone, Internet and fax orders. Internet sales are also
-				charged an extra $2.00 per order. We accept VISA, DISCOVER , MASTERCARD and AMERICAN EXPRESS for Online
-				sales.
-			</p>
-
-			<p> Ticket prices are inclusive of a Facilities fee of $6.65 and a HCSO Fee of $1.35.</p>
-
-		</div>
+		{% include "includes/bbb/payment-info.html" %}
 
 		{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
 		<p style="margin-bottom: 30px">

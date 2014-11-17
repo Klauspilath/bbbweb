@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: initial;
-  color: #000000;
+  color: black;
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
   font-style: normal;
@@ -46,7 +46,7 @@ p {
 
 /* line 40, ../../sass/custom.scss */
 a {
-  color: #ffffff;
+  color: white;
 }
 
 /* line 44, ../../sass/custom.scss */
@@ -57,7 +57,7 @@ a.red {
 /* line 47, ../../sass/custom.scss */
 a:hover {
   text-decoration: none;
-  color: #000000;
+  color: black;
 }
 
 /* line 52, ../../sass/custom.scss */
@@ -67,12 +67,12 @@ a:hover {
 
 /* line 56, ../../sass/custom.scss */
 .white-text-force {
-  color: #ffffff !important;
+  color: white !important;
 }
 
 /* line 60, ../../sass/custom.scss */
 .dark-grey-text {
-  color: #666;
+  color: #666666;
 }
 
 /* line 64, ../../sass/custom.scss */
@@ -82,7 +82,7 @@ a:hover {
 
 /* line 68, ../../sass/custom.scss */
 .bg-white {
-  background-color: #ffffff;
+  background-color: white;
 }
 
 /* line 72, ../../sass/custom.scss */
@@ -112,17 +112,17 @@ a:hover {
 
 /* line 92, ../../sass/custom.scss */
 .bg-black {
-  background-color: #000000 !important;
+  background-color: black !important;
 }
 
 /* line 96, ../../sass/custom.scss */
 .hover-black:hover {
-  color: #000000 !important;
+  color: black !important;
 }
 
 /* line 100, ../../sass/custom.scss */
 .hover-white:hover {
-  color: #ffffff !important;
+  color: white !important;
 }
 
 /* line 104, ../../sass/custom.scss */
@@ -150,18 +150,18 @@ table {
 /* line 123, ../../sass/custom.scss */
 section.content td {
   padding-bottom: 30px;
-  padding-right: 30px;
 }
 
-/* line 127, ../../sass/custom.scss */
+/* line 126, ../../sass/custom.scss */
 #screen > div > section > div > table > tbody > tr > td:nth-child(1) {
   max-width: 300px;
   min-width: 180px;
 }
 
-/* line 132, ../../sass/custom.scss */
+/* line 131, ../../sass/custom.scss */
 #screen > div > section > div > table > tbody > tr > td:nth-child(2) {
   max-width: 600px;
+  padding-left: 30px;
 }
 
 /* line 136, ../../sass/custom.scss */
@@ -193,7 +193,7 @@ footer {
   font-weight: 400;
   font-style: normal;
   font-size: 28px;
-  color: #000000;
+  color: black;
 }
 
 /* line 162, ../../sass/custom.scss */
@@ -202,7 +202,7 @@ footer {
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  color: #ffffff;
+  color: white;
 }
 
 /* line 167, ../../sass/custom.scss */
@@ -274,7 +274,7 @@ footer {
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
-  color: #000000;
+  color: black;
 }
 
 /* line 213, ../../sass/custom.scss */
@@ -286,7 +286,7 @@ div.get-tickets-button {
   font-weight: 400;
   font-style: normal;
   font-size: 26px;
-  color: #ffffff;
+  color: white;
   width: 232px !important;
   min-width: 232px !important;
   padding: 5px;
@@ -336,7 +336,7 @@ div.get-tickets-button img {
 
 /* line 262, ../../sass/custom.scss */
 .dropdown-menu > li > a {
-  color: #ffffff;
+  color: white;
   text-transform: uppercase;
 }
 
@@ -344,7 +344,7 @@ div.get-tickets-button img {
 .nav-background {
   height: 250px;
   position: absolute;
-  width: 1000px;
+  width: 1001px;
   background-color: #bb281f;
   z-index: 2;
   opacity: 0.9;
@@ -366,7 +366,7 @@ div.get-tickets-button img {
 /* line 288, ../../sass/custom.scss */
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   background-color: inherit;
-  color: #000000;
+  color: black;
 }
 
 /* line 293, ../../sass/custom.scss */
@@ -376,7 +376,7 @@ div.get-tickets-button img {
 
 /* line 297, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a {
-  color: #ffffff;
+  color: white;
 }
 
 /* line 301, ../../sass/custom.scss */
@@ -412,7 +412,7 @@ div.get-tickets-button img {
 
 /* line 326, ../../sass/custom.scss */
 .navbar-default {
-  background-color: #000000;
+  background-color: black;
   border-color: initial;
   border: 0;
 }
@@ -496,7 +496,7 @@ li.open > a {
   margin-right: 10px;
 }
 
-/* line 404, ../../sass/custom.scss */
+/* line 406, ../../sass/custom.scss */
 .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
   background-color: transparent;
   color: #bb281f;
@@ -504,26 +504,26 @@ li.open > a {
 @media (max-width: 768px) {
   /* line 415, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > li > a {
-    color: #000000;
+    color: black;
   }
-  /* line 417, ../../sass/custom.scss */
+  /* line 418, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
     background-color: initial;
-    color: #000000;
+    color: black;
   }
-  /* line 424, ../../sass/custom.scss */
+  /* line 426, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .active > a, .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-nav .open .dropdown-menu > .active > a:focus {
-    background-color: #000000;
-    color: #000000;
+    background-color: black;
+    color: black;
   }
-  /* line 432, ../../sass/custom.scss */
+  /* line 434, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     background-color: initial;
-    color: #000000;
+    color: black;
   }
 }
 
-/* line 443, ../../sass/custom.scss */
+/* line 444, ../../sass/custom.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav >
 .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   background-color: none;
@@ -537,12 +537,12 @@ li.open > a {
 
 /* line 453, ../../sass/custom.scss */
 .dropdown .open {
-  background-color: #000000 !important;
+  background-color: black !important;
 }
 
 /* line 457, ../../sass/custom.scss */
 .open > a :hover {
-  background-color: #000000;
+  background-color: black;
 }
 
 @media (max-width: 768px) {
@@ -582,11 +582,11 @@ li.open > a {
   /* line 490, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
-    color: #000000;
+    color: black;
   }
 
   /* line 495, ../../sass/custom.scss */
   li.open > a {
-    color: #000000 !important;
+    color: black !important;
   }
 }

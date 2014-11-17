@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
+{% endblock %}
+{% block main %}
+	<img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
+	<section class="content bg-white">
+		<div class="row">
+			{% if page.quote_text != "" %}
+				<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+					{% editable page.quote_text %}
+						{{ page.quote_text|safe }}
+					{% endeditable %}
+					<p class="byline">
+						{% editable page.quote_byline %}
+							{{ page.quote_byline|safe }}
+						{% endeditable %}
+					</p>
+				</div>
+			{% endif %}
+
+			<h1>
+				{% editable page.title %}
+					The Beach Blanket Babylon New Year's Eve show{#{{ page.title|safe }}#}
+				{% endeditable %}
+			</h1>
+
+
+				{% editable page.richtextpage.content %}
+					{{ page.richtextpage.content|richtext_filters|safe }}
+				{% endeditable %}
+
+
+			{% include "includes/bbb/nye-seating.html" %}
+
+
+		</div>
+		<div class="row">
+			<p class="showtimes-title">
+				Floorplan
+			</p>
+
+			<p>
+				<a href=""><img src="{% static "img/finger-red.png" %}"/></a>
+				<a class="ticket-links hover-black" href="">View the sections</a>
+			</p>
+		</div>
+		{% include "includes/bbb/payment-info.html" %}
+
+		{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
+
+	</section>
+{% endblock %}

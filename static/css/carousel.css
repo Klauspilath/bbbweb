@@ -13,8 +13,8 @@
   height: 14px;
   margin: 1px;
   cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
+  background-color: white;
+  border: 1px solid white;
   border-radius: 14px;
 }
 
@@ -32,7 +32,7 @@
   bottom: 26%;
   left: 52px;
   z-index: 10;
-  color: #ffffff;
+  color: white;
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
   font-style: normal;
