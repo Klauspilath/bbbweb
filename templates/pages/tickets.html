@@ -2,11 +2,6 @@
 {% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
 {% block extra_css %}
 	<link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
-	<style>
-		.get-tickets-button {
-			margin-top: 35px;
-		}
-	</style>
 {% endblock %}
 {% block main %}
 	<img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
