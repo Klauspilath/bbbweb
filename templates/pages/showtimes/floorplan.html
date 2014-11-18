@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static "css/floorplan.css" %}"/>
+{% endblock %}
+{% block main %}
+	<img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
+	<section class="content bg-white">
+		<h1>
+			{% editable page.title %}
+				{{ page.title|safe }}
+			{% endeditable %}
+		</h1>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<object id="2d" type="image/svg+xml" data="{% static "svg/floorplan_2d.svg" %}" data-next="/"></object>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				Photos
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-8">
+				<object id="3d" type="image/svg+xml" data="{% static "svg/floorplan_3d.svg" %}" data-next="/"></object>
+			</div>
+			<div class="col-xs-12 col-sm-4">
+				<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+					{% editable page.quote_text %}
+						{{ page.quote_text|safe }}
+					{% endeditable %}
+					<p class="byline">
+						{% editable page.quote_byline %}
+							{{ page.quote_byline|safe }}
+						{% endeditable %}
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
