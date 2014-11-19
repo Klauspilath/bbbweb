@@ -2,8 +2,16 @@
 @import "global-vars";
 @import "fonts";
 
-
-#2d{
+#2d {
 	height: 600px;
 	width: auto;
+}
+
+#stage-view {
+	height: 300px;
+	width: 380px;
+	background: url("/static/img/stage-views.jpg") no-repeat 0px 0px;
+	overflow: hidden;
+	margin-top: 115px;
+	margin-left: 53px;
 }
