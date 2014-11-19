@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/css" href="/static/css/svgfloorplan.css"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
-<script  xlink:href="/static/js/3fo/FloorPlan.js" type="text/ecmascript"></script>
+<script  xlink:href="/static/js/3fo/Floorplan.js" type="text/ecmascript"></script>
 
 <g id="Layer_1_1_">
 	<path d="M276.3,565.5H30.4V135.1h74.1v47.1h102.7v-47.1h69.1V565.5L276.3,565.5z M32.6,563.3H274V137.4h-64.6v47.1H102.2v-47.1
