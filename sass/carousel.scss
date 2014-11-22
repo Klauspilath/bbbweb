@@ -40,20 +40,10 @@
 	padding: 0 !important;
 }
 
-@media (max-width: $screen-sm-min) {
-
-	.carousel-indicators {
-		/* left: 50px; */
-		bottom: 2%;
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-	}
-
-	.carousel-caption {
-		display: none;
-	}
+div.get-tickets-button {
+	position: absolute;
+	bottom: 231px;
+	left: 50px;
 }
 
 .item.stretch {
@@ -77,8 +67,23 @@
 	left: 0;
 }
 
-div.get-tickets-button {
-	position: absolute;
-	bottom: 231px;
-	left: 50px;
+@media (max-width: $screen-sm-min) {
+
+	.carousel-indicators {
+		/* left: 50px; */
+		bottom: 2%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
+	.carousel-caption {
+		display: none;
+	}
+
+	div.get-tickets-button {
+		bottom: 10%;
+		left: 30%;
+	}
 }

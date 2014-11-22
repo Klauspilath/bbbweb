@@ -43,23 +43,14 @@
   padding: 0 !important;
 }
 
-@media (max-width: 768px) {
-  /* line 45, ../../sass/carousel.scss */
-  .carousel-indicators {
-    /* left: 50px; */
-    bottom: 2%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-
-  /* line 54, ../../sass/carousel.scss */
-  .carousel-caption {
-    display: none;
-  }
+/* line 43, ../../sass/carousel.scss */
+div.get-tickets-button {
+  position: absolute;
+  bottom: 231px;
+  left: 50px;
 }
-/* line 59, ../../sass/carousel.scss */
+
+/* line 49, ../../sass/carousel.scss */
 .item.stretch {
   height: 100%;
   max-height: 100% !important;
@@ -70,7 +61,7 @@
   background-position: 50% 50%;
 }
 
-/* line 69, ../../sass/carousel.scss */
+/* line 59, ../../sass/carousel.scss */
 .carousel-inner {
   position: relative;
   overflow: hidden;
@@ -78,14 +69,30 @@
   height: 100%;
 }
 
-/* line 76, ../../sass/carousel.scss */
+/* line 66, ../../sass/carousel.scss */
 .carousel-inner > .active {
   left: 0;
 }
 
-/* line 80, ../../sass/carousel.scss */
-div.get-tickets-button {
-  position: absolute;
-  bottom: 231px;
-  left: 50px;
+@media (max-width: 768px) {
+  /* line 72, ../../sass/carousel.scss */
+  .carousel-indicators {
+    /* left: 50px; */
+    bottom: 2%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  /* line 81, ../../sass/carousel.scss */
+  .carousel-caption {
+    display: none;
+  }
+
+  /* line 85, ../../sass/carousel.scss */
+  div.get-tickets-button {
+    bottom: 10%;
+    left: 30%;
+  }
 }
