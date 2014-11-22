@@ -40,8 +40,7 @@
 	padding: 0 !important;
 }
 
-
-@media (max-width: $screen-sm-min){
+@media (max-width: $screen-sm-min) {
 
 	.carousel-indicators {
 		/* left: 50px; */
@@ -55,4 +54,25 @@
 	.carousel-caption {
 		display: none;
 	}
+}
+
+.item.stretch {
+	height: 100%;
+	max-height: 100% !important;
+	background-repeat: no-repeat;
+	width: 1000px;
+	max-width: 100% !important;
+	background-size: cover;
+	background-position: 50% 50%
+}
+
+.carousel-inner {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-inner > .active {
+	left: 0;
 }
