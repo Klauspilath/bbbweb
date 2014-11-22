@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static "css/carousel.css" %}"/>
@@ -48,6 +48,7 @@
                 {% endfor %}
             {% endwith %}
         </div>
+        {% get_tickets_button "/tickets"%}
     </div>
     <section class="content bg-white">
         <h1>

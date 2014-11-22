@@ -1,7 +1,9 @@
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
 
-<a href="{{ link }}" {% if target %}target="{{ target }}{% endif %}">
+
     <div class="get-tickets-button">
+        <a href="{{ link }}" {% if target %}target="{{ target }}{% endif %}">
         <img src="{% static "img/finger.png" %}"> Get Tickets Now!
+        </a>
     </div>
-</a>
+

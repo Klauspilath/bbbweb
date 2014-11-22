@@ -4,7 +4,7 @@
 
 .carousel-indicators {
 	left: 50px;
-	bottom: 20%;
+	bottom: 139px;
 	text-align: $reset;
 	margin-left: $reset;
 }
@@ -29,8 +29,8 @@
 
 .carousel-caption {
 	position: absolute;
-	bottom: 26%;
-	left: 52px;
+	bottom: 182px;
+	left: 51px;
 	z-index: 10;
 	color: $bright;
 	@include verlag-light(16px);
@@ -75,4 +75,10 @@
 
 .carousel-inner > .active {
 	left: 0;
+}
+
+div.get-tickets-button {
+	position: absolute;
+	bottom: 231px;
+	left: 50px;
 }

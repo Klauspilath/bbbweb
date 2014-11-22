@@ -1,7 +1,7 @@
 /* line 5, ../../sass/carousel.scss */
 .carousel-indicators {
   left: 50px;
-  bottom: 20%;
+  bottom: 139px;
   text-align: initial;
   margin-left: initial;
 }
@@ -29,8 +29,8 @@
 /* line 30, ../../sass/carousel.scss */
 .carousel-caption {
   position: absolute;
-  bottom: 26%;
-  left: 52px;
+  bottom: 182px;
+  left: 51px;
   z-index: 10;
   color: #ffffff;
   font-family: 'Verlag A', 'Verlag B';
@@ -81,4 +81,11 @@
 /* line 76, ../../sass/carousel.scss */
 .carousel-inner > .active {
   left: 0;
+}
+
+/* line 80, ../../sass/carousel.scss */
+div.get-tickets-button {
+  position: absolute;
+  bottom: 231px;
+  left: 50px;
 }
