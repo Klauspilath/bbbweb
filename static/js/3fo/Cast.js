@@ -26,7 +26,7 @@ $(function() {
 		);
 	};
 
-	TFO.__CastInstance.prototype.setGalleryHeight = function(){
+	TFO.__CastInstance.prototype.setHeroImageHeight = function(){
 
 	};
 

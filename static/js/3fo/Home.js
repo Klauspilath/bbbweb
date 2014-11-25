@@ -23,13 +23,13 @@ $(function() {
 				g.css('height', $(window).height() - $("header").height());
 
 				if (($(window).scrollTop() === 0)) {
-					TFO.Home.setGalleryHeight();
+					TFO.Home.setHeroImageHeight();
 				}
 			}
 		});
 	};
 
-	TFO.__HomeInstance.prototype.setGalleryHeight = function(){
+	TFO.__HomeInstance.prototype.setHeroImageHeight = function(){
 		var hBase = 185;
 
 		if(TFO.globals.constants.IS_HOME) {

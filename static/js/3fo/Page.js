@@ -5,43 +5,37 @@ $(function() {
 	}
 
 	TFO.__PageInstance = function () {
-		//this.initNavOverlay();
-		this.setCaptions();
+		this.initializeResizeListener();
 		this.setNavigationEvents();
+		this.init = true;
+
 	};
 
-	TFO.__PageInstance.prototype.initNavOverlay = function () {
-
-		$(".entire-menu").click(function(){
-			var menuCB = document.getElementById("change-stack");
-			$("#change-stack").trigger("change");
-			menuCB.checked = menuCB.checked != true;
-		});
-
-        $("#change-stack").change(
-            function(){
-                var ol = $("#nav-overlay");
-                //console.log($(ol).css("display") + " clicked");
-
-				if(ol.css("opacity") == 0){
-                    ol.css("z-index","12");
-                    ol.fadeTo(200,1);
-                } else {
-                    ol.fadeTo(200,0,function(){
-						ol.css("z-index","0");
-					});
-                }
-            }
-        );
-
-		$(window).keydown(function(event){
-			var menuCB = document.getElementById("change-stack");
-
-			if(menuCB.checked == true)
-				if(event.keyCode == 27)
-					$(".entire-menu").trigger("click");
+	TFO.__PageInstance.prototype.initializeResizeListener = function () {
+		$(window).resize(function(){
+			TFO.Page.setHeroImageHeight()
 		});
 	};
+
+	TFO.__PageInstance.prototype.setHeroImageHeight = function () {
+		var hi = $("#hero-image"),
+			pt = $("section > div:nth-child(1) > h1"),
+			nv = $("nav"),
+			hd = $("header");
+
+		var titleHeight = pt.height();
+			if(!TFO.Page.init){
+				titleHeight = 106;
+				TFO.Page.init = false;
+			}
+
+		hi.css("height", $(window).height()
+			- (titleHeight
+			+ nv.height()
+			+ hd.height())
+		);
+	};
+
 
 	TFO.__PageInstance.prototype.setNavigationEvents = function(){
 		var $dropdowns = $('li.dropdown');
@@ -65,13 +59,9 @@ $(function() {
 		this.state = state;
 	};
 
-	TFO.__PageInstance.prototype.setCaptions = function(){
-
-		if(TFO.globals.constants.IS_MOBILE && TFO.globals.constants.IS_HOME){
-			$('.carousel-caption').css("display","none");
-		}
-	};
-
 	//create instance
-	TFO.Page = new TFO.__PageInstance();
+	if(!TFO.globals.constants.IS_HOME){
+		TFO.Page = new TFO.__PageInstance();
+		$(window).trigger('resize');
+	}
 });

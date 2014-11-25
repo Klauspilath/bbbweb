@@ -4,7 +4,8 @@
 	<link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
 {% endblock %}
 {% block main %}
-	<img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
+	<div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
+    </div>
 	<section class="content bg-white">
 	<div class="row">
 	{% if page.quote_text != "" %}

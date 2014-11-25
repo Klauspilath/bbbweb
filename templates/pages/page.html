@@ -2,7 +2,7 @@
 {% load mezzanine_tags keyword_tags staticfiles %}
 
 {% block meta_title %}{{ page.meta_title }}{% endblock %}
-
+{% block extra_js %}{% endblock %}
 {% block meta_keywords %}{% metablock %}
     {% keywords_for page as keywords %}
     {% for keyword in keywords %}
@@ -17,5 +17,4 @@
 
 
 {% block main %}
-<img class="img-responsive" src="{% static "media/" %}{{ page.featured_image }}"/>
 {% endblock %}

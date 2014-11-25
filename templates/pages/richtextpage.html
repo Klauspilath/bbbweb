@@ -4,7 +4,7 @@
 {% block main %}{{ block.super }}
     <section class="content bg-white">
         <div class="row">
-            <h1 class="page-title">
+            <h1 id="page-title">
                 {% editable page.title %}
                     {{ page.title|safe }}
                 {% endeditable %}

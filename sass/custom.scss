@@ -33,6 +33,10 @@ h1 {
 	margin: 0;
 }
 
+section > div:nth-child(1) > h1{
+	//height: 120px;
+}
+
 h2,h4,h5 {
 	font-family: 'Knockout 49 A', 'Knockout 49 B';
 }
@@ -105,8 +109,11 @@ a:hover {
 	color: $bright !important;
 }
 
-.page-title {
-	margin-bottom: 60px;
+footer {
+	background-color: $red;
+	border: 0;
+	margin-top: 15px;
+	padding: 15px 0 30px;
 }
 
 table {
@@ -127,6 +134,23 @@ table {
 section.content td {
 	padding-bottom: 30px;
 }
+
+#page-title {
+	margin-bottom: 40px;
+}
+
+#hero-image{
+	height: 100%;
+	max-height: 100% !important;
+	width: 1000px;
+	max-width: 100% !important;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+
+
 #screen > div > section > div > table > tbody > tr > td:nth-child(1){
 	max-width: 300px;
 	min-width: 180px;
@@ -144,12 +168,6 @@ section.content td {
 	overflow: hidden;
 }
 
-footer {
-	background-color: $red;
-	border: 0;
-	margin-top: 15px;
-	padding: 15px 0 30px;
-}
 
 #footer-get-tickets {
 	text-transform: uppercase;
@@ -178,6 +196,7 @@ footer {
 
 .content {
 	padding: 50px;
+	padding-top: 20px;
 }
 
 .copy {

@@ -17,18 +17,10 @@
 	@include white-text;
 }
 
-h1 {
-	margin-bottom: 25px;
-}
-
 .column-header p, .grey-cell p {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-}
-
-.content {
-	//position: absolute;
 }
 
 section.content > div {
@@ -39,7 +31,7 @@ section.content > div {
 section > div > div.row {
 	position: relative;
 	float: left;
-	top: 0px;
+	top: 0;
 }
 
 #quote {
@@ -55,14 +47,12 @@ section > div > div.row {
 .showtimes-title {
 	@include knockout-49(34px);
 	margin-top: 42px;
-
 }
 
 .grey-cell {
 	@include cal-day;
 	@include verlag-light(24px);
 	@include dark-text;
-
 }
 
 @media (max-width: 972px) {
