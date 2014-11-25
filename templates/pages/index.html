@@ -37,7 +37,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             {% with page.gallery.images.all as images %}
-                {% for image in images %}0
+                {% for image in images %}
                     <div class="item stretch {% if forloop.first %}active{% endif %}" style="background-image: url('{{ image.file.url }}')">
 {#                        <img class="img-responsive" src="{{ image.file.url }}">#}
                         <div class="carousel-caption">
