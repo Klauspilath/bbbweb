@@ -2,6 +2,8 @@
 {% load mezzanine_tags staticfiles %}
 
 {% block main %}{{ block.super }}
+    <div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
+    </div>
     <section class="content bg-white">
         <div class="row">
             <h1 id="page-title">
