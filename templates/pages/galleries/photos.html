@@ -8,8 +8,8 @@
         <div class="carousel-inner" role="listbox">
             {% with page.gallery.images.all as images %}
                 {% for image in images %}
-                    <div id="slide-{{ image.id }}" class="item item-div {% if forloop.first %}active{% endif %}">
-                        <img class="img-responsive" src="{{ image.file.url }}">
+                    <div id="slide-{{ image.id }}" class="item item-div stretch {% if forloop.first %}active{% endif %}" style="background-image: url('{{ image.file.url }}')">
+
 
                         <div class="carousel-caption show">
                             {{ image.description }}

@@ -1,4 +1,4 @@
-$( window ).load(function () {
+$(window).load(function () {
 
 	window.timer = null;
 
@@ -52,7 +52,37 @@ $( window ).load(function () {
 
 			clearTimeout(timer);
 			window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 1000);
+
+
+			var hg = $('#carousel-gallery');
+			hg.css('height', $(window).height() - $("#thumbnails").height());
+
+			$(window).resize(function () {
+
+				//if (TFO.globals.constants.IS_HOME) {
+
+					var hg = $('#carousel-gallery');
+					hg.css('height', $(window).height() - $("thumbnails").height());
+
+					if (($(window).scrollTop() === 0)) {
+						TFO.Gallery.setContentNav();
+					}
+				//}
+			});
+
+
 		});
+	};
+
+	TFO.__GalleryInstance.prototype.setContentNav = function(){
+		var hBase = 185;
+
+		//if(TFO.globals.constants.IS_HOME) {
+			hBase = 100;
+		//}
+		console.log("hBase:" + hBase);
+
+		$('#carousel-gallery').css('margin-top',$(window).height() - hBase + 'px' );
 	};
 
 	TFO.__GalleryInstance.prototype.setThumbnailListeners = function () {
@@ -78,7 +108,7 @@ $( window ).load(function () {
 				return;
 			}
 
-			if (isEnd && index != (thumbImages.length -1)) {
+			if (isEnd && index != (thumbImages.length - 1)) {
 				t.attr(g.DATA_ATTRIBUTE, isEnd);
 				t.on('click', function () {
 					g.shiftThumbs(g.DIRECTION_THUMBSTRIP_FORWARD, t);
@@ -123,29 +153,29 @@ $( window ).load(function () {
 		 last image is visible in the last position.
 
 		 shift the thumb slider to the left edge of the screen element.
-		*/
+		 */
 
 		console.log(direction + ':' + $(target).attr('id'));
 
 		var s = $('#screen');
 
 		if (direction === this.DIRECTION_THUMBSTRIP_FORWARD) {
-			$('#thumbnails').animate({ 'left': '+=' + -1 * (s.width()) + 'px'}, 'slow');
+			$('#thumbnails').animate({'left': '+=' + -1 * (s.width()) + 'px'}, 'slow');
 		}
 
 		if (direction === this.DIRECTION_THUMBSTRIP_BACK) {
-			$('#thumbnails').animate({ 'left': '+=' + -1 * -(s.width()) + 'px'}, 'slow');
+			$('#thumbnails').animate({'left': '+=' + -1 * -(s.width()) + 'px'}, 'slow');
 		}
 	};
 
 	/*create instance*/
 	TFO.Gallery = new TFO.__GalleryInstance();
-    console.log('window totally loaded.');
-    $(window).trigger('resize');
-    console.log('resize triggered.');
+	console.log('window totally loaded.');
+	$(window).trigger('resize');
+	console.log('resize triggered.');
 });
 
 
-$(function(){
-   console.log('document.ready ');
+$(function () {
+	console.log('document.ready ');
 });
