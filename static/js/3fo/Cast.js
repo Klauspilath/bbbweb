@@ -26,7 +26,7 @@ $(function() {
 		);
 	};
 
-	TFO.__CastInstance.prototype.setContentNav = function(){
+	TFO.__CastInstance.prototype.setGalleryHeight = function(){
 
 	};
 

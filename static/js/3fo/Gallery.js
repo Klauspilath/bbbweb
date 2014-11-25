@@ -25,6 +25,7 @@ $(window).load(function () {
 
 	TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
 
+
 		$(window).resize(function () {
 
 			var t = $(this), s = $('#screen'), i = $('.thumbnail > img'),
@@ -53,36 +54,24 @@ $(window).load(function () {
 			clearTimeout(timer);
 			window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 1000);
 
-
-			var hg = $('#carousel-gallery');
-			hg.css('height', $(window).height() - $("#thumbnails").height());
-
-			$(window).resize(function () {
-
-				//if (TFO.globals.constants.IS_HOME) {
-
-					var hg = $('#carousel-gallery');
-					hg.css('height', $(window).height() - $("thumbnails").height());
-
-					if (($(window).scrollTop() === 0)) {
-						TFO.Gallery.setContentNav();
-					}
-				//}
-			});
-
+			if (($(window).scrollTop() === 0)) {
+				TFO.Gallery.setGalleryHeight();
+			}
 
 		});
 	};
 
-	TFO.__GalleryInstance.prototype.setContentNav = function(){
-		var hBase = 185;
+	TFO.__GalleryInstance.prototype.setGalleryHeight = function () {
+		var hg = $('#carousel-gallery'),
+			tn = $("#thumbnails"),
+			nv = $("nav"),
+			hd = $("header");
 
-		//if(TFO.globals.constants.IS_HOME) {
-			hBase = 100;
-		//}
-		console.log("hBase:" + hBase);
-
-		$('#carousel-gallery').css('margin-top',$(window).height() - hBase + 'px' );
+		hg.css("height", $(window).height()
+			- (hd.height()
+			+ nv.height()
+			+ tn.height())
+		);
 	};
 
 	TFO.__GalleryInstance.prototype.setThumbnailListeners = function () {
