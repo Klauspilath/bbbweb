@@ -548,34 +548,40 @@ li.open > a {
 /* line 466, ../../sass/custom.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav >
 .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: unset;
+  background-color: #000000;
   color: #bb281f;
 }
 
 /* line 472, ../../sass/custom.scss */
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: unset;
+  background-color: #000000;
 }
 
 /* line 476, ../../sass/custom.scss */
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: initial;
+  color: #000000;
+}
+
+/* line 482, ../../sass/custom.scss */
 .dropdown .open {
   background-color: #000000 !important;
 }
 
-/* line 480, ../../sass/custom.scss */
+/* line 486, ../../sass/custom.scss */
 .open > a :hover {
   background-color: #000000;
 }
 
 @media (max-width: 768px) {
-  /* line 485, ../../sass/custom.scss */
+  /* line 491, ../../sass/custom.scss */
   .navbar-default .navbar-collapse {
     background-color: #bb281f;
     position: absolute;
     z-index: 3;
   }
 
-  /* line 491, ../../sass/custom.scss */
+  /* line 497, ../../sass/custom.scss */
   .carousel-indicators {
     bottom: 2%;
     text-align: center;
@@ -584,30 +590,30 @@ li.open > a {
     width: 100%;
   }
 
-  /* line 499, ../../sass/custom.scss */
+  /* line 505, ../../sass/custom.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 503, ../../sass/custom.scss */
+  /* line 509, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 35px;
   }
 
-  /* line 507, ../../sass/custom.scss */
+  /* line 513, ../../sass/custom.scss */
   .navbar-nav {
     margin: 0;
     margin-left: 25%;
     float: initial;
   }
 
-  /* line 513, ../../sass/custom.scss */
+  /* line 519, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
     color: #000000;
   }
 
-  /* line 518, ../../sass/custom.scss */
+  /* line 524, ../../sass/custom.scss */
   li.open > a {
     color: #000000 !important;
   }

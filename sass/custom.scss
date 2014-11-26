@@ -465,13 +465,19 @@ li.open > a {
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav >
 .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	background-color: unset;
+	background-color: $dark-color;
 	color: $red;
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: unset;
+	background-color: $dark-color;
 }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+	background-color: $reset;
+	color: $dark-color;
+}
+
 
 .dropdown .open {
 	background-color: $dark-color !important;
