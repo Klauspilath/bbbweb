@@ -39,6 +39,11 @@ h1 {
   margin: 0;
 }
 
+/* line 36, ../../sass/custom.scss */
+h1.page-title {
+  height: 106px;
+}
+
 /* line 40, ../../sass/custom.scss */
 h2, h4, h5 {
   font-family: 'Knockout 49 A', 'Knockout 49 B';

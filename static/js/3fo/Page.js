@@ -19,15 +19,15 @@ $(function () {
 
     TFO.__PageInstance.prototype.setHeroImageHeight = function () {
         var hi = $("#hero-image"),
-            pt = $("section > div:nth-child(1) > h1"),
+            pt = $(".page-title"),
             nv = $("nav"),
             hd = $("header");
 
         var titleHeight = pt.height();
-        if (!TFO.Page.init) {
-            titleHeight = 106;
-            TFO.Page.init = false;
-        }
+        //if (!TFO.Page.init) {
+        //    titleHeight = 106;
+        //    TFO.Page.init = false;
+       // }
 
         hi.css("height", $(window).height()
                 - (titleHeight
