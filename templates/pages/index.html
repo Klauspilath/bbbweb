@@ -8,9 +8,10 @@
             color: #bb281f;
         }
 
-     #screen > div > section > p > a:hover{
+        #screen > div > section > p > a:hover{
             color: #000;
         }
+
     </style>
 {% endblock %}
 
@@ -26,7 +27,6 @@
 {% block extra_head %}{% endblock %}
 {% block main %}
     <div id="home-gallery" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
         <ol class="carousel-indicators">
              {% with page.gallery.images.all as images %}
                 {% for image in images %}
@@ -34,12 +34,10 @@
                 {% endfor %}
             {% endwith %}
         </ol>
-        <!-- Wrapper for slides -->
         <div class="carousel-inner">
             {% with page.gallery.images.all as images %}
                 {% for image in images %}
                     <div class="item stretch {% if forloop.first %}active{% endif %}" style="background-image: url('{{ image.file.url }}')">
-{#                        <img class="img-responsive" src="{{ image.file.url }}">#}
                         <div class="carousel-caption">
                            {{ image.description }}
                         </div>
@@ -48,6 +46,7 @@
             {% endwith %}
         </div>
         {% get_tickets_button "/tickets"%}
+        <a href="#content"><img id="scroll-indicator" src="{% static "img/right-angle.png" %}" alt="scroll to the bottom"></a>
     </div>
     <section class="content bg-white">
         <h1>
@@ -55,6 +54,7 @@
                 {{ page.title|safe }}
             {% endeditable %}
         </h1>
+        <a id="content"></a>
          {% editable page.gallery.content %}
             {{ page.gallery.content|safe }}
          {% endeditable %}
