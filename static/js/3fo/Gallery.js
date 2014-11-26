@@ -20,7 +20,9 @@ $(window).load(function () {
 	TFO.__GalleryInstance.prototype.SMALL_THUMBS_PER_SLIDE = 3;
 	TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_FORWARD = 'left';
 	TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_BACK = 'right';
-	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE = 'data-moves-slide';
+	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_MOVE_DIRECTION = 'data-move-direction';
+	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_START = 'data-start';
+	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_END = 'data-end';
 	TFO.__GalleryInstance.prototype.currentMaxThumbs = TFO.__GalleryInstance.prototype.MAX_THUMBS_PER_SLIDE;
 
 	TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
@@ -84,25 +86,24 @@ $(window).load(function () {
 				isEnd = index % g.currentMaxThumbs == (g.currentMaxThumbs - 1),
 				t = $(this);
 
-			console.log(index + " : isStart=" + isStart + ' : isEnd=' + isEnd);
+			console.log(index + " : isStart=" + isStart + ' : isEnd=' + isEnd + ': %=' + index % g.currentMaxThumbs);
+
 			t.off('click');
-			if (isStart && index != 0) {
-				/*console.log(index + ":" + index % g.currentMaxThumbs + '=' + Boolean(index% g.currentMaxThumbs ));
-				 console.log($(this).attr('class') + " : " + index + " : " + isStart);*/
-				/*console.log($(this).attr('id'));*/
-				t.attr(g.DATA_ATTRIBUTE, isStart);
-				t.on('click', function () {
-					g.shiftThumbs(g.DIRECTION_THUMBSTRIP_BACK, t);
-				});
-				return;
-			}
 
 			if (isEnd && index != (thumbImages.length - 1)) {
-				t.attr(g.DATA_ATTRIBUTE, isEnd);
+				t.attr(g.DATA_ATTRIBUTE_START, false);
+				t.attr(g.DATA_ATTRIBUTE_END, isEnd);
+				t.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION,g.DIRECTION_THUMBSTRIP_FORWARD);
 				t.on('click', function () {
 					g.shiftThumbs(g.DIRECTION_THUMBSTRIP_FORWARD, t);
 				});
+
+			} else {
+				t.attr(g.DATA_ATTRIBUTE_START, false);
+				t.attr(g.DATA_ATTRIBUTE_END, false);
+				t.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, 'none');
 			}
+
 		});
 	};
 
@@ -113,15 +114,15 @@ $(window).load(function () {
 
 		// as the gallery slider moves, show the the current thumb nail
 		$('#carousel-gallery').on('slide.bs.carousel', function (event) {
-			var thumb = event.relatedTarget,
+			var thumb = $(event.relatedTarget),
 				direction = event.direction,
 				activeId = $('.item.item-div.active').attr('id'),
 				t = $(this);
 
 			$('.thumbnail.' + activeId + '> img').toggleClass('semi-trans');
 			$('.thumbnail.' + $(thumb).attr('id') + '> img').toggleClass('semi-trans');
-
-			if (t.attr(TFO.Gallery.DATA_ATTRIBUTE) === "true") {
+			console.log(thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true");
+			if (thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true" && thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_END) === "true") {
 				TFO.Gallery.shiftThumbs(direction, thumb);
 			}
 		});
@@ -149,11 +150,11 @@ $(window).load(function () {
 		var s = $('#screen');
 
 		if (direction === this.DIRECTION_THUMBSTRIP_FORWARD) {
-			$('#thumbnails').animate({'left': '+=' + -1 * (s.width()) + 'px'}, 'slow');
+			$('#thumbnails').animate({'left': '+=' + -1 * (s.width()-(s.width()/this.currentMaxThumbs)) + 'px'}, 'slow');
 		}
 
 		if (direction === this.DIRECTION_THUMBSTRIP_BACK) {
-			$('#thumbnails').animate({'left': '+=' + -1 * -(s.width()) + 'px'}, 'slow');
+			$('#thumbnails').animate({'left': '+=' + (s.width()-(s.width()/this.currentMaxThumbs)) + 'px'}, 'slow');
 		}
 	};
 
