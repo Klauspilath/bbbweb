@@ -1,171 +1,186 @@
 $(window).load(function () {
 
-	window.timer = null;
+    window.timer = null;
 
-	if (typeof TFO === 'undefined') {
-		TFO = {};
-	}
+    if (typeof TFO === 'undefined') {
+        TFO = {};
+    }
 
-	TFO.__GalleryInstance = function () {
-		this.initializeResizeListener();
-		this.initializeSlideListener();
-	};
+    TFO.__GalleryInstance = function () {
+        this.initializeResizeListener();
+        this.initializeSlideListener();
+    };
 
-	TFO.__GalleryInstance.prototype.THUMBNAIL_WIDTH = 200;
-	TFO.__GalleryInstance.prototype.SCREEN_WIDTH = 1000;
-	TFO.__GalleryInstance.prototype.MOBILE_MEDIUM_WIDTH = 768;
-	TFO.__GalleryInstance.prototype.MOBILE_SMALL_WIDTH = 640;
-	TFO.__GalleryInstance.prototype.MAX_THUMBS_PER_SLIDE = 5;
-	TFO.__GalleryInstance.prototype.MEDIUM_THUMBS_PER_SLIDE = 4;
-	TFO.__GalleryInstance.prototype.SMALL_THUMBS_PER_SLIDE = 3;
-	TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_FORWARD = 'left';
-	TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_BACK = 'right';
-	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_MOVE_DIRECTION = 'data-move-direction';
-	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_START = 'data-start';
-	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_END = 'data-end';
-	TFO.__GalleryInstance.prototype.currentMaxThumbs = TFO.__GalleryInstance.prototype.MAX_THUMBS_PER_SLIDE;
+    TFO.__GalleryInstance.prototype.DEFAULT_SCREEN_WIDTH = 1000;
+    TFO.__GalleryInstance.prototype.MOBILE_MEDIUM_WIDTH = 768;
+    TFO.__GalleryInstance.prototype.MOBILE_SMALL_WIDTH = 640;
+    TFO.__GalleryInstance.prototype.MAX_THUMBS_PER_SLIDE = 5;
+    TFO.__GalleryInstance.prototype.MEDIUM_THUMBS_PER_SLIDE = 4;
+    TFO.__GalleryInstance.prototype.SMALL_THUMBS_PER_SLIDE = 3;
+    TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_FORWARD = 'left';
+    TFO.__GalleryInstance.prototype.DIRECTION_THUMBSTRIP_BACK = 'right';
+    TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_MOVE_DIRECTION = 'data-move-direction';
+    TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_START = 'data-start';
+    TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_END = 'data-end';
+    TFO.__GalleryInstance.prototype.currentMaxThumbs = TFO.__GalleryInstance.prototype.MAX_THUMBS_PER_SLIDE;
+    TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
 
-	TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
+        $(window).resize(function () {
+
+            var screen = $('#screen'),
+                screenWidth = screen.width(),
+                thumbImage = $('.thumbnail > img'),
+                galleryInstance = TFO.Gallery;
+
+            //stop scrolling
+            $('.carousel').carousel('pause');
+
+            if (($(window).scrollTop() === 0)) TFO.Gallery.setGalleryHeight();
+
+            // between 1000 and 768
+            // this should just resize to the screen width/max thumbs per slide
+            if (screenWidth < galleryInstance.DEFAULT_SCREEN_WIDTH && screenWidth > galleryInstance.MOBILE_MEDIUM_WIDTH) {
+
+                thumbImage.css('width', screenWidth / galleryInstance.MAX_THUMBS_PER_SLIDE + 'px');
+                galleryInstance.currentMaxThumbs = galleryInstance.MAX_THUMBS_PER_SLIDE;
+
+                //between 768 and 640
+            } else if (screenWidth < galleryInstance.MOBILE_MEDIUM_WIDTH && screenWidth > galleryInstance.MOBILE_SMALL_WIDTH) {
+                thumbImage.css('width', screenWidth / galleryInstance.MEDIUM_THUMBS_PER_SLIDE + 'px');
+                galleryInstance.currentMaxThumbs = galleryInstance.MEDIUM_THUMBS_PER_SLIDE;
+
+                // less than 640
+            } else if (screenWidth < galleryInstance.MOBILE_SMALL_WIDTH) {
+                thumbImage.css('width', screenWidth / galleryInstance.SMALL_THUMBS_PER_SLIDE + 'px');
+                galleryInstance.currentMaxThumbs = galleryInstance.SMALL_THUMBS_PER_SLIDE;
+
+                // default
+            } else {
+                // grow
+                thumbImage.css('width', screenWidth / galleryInstance.MAX_THUMBS_PER_SLIDE + 'px');
+            }
+
+            
+            clearTimeout(timer);
+            window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 500);
+
+        });
+    };
+
+    TFO.__GalleryInstance.prototype.setGalleryHeight = function () {
+        var hg = $('#carousel-gallery'),
+            tn = $("#thumbnails"),
+            nv = $("nav"),
+            hd = $("header");
+
+        hg.css("height", $(window).height()
+            - (hd.height()
+            + nv.height()
+            + tn.height())
+        );
+    };
+
+    TFO.__GalleryInstance.prototype.setThumbnailListeners = function () {
+
+        var thumbImages = $('.thumb-image .thumbnail');
+
+        thumbImages.each(function (index) {
+            var g = TFO.Gallery,
+                isStart = index == 0 ? false : !(Boolean(index % g.currentMaxThumbs)),
+                isEnd = index == (thumbImages.length - 1) ? true : index % g.currentMaxThumbs == (g.currentMaxThumbs - 1),
+                thumb = $(this);
+
+            console.log(index + " : isStart=" + isStart + ' : isEnd=' + isEnd + ': %=' + index % g.currentMaxThumbs);
+
+            thumb.off('click');
+
+            thumb.attr(g.DATA_ATTRIBUTE_START, isStart);
+
+            thumb.attr(g.DATA_ATTRIBUTE_END, isEnd);
+
+            if (!isEnd && !isStart) {
+                thumb.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, 'none');
+                return;
+            }
+
+            if (isEnd) {
+                thumb.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, g.DIRECTION_THUMBSTRIP_FORWARD);
+            } else if (isStart) {
+                thumb.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, g.DIRECTION_THUMBSTRIP_BACK);
+            }
+
+            if(index != (thumbImages.length - 1)) {
+                thumb.on('click', function (event) {
+                    g.shiftThumbsOnClick(event);
+                });
+            }
+        });
+
+        // start scrolling
+        $('.carousel').carousel('cycle');
+    };
+
+    TFO.__GalleryInstance.prototype.initializeSlideListener = function () {
+        var activeId = $('.item.item-div.active').attr('id');
+
+        $('.thumbnail.' + activeId + '> img').toggleClass('semi-trans');
+
+        // as the gallery slider moves, show the the current thumb nail
+        $('#carousel-gallery').on('slide.bs.carousel', function (event) {
+            var slide = $(event.relatedTarget),
+                direction = event.direction,
+                activeId = $('.item.item-div.active').attr('id'),
+                thumb = $('#thumb-' + String(activeId).split('-')[1]);
+
+            $('.thumbnail.' + activeId + '> img').toggleClass('semi-trans');
+            $('.thumbnail.' + $(slide).attr('id') + '> img').toggleClass('semi-trans');
+            //console.log(thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true");
 
 
-		$(window).resize(function () {
+            if (thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_END) === "true") {
+                TFO.Gallery.shiftThumbsOnSlide(direction, thumb);
+            }
+        });
+    };
 
-			var t = $(this), s = $('#screen'), i = $('.thumbnail > img'),
-				g = TFO.Gallery,
-				tw = t.width(),
-				sw = s.width();
 
-			if (tw < g.SCREEN_WIDTH && tw > g.MOBILE_MEDIUM_WIDTH) {
-				/*ResponsiveWidth = ThumbWidth(WindowWidth/ScreenWidth)
-				 this should always be MAX_THUMBS_PER_SLIDE.*/
-				i.css('width', g.THUMBNAIL_WIDTH * (tw / g.SCREEN_WIDTH) + 'px');
-				g.currentMaxThumbs = g.MAX_THUMBS_PER_SLIDE;
+    TFO.__GalleryInstance.prototype.shiftThumbsOnClick = function (event) {
+        console.log(event.currentTarget);
+    };
 
-			} else if (sw < g.MOBILE_MEDIUM_WIDTH && sw > g.MOBILE_SMALL_WIDTH) {
-				i.css('width', sw / g.MEDIUM_THUMBS_PER_SLIDE + 'px');
-				g.currentMaxThumbs = g.MEDIUM_THUMBS_PER_SLIDE;
 
-			} else if (tw < g.MOBILE_SMALL_WIDTH) {
-				i.css('width', sw / g.SMALL_THUMBS_PER_SLIDE + 'px');
-				g.currentMaxThumbs = g.SMALL_THUMBS_PER_SLIDE;
+    // this needs to work in revers
+    TFO.__GalleryInstance.prototype.shiftThumbsOnSlide = function (direction, target) {
 
-			} else {
-				i.css('width', g.THUMBNAIL_WIDTH + 'px');
-			}
+        console.log(direction + ':' + $(target).attr('id'));
 
-			clearTimeout(timer);
-			window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 1000);
+        var s = $('#screen'),
+            thumbNodes = $('.thumb-image .thumbnail');
 
-			if (($(window).scrollTop() === 0)) {
-				TFO.Gallery.setGalleryHeight();
-			}
+        //go back to the start
+        if (thumbNodes.filter(':last').attr('id') === $(target).attr('id')) {
+            $('#thumbnails').animate({'left': '0px'}, 10, 'linear');
+            return;
+        }
 
-		});
-	};
+        if (direction === this.DIRECTION_THUMBSTRIP_FORWARD) {
+            $('#thumbnails').animate({'left': '+=' + (-1 * s.width()) + 'px'}, 'slow');
+            return;
+        }
 
-	TFO.__GalleryInstance.prototype.setGalleryHeight = function () {
-		var hg = $('#carousel-gallery'),
-			tn = $("#thumbnails"),
-			nv = $("nav"),
-			hd = $("header");
+        if (direction === this.DIRECTION_THUMBSTRIP_BACK) {
+            $('#thumbnails').animate({'left': '+=' + s.width() + 'px'}, 'slow');
+        }
+    };
 
-		hg.css("height", $(window).height()
-			- (hd.height()
-			+ nv.height()
-			+ tn.height())
-		);
-	};
-
-	TFO.__GalleryInstance.prototype.setThumbnailListeners = function () {
-
-		var thumbImages = $('.thumb-image .thumbnail');
-
-		thumbImages.each(function (index) {
-			var g = TFO.Gallery,
-				isStart = !(Boolean(index % g.currentMaxThumbs)),
-				isEnd = index % g.currentMaxThumbs == (g.currentMaxThumbs - 1),
-				t = $(this);
-
-			console.log(index + " : isStart=" + isStart + ' : isEnd=' + isEnd + ': %=' + index % g.currentMaxThumbs);
-
-			t.off('click');
-
-			if (isEnd && index != (thumbImages.length - 1)) {
-				t.attr(g.DATA_ATTRIBUTE_START, false);
-				t.attr(g.DATA_ATTRIBUTE_END, isEnd);
-				t.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION,g.DIRECTION_THUMBSTRIP_FORWARD);
-				t.on('click', function () {
-					g.shiftThumbs(g.DIRECTION_THUMBSTRIP_FORWARD, t);
-				});
-
-			} else {
-				t.attr(g.DATA_ATTRIBUTE_START, false);
-				t.attr(g.DATA_ATTRIBUTE_END, false);
-				t.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, 'none');
-			}
-
-		});
-	};
-
-	TFO.__GalleryInstance.prototype.initializeSlideListener = function () {
-		var activeId = $('.item.item-div.active').attr('id');
-
-		$('.thumbnail.' + activeId + '> img').toggleClass('semi-trans');
-
-		// as the gallery slider moves, show the the current thumb nail
-		$('#carousel-gallery').on('slide.bs.carousel', function (event) {
-			var thumb = $(event.relatedTarget),
-				direction = event.direction,
-				activeId = $('.item.item-div.active').attr('id'),
-				t = $(this);
-
-			$('.thumbnail.' + activeId + '> img').toggleClass('semi-trans');
-			$('.thumbnail.' + $(thumb).attr('id') + '> img').toggleClass('semi-trans');
-			console.log(thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true");
-			if (thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true" && thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_END) === "true") {
-				TFO.Gallery.shiftThumbs(direction, thumb);
-			}
-		});
-	};
-
-	TFO.__GalleryInstance.prototype.shiftThumbs = function (direction, target) {
-		/*
-		 handles the movement of the thumbnail row. The row will shift in the
-		 left or right based on which item in the row is clicked.
-		 1st item will move the row to the previous set (slides the to the right),
-		 if one is available.
-
-		 The last item in the row will slide the next set into view. (slides to
-		 the left).
-
-		 Only whole sets will move at a time. If there is an incomplete block left
-		 at the end, the navigation will only slide to a position where the very
-		 last image is visible in the last position.
-
-		 shift the thumb slider to the left edge of the screen element.
-		 */
-
-		console.log(direction + ':' + $(target).attr('id'));
-
-		var s = $('#screen');
-
-		if (direction === this.DIRECTION_THUMBSTRIP_FORWARD) {
-			$('#thumbnails').animate({'left': '+=' + -1 * (s.width()-(s.width()/this.currentMaxThumbs)) + 'px'}, 'slow');
-		}
-
-		if (direction === this.DIRECTION_THUMBSTRIP_BACK) {
-			$('#thumbnails').animate({'left': '+=' + (s.width()-(s.width()/this.currentMaxThumbs)) + 'px'}, 'slow');
-		}
-	};
-
-	/*create instance*/
-	TFO.Gallery = new TFO.__GalleryInstance();
-	console.log('window totally loaded.');
-	$(window).trigger('resize');
-	console.log('resize triggered.');
+    /*create instance*/
+    TFO.Gallery = new TFO.__GalleryInstance();
+    console.log('window totally loaded.');
+    $(window).trigger('resize');
+    console.log('resize triggered.');
 });
 
 
 $(function () {
-	console.log('document.ready ');
+    console.log('document.ready ');
 });

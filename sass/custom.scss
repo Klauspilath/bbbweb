@@ -102,7 +102,6 @@ a:hover {
 	@include knockout-29(18px);
 }
 
-
 .opacity-fifty {
 	opacity: 0.5;
 }
@@ -171,8 +170,6 @@ section.content td {
 	background-position: 50%;
 }
 
-
-
 #screen > div > section > div > table > tbody > tr > td:nth-child(1){
 	max-width: 300px;
 	min-width: 180px;
@@ -190,7 +187,6 @@ section.content td {
 	overflow: hidden;
 }
 
-
 #footer-get-tickets {
 	text-transform: uppercase;
 	margin-top: 60px;
@@ -200,7 +196,6 @@ section.content td {
 #footer-get-tickets > p > a {
 	@include knockout-49(28px);
 	color: $dark-color;
-
 }
 
 #footer-get-tickets > span > a {
