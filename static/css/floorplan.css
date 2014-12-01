@@ -29,15 +29,16 @@
 @media (max-width: 768px) {
   /* line 35, ../../sass/floorplan.scss */
   #stage-view {
-    margin-top: 0px;
+    margin-top: 20px;
   }
 
   /* line 39, ../../sass/floorplan.scss */
   #layout-3d {
     margin-left: 12%;
+    margin-top: 20px;
   }
 
-  /* line 43, ../../sass/floorplan.scss */
+  /* line 44, ../../sass/floorplan.scss */
   #quote {
     display: none;
   }
