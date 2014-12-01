@@ -181,7 +181,6 @@ section.content td {
 
 #screen > div > section > div > table > tbody > tr > td:nth-child(2) {
 	max-width: 600px;
-	padding-left: 30px;
 }
 
 #screen {
@@ -460,7 +459,7 @@ li.open > a {
 		}
 	}
 
-	@media (max-width: 767px) {
+	@media (max-width: $screen-md-min) {
 		// Dropdowns get custom display when collapsed
 		.open .dropdown-menu {
 			> li > a {
@@ -491,13 +490,29 @@ li.open > a {
 	}
 }
 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	background-color: transparent;
+	color: $red;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+	color: $dark-color;
+	text-decoration: none;
+	outline: 0;
+	background-color: transparent;
+}
+
 @media (max-width: $screen-sm-min) {
 
 	.navbar-nav .open .dropdown-menu > .active > a,
 	.navbar-nav .open .dropdown-menu > .active > a:hover,
 	.navbar-nav .open .dropdown-menu > .active > a:focus {
 		background-color: transparent;
-		color: #000000;
+		color: $dark-color;
 	}
 
 	.navbar-default .navbar-nav > .active > a,

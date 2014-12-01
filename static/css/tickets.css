@@ -130,7 +130,26 @@ a.ticket-links {
   color: #bb281f;
 }
 
-/* line 104, ../../sass/tickets.scss */
+/* line 105, ../../sass/tickets.scss */
 .get-tickets-button {
   margin-top: 75px;
+}
+
+@media (max-width: 992px) {
+  /* line 110, ../../sass/tickets.scss */
+  .content {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* line 115, ../../sass/tickets.scss */
+  section.content td {
+    padding: 0;
+    font-size: 24px;
+  }
+
+  /* line 120, ../../sass/tickets.scss */
+  td.bg-light-grey.grey-cell {
+    font-size: 20px;
+  }
 }

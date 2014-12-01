@@ -39,7 +39,7 @@ section.content td {
 	width: 120px;
 }
 
-.section-column-header{
+.section-column-header {
 	@include grid-cell;
 	@include knockout-49(34px);
 	@include white-text;
@@ -47,7 +47,7 @@ section.content td {
 	max-width: 222px !important;
 }
 
-.row-header{
+.row-header {
 	@include grid-cell;
 	@include knockout-49(24px);
 	@include white-text;
@@ -99,8 +99,32 @@ a.ticket-links {
 	@include red-text();
 }
 
-a:hover{}
+a:hover {
+}
 
 .get-tickets-button {
 	margin-top: 75px;
 }
+
+@media (max-width: $screen-md-min) {
+	.content {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	section.content td {
+		padding: 0;
+		font-size: 24px;
+	}
+
+	td.bg-light-grey.grey-cell {
+		font-size: 20px;
+	}
+
+//	#screen > div > section > div > table > tbody > tr > td:nth-child(2) {
+//
+//		padding-left: 0;
+//	}
+
+}
+
