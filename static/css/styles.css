@@ -513,7 +513,7 @@ li.open > a {
   color: #bb281f;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* line 413, ../../sass/custom.scss */
   #icons {
     display: none;
@@ -563,7 +563,7 @@ li.open > a {
   background-color: transparent;
   color: #bb281f;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* line 466, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > li > a {
     color: #000000;
@@ -585,54 +585,76 @@ li.open > a {
   }
 }
 
-/* line 494, ../../sass/custom.scss */
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav >
-.active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  background-color: #000000;
-  color: #bb281f;
-}
+@media (max-width: 768px) {
+  /* line 496, ../../sass/custom.scss */
+  .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-nav .open .dropdown-menu > .active > a:focus {
+    background-color: transparent;
+    color: #000000;
+  }
 
-/* line 500, ../../sass/custom.scss */
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: #000000;
+  /* line 503, ../../sass/custom.scss */
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #000000;
+    color: #000000;
+  }
 }
-
-/* line 504, ../../sass/custom.scss */
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
-  background-color: initial;
-  color: #000000;
-}
-
-/* line 509, ../../sass/custom.scss */
-.dropdown .open {
-  background-color: #000000 !important;
-}
-
-/* line 513, ../../sass/custom.scss */
-.open > a :hover {
-  background-color: #000000;
-}
-
-/* line 517, ../../sass/custom.scss */
-#screen > footer > div > div.nav-footer > ul {
-  list-style: disc;
-  color: #ffffff;
-}
-
-/* line 522, ../../sass/custom.scss */
-#screen > footer > div > div.nav-footer > ul > li > a {
-  margin-right: 11px;
+@media (max-width: 768px) and (max-width: 992px) {
+  /* line 503, ../../sass/custom.scss */
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+  }
 }
 
 @media (max-width: 768px) {
-  /* line 527, ../../sass/custom.scss */
+  /* line 514, ../../sass/custom.scss */
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: #000000;
+  }
+
+  /* line 519, ../../sass/custom.scss */
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus {
+    background-color: transparent;
+    color: #000000;
+  }
+
+  /* line 526, ../../sass/custom.scss */
+  .dropdown .open {
+    background-color: #000000 !important;
+  }
+
+  /* line 530, ../../sass/custom.scss */
+  .open > a :hover {
+    background-color: #000000;
+  }
+
+  /* line 534, ../../sass/custom.scss */
+  #screen > footer > div > div.nav-footer > ul {
+    list-style: disc;
+    color: #ffffff;
+  }
+
+  /* line 539, ../../sass/custom.scss */
+  #screen > footer > div > div.nav-footer > ul > li > a {
+    margin-right: 11px;
+  }
+
+  /* line 543, ../../sass/custom.scss */
   .navbar-default .navbar-collapse {
     background-color: #bb281f;
     position: absolute;
     z-index: 3;
   }
 
-  /* line 533, ../../sass/custom.scss */
+  /* line 549, ../../sass/custom.scss */
   .carousel-indicators {
     bottom: 2%;
     text-align: center;
@@ -641,31 +663,36 @@ li.open > a {
     width: 100%;
   }
 
-  /* line 541, ../../sass/custom.scss */
+  /* line 557, ../../sass/custom.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 545, ../../sass/custom.scss */
+  /* line 561, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 35px;
   }
 
-  /* line 549, ../../sass/custom.scss */
+  /* line 565, ../../sass/custom.scss */
   .navbar-nav {
     margin: 0;
     margin-left: 25%;
     float: initial;
   }
 
-  /* line 555, ../../sass/custom.scss */
+  /* line 571, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
     color: #000000;
   }
 
-  /* line 560, ../../sass/custom.scss */
+  /* line 576, ../../sass/custom.scss */
   li.open > a {
     color: #000000 !important;
+  }
+
+  /* line 581, ../../sass/custom.scss */
+  .navbar-default .navbar-nav > li > a:hover {
+    color: #000000;
   }
 }
