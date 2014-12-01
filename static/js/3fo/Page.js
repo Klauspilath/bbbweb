@@ -7,8 +7,6 @@ $(function () {
     TFO.__PageInstance = function () {
         this.initializeResizeListener();
         this.setNavigationEvents();
-        this.init = true;
-
     };
 
     TFO.__PageInstance.prototype.initializeResizeListener = function () {
@@ -18,21 +16,15 @@ $(function () {
     };
 
     TFO.__PageInstance.prototype.setHeroImageHeight = function () {
-        var hi = $("#hero-image"),
-            pt = $(".page-title"),
-            nv = $("nav"),
-            hd = $("header");
+        var hero = $("#hero-image"),
+            title = $(".page-title"),
+            nav = $("nav"),
+            header = $("header");
 
-        var titleHeight = pt.height();
-        //if (!TFO.Page.init) {
-        //    titleHeight = 106;
-        //    TFO.Page.init = false;
-       // }
-
-        hi.css("height", $(window).height()
-                - (titleHeight
-                    + nv.height()
-                    + hd.height())
+        hero.css("height", $(window).height()
+                - (title.height()
+                    + nav.height()
+                    + header.height())
         );
     };
 

@@ -1,15 +1,44 @@
 /* line 5, ../../sass/floorplan.scss */
-#2d {
-  height: 600px;
-  width: auto;
+#layout-2d {
+  height: 375px;
+  width: 450px;
+  max-height: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
 }
 
-/* line 10, ../../sass/floorplan.scss */
+/* line 15, ../../sass/floorplan.scss */
+#layout-3d {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 20, ../../sass/floorplan.scss */
 #stage-view {
   height: 300px;
   width: 380px;
   background: url("/static/img/stage-views.jpg") no-repeat 0px 0px;
   overflow: hidden;
-  margin-top: 115px;
-  margin-left: 53px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  /* line 35, ../../sass/floorplan.scss */
+  #stage-view {
+    margin-top: 0px;
+  }
+
+  /* line 39, ../../sass/floorplan.scss */
+  #layout-3d {
+    margin-left: 12%;
+  }
+
+  /* line 43, ../../sass/floorplan.scss */
+  #quote {
+    display: none;
+  }
 }

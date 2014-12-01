@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/css" href="/static/css/svgfloorplan.css"?>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 612 792" enable-background="new 0 0 612 792" xml:space="preserve">
+	 viewBox="10 100 600 500" enable-background="new 10 100 600 500" xml:space="preserve">
 <script  xlink:href="/static/js/3fo/Floorplan.js" type="text/ecmascript"></script>
 
 <g id="Layer_1_1_">

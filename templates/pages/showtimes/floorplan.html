@@ -8,25 +8,20 @@
 {% endblock %}
 
 {% block main %}
-	<div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
-    </div>
+	<div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')"></div>
 	<section class="content bg-white">
-		<h1 class="page-title">
-			{% editable page.title %}
-				{{ page.title|safe }}
-			{% endeditable %}
-		</h1>
-		<div class="row">
+		<h1 class="page-title">{% editable page.title %}{{ page.title|safe }}{% endeditable %}</h1>
+		<div class="row align-center">
 			<div class="col-xs-12 col-sm-6">
-				<object id="2d" type="image/svg+xml" data="{% static "svg/floorplan_2d.svg" %}" data-next="/"></object>
+				<object id="layout-2d" type="image/svg+xml" data="{% static "svg/floorplan_2d.svg" %}" data-next="/"></object>
 			</div>
 			<div class="col-xs-12 col-sm-6">
 				<div id="stage-view"></div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row align-center">
 			<div class="col-xs-12 col-sm-8">
-				<object id="3d" type="image/svg+xml" data="{% static "svg/floorplan_3d.svg" %}" data-next="/"></object>
+				<object id="layout-3d" type="image/svg+xml" data="{% static "svg/floorplan_3d.svg" %}" data-next="/"></object>
 			</div>
 			<div class="col-xs-12 col-sm-4">
 				<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">

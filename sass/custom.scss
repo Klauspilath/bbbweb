@@ -130,6 +130,10 @@ a:hover {
 	text-align: right;
 }
 
+.align-center{
+	text-align: center;
+}
+
 footer {
 	background-color: $red;
 	border: 0;
@@ -212,8 +216,7 @@ section.content td {
 }
 
 .content {
-	padding: 50px;
-	padding-top: 20px;
+	padding: 20px 50px 50px;
 }
 
 .copy {

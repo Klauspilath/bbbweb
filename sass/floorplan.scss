@@ -2,9 +2,19 @@
 @import "global-vars";
 @import "fonts";
 
-#2d {
-	height: 600px;
-	width: auto;
+#layout-2d {
+	height: 375px;
+	width: 450px;
+	max-height: 100% !important;
+	max-width: 100% !important;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 24px;
+}
+
+#layout-3d {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #stage-view {
@@ -12,6 +22,26 @@
 	width: 380px;
 	background: url("/static/img/stage-views.jpg") no-repeat 0px 0px;
 	overflow: hidden;
-	margin-top: 115px;
-	margin-left: 53px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+}
+
+@media handheld {
+
+}
+
+@media (max-width: $screen-sm-min) {
+	#stage-view{
+		margin-top: 0px;
+	}
+
+	#layout-3d {
+		margin-left: 12%;
+	}
+
+	#quote{
+		display: none;
+	}
+
 }

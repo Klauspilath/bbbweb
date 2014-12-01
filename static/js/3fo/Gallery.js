@@ -60,7 +60,9 @@ $(window).load(function () {
                 thumbImage.css('width', screenWidth / galleryInstance.MAX_THUMBS_PER_SLIDE + 'px');
             }
 
-            
+            // track the currently selected thumbnail and reposition the thumbnail strip relative to it.
+
+
             clearTimeout(timer);
             window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 500);
 
@@ -146,6 +148,10 @@ $(window).load(function () {
 
     TFO.__GalleryInstance.prototype.shiftThumbsOnClick = function (event) {
         console.log(event.currentTarget);
+
+        // set a state on the class so the carousel will cycle, but not only move the
+        // thumbs by the currentMaxThumbs -1
+
     };
 
 
