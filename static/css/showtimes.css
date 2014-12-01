@@ -82,3 +82,22 @@ a.ticket-links {
   font-size: 20px;
   color: #bb281f;
 }
+
+@media (max-width: 992px) {
+  /* line 72, ../../sass/showtimes.scss */
+  .content {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* line 77, ../../sass/showtimes.scss */
+  section.content td {
+    padding: 0;
+    font-size: 24px;
+  }
+
+  /* line 82, ../../sass/showtimes.scss */
+  td.bg-light-grey.grey-cell {
+    font-size: 20px;
+  }
+}
