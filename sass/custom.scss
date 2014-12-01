@@ -33,11 +33,11 @@ h1 {
 	margin: 0;
 }
 
-h1.page-title{
+h1.page-title {
 	height: 106px;
 }
 
-h2,h4,h5 {
+h2, h4, h5 {
 	font-family: 'Knockout 49 A', 'Knockout 49 B';
 }
 
@@ -48,12 +48,12 @@ p {
 a {
 	color: $bright;
 }
+
 #location-info {
 	color: $bright;
 }
 
-
-a.red{
+a.red {
 	@include red-text();
 }
 
@@ -90,11 +90,11 @@ a:hover {
 	background-color: $gray-light;
 }
 
-.caps{
+.caps {
 	text-transform: uppercase;
 }
 
-.ko-49-18{
+.ko-49-18 {
 	@include knockout-49(18px);
 }
 
@@ -126,11 +126,11 @@ a:hover {
 	color: $bright !important;
 }
 
-.align-right{
+.align-right {
 	text-align: right;
 }
 
-.align-center{
+.align-center {
 	text-align: center;
 }
 
@@ -164,7 +164,7 @@ section.content td {
 	margin-bottom: 40px;
 }
 
-#hero-image{
+#hero-image {
 	height: 100%;
 	max-height: 100% !important;
 	width: 1000px;
@@ -174,12 +174,12 @@ section.content td {
 	background-position: 50%;
 }
 
-#screen > div > section > div > table > tbody > tr > td:nth-child(1){
+#screen > div > section > div > table > tbody > tr > td:nth-child(1) {
 	max-width: 300px;
 	min-width: 180px;
 }
 
-#screen > div > section > div > table > tbody > tr > td:nth-child(2){
+#screen > div > section > div > table > tbody > tr > td:nth-child(2) {
 	max-width: 600px;
 	padding-left: 30px;
 }
@@ -232,7 +232,7 @@ section.content td {
 	margin-top: 25px;
 }
 
-#location-info{
+#location-info {
 
 }
 
@@ -370,6 +370,10 @@ div.get-tickets-button img {
 	z-index: 100;
 }
 
+.navbar-nav > li > .dropdown-menu {
+	margin-top: 30px;
+}
+
 .navbar-default {
 	background-color: $dark-color;
 	border-color: $reset;
@@ -497,11 +501,10 @@ li.open > a {
 	background-color: $dark-color;
 }
 
-.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
 	background-color: $reset;
 	color: $dark-color;
 }
-
 
 .dropdown .open {
 	background-color: $dark-color !important;
@@ -511,15 +514,14 @@ li.open > a {
 	background-color: $dark-color;
 }
 
-#screen > footer > div > div.nav-footer > ul{
+#screen > footer > div > div.nav-footer > ul {
 	list-style: disc;
 	color: $bright;
 }
 
-#screen > footer > div > div.nav-footer > ul > li > a{
+#screen > footer > div > div.nav-footer > ul > li > a {
 	margin-right: 11px;
 }
-
 
 @media (max-width: $screen-sm-min) {
 	.navbar-default .navbar-collapse {
