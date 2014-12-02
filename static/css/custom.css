@@ -748,4 +748,9 @@ div.nav-footer > ul > li > a {
   #desktop-footer {
     display: none;
   }
+
+  /* line 612, ../../sass/custom.scss */
+  #quote {
+    display: none;
+  }
 }
