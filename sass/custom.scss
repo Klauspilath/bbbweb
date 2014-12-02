@@ -458,10 +458,9 @@ div.nav-footer > ul > li > a {
 	margin-right: 11px;
 }
 
-#social-links{
+#social-links {
 	float: right;
 }
-
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -472,58 +471,26 @@ div.nav-footer > ul > li > a {
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus{
-		text-decoration: none;
-		outline: 0;
-		background-color: transparent;
+.dropdown-menu > .active > a:focus {
+	text-decoration: none;
+	outline: 0;
+	background-color: transparent;
+	color: $dark-color;
 }
 
-
-// Dropdown menu items
-.navbar-nav {
-	// Remove background color from open dropdown
-	> .open > a {
-		&,
-		&:hover,
-		&:focus {
-			background-color: transparent;
-			color: $red;
-		}
-	}
-
-	@media (max-width: $screen-md-min) {
-		// Dropdowns get custom display when collapsed
-		.open .dropdown-menu {
-			> li > a {
-				color: $dark-color;
-				&:hover,
-				&:focus {
-					background-color: $reset;
-					color: $dark-color;
-				}
-			}
-			> .active > a {
-				&,
-				&:hover,
-				&:focus {
-					background-color: $dark-color;
-					color: $dark-color;
-				}
-			}
-			> .disabled > a {
-				&,
-				&:hover,
-				&:focus {
-					background-color: $reset;
-					color: $dark-color;
-				}
-			}
-		}
+@media (max-width: $screen-md) {
+	footer{
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
 
 @media (max-width: $screen-sm-min) {
+
+	h1{
+		font-size: 50px;
+	}
 
 	.navbar-default .navbar-nav > .active > a,
 	.navbar-default .navbar-nav > .active > a:hover,
@@ -621,4 +588,18 @@ div.nav-footer > ul > li > a {
 		color: $dark-color;
 	}
 
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: $bright;
+	}
+
+	.navbar-toggle .icon-bar {
+		display: block;
+		width: 22px;
+		height: 4px;
+		border-radius: 1px;
+	}
+
+	#desktop-footer{
+		display: none;
+	}
 }
