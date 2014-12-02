@@ -192,8 +192,8 @@ table {
   border-collapse: collapse;
   padding: 0;
   margin: 0;
-  font-size: 0px;
-  line-height: 0px;
+  font-size: 0;
+  line-height: 0;
 }
 
 /* line 159, ../../sass/custom.scss */
@@ -585,25 +585,36 @@ li.open > a {
 }
 
 /* line 493, ../../sass/custom.scss */
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
-  color: #bb281f;
+div.nav-footer > ul {
+  list-style-type: disc;
+  color: #ffffff;
 }
 
-/* line 500, ../../sass/custom.scss */
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  color: #000000;
-  text-decoration: none;
-  outline: 0;
-  background-color: transparent;
+/* line 498, ../../sass/custom.scss */
+div.nav-footer > ul > li > a {
+  margin-right: 11px;
 }
 
 @media (max-width: 768px) {
+  /* line 504, ../../sass/custom.scss */
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    color: #bb281f;
+  }
+
   /* line 511, ../../sass/custom.scss */
+  .dropdown-menu > .active > a,
+  .dropdown-menu > .active > a:hover,
+  .dropdown-menu > .active > a:focus {
+    color: #000000;
+    text-decoration: none;
+    outline: 0;
+    background-color: transparent;
+  }
+
+  /* line 520, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-nav .open .dropdown-menu > .active > a:focus {
@@ -611,7 +622,7 @@ li.open > a {
     color: #000000;
   }
 
-  /* line 518, ../../sass/custom.scss */
+  /* line 527, ../../sass/custom.scss */
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -620,7 +631,7 @@ li.open > a {
   }
 }
 @media (max-width: 768px) and (max-width: 992px) {
-  /* line 518, ../../sass/custom.scss */
+  /* line 527, ../../sass/custom.scss */
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -629,13 +640,13 @@ li.open > a {
 }
 
 @media (max-width: 768px) {
-  /* line 529, ../../sass/custom.scss */
+  /* line 538, ../../sass/custom.scss */
   .navbar-default .navbar-toggle:hover,
   .navbar-default .navbar-toggle:focus {
     background-color: #000000;
   }
 
-  /* line 534, ../../sass/custom.scss */
+  /* line 543, ../../sass/custom.scss */
   .dropdown-menu > .active > a,
   .dropdown-menu > .active > a:hover,
   .dropdown-menu > .active > a:focus {
@@ -643,25 +654,14 @@ li.open > a {
     color: #000000;
   }
 
-  /* line 541, ../../sass/custom.scss */
+  /* line 550, ../../sass/custom.scss */
   .dropdown .open {
     background-color: #000000 !important;
   }
 
-  /* line 545, ../../sass/custom.scss */
+  /* line 554, ../../sass/custom.scss */
   .open > a :hover {
     background-color: #000000;
-  }
-
-  /* line 549, ../../sass/custom.scss */
-  #screen > footer > div > div.nav-footer > ul {
-    list-style: disc;
-    color: #ffffff;
-  }
-
-  /* line 554, ../../sass/custom.scss */
-  #screen > footer > div > div.nav-footer > ul > li > a {
-    margin-right: 11px;
   }
 
   /* line 558, ../../sass/custom.scss */
