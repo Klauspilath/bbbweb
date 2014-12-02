@@ -608,6 +608,11 @@ div.nav-footer > ul > li > a {
   }
 
   /* line 495, ../../sass/custom.scss */
+  h3 {
+    font-size: 25px;
+  }
+
+  /* line 499, ../../sass/custom.scss */
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -615,7 +620,7 @@ div.nav-footer > ul > li > a {
     color: #bb281f;
   }
 
-  /* line 502, ../../sass/custom.scss */
+  /* line 506, ../../sass/custom.scss */
   .dropdown-menu > .active > a,
   .dropdown-menu > .active > a:hover,
   .dropdown-menu > .active > a:focus {
@@ -625,7 +630,7 @@ div.nav-footer > ul > li > a {
     background-color: transparent;
   }
 
-  /* line 511, ../../sass/custom.scss */
+  /* line 515, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-nav .open .dropdown-menu > .active > a:focus {
@@ -633,7 +638,7 @@ div.nav-footer > ul > li > a {
     color: #000000;
   }
 
-  /* line 518, ../../sass/custom.scss */
+  /* line 522, ../../sass/custom.scss */
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -642,7 +647,7 @@ div.nav-footer > ul > li > a {
   }
 }
 @media (max-width: 768px) and (max-width: 992px) {
-  /* line 518, ../../sass/custom.scss */
+  /* line 522, ../../sass/custom.scss */
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -651,13 +656,13 @@ div.nav-footer > ul > li > a {
 }
 
 @media (max-width: 768px) {
-  /* line 529, ../../sass/custom.scss */
+  /* line 533, ../../sass/custom.scss */
   .navbar-default .navbar-toggle:hover,
   .navbar-default .navbar-toggle:focus {
     background-color: #000000;
   }
 
-  /* line 534, ../../sass/custom.scss */
+  /* line 538, ../../sass/custom.scss */
   .dropdown-menu > .active > a,
   .dropdown-menu > .active > a:hover,
   .dropdown-menu > .active > a:focus {
@@ -665,17 +670,17 @@ div.nav-footer > ul > li > a {
     color: #000000;
   }
 
-  /* line 541, ../../sass/custom.scss */
+  /* line 545, ../../sass/custom.scss */
   .dropdown .open {
     background-color: #000000 !important;
   }
 
-  /* line 545, ../../sass/custom.scss */
+  /* line 549, ../../sass/custom.scss */
   .open > a :hover {
     background-color: #000000;
   }
 
-  /* line 549, ../../sass/custom.scss */
+  /* line 553, ../../sass/custom.scss */
   .navbar-default .navbar-collapse {
     background-color: #bb281f;
     position: absolute;
@@ -684,7 +689,7 @@ div.nav-footer > ul > li > a {
     margin: 0;
   }
 
-  /* line 557, ../../sass/custom.scss */
+  /* line 561, ../../sass/custom.scss */
   .carousel-indicators {
     bottom: 2%;
     text-align: center;
@@ -693,45 +698,45 @@ div.nav-footer > ul > li > a {
     width: 100%;
   }
 
-  /* line 565, ../../sass/custom.scss */
+  /* line 569, ../../sass/custom.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 569, ../../sass/custom.scss */
+  /* line 573, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 35px;
   }
 
-  /* line 573, ../../sass/custom.scss */
+  /* line 577, ../../sass/custom.scss */
   .navbar-nav {
     margin: 0;
     margin-left: 25%;
     float: initial;
   }
 
-  /* line 579, ../../sass/custom.scss */
+  /* line 583, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
     color: #000000;
   }
 
-  /* line 584, ../../sass/custom.scss */
+  /* line 588, ../../sass/custom.scss */
   li.open > a {
     color: #000000 !important;
   }
 
-  /* line 589, ../../sass/custom.scss */
+  /* line 593, ../../sass/custom.scss */
   .navbar-default .navbar-nav > li > a:hover {
     color: #000000;
   }
 
-  /* line 593, ../../sass/custom.scss */
+  /* line 597, ../../sass/custom.scss */
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #ffffff;
   }
 
-  /* line 597, ../../sass/custom.scss */
+  /* line 601, ../../sass/custom.scss */
   .navbar-toggle .icon-bar {
     display: block;
     width: 22px;
@@ -739,7 +744,7 @@ div.nav-footer > ul > li > a {
     border-radius: 1px;
   }
 
-  /* line 604, ../../sass/custom.scss */
+  /* line 608, ../../sass/custom.scss */
   #desktop-footer {
     display: none;
   }
