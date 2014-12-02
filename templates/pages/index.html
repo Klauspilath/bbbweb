@@ -27,6 +27,17 @@
 {% block extra_head %}{% endblock %}
 {% block main %}
     <div id="home-gallery" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            {% with page.gallery.images.all as images %}
+                {% for image in images %}
+                    <div class="item stretch {% if forloop.first %}active{% endif %}" style="background-image: url('{{ image.file.url }}')">
+                        <div class="carousel-caption">
+                            {{ image.description }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
         <ol class="carousel-indicators">
              {% with page.gallery.images.all as images %}
                 {% for image in images %}
@@ -34,17 +45,6 @@
                 {% endfor %}
             {% endwith %}
         </ol>
-        <div class="carousel-inner">
-            {% with page.gallery.images.all as images %}
-                {% for image in images %}
-                    <div class="item stretch {% if forloop.first %}active{% endif %}" style="background-image: url('{{ image.file.url }}')">
-                        <div class="carousel-caption">
-                           {{ image.description }}
-                        </div>
-                    </div>
-                {% endfor %}
-            {% endwith %}
-        </div>
         {% get_tickets_button "/tickets"%}
         <a href="#content"><img id="scroll-indicator" src="{% static "img/right-angle.png" %}" alt="scroll to the bottom"></a>
     </div>

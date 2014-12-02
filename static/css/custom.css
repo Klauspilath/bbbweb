@@ -226,9 +226,10 @@ section.content td {
 /* line 182, ../../sass/custom.scss */
 #screen > div > section > div > table > tbody > tr > td:nth-child(2) {
   max-width: 600px;
+  padding-left: 20px;
 }
 
-/* line 186, ../../sass/custom.scss */
+/* line 187, ../../sass/custom.scss */
 #screen {
   max-width: 1000px;
   margin-left: auto;
@@ -236,14 +237,14 @@ section.content td {
   overflow: hidden;
 }
 
-/* line 193, ../../sass/custom.scss */
+/* line 194, ../../sass/custom.scss */
 #footer-get-tickets {
   text-transform: uppercase;
   margin-top: 60px;
   text-align: center;
 }
 
-/* line 199, ../../sass/custom.scss */
+/* line 200, ../../sass/custom.scss */
 #footer-get-tickets > p > a {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -252,7 +253,7 @@ section.content td {
   color: #000000;
 }
 
-/* line 204, ../../sass/custom.scss */
+/* line 205, ../../sass/custom.scss */
 #footer-get-tickets > span > a {
   font-family: 'Knockout 29 A', 'Knockout 29 B';
   font-weight: 400;
@@ -261,22 +262,22 @@ section.content td {
   color: #ffffff;
 }
 
-/* line 209, ../../sass/custom.scss */
+/* line 210, ../../sass/custom.scss */
 #logo {
   margin: 10px 20px 3px 10px;
 }
 
-/* line 213, ../../sass/custom.scss */
+/* line 214, ../../sass/custom.scss */
 #icons {
   margin-bottom: -38px;
 }
 
-/* line 217, ../../sass/custom.scss */
+/* line 218, ../../sass/custom.scss */
 .content {
   padding: 20px 50px 50px;
 }
 
-/* line 221, ../../sass/custom.scss */
+/* line 222, ../../sass/custom.scss */
 .copy {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -284,7 +285,7 @@ section.content td {
   font-size: 20px;
 }
 
-/* line 225, ../../sass/custom.scss */
+/* line 226, ../../sass/custom.scss */
 .copy p em {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -292,7 +293,7 @@ section.content td {
   font-size: 20px;
 }
 
-/* line 229, ../../sass/custom.scss */
+/* line 230, ../../sass/custom.scss */
 .presentation-copy {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -301,7 +302,7 @@ section.content td {
   margin-top: 25px;
 }
 
-/* line 238, ../../sass/custom.scss */
+/* line 239, ../../sass/custom.scss */
 .presentation-copy p em {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -309,7 +310,7 @@ section.content td {
   font-size: 24px;
 }
 
-/* line 243, ../../sass/custom.scss */
+/* line 244, ../../sass/custom.scss */
 #quote {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -324,7 +325,7 @@ section.content td {
   padding-top: 52px;
 }
 
-/* line 254, ../../sass/custom.scss */
+/* line 255, ../../sass/custom.scss */
 .byline {
   font-family: 'Knockout 29 A', 'Knockout 29 B';
   font-weight: 400;
@@ -333,7 +334,7 @@ section.content td {
   color: #000000;
 }
 
-/* line 259, ../../sass/custom.scss */
+/* line 260, ../../sass/custom.scss */
 div.get-tickets-button {
   background-color: #bb281f;
   border-radius: 10px;
@@ -350,23 +351,23 @@ div.get-tickets-button {
   letter-spacing: 0.8px;
 }
 
-/* line 272, ../../sass/custom.scss */
+/* line 273, ../../sass/custom.scss */
 div.get-tickets-button img {
   margin-bottom: 2px;
   margin-right: 2px;
 }
 
-/* line 278, ../../sass/custom.scss */
+/* line 279, ../../sass/custom.scss */
 .row {
   margin: 0;
 }
 
-/* line 282, ../../sass/custom.scss */
+/* line 283, ../../sass/custom.scss */
 .container-fluid {
   padding: 0;
 }
 
-/* line 286, ../../sass/custom.scss */
+/* line 287, ../../sass/custom.scss */
 .dropdown-menu {
   position: absolute;
   left: 0;
@@ -385,18 +386,18 @@ div.get-tickets-button img {
   background-clip: initial;
 }
 
-/* line 304, ../../sass/custom.scss */
+/* line 305, ../../sass/custom.scss */
 .dropdown-submenu > a:after {
   border: 0;
 }
 
-/* line 308, ../../sass/custom.scss */
+/* line 309, ../../sass/custom.scss */
 .dropdown-menu > li > a {
   color: #ffffff;
   text-transform: uppercase;
 }
 
-/* line 313, ../../sass/custom.scss */
+/* line 314, ../../sass/custom.scss */
 .nav-background {
   height: 247px;
   position: absolute;
@@ -407,55 +408,55 @@ div.get-tickets-button img {
   display: none;
 }
 
-/* line 323, ../../sass/custom.scss */
+/* line 324, ../../sass/custom.scss */
 .dropdown-image {
   float: right;
   opacity: 0.25;
 }
 
 @media (min-width: 768px) {
-  /* line 329, ../../sass/custom.scss */
+  /* line 330, ../../sass/custom.scss */
   .navbar-nav > li.dropdown:hover > .nav-background {
     display: block;
   }
 }
-/* line 334, ../../sass/custom.scss */
+/* line 335, ../../sass/custom.scss */
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   background-color: inherit;
   color: #000000;
 }
 
-/* line 340, ../../sass/custom.scss */
+/* line 341, ../../sass/custom.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: initial;
 }
 
-/* line 345, ../../sass/custom.scss */
+/* line 346, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
 }
 
-/* line 349, ../../sass/custom.scss */
+/* line 350, ../../sass/custom.scss */
 .navbar-header {
   height: 40px;
   margin: 0 !important;
 }
 
-/* line 354, ../../sass/custom.scss */
+/* line 355, ../../sass/custom.scss */
 .nav > li {
   display: inline-block;
 }
 
-/* line 359, ../../sass/custom.scss */
+/* line 360, ../../sass/custom.scss */
 .navbar-nav {
   margin-left: auto;
   margin-right: auto;
   width: 515px;
 }
 
-/* line 365, ../../sass/custom.scss */
+/* line 366, ../../sass/custom.scss */
 .navbar {
   border-radius: 0;
   border: 0;
@@ -468,70 +469,70 @@ div.get-tickets-button img {
   z-index: 100;
 }
 
-/* line 374, ../../sass/custom.scss */
+/* line 375, ../../sass/custom.scss */
 .navbar-nav > li > .dropdown-menu {
   margin-top: 30px;
 }
 
-/* line 378, ../../sass/custom.scss */
+/* line 379, ../../sass/custom.scss */
 .navbar-default {
   background-color: #000000;
   border-color: initial;
   border: 0;
 }
 
-/* line 384, ../../sass/custom.scss */
+/* line 385, ../../sass/custom.scss */
 .navbar-nav > li > a {
   padding: 0;
   line-height: initial;
 }
 
-/* line 389, ../../sass/custom.scss */
+/* line 390, ../../sass/custom.scss */
 .nav > li > a {
   position: relative;
   display: inline-block;
   padding: 8.5px 15px;
 }
 
-/* line 395, ../../sass/custom.scss */
+/* line 396, ../../sass/custom.scss */
 li.open > a {
   color: #bb281f !important;
 }
 
-/* line 399, ../../sass/custom.scss */
+/* line 400, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a:hover {
   color: #bb281f;
 }
 
-/* line 403, ../../sass/custom.scss */
+/* line 404, ../../sass/custom.scss */
 .navbar-toggle {
   height: 40px;
 }
 
-/* line 407, ../../sass/custom.scss */
+/* line 408, ../../sass/custom.scss */
 .nav > li > a.dropdown-toggle:hover {
   background-color: inherit;
   color: #bb281f;
 }
 
 @media (max-width: 767px) {
-  /* line 414, ../../sass/custom.scss */
+  /* line 415, ../../sass/custom.scss */
   #icons {
     display: none;
   }
 
-  /* line 418, ../../sass/custom.scss */
+  /* line 419, ../../sass/custom.scss */
   .nav > li {
     position: relative;
     display: block;
   }
 }
-/* line 426, ../../sass/custom.scss */
+/* line 427, ../../sass/custom.scss */
 .editable-link, .editable-form {
   font-family: sans-serif;
 }
 
-/* line 430, ../../sass/custom.scss */
+/* line 431, ../../sass/custom.scss */
 .navbar-toggle {
   padding: 0;
   border: 0;
@@ -540,7 +541,7 @@ li.open > a {
   margin-bottom: 0px;
 }
 
-/* line 438, ../../sass/custom.scss */
+/* line 439, ../../sass/custom.scss */
 .nav-footer {
   margin: 0 auto;
   display: initial;
@@ -551,7 +552,7 @@ li.open > a {
   text-transform: uppercase;
 }
 
-/* line 445, ../../sass/custom.scss */
+/* line 446, ../../sass/custom.scss */
 .nav-footer ul {
   margin-left: 0px;
   vertical-align: top;
@@ -559,23 +560,23 @@ li.open > a {
   margin-right: 10px;
 }
 
-/* line 452, ../../sass/custom.scss */
+/* line 453, ../../sass/custom.scss */
 div.nav-footer > ul {
   list-style-type: disc;
   color: #ffffff;
 }
 
-/* line 457, ../../sass/custom.scss */
+/* line 458, ../../sass/custom.scss */
 div.nav-footer > ul > li > a {
   margin-right: 11px;
 }
 
-/* line 461, ../../sass/custom.scss */
+/* line 462, ../../sass/custom.scss */
 #social-links {
   float: right;
 }
 
-/* line 465, ../../sass/custom.scss */
+/* line 466, ../../sass/custom.scss */
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -583,7 +584,7 @@ div.nav-footer > ul > li > a {
   color: #bb281f;
 }
 
-/* line 472, ../../sass/custom.scss */
+/* line 473, ../../sass/custom.scss */
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
@@ -594,7 +595,7 @@ div.nav-footer > ul > li > a {
 }
 
 @media (max-width: 992px) {
-  /* line 482, ../../sass/custom.scss */
+  /* line 483, ../../sass/custom.scss */
   footer {
     padding-left: 10px;
     padding-right: 10px;
@@ -679,9 +680,11 @@ div.nav-footer > ul > li > a {
     background-color: #bb281f;
     position: absolute;
     z-index: 3;
+    width: 100%;
+    margin: 0;
   }
 
-  /* line 555, ../../sass/custom.scss */
+  /* line 557, ../../sass/custom.scss */
   .carousel-indicators {
     bottom: 2%;
     text-align: center;
@@ -690,45 +693,45 @@ div.nav-footer > ul > li > a {
     width: 100%;
   }
 
-  /* line 563, ../../sass/custom.scss */
+  /* line 565, ../../sass/custom.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 567, ../../sass/custom.scss */
+  /* line 569, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 35px;
   }
 
-  /* line 571, ../../sass/custom.scss */
+  /* line 573, ../../sass/custom.scss */
   .navbar-nav {
     margin: 0;
     margin-left: 25%;
     float: initial;
   }
 
-  /* line 577, ../../sass/custom.scss */
+  /* line 579, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
     color: #000000;
   }
 
-  /* line 582, ../../sass/custom.scss */
+  /* line 584, ../../sass/custom.scss */
   li.open > a {
     color: #000000 !important;
   }
 
-  /* line 587, ../../sass/custom.scss */
+  /* line 589, ../../sass/custom.scss */
   .navbar-default .navbar-nav > li > a:hover {
     color: #000000;
   }
 
-  /* line 591, ../../sass/custom.scss */
+  /* line 593, ../../sass/custom.scss */
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #ffffff;
   }
 
-  /* line 595, ../../sass/custom.scss */
+  /* line 597, ../../sass/custom.scss */
   .navbar-toggle .icon-bar {
     display: block;
     width: 22px;
@@ -736,7 +739,7 @@ div.nav-footer > ul > li > a {
     border-radius: 1px;
   }
 
-  /* line 602, ../../sass/custom.scss */
+  /* line 604, ../../sass/custom.scss */
   #desktop-footer {
     display: none;
   }

@@ -95,22 +95,31 @@ div.get-tickets-button {
 @media (max-width: 768px) {
   /* line 88, ../../sass/carousel.scss */
   .carousel-indicators {
-    /* left: 50px; */
-    bottom: 2%;
+    left: initial;
+    bottom: 6%;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 99px;
+    position: relative;
   }
 
-  /* line 97, ../../sass/carousel.scss */
+  /* line 98, ../../sass/carousel.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 101, ../../sass/carousel.scss */
+  /* line 102, ../../sass/carousel.scss */
   div.get-tickets-button {
-    bottom: 10%;
-    left: 30%;
+    bottom: 19%;
+    left: initial;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  /* line 110, ../../sass/carousel.scss */
+  #scroll-indicator {
+    display: none;
   }
 }

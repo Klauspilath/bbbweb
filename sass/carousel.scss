@@ -2,7 +2,7 @@
 @import "global-vars";
 @import "fonts";
 
-#home-gallery{
+#home-gallery {
 	text-align: center;
 }
 
@@ -86,12 +86,13 @@ div.get-tickets-button {
 @media (max-width: $screen-sm-min) {
 
 	.carousel-indicators {
-		/* left: 50px; */
-		bottom: 2%;
+		left: initial;
+		bottom: 6%;
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
-		width: 100%;
+		width: 99px;
+		position: relative;
 	}
 
 	.carousel-caption {
@@ -99,7 +100,14 @@ div.get-tickets-button {
 	}
 
 	div.get-tickets-button {
-		bottom: 10%;
-		left: 30%;
+		bottom: 19%;
+		left: initial;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+
+	#scroll-indicator{
+		display: none;
 	}
 }
