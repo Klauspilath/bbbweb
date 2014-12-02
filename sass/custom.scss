@@ -447,6 +447,20 @@ li.open > a {
 	margin-right: 10px;
 }
 
+div.nav-footer > ul {
+	list-style-type: disc;
+	color: $bright;
+}
+
+div.nav-footer > ul > li > a {
+	margin-right: 11px;
+}
+
+#social-links{
+	float: right;
+}
+
+
 // Dropdown menu items
 .navbar-nav {
 	// Remove background color from open dropdown
@@ -490,14 +504,6 @@ li.open > a {
 	}
 }
 
-div.nav-footer > ul {
-	list-style-type: disc;
-	color: $bright;
-}
-
-div.nav-footer > ul > li > a {
-	margin-right: 11px;
-}
 
 @media (max-width: $screen-sm-min) {
 
