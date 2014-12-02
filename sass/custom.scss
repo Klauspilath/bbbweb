@@ -13,7 +13,18 @@ body {
 	line-height: $reset;
 	color: $dark-color;
 	@include verlag-light(20px);
+
+
+
 }
+
+@media (max-width: $screen-sm-min) {
+
+	body{
+		font-size: 18px;
+	}
+}
+
 
 //customizations
 
@@ -42,7 +53,7 @@ h2, h4, h5 {
 }
 
 p {
-	margin: 5px 0 0 0px;
+	margin: 5px 0 0 0;
 }
 
 a {
@@ -410,7 +421,7 @@ li.open > a {
 	color: $red;
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-md-min) {
 
 	#icons {
 		display: none;
@@ -488,20 +499,15 @@ div.nav-footer > ul > li > a {
 
 @media (max-width: $screen-sm-min) {
 
+
 	h1 {
-		font-size: 50px;
+		font-size: 48px;
 	}
 
 	h3{
 		font-size: 25px;
 	}
 
-	.navbar-default .navbar-nav > .active > a,
-	.navbar-default .navbar-nav > .active > a:hover,
-	.navbar-default .navbar-nav > .active > a:focus {
-		background-color: transparent;
-		color: $red;
-	}
 
 	.dropdown-menu > .active > a,
 	.dropdown-menu > .active > a:hover,

@@ -27,12 +27,12 @@
                             <a href="{{ image.linkout }}"><img class="img-responsive"
                                                                src="{{ MEDIA_URL }}{% thumbnail image.file 300 300 %}"></a>
 
-                            <div class="cast-member-name" onclick="document.location.href='{{ image.linkout }}'">
-                                {{ image.description }}
-                            </div>
                             <div class="member-overlay" onclick="document.location.href='{{ image.linkout }}'">
                                 <p>view biography</p>
                                 <img class="img-responsive" src="{% static "img/cast-overlay.png" %}">
+                            </div>
+                            <div class="cast-member-name red-semi-trans" onclick="document.location.href='{{ image.linkout }}'">
+                                {{ image.description }}
                             </div>
                         </div>
                     </div>

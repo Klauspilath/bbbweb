@@ -7,7 +7,6 @@ $(function() {
 		this.initOverlays();
 	};
 
-
 	TFO.__CastInstance.prototype.initOverlays = function(){
 		var container = $(".headshot");
 
@@ -15,6 +14,8 @@ $(function() {
 			function (event) {
 				var overlay = $(event.currentTarget).children(".member-overlay");
 				overlay.css("display", "block");
+				overlay.toggleClass('red-semi-trans');
+				$(event.currentTarget).children('.cast-member-name').toggleClass('red-semi-trans');
 			}
 		);
 
@@ -22,12 +23,10 @@ $(function() {
 			function (event) {
 				var overlay = $(event.currentTarget).children(".member-overlay");
 				overlay.css("display", "none");
+				overlay.toggleClass('red-semi-trans');
+				$(event.currentTarget).children('.cast-member-name').toggleClass('red-semi-trans');
 			}
 		);
-	};
-
-	TFO.__CastInstance.prototype.setHeroImageHeight = function(){
-
 	};
 
 	//create instance
