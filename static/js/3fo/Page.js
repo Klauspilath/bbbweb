@@ -7,6 +7,11 @@ $(function () {
     TFO.__PageInstance = function () {
         this.initializeResizeListener();
         this.setNavigationEvents();
+
+        if (TFO.globals.constants.IS_MOBILE == true){
+            this.formatMobileNavigation();
+        }
+
     };
 
     TFO.__PageInstance.prototype.initializeResizeListener = function () {
@@ -41,6 +46,13 @@ $(function () {
             bg.css("left", bgl + "px");
         })
     };
+
+    TFO.__PageInstance.prototype.formatMobileNavigation = function () {
+
+
+
+    };
+
 
     TFO.__PageInstance.prototype.getState = function () {
         return this.state;
