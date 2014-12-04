@@ -70,6 +70,14 @@ a:hover {
 	color: $dark-color;
 }
 
+.vanish {
+	visibility: hidden;
+	height: 0px;
+	width: 0px;
+	position: absolute;
+	top: 0px;
+}
+
 .click {
 	cursor: pointer;
 }
@@ -334,7 +342,7 @@ div.get-tickets-button img {
 	opacity: 0.25;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-sm-min) {
 	.navbar-nav > li.dropdown:hover > .nav-background {
 		display: block;
 	}
@@ -410,7 +418,7 @@ li.open > a {
 }
 
 .navbar-toggle {
-	height: 40px;
+	height: 45px;
 }
 
 .nav > li > a.dropdown-toggle:hover {
@@ -427,8 +435,9 @@ li.open > a {
 	padding: 0;
 	border: 0;
 	background-color: transparent;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 40px;
 }
 
 .nav-footer {
@@ -481,6 +490,14 @@ div.nav-footer > ul > li > a {
 	}
 }
 
+#mobile-nav-separator {
+	height: 0px;
+	width: 0px;
+	visibility: hidden;
+	position: absolute;
+	top: 0px;
+}
+
 @media (max-width: $screen-sm-min) {
 
 	h1 {
@@ -492,6 +509,10 @@ div.nav-footer > ul > li > a {
 	}
 
 	#icons {
+		display: none;
+	}
+
+	#location-info {
 		display: none;
 	}
 
@@ -547,6 +568,25 @@ div.nav-footer > ul > li > a {
 		background-color: $dark-color;
 	}
 
+	.navbar-header {
+		text-align: right;
+		height: 60px;
+	}
+
+	.navbar-menu-text {
+		color: #fff;
+		display: inline-block;
+		margin-top: 5px;
+		margin-right: 20px;
+		@include knockout-49(42px);
+
+	}
+
+	.dropdown-menu > li > a {
+		@include knockout-29(42px);
+		margin-bottom: 21px;
+	}
+
 	.navbar-default .navbar-collapse {
 		background-color: $red;
 		position: absolute;
@@ -569,12 +609,13 @@ div.nav-footer > ul > li > a {
 	}
 
 	.navbar-nav > li > a {
-		font-size: 35px;
+		font-size: 52px;
+		padding: 0;
 	}
 
 	.navbar-nav {
 		margin: 0;
-		margin-left: 25%;
+		margin-left: 8%;
 		float: $reset;
 	}
 
@@ -598,20 +639,44 @@ div.nav-footer > ul > li > a {
 
 	.navbar-toggle .icon-bar {
 		display: block;
-		width: 22px;
-		height: 4px;
-		border-radius: 1px;
-	}
-
-	#desktop-footer {
-		visibility: hidden;
-		height: 0px;
-		width: 0px;
-		position: absolute;
-		top: 0px;
+		width: 32px;
+		height: 5px;
+		border-radius: 0px;
+		margin-bottom: 6px;
+		margin-top: 18px;
 	}
 
 	#quote {
 		display: none;
 	}
+
+	div.nav-footer ul {
+		list-style-type: none;
+		display: block;
+		@include knockout-49(32px);
+		margin-left: 8%;
+	}
+
+	.nav-footer ul li {
+		padding: 0;
+	}
+
+	#footer-get-tickets {
+		margin-top: 15px;
+	}
+
+	#mobile-nav-separator {
+		height: 1px;
+		width: 89%;
+		position: relative;
+		color: $bright;
+		visibility: visible;
+		top: $reset;
+		border-top: 1px solid #FFFFFF;
+	}
+
+	#social-links {
+		float: none;
+	}
+
 }
