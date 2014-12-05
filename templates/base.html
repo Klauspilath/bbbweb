@@ -62,8 +62,8 @@
         <img id="icons" src="{% static "img/head-icons.png" %}">
     </header>
     <nav>
-        <div class="navbar navbar-default" role="navigation" data-text="append the div to me">
-            <div class="container-fluid">
+        <div  id="themenu" class="navbar navbar-default" role="navigation" data-text="append the div to me">
+            <div id="thebelowdiv" class="container-fluid">
                 <div class="navbar-header"><span class="navbar-menu-text">MENU</span>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">{% trans "Toggle Navigation" %}</span>
@@ -100,6 +100,9 @@
                     </div>
                     <div class="col-xs-12 col-sm-3">
                         <ul id="social-links" class="list-inline">
+                            <li id="follow-us">
+                                    FOLLOW US:
+                            </li>
                             <li><a href="https://www.facebook.com/BBBinSF" target="_blank"><img
                                     src="{% static "img/fb-icon.png" %}"></a></li>
                             <li><a href="https://twitter.com/beachblanketsf" target="_blank"><img

@@ -94,6 +94,10 @@ a:hover {
 	color: $grey;
 }
 
+.red {
+	color: $red;
+}
+
 .bg-white {
 	background-color: $bright;
 }
@@ -498,6 +502,16 @@ div.nav-footer > ul > li > a {
 	top: 0px;
 }
 
+.navbar-menu-text {
+	//display: none;
+}
+
+#box-office, #follow-us {
+	display: none;
+}
+
+
+
 @media (max-width: $screen-sm-min) {
 
 	h1 {
@@ -519,6 +533,7 @@ div.nav-footer > ul > li > a {
 	.nav > li {
 		position: relative;
 		display: block;
+		margin-bottom: 15px
 	}
 
 	.dropdown-menu > .active > a,
@@ -560,6 +575,13 @@ div.nav-footer > ul > li > a {
 		color: $dark-color;
 	}
 
+	.dropdown-submenu > .dropdown-menu {
+		top: 0;
+		left: 100%;
+		margin-left: 18px;
+		border-top-left-radius: 0;
+	}
+
 	.dropdown .open {
 		background-color: $dark-color !important;
 	}
@@ -582,6 +604,10 @@ div.nav-footer > ul > li > a {
 
 	}
 
+	//	.navbar-menu-text:hover{
+	//		color: $red;
+	//	}
+
 	.dropdown-menu > li > a {
 		@include knockout-29(42px);
 		margin-bottom: 21px;
@@ -594,6 +620,7 @@ div.nav-footer > ul > li > a {
 		width: 100%;
 		margin: 0;
 		opacity: 0.95;
+		padding-top: 60px;
 	}
 
 	.carousel-indicators {
@@ -637,6 +664,10 @@ div.nav-footer > ul > li > a {
 		background-color: $bright;
 	}
 
+	.navbar-default .navbar-toggle .icon-bar:hover {
+		background-color: $red;
+	}
+
 	.navbar-toggle .icon-bar {
 		display: block;
 		width: 32px;
@@ -672,11 +703,22 @@ div.nav-footer > ul > li > a {
 		color: $bright;
 		visibility: visible;
 		top: $reset;
-		border-top: 1px solid #FFFFFF;
+		border-top: 2px solid $bright;
+		margin-bottom: 42px;
 	}
 
 	#social-links {
 		float: none;
 	}
 
+	#box-office {
+		display: block;
+		margin-left: 7%;
+	}
+
+	#follow-us{
+		display: inline-block;
+		@include knockout-49(32px);
+		color: $bright;
+	}
 }

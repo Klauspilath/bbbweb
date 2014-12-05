@@ -111,26 +111,31 @@ a:hover {
 }
 
 /* line 97, ../../sass/custom.scss */
+.red {
+  color: #bb281f;
+}
+
+/* line 101, ../../sass/custom.scss */
 .bg-white {
   background-color: #ffffff;
 }
 
-/* line 101, ../../sass/custom.scss */
+/* line 105, ../../sass/custom.scss */
 .bg-red {
   background-color: #bb281f;
 }
 
-/* line 105, ../../sass/custom.scss */
+/* line 109, ../../sass/custom.scss */
 .bg-light-grey {
   background-color: #ebebeb;
 }
 
-/* line 109, ../../sass/custom.scss */
+/* line 113, ../../sass/custom.scss */
 .caps {
   text-transform: uppercase;
 }
 
-/* line 113, ../../sass/custom.scss */
+/* line 117, ../../sass/custom.scss */
 .ko-49-18 {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -138,7 +143,7 @@ a:hover {
   font-size: 18px;
 }
 
-/* line 117, ../../sass/custom.scss */
+/* line 121, ../../sass/custom.scss */
 .ko-29-18 {
   font-family: 'Knockout 29 A', 'Knockout 29 B';
   font-weight: 400;
@@ -146,47 +151,47 @@ a:hover {
   font-size: 18px;
 }
 
-/* line 121, ../../sass/custom.scss */
+/* line 125, ../../sass/custom.scss */
 .opacity-fifty {
   opacity: 0.5;
 }
 
-/* line 125, ../../sass/custom.scss */
+/* line 129, ../../sass/custom.scss */
 .opacity-eighty {
   opacity: 0.8;
 }
 
-/* line 129, ../../sass/custom.scss */
+/* line 133, ../../sass/custom.scss */
 .bg-clear {
   background-color: initial !important;
 }
 
-/* line 133, ../../sass/custom.scss */
+/* line 137, ../../sass/custom.scss */
 .bg-black {
   background-color: #000000 !important;
 }
 
-/* line 137, ../../sass/custom.scss */
+/* line 141, ../../sass/custom.scss */
 .hover-black:hover {
   color: #000000 !important;
 }
 
-/* line 141, ../../sass/custom.scss */
+/* line 145, ../../sass/custom.scss */
 .hover-white:hover {
   color: #ffffff !important;
 }
 
-/* line 145, ../../sass/custom.scss */
+/* line 149, ../../sass/custom.scss */
 .align-right {
   text-align: right;
 }
 
-/* line 149, ../../sass/custom.scss */
+/* line 153, ../../sass/custom.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 153, ../../sass/custom.scss */
+/* line 157, ../../sass/custom.scss */
 footer {
   background-color: #bb281f;
   border: 0;
@@ -194,14 +199,14 @@ footer {
   padding: 15px 0 30px;
 }
 
-/* line 160, ../../sass/custom.scss */
+/* line 164, ../../sass/custom.scss */
 table {
   padding: 0;
   margin: 0;
   max-width: 900px;
 }
 
-/* line 166, ../../sass/custom.scss */
+/* line 170, ../../sass/custom.scss */
 .zero-table * {
   border: none;
   border-collapse: collapse;
@@ -211,17 +216,17 @@ table {
   line-height: 0;
 }
 
-/* line 175, ../../sass/custom.scss */
+/* line 179, ../../sass/custom.scss */
 section.content td {
   padding-bottom: 30px;
 }
 
-/* line 179, ../../sass/custom.scss */
+/* line 183, ../../sass/custom.scss */
 #page-title {
   margin-bottom: 40px;
 }
 
-/* line 183, ../../sass/custom.scss */
+/* line 187, ../../sass/custom.scss */
 #hero-image {
   height: 100%;
   max-height: 100% !important;
@@ -232,19 +237,19 @@ section.content td {
   background-position: 50%;
 }
 
-/* line 193, ../../sass/custom.scss */
+/* line 197, ../../sass/custom.scss */
 #screen > div > section > div > table > tbody > tr > td:nth-child(1) {
   max-width: 300px;
   min-width: 180px;
 }
 
-/* line 198, ../../sass/custom.scss */
+/* line 202, ../../sass/custom.scss */
 #screen > div > section > div > table > tbody > tr > td:nth-child(2) {
   max-width: 600px;
   padding-left: 20px;
 }
 
-/* line 203, ../../sass/custom.scss */
+/* line 207, ../../sass/custom.scss */
 #screen {
   max-width: 1000px;
   margin-left: auto;
@@ -252,14 +257,14 @@ section.content td {
   overflow: hidden;
 }
 
-/* line 210, ../../sass/custom.scss */
+/* line 214, ../../sass/custom.scss */
 #footer-get-tickets {
   text-transform: uppercase;
   margin-top: 60px;
   text-align: center;
 }
 
-/* line 216, ../../sass/custom.scss */
+/* line 220, ../../sass/custom.scss */
 #footer-get-tickets > p > a {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -268,7 +273,7 @@ section.content td {
   color: #000000;
 }
 
-/* line 221, ../../sass/custom.scss */
+/* line 225, ../../sass/custom.scss */
 #footer-get-tickets > span > a {
   font-family: 'Knockout 29 A', 'Knockout 29 B';
   font-weight: 400;
@@ -277,22 +282,22 @@ section.content td {
   color: #ffffff;
 }
 
-/* line 226, ../../sass/custom.scss */
+/* line 230, ../../sass/custom.scss */
 #logo {
   margin: 10px 20px 3px 10px;
 }
 
-/* line 230, ../../sass/custom.scss */
+/* line 234, ../../sass/custom.scss */
 #icons {
   margin-bottom: -38px;
 }
 
-/* line 234, ../../sass/custom.scss */
+/* line 238, ../../sass/custom.scss */
 .content {
   padding: 20px 50px 50px;
 }
 
-/* line 238, ../../sass/custom.scss */
+/* line 242, ../../sass/custom.scss */
 .copy {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -300,7 +305,7 @@ section.content td {
   font-size: 20px;
 }
 
-/* line 242, ../../sass/custom.scss */
+/* line 246, ../../sass/custom.scss */
 .copy p em {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -308,7 +313,7 @@ section.content td {
   font-size: 20px;
 }
 
-/* line 246, ../../sass/custom.scss */
+/* line 250, ../../sass/custom.scss */
 .presentation-copy {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -317,7 +322,7 @@ section.content td {
   margin-top: 25px;
 }
 
-/* line 255, ../../sass/custom.scss */
+/* line 259, ../../sass/custom.scss */
 .presentation-copy p em {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -325,7 +330,7 @@ section.content td {
   font-size: 24px;
 }
 
-/* line 260, ../../sass/custom.scss */
+/* line 264, ../../sass/custom.scss */
 #quote {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -340,7 +345,7 @@ section.content td {
   padding-top: 52px;
 }
 
-/* line 271, ../../sass/custom.scss */
+/* line 275, ../../sass/custom.scss */
 .byline {
   font-family: 'Knockout 29 A', 'Knockout 29 B';
   font-weight: 400;
@@ -349,7 +354,7 @@ section.content td {
   color: #000000;
 }
 
-/* line 276, ../../sass/custom.scss */
+/* line 280, ../../sass/custom.scss */
 div.get-tickets-button {
   background-color: #bb281f;
   border-radius: 10px;
@@ -366,23 +371,23 @@ div.get-tickets-button {
   letter-spacing: 0.8px;
 }
 
-/* line 289, ../../sass/custom.scss */
+/* line 293, ../../sass/custom.scss */
 div.get-tickets-button img {
   margin-bottom: 2px;
   margin-right: 2px;
 }
 
-/* line 295, ../../sass/custom.scss */
+/* line 299, ../../sass/custom.scss */
 .row {
   margin: 0;
 }
 
-/* line 299, ../../sass/custom.scss */
+/* line 303, ../../sass/custom.scss */
 .container-fluid {
   padding: 0;
 }
 
-/* line 303, ../../sass/custom.scss */
+/* line 307, ../../sass/custom.scss */
 .dropdown-menu {
   position: absolute;
   left: 0;
@@ -401,18 +406,18 @@ div.get-tickets-button img {
   background-clip: initial;
 }
 
-/* line 321, ../../sass/custom.scss */
+/* line 325, ../../sass/custom.scss */
 .dropdown-submenu > a:after {
   border: 0;
 }
 
-/* line 325, ../../sass/custom.scss */
+/* line 329, ../../sass/custom.scss */
 .dropdown-menu > li > a {
   color: #ffffff;
   text-transform: uppercase;
 }
 
-/* line 330, ../../sass/custom.scss */
+/* line 334, ../../sass/custom.scss */
 .nav-background {
   height: 247px;
   position: absolute;
@@ -423,55 +428,55 @@ div.get-tickets-button img {
   display: none;
 }
 
-/* line 340, ../../sass/custom.scss */
+/* line 344, ../../sass/custom.scss */
 .dropdown-image {
   float: right;
   opacity: 0.25;
 }
 
 @media (min-width: 768px) {
-  /* line 346, ../../sass/custom.scss */
+  /* line 350, ../../sass/custom.scss */
   .navbar-nav > li.dropdown:hover > .nav-background {
     display: block;
   }
 }
-/* line 351, ../../sass/custom.scss */
+/* line 355, ../../sass/custom.scss */
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   background-color: inherit;
   color: #000000;
 }
 
-/* line 357, ../../sass/custom.scss */
+/* line 361, ../../sass/custom.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: initial;
 }
 
-/* line 362, ../../sass/custom.scss */
+/* line 366, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a {
   color: #ffffff;
 }
 
-/* line 366, ../../sass/custom.scss */
+/* line 370, ../../sass/custom.scss */
 .navbar-header {
   height: 40px;
   margin: 0 !important;
 }
 
-/* line 371, ../../sass/custom.scss */
+/* line 375, ../../sass/custom.scss */
 .nav > li {
   display: inline-block;
 }
 
-/* line 376, ../../sass/custom.scss */
+/* line 380, ../../sass/custom.scss */
 .navbar-nav {
   margin-left: auto;
   margin-right: auto;
   width: 515px;
 }
 
-/* line 382, ../../sass/custom.scss */
+/* line 386, ../../sass/custom.scss */
 .navbar {
   border-radius: 0;
   border: 0;
@@ -484,58 +489,58 @@ div.get-tickets-button img {
   z-index: 100;
 }
 
-/* line 391, ../../sass/custom.scss */
+/* line 395, ../../sass/custom.scss */
 .navbar-nav > li > .dropdown-menu {
   margin-top: 30px;
 }
 
-/* line 395, ../../sass/custom.scss */
+/* line 399, ../../sass/custom.scss */
 .navbar-default {
   background-color: #000000;
   border-color: initial;
   border: 0;
 }
 
-/* line 401, ../../sass/custom.scss */
+/* line 405, ../../sass/custom.scss */
 .navbar-nav > li > a {
   padding: 0;
   line-height: initial;
 }
 
-/* line 406, ../../sass/custom.scss */
+/* line 410, ../../sass/custom.scss */
 .nav > li > a {
   position: relative;
   display: inline-block;
   padding: 8.5px 15px;
 }
 
-/* line 412, ../../sass/custom.scss */
+/* line 416, ../../sass/custom.scss */
 li.open > a {
   color: #bb281f !important;
 }
 
-/* line 416, ../../sass/custom.scss */
+/* line 420, ../../sass/custom.scss */
 .navbar-default .navbar-nav > li > a:hover {
   color: #bb281f;
 }
 
-/* line 420, ../../sass/custom.scss */
+/* line 424, ../../sass/custom.scss */
 .navbar-toggle {
   height: 45px;
 }
 
-/* line 424, ../../sass/custom.scss */
+/* line 428, ../../sass/custom.scss */
 .nav > li > a.dropdown-toggle:hover {
   background-color: inherit;
   color: #bb281f;
 }
 
-/* line 430, ../../sass/custom.scss */
+/* line 434, ../../sass/custom.scss */
 .editable-link, .editable-form {
   font-family: sans-serif;
 }
 
-/* line 434, ../../sass/custom.scss */
+/* line 438, ../../sass/custom.scss */
 .navbar-toggle {
   padding: 0;
   border: 0;
@@ -545,7 +550,7 @@ li.open > a {
   margin-right: 40px;
 }
 
-/* line 443, ../../sass/custom.scss */
+/* line 447, ../../sass/custom.scss */
 .nav-footer {
   margin: 0 auto;
   display: initial;
@@ -556,7 +561,7 @@ li.open > a {
   text-transform: uppercase;
 }
 
-/* line 450, ../../sass/custom.scss */
+/* line 454, ../../sass/custom.scss */
 .nav-footer ul {
   margin-left: 0px;
   vertical-align: top;
@@ -564,23 +569,23 @@ li.open > a {
   margin-right: 10px;
 }
 
-/* line 457, ../../sass/custom.scss */
+/* line 461, ../../sass/custom.scss */
 div.nav-footer > ul {
   list-style-type: disc;
   color: #ffffff;
 }
 
-/* line 462, ../../sass/custom.scss */
+/* line 466, ../../sass/custom.scss */
 div.nav-footer > ul > li > a {
   margin-right: 11px;
 }
 
-/* line 466, ../../sass/custom.scss */
+/* line 470, ../../sass/custom.scss */
 #social-links {
   float: right;
 }
 
-/* line 470, ../../sass/custom.scss */
+/* line 474, ../../sass/custom.scss */
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -588,7 +593,7 @@ div.nav-footer > ul > li > a {
   color: #bb281f;
 }
 
-/* line 477, ../../sass/custom.scss */
+/* line 481, ../../sass/custom.scss */
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
@@ -599,13 +604,13 @@ div.nav-footer > ul > li > a {
 }
 
 @media (max-width: 992px) {
-  /* line 487, ../../sass/custom.scss */
+  /* line 491, ../../sass/custom.scss */
   footer {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
-/* line 493, ../../sass/custom.scss */
+/* line 497, ../../sass/custom.scss */
 #mobile-nav-separator {
   height: 0px;
   width: 0px;
@@ -614,34 +619,40 @@ div.nav-footer > ul > li > a {
   top: 0px;
 }
 
+/* line 509, ../../sass/custom.scss */
+#box-office, #follow-us {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  /* line 503, ../../sass/custom.scss */
+  /* line 517, ../../sass/custom.scss */
   h1 {
     font-size: 48px;
   }
 
-  /* line 507, ../../sass/custom.scss */
+  /* line 521, ../../sass/custom.scss */
   h3 {
     font-size: 25px;
   }
 
-  /* line 511, ../../sass/custom.scss */
+  /* line 525, ../../sass/custom.scss */
   #icons {
     display: none;
   }
 
-  /* line 515, ../../sass/custom.scss */
+  /* line 529, ../../sass/custom.scss */
   #location-info {
     display: none;
   }
 
-  /* line 519, ../../sass/custom.scss */
+  /* line 533, ../../sass/custom.scss */
   .nav > li {
     position: relative;
     display: block;
+    margin-bottom: 15px;
   }
 
-  /* line 524, ../../sass/custom.scss */
+  /* line 539, ../../sass/custom.scss */
   .dropdown-menu > .active > a,
   .dropdown-menu > .active > a:hover,
   .dropdown-menu > .active > a:focus {
@@ -651,7 +662,7 @@ div.nav-footer > ul > li > a {
     background-color: transparent;
   }
 
-  /* line 533, ../../sass/custom.scss */
+  /* line 548, ../../sass/custom.scss */
   .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-nav .open .dropdown-menu > .active > a:focus {
@@ -659,7 +670,7 @@ div.nav-footer > ul > li > a {
     color: #000000;
   }
 
-  /* line 540, ../../sass/custom.scss */
+  /* line 555, ../../sass/custom.scss */
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -668,7 +679,7 @@ div.nav-footer > ul > li > a {
   }
 }
 @media (max-width: 768px) and (max-width: 992px) {
-  /* line 540, ../../sass/custom.scss */
+  /* line 555, ../../sass/custom.scss */
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
@@ -677,13 +688,13 @@ div.nav-footer > ul > li > a {
 }
 
 @media (max-width: 768px) {
-  /* line 551, ../../sass/custom.scss */
+  /* line 566, ../../sass/custom.scss */
   .navbar-default .navbar-toggle:hover,
   .navbar-default .navbar-toggle:focus {
     background-color: #000000;
   }
 
-  /* line 556, ../../sass/custom.scss */
+  /* line 571, ../../sass/custom.scss */
   .dropdown-menu > .active > a,
   .dropdown-menu > .active > a:hover,
   .dropdown-menu > .active > a:focus {
@@ -691,23 +702,31 @@ div.nav-footer > ul > li > a {
     color: #000000;
   }
 
-  /* line 563, ../../sass/custom.scss */
+  /* line 578, ../../sass/custom.scss */
+  .dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: 18px;
+    border-top-left-radius: 0;
+  }
+
+  /* line 585, ../../sass/custom.scss */
   .dropdown .open {
     background-color: #000000 !important;
   }
 
-  /* line 567, ../../sass/custom.scss */
+  /* line 589, ../../sass/custom.scss */
   .open > a :hover {
     background-color: #000000;
   }
 
-  /* line 571, ../../sass/custom.scss */
+  /* line 593, ../../sass/custom.scss */
   .navbar-header {
     text-align: right;
     height: 60px;
   }
 
-  /* line 576, ../../sass/custom.scss */
+  /* line 598, ../../sass/custom.scss */
   .navbar-menu-text {
     color: #fff;
     display: inline-block;
@@ -719,7 +738,7 @@ div.nav-footer > ul > li > a {
     font-size: 42px;
   }
 
-  /* line 585, ../../sass/custom.scss */
+  /* line 611, ../../sass/custom.scss */
   .dropdown-menu > li > a {
     font-family: 'Knockout 29 A', 'Knockout 29 B';
     font-weight: 400;
@@ -728,7 +747,7 @@ div.nav-footer > ul > li > a {
     margin-bottom: 21px;
   }
 
-  /* line 590, ../../sass/custom.scss */
+  /* line 616, ../../sass/custom.scss */
   .navbar-default .navbar-collapse {
     background-color: #bb281f;
     position: absolute;
@@ -736,9 +755,10 @@ div.nav-footer > ul > li > a {
     width: 100%;
     margin: 0;
     opacity: 0.95;
+    padding-top: 60px;
   }
 
-  /* line 599, ../../sass/custom.scss */
+  /* line 626, ../../sass/custom.scss */
   .carousel-indicators {
     bottom: 2%;
     text-align: center;
@@ -747,46 +767,51 @@ div.nav-footer > ul > li > a {
     width: 100%;
   }
 
-  /* line 607, ../../sass/custom.scss */
+  /* line 634, ../../sass/custom.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 611, ../../sass/custom.scss */
+  /* line 638, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 52px;
     padding: 0;
   }
 
-  /* line 616, ../../sass/custom.scss */
+  /* line 643, ../../sass/custom.scss */
   .navbar-nav {
     margin: 0;
     margin-left: 8%;
     float: initial;
   }
 
-  /* line 622, ../../sass/custom.scss */
+  /* line 649, ../../sass/custom.scss */
   .nav > li > a.dropdown-toggle:hover {
     background-color: inherit;
     color: #000000;
   }
 
-  /* line 627, ../../sass/custom.scss */
+  /* line 654, ../../sass/custom.scss */
   li.open > a {
     color: #000000 !important;
   }
 
-  /* line 632, ../../sass/custom.scss */
+  /* line 659, ../../sass/custom.scss */
   .navbar-default .navbar-nav > li > a:hover {
     color: #000000;
   }
 
-  /* line 636, ../../sass/custom.scss */
+  /* line 663, ../../sass/custom.scss */
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #ffffff;
   }
 
-  /* line 640, ../../sass/custom.scss */
+  /* line 667, ../../sass/custom.scss */
+  .navbar-default .navbar-toggle .icon-bar:hover {
+    background-color: #bb281f;
+  }
+
+  /* line 671, ../../sass/custom.scss */
   .navbar-toggle .icon-bar {
     display: block;
     width: 32px;
@@ -796,12 +821,12 @@ div.nav-footer > ul > li > a {
     margin-top: 18px;
   }
 
-  /* line 649, ../../sass/custom.scss */
+  /* line 680, ../../sass/custom.scss */
   #quote {
     display: none;
   }
 
-  /* line 653, ../../sass/custom.scss */
+  /* line 684, ../../sass/custom.scss */
   div.nav-footer ul {
     list-style-type: none;
     display: block;
@@ -812,17 +837,17 @@ div.nav-footer > ul > li > a {
     margin-left: 8%;
   }
 
-  /* line 660, ../../sass/custom.scss */
+  /* line 691, ../../sass/custom.scss */
   .nav-footer ul li {
     padding: 0;
   }
 
-  /* line 664, ../../sass/custom.scss */
+  /* line 695, ../../sass/custom.scss */
   #footer-get-tickets {
     margin-top: 15px;
   }
 
-  /* line 668, ../../sass/custom.scss */
+  /* line 699, ../../sass/custom.scss */
   #mobile-nav-separator {
     height: 1px;
     width: 89%;
@@ -830,11 +855,28 @@ div.nav-footer > ul > li > a {
     color: #ffffff;
     visibility: visible;
     top: initial;
-    border-top: 1px solid #FFFFFF;
+    border-top: 2px solid #ffffff;
+    margin-bottom: 42px;
   }
 
-  /* line 678, ../../sass/custom.scss */
+  /* line 710, ../../sass/custom.scss */
   #social-links {
     float: none;
+  }
+
+  /* line 714, ../../sass/custom.scss */
+  #box-office {
+    display: block;
+    margin-left: 7%;
+  }
+
+  /* line 719, ../../sass/custom.scss */
+  #follow-us {
+    display: inline-block;
+    font-family: 'Knockout 49 A', 'Knockout 49 B';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    color: #ffffff;
   }
 }
