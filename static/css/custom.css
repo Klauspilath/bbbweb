@@ -862,12 +862,12 @@ div.nav-footer > ul > li > a {
   /* line 710, ../../sass/custom.scss */
   #social-links {
     float: none;
+    margin-left: 7%;
   }
 
-  /* line 714, ../../sass/custom.scss */
+  /* line 715, ../../sass/custom.scss */
   #box-office {
     display: block;
-    margin-left: 7%;
   }
 
   /* line 719, ../../sass/custom.scss */
