@@ -1,0 +1,25 @@
+@import "bootstrap/variables";
+@import "global-vars";
+@import "fonts";
+
+.list-image {
+
+}
+
+.listing-content {
+	padding-left: 30px;
+}
+
+.listing-row {
+	margin-bottom: 40px;
+}
+
+@media (max-width: $screen-md-min) {
+
+	.listing-content {
+		padding-left: 0px;
+		width: 350px;
+		padding-top: 30px;
+	}
+
+}

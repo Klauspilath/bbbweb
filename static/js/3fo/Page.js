@@ -53,7 +53,6 @@ $(function () {
             var menuButton = $('.navbar-header > button'),
                 clickedClass = 'clicked';
 
-
             menuButton.on('click',function(event){
 
                 if(event.isDefaultPrevented())
@@ -74,7 +73,6 @@ $(function () {
                     $('.navbar-menu-text').css('color', '#ffffff');
                     menuButton.removeClass(clickedClass);
                 }
-
             });
 
             $('#main-menu-dropdown').append($('#bottom-menu'));
