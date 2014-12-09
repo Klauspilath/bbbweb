@@ -35,6 +35,10 @@ h3 {
 	margin: -8px 0 0;
 }
 
+#screen > div > section > div > div > h3{
+	margin-bottom: 30px;
+}
+
 h1 {
 	@include knockout-49(58px);
 	padding: 0;
@@ -288,6 +292,7 @@ div.get-tickets-button {
 	padding: 5px;
 	text-transform: uppercase;
 	letter-spacing: 0.8px;
+	margin-top: 30px;
 }
 
 div.get-tickets-button img {
