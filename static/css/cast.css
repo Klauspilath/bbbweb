@@ -80,13 +80,13 @@ h1 {
 }
 
 @media (min-width: 928px) {
-  /* line 71, ../../sass/cast.scss */
+  /* line 70, ../../sass/cast.scss */
   .col-sm-4 {
     margin-bottom: 0.6%;
   }
 }
 @media (max-width: 568px) {
-  /* line 79, ../../sass/cast.scss */
+  /* line 76, ../../sass/cast.scss */
   .cast-member-name {
     font-size: 20px;
   }

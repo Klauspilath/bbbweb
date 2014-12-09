@@ -23,6 +23,16 @@ body {
 	}
 }
 
+div.cms-content p{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+div.cms-content  h3{
+	padding-top: 40px;
+}
+
+
 //customizations
 
 header {
@@ -319,7 +329,7 @@ div.get-tickets-button img {
 	margin: 0;
 	font-size: 19px;
 	list-style: none;
-	background-color: $reset;
+	background-color: transparent;
 	border: 0;
 	border-radius: $reset;
 	-webkit-box-shadow: $reset;
