@@ -37,8 +37,11 @@ $(function () {
         $dropdowns.on('mouseenter', function () {
             var sc = $('#screen');
             var bg = $(this).children('.nav-background');
+
             if (sc.offset().left == bg.offset().left) return;
+
             var bgl = sc.offset().left - bg.offset().left;
+
             bg.css('left', bgl + 'px');
         })
     };
