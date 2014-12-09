@@ -111,3 +111,25 @@ div.get-tickets-button {
 		display: none;
 	}
 }
+
+@media (max-width: $screen-phone) {
+
+	.carousel-indicators {
+		left: 35%;
+		bottom: 60px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		width: 99px;
+		position: absolute;
+	}
+
+	div.get-tickets-button {
+		bottom: 110px;
+		left: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+	}
+
+}

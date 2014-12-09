@@ -123,3 +123,24 @@ div.get-tickets-button {
     display: none;
   }
 }
+@media (max-width: 480px) {
+  /* line 117, ../../sass/carousel.scss */
+  .carousel-indicators {
+    left: 35%;
+    bottom: 60px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 99px;
+    position: absolute;
+  }
+
+  /* line 127, ../../sass/carousel.scss */
+  div.get-tickets-button {
+    bottom: 110px;
+    left: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+  }
+}

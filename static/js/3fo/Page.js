@@ -26,9 +26,9 @@ $(function () {
             header = $('header');
 
         hero.css('height', $(window).height()
-                - ( title.height()
-                    + nav.height()
-                    + header.height())
+            - ( title.height()
+            + nav.height()
+            + header.height())
         );
     };
 
@@ -48,55 +48,62 @@ $(function () {
 
     TFO.__PageInstance.prototype.formatNavigation = function () {
 
-        if ($(window).width() <= 768 && !TFO.Page.isMobileAdapted){
-
-            var menuButton = $('.navbar-header > button'),
-                clickedClass = 'clicked';
-
-            menuButton.on('click',function(event){
-
-                if(event.isDefaultPrevented())
-                    return;
-
-                event.preventDefault();
-                event.stopPropagation();
-
-                $('#main-menu-dropdown').slideToggle();
-
-                menuButton.toggleClass(clickedClass);
-
-                if(menuButton.hasClass(clickedClass) && $('.navbar-menu-text').css('color') !== '#bb281f'){
-                    $('.icon-bar').css('background-color', '#bb281f');
-                    $('.navbar-menu-text').css('color', '#bb281f');
-                }else{
-                    $('.icon-bar').css('background-color', '#ffffff');
-                    $('.navbar-menu-text').css('color', '#ffffff');
-                    menuButton.removeClass(clickedClass);
-                }
-            });
-
-            $('#main-menu-dropdown').append($('#bottom-menu'));
-            $('.navbar-menu-text').removeClass('vanish');
-            TFO.Page.isMobileAdapted = true;
-            TFO.Page.isDesktopAdapted = false;
-            return true;
+        if ($(window).width() <= 768 && !TFO.Page.isMobileAdapted) {
+            TFO.Page.setMobileNavigation();
         }
 
-        if($(window).width() >= 769 && !TFO.Page.isDesktopAdapted){
+        if ($(window).width() >= 769 && !TFO.Page.isDesktopAdapted) {
+            TFO.Page.setDesktopNavigation()
+        }
 
-            if($('#desktop-footer').children('#bottom-menu').length == 0){
-                var bottomMenu = $('#bottom-menu');
-                bottomMenu.detach();
-                $('#desktop-footer').append(bottomMenu);
+    };
+
+    TFO.__PageInstance.prototype.setMobileNavigation = function () {
+
+        var menuButton = $('.navbar-header > button'),
+            clickedClass = 'clicked';
+
+        menuButton.on('click', function (event) {
+
+            if (event.isDefaultPrevented())
+                return;
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            $('#main-menu-dropdown').slideToggle();
+
+            menuButton.toggleClass(clickedClass);
+
+            if (menuButton.hasClass(clickedClass) && $('.navbar-menu-text').css('color') !== '#bb281f') {
+                $('.icon-bar').css('background-color', '#bb281f');
+                $('.navbar-menu-text').css('color', '#bb281f');
+            } else {
+                $('.icon-bar').css('background-color', '#ffffff');
+                $('.navbar-menu-text').css('color', '#ffffff');
+                menuButton.removeClass(clickedClass);
             }
+        });
 
+        $('#main-menu-dropdown').append($('#bottom-menu'));
+        $('.navbar-menu-text').removeClass('vanish');
+        TFO.Page.isMobileAdapted = true;
+        TFO.Page.isDesktopAdapted = false;
+        return true;
 
-            $('.navbar-menu-text').addClass('vanish');
-            TFO.Page.isMobileAdapted = false;
-            TFO.Page.isDesktopAdapted = true;
-            return true;
+    };
+
+    TFO.__PageInstance.prototype.setDesktopNavigation = function () {
+        if ($('#desktop-footer').children('#bottom-menu').length == 0) {
+            var bottomMenu = $('#bottom-menu');
+            bottomMenu.detach();
+            $('#desktop-footer').append(bottomMenu);
         }
 
+        $('.navbar-menu-text').addClass('vanish');
+        TFO.Page.isMobileAdapted = false;
+        TFO.Page.isDesktopAdapted = true;
+        return true;
     };
 
     TFO.__PageInstance.prototype.getState = function () {
