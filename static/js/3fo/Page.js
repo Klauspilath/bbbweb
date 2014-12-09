@@ -9,7 +9,6 @@ $(function () {
         this.isMobileAdapted = false;
         this.isDesktopAdapted = false;
         this.initializeResizeListener();
-
     };
 
     TFO.__PageInstance.prototype.initializeResizeListener = function () {
@@ -55,7 +54,6 @@ $(function () {
         if ($(window).width() >= 769 && !TFO.Page.isDesktopAdapted) {
             TFO.Page.setDesktopNavigation()
         }
-
     };
 
     TFO.__PageInstance.prototype.setMobileNavigation = function () {

@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-  line-height: initial;
+  line-height: inital;
   color: #000000;
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -417,10 +417,10 @@ div.get-tickets-button img {
   list-style: none;
   background-color: transparent;
   border: 0;
-  border-radius: initial;
-  -webkit-box-shadow: initial;
-  box-shadow: initial;
-  background-clip: initial;
+  border-radius: inital;
+  -webkit-box-shadow: inital;
+  box-shadow: inital;
+  background-clip: inital;
 }
 
 /* line 340, ../../sass/custom.scss */
@@ -467,7 +467,7 @@ div.get-tickets-button img {
 /* line 376, ../../sass/custom.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: initial;
+  border-color: inital;
 }
 
 /* line 381, ../../sass/custom.scss */
@@ -514,14 +514,14 @@ div.get-tickets-button img {
 /* line 414, ../../sass/custom.scss */
 .navbar-default {
   background-color: #000000;
-  border-color: initial;
+  border-color: inital;
   border: 0;
 }
 
 /* line 420, ../../sass/custom.scss */
 .navbar-nav > li > a {
   padding: 0;
-  line-height: initial;
+  line-height: inital;
 }
 
 /* line 425, ../../sass/custom.scss */
@@ -582,7 +582,7 @@ li.open > a {
 .nav-footer ul {
   margin-left: 0px;
   vertical-align: top;
-  width: initial;
+  width: inital;
   margin-right: 10px;
 }
 
@@ -654,7 +654,7 @@ div.nav-footer > ul > li > a {
 
   /* line 538, ../../sass/custom.scss */
   h1.page-title {
-    height: initial;
+    height: inital;
   }
 
   /* line 542, ../../sass/custom.scss */
@@ -804,7 +804,7 @@ div.nav-footer > ul > li > a {
   .navbar-nav {
     margin: 0;
     margin-left: 8%;
-    float: initial;
+    float: inital;
   }
 
   /* line 666, ../../sass/custom.scss */
@@ -876,7 +876,7 @@ div.nav-footer > ul > li > a {
     position: relative;
     color: #ffffff;
     visibility: visible;
-    top: initial;
+    top: inital;
     border-top: 2px solid #ffffff;
     margin-bottom: 42px;
   }

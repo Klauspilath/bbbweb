@@ -11,12 +11,12 @@
 	color: $bright;
 	@include verlag-book(18px);
 	right: $reset !important;
-	text-align: $reset;
-	text-shadow: $reset;
+	text-align: left;
+	text-shadow: none;
 	height: 30px;
 	background-color: rgba(0, 0, 0, 0.6);
 	width: 100%;
-	padding: 4px 0 0 20px;
+	padding: 0 0 0 20px;
 }
 
 @media (max-width: $screen-sm-min) {
