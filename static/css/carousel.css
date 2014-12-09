@@ -7,8 +7,8 @@
 .carousel-indicators {
   left: 50px;
   bottom: 139px;
-  text-align: inital;
-  margin-left: inital;
+  text-align: initial;
+  margin-left: initial;
 }
 
 /* line 16, ../../sass/carousel.scss */
@@ -42,9 +42,9 @@
   font-weight: 300;
   font-style: normal;
   font-size: 16px;
-  right: inital !important;
-  text-align: inital;
-  text-shadow: inital;
+  right: initial !important;
+  text-align: initial;
+  text-shadow: initial;
   padding: 0 !important;
 }
 

@@ -34,8 +34,6 @@ $(function () {
     TFO.__PageInstance.prototype.setNavigationEvents = function () {
         var $dropdowns = $('li.dropdown');
 
-        // Mouseenter (used with .hover()) does not trigger when user enters from outside document window
-
         $dropdowns.on('mouseenter', function () {
             var sc = $('#screen');
             var bg = $(this).children('.nav-background');
@@ -66,6 +64,7 @@ $(function () {
             if (event.isDefaultPrevented())
                 return;
 
+            var navMenuText = $('.navbar-menu-text');
             event.preventDefault();
             event.stopPropagation();
 
@@ -73,12 +72,12 @@ $(function () {
 
             menuButton.toggleClass(clickedClass);
 
-            if (menuButton.hasClass(clickedClass) && $('.navbar-menu-text').css('color') !== '#bb281f') {
+            if (menuButton.hasClass(clickedClass) && navMenuText.css('color') !== '#bb281f') {
                 $('.icon-bar').css('background-color', '#bb281f');
-                $('.navbar-menu-text').css('color', '#bb281f');
+                navMenuText.css('color', '#bb281f');
             } else {
                 $('.icon-bar').css('background-color', '#ffffff');
-                $('.navbar-menu-text').css('color', '#ffffff');
+                navMenuText.css('color', '#ffffff');
                 menuButton.removeClass(clickedClass);
             }
         });
@@ -92,10 +91,11 @@ $(function () {
     };
 
     TFO.__PageInstance.prototype.setDesktopNavigation = function () {
-        if ($('#desktop-footer').children('#bottom-menu').length == 0) {
+        var deskTopFooter = $('#desktop-footer');
+        if (deskTopFooter.children('#bottom-menu').length == 0) {
             var bottomMenu = $('#bottom-menu');
             bottomMenu.detach();
-            $('#desktop-footer').append(bottomMenu);
+            deskTopFooter.append(bottomMenu);
         }
 
         $('.navbar-menu-text').addClass('vanish');

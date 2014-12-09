@@ -5,8 +5,8 @@
 
 .carousel-caption {
 	position: absolute;
-	bottom: 0px;
-	left: 0px;
+	bottom: 0;
+	left: 0;
 	z-index: 1;
 	color: $bright;
 	@include verlag-book(18px);
@@ -50,7 +50,7 @@
 
 .thumb-image {
 	display: table-cell;
-	background-color: #000000;
+	background-color: $dark-color;
 	position: relative;
 	float: left;
 }
@@ -61,7 +61,7 @@
 	position: relative;
 	width: 10000px;
 	height: 150px;
-	font-size: 0px;
+	font-size: 0;
 }
 
 .carousel-inner {

@@ -26,11 +26,6 @@
 			</h1>
 
 
-				{% editable page.richtextpage.content %}
-					{{ page.richtextpage.content|richtext_filters|safe }}
-				{% endeditable %}
-
-
 			{% include "includes/bbb/nye-seating.html" %}
 
 
@@ -45,7 +40,11 @@
 				<a class="ticket-links hover-black" href="/showtimes/floorplan">View the sections</a>
 			</p>
 		</div>
-		{% include "includes/bbb/payment-info.html" %}
+		 <div class="cms-content row">
+            {% editable page.richtextpage.content %}
+                {{ page.richtextpage.content|richtext_filters|safe }}
+            {% endeditable %}
+        </div>
 
 		{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
 

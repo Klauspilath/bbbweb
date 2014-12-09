@@ -33,9 +33,11 @@
                     </div>
                 </div>
             {% else %}
+                <div class="cms-content">
                 {% editable page.richtextpage.content %}
                     {{ page.richtextpage.content|richtext_filters|safe }}
                 {% endeditable %}
+                </div>
             {% endif %}
         </div>
     </section>
