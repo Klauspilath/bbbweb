@@ -22,7 +22,7 @@ $(window).load(function () {
     TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_MOVE_DIRECTION = 'data-move-direction';
     TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_START = 'data-start';
     TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_END = 'data-end';
-    TFO.__GalleryInstance.prototype.currentMaxThumbs = TFO.__GalleryInstance.MAX_THUMBS_PER_SLIDE;
+    TFO.__GalleryInstance.prototype.currentMaxThumbs = 5;
     TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
 
         $(window).resize(function () {
@@ -85,7 +85,7 @@ $(window).load(function () {
         var thumbImages = $('.thumb-image .thumbnail');
 
         thumbImages.each(function (index) {
-            
+
             var g = TFO.Gallery,
                 isStart = index == 0 ? false : !(Boolean(index % g.currentMaxThumbs)),
                 isEnd = index == (thumbImages.length - 1) ? true : index % g.currentMaxThumbs == (g.currentMaxThumbs - 1),
