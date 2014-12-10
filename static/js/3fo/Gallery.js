@@ -22,7 +22,7 @@ $(window).load(function () {
     TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_MOVE_DIRECTION = 'data-move-direction';
     TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_START = 'data-start';
     TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_END = 'data-end';
-    TFO.__GalleryInstance.prototype.currentMaxThumbs = TFO.__GalleryInstance.prototype.MAX_THUMBS_PER_SLIDE;
+    TFO.__GalleryInstance.prototype.currentMaxThumbs = TFO.__GalleryInstance.MAX_THUMBS_PER_SLIDE;
     TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
 
         $(window).resize(function () {
@@ -61,8 +61,6 @@ $(window).load(function () {
             }
 
             // track the currently selected thumbnail and reposition the thumbnail strip relative to it.
-
-
             clearTimeout(timer);
             window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 500);
 

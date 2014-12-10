@@ -47,7 +47,7 @@ TFO.__FloorPlanInstance.prototype.setSectionListeners = function () {
                 section_event.initEvent("section_triggered", true, false);
                 section_event.data = {
                     "target": event.currentTarget.id
-                }
+                };
                 top.TFO.FloorPlan.updateStage(section_event);
             });
     }
