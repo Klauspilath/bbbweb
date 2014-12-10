@@ -13,9 +13,11 @@
             </h1>
             {% if page.silhouette_image %}
                 <div class="col-xs-12 col-sm-7">
+                    <div class="cms-content">
                     {% editable page.richtextpage.content %}
                         {{ page.richtextpage.content|richtext_filters|safe }}
                     {% endeditable %}
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-5">
                     <div id="quote"
@@ -31,9 +33,11 @@
                     </div>
                 </div>
             {% else %}
+                <div class="cms-content">
                 {% editable page.richtextpage.content %}
                     {{ page.richtextpage.content|richtext_filters|safe }}
                 {% endeditable %}
+                </div>
             {% endif %}
         </div>
     </section>

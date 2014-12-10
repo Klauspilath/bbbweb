@@ -1,8 +1,8 @@
 /* line 6, ../../sass/galleries.scss */
 .carousel-caption {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   z-index: 1;
   color: #ffffff;
   font-family: 'Verlag A', 'Verlag B';
@@ -10,12 +10,12 @@
   font-style: normal;
   font-size: 18px;
   right: initial !important;
-  text-align: initial;
-  text-shadow: initial;
+  text-align: left;
+  text-shadow: none;
   height: 30px;
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  padding: 4px 0 0 20px;
+  padding: 0 0 0 20px;
 }
 
 /* line 29, ../../sass/galleries.scss */
@@ -68,7 +68,7 @@
   position: relative;
   width: 10000px;
   height: 150px;
-  font-size: 0px;
+  font-size: 0;
 }
 
 /* line 67, ../../sass/galleries.scss */

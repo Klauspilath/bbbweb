@@ -85,10 +85,16 @@ $(window).load(function () {
         var thumbImages = $('.thumb-image .thumbnail');
 
         thumbImages.each(function (index) {
+            
             var g = TFO.Gallery,
                 isStart = index == 0 ? false : !(Boolean(index % g.currentMaxThumbs)),
                 isEnd = index == (thumbImages.length - 1) ? true : index % g.currentMaxThumbs == (g.currentMaxThumbs - 1),
                 thumb = $(this);
+
+            if (!isEnd && !isStart) {
+                thumb.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, 'none');
+                return;
+            }
 
             console.log(index + " : isStart=" + isStart + ' : isEnd=' + isEnd + ': %=' + index % g.currentMaxThumbs);
 
@@ -98,10 +104,6 @@ $(window).load(function () {
 
             thumb.attr(g.DATA_ATTRIBUTE_END, isEnd);
 
-            if (!isEnd && !isStart) {
-                thumb.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, 'none');
-                return;
-            }
 
             if (isEnd) {
                 thumb.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, g.DIRECTION_THUMBSTRIP_FORWARD);
