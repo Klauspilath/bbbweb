@@ -3,7 +3,6 @@
 @import "fonts";
 
 body {
-	//background-color: $body-bg;
 	background-color: $red;
 	font-weight: normal;
 	font-style: normal;
@@ -13,7 +12,6 @@ body {
 	line-height: $reset;
 	color: $dark-color;
 	@include verlag-light(20px);
-
 }
 
 @media (max-width: $screen-sm-min) {

@@ -53,7 +53,7 @@ $(function () {
         }
 
         if ($(window).width() >= 769 && !TFO.Page.isDesktopAdapted) {
-            TFO.Page.setDesktopNavigation()
+            TFO.Page.setDesktopNavigation();
         }
     };
 

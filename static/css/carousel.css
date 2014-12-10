@@ -111,7 +111,7 @@ div.get-tickets-button {
 
   /* line 102, ../../sass/carousel.scss */
   div.get-tickets-button {
-    bottom: 19%;
+    bottom: 155px;
     left: initial;
     margin-left: auto;
     margin-right: auto;
@@ -138,7 +138,7 @@ div.get-tickets-button {
   /* line 127, ../../sass/carousel.scss */
   div.get-tickets-button {
     bottom: 110px;
-    left: 50px;
+    left: 17%;
     margin-left: auto;
     margin-right: auto;
     position: absolute;

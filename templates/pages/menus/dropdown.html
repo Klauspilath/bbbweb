@@ -1,7 +1,6 @@
 {% load i18n future pages_tags staticfiles %}
 {% spaceless %}
 	{% if page_branch_in_menu %}
-
 		{% if branch_level == 0 %}
 			<ul class="nav navbar-nav">
 				{% for page in page_branch %}
@@ -15,7 +14,7 @@
 						{% if page.is_current_or_ascendant %}active{% endif %}"
 						    id="{{ page.html_id }}">
 							<a href="{{ page.get_absolute_url }}"
-							   {% if page.has_children_in_menu %}oh wow
+							   {% if page.has_children_in_menu %}
 							   class="dropdown-toggle disabled" data-toggle="dropdown"
 							   {% endif %}>
 								{{ page.title }}
@@ -45,6 +44,5 @@
 				</div>
 			{% endif %}
 		{% endif %}
-
 	{% endif %}
 {% endspaceless %}
