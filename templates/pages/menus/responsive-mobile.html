@@ -1,0 +1,130 @@
+{% load i18n future pages_tags staticfiles %}
+{#{% spaceless %}#}
+{#	{% if page_branch_in_menu %}#}
+{#		{% if branch_level == 0 %}#}
+{#			<ul class="nav navbar-nav">#}
+{#				{% for page in page_branch %}#}
+{##}
+{#					{% if page.in_menu %}#}
+{#						<li class="{% if page.has_children_in_menu %}dropdown{% endif %}#}
+{#						{% if page.is_current_or_ascendant %}active{% endif %}"#}
+{#						    id="{{ page.html_id }}">#}
+{#							<a {% if page.has_children_in_menu %}#}
+{#								class="dropdown-toggle disabled text-uppercase" data-toggle="dropdown"#}
+{#							{% endif %}>#}
+{#								{{ page.title }}#}
+{#							</a>#}
+{#							{% if page.has_children_in_menu %}{% page_menu page %}{% endif %}#}
+{#						</li>#}
+{#					{% endif %}#}
+{#				{% endfor %}#}
+{#			</ul>#}
+{#		{% else %}#}
+{#			<ul class="dropdown-menu">#}
+{#				{% for page in page_branch %}#}
+{#					{% if page.in_menu %}#}
+{#						<li class="{% if page.has_children_in_menu %}dropdown-submenu{% endif %}#}
+{#						{% if page.is_current_or_ascendant %}active{% endif %} text-uppercase"#}
+{#						    id="{{ page.html_id }}">#}
+{#							<a {% if not page.has_children_in_menu %}href="{{ page.get_absolute_url }}"#}
+{#							   {% else %}class='noclick'{% endif %}>{{ page.title }}</a>#}
+{#							{% if page.has_children_in_menu %}{% page_menu page %}{% endif %}#}
+{#						</li>#}
+{#					{% endif %}#}
+{#				{% endfor %}#}
+{#			</ul>#}
+{#		{% endif %}#}
+{#	{% endif %}#}
+{#{% endspaceless %}#}
+
+{% spaceless %}
+	{% if page_branch_in_menu %}
+		{% if branch_level == 0 %}
+			<div class="panel-group" id="accordion_{{ branch_level }}" role="tablist" aria-multiselectable="false">
+				{% for page in page_branch %}
+					{% if page.in_menu %}
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="heading_{{ page.html_id }}">
+								<h4 class="panel-title">
+									<a data-parent="#accordion_{{ branch_level }}"
+											{% if page.has_children_in_menu %}
+                                       data-toggle="collapse"
+                                       href="#collapse_{{ page.html_id }}"
+                                       aria-controls="collapse_{{ page.html_id }}"
+											{% endif %}
+
+											{% if not page.is_current_or_ascendant %}
+                                       aria-expanded="false"
+                                       class="collapsed"
+											{% else %}
+                                       aria-expanded="true"
+											{% endif %}
+											>
+										{{ page.title }}
+									</a>
+								</h4>
+							</div>
+							{% if page.has_children_in_menu %}
+								<div id="collapse_{{ page.html_id }}"
+								     class="panel-collapse collapse {% if page.is_current_or_ascendant %}in{% endif %}"
+								     role="tabpanel"
+								     aria-labelledby="heading_{{ page.html_id }}"
+										{% if page.is_current_or_ascendant %}
+								     aria-expanded="true"
+										{% endif %}
+										>
+									<div class="panel-body">
+										{% if page.has_children_in_menu %}{% page_menu page %}{% endif %}
+									</div>
+								</div>
+							{% endif %}
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% else %}
+			<div class="panel-group" id="accordion_{{ branch_level }}" role="tablist" aria-multiselectable="false">
+				{% for page in page_branch %}
+					{% if page.in_menu %}
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="heading_{{ page.html_id }}">
+								<h4 class="panel-title">
+									<a data-parent="#accordion_{{ branch_level }}"
+											{% if page.has_children_in_menu %}
+                                       data-toggle="collapse"
+                                       href="#collapse_{{ page.html_id }}"
+                                       aria-controls="collapse_{{ page.html_id }}"
+											{% endif %}
+
+											{% if not page.is_current_or_ascendant %}
+                                       aria-expanded="false"
+                                       class="collapsed"
+											{% else %}
+                                       aria-expanded="true"
+											{% endif %}
+											>
+										{{ page.title }}
+									</a>
+								</h4>
+							</div>
+							<div id="collapse_{{ page.html_id }}"
+							     class="panel-collapse collapse {% if page.is_current_or_ascendant %}in{% endif %}"
+							     role="tabpanel"
+							     aria-labelledby="heading_{{ page.html_id }}"
+									{% if page.is_current_or_ascendant %}
+							     aria-expanded="true"
+									{% endif %}
+									>
+								<div class="panel-body">
+									{% if page.has_children_in_menu %}{% page_menu page %}{% endif %}
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		{% endif %}
+	{% endif %}
+{% endspaceless %}
+
+

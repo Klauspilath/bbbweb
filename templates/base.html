@@ -2,126 +2,145 @@
 <html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
 {% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
-    <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <title>
-        {% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
-    <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
-    {% compress css %}
-        <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7494932/640386/css/fonts.css"/>
-        <link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.css" %}">
-        <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
-        <link rel="stylesheet" href="{% static "css/styles.css" %}">
-        {% block extra_css %}{% endblock %}
-    {% endcompress %}
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+	<meta name="description" content="{% block meta_description %}{% endblock %}">
+	<title>
+		{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+	<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+	{% compress css %}
+		<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7494932/640386/css/fonts.css"/>
+		<link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.css" %}">
+		<link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+		<link rel="stylesheet" href="{% static "css/styles.css" %}">
+		{% block extra_css %}{% endblock %}
+	{% endcompress %}
 
-    {% compress js %}
-        <script src="{% static "js/jquery-2.1.1.min.js" %}"></script>
-        <script src="{% static "js/bootstrap.min.js" %}"></script>
-        <script src="{% static "js/bootstrap-extras.js" %}"></script>
-        <script src="{% static "js/modernizer/modernizr.js" %}"></script>
-        <script>
-            $(function () {
-                if (typeof TFO === 'undefined') {
-                    //console.log('TFO does not exist');
-                    TFO = {};
-                }
-                TFO.globals = function () {
-                };
-                TFO.globals.constants = {};
-                if (Modernizr.touch && window.navigator.userAgent.indexOf('Windows NT') < 0) {
-                    TFO.globals.constants.IS_DESKTOP = false;
-                    TFO.globals.constants.IS_MOBILE = true;
-                } else {
-                    TFO.globals.constants.IS_DESKTOP = true;
-                    TFO.globals.constants.IS_MOBILE = false;
-                }
+	{% compress js %}
+		<script src="{% static "js/jquery-2.1.1.min.js" %}"></script>
+		<script src="{% static "js/bootstrap.min.js" %}"></script>
+		<script src="{% static "js/bootstrap-extras.js" %}"></script>
+		<script src="{% static "js/modernizer/modernizr.js" %}"></script>
+		<script>
+			$(function () {
+				if (typeof TFO === 'undefined') {
+					//console.log('TFO does not exist');
+					TFO = {};
+				}
+				TFO.globals = function () {
+				};
+				TFO.globals.constants = {};
+				if (Modernizr.touch && window.navigator.userAgent.indexOf('Windows NT') < 0) {
+					TFO.globals.constants.IS_DESKTOP = false;
+					TFO.globals.constants.IS_MOBILE = true;
+				} else {
+					TFO.globals.constants.IS_DESKTOP = true;
+					TFO.globals.constants.IS_MOBILE = false;
+				}
 
-                TFO.globals.constants.IS_HOME = false;
-            });
-        </script>
-        {% block extra_js %}{% endblock %}
-        {% if user.is_staff %}
-            <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}">
-                jQuery.noConflict();
-            </script>
-        {% endif %}
-    {% endcompress %}
-    <!--[if lt IE 9]>
+				TFO.globals.constants.IS_HOME = false;
+			});
+		</script>
+		{% block extra_js %}{% endblock %}
+		{% if user.is_staff %}
+			<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}">
+				jQuery.noConflict();
+			</script>
+		{% endif %}
+	{% endcompress %}
+	<!--[if lt IE 9]>
 <script src="{% static "js/html5shiv.js" %}"></script>
 <script src="{% static "js/respond.min.js" %}"></script>
 <![endif]-->
-    {% block extra_head %}{% endblock %}
+	{% block extra_head %}{% endblock %}
 </head>
 <body id="{% block body_id %}body{% endblock %}">
 <div id="screen">
-    <header>
-        <a href="/"><img id="logo" src="{% static "img/logo.png" %}"></a>
-        <img id="icons" src="{% static "img/head-icons.png" %}">
-    </header>
-    <nav>
-        <div  id="themenu" class="navbar navbar-default" role="navigation" data-text="append the div to me">
-            <div id="thebelowdiv" class="container-fluid">
-                <div class="navbar-header"><span class="navbar-menu-text">MENU</span>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">{% trans "Toggle Navigation" %}</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div id="main-menu-dropdown" class="navbar-collapse collapse">
-                    {% page_menu "pages/menus/dropdown.html" %}
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div class="container-fluid">
-        {% block main %}{% endblock %}
-    </div>
-    <footer>
-        <div class="container-fluid">
+	<header>
+		<a href="/"><img id="logo" src="{% static "img/logo.png" %}"></a>
+		<img id="icons" src="{% static "img/head-icons.png" %}">
+	</header>
+	<nav>
+		<div id="themenu" class="navbar navbar-default" role="navigation" data-text="append the div to me">
+			<div id="thebelowdiv" class="container-fluid">
+				<div class="navbar-header"><span class="navbar-menu-text">MENU</span>
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobile-menu-dropdown">
+						<span class="sr-only">{% trans "Toggle Navigation" %}</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div id="main-menu-dropdown" class="navbar-collapse">
+					{% page_menu "pages/menus/dropdown.html" %}
+				</div>
+				<div id="mobile-menu-dropdown" class="navbar-collapse collapse">
+					{% page_menu "pages/menus/responsive-mobile.html" %}
+				</div>
 
-            <div id="desktop-footer">
-                <div id="location-info" class="row">
-                    <div class="col-md-8"><span class="caps ko-49-18"
-                                                style="margin-right: 15px;">Beach Blanket Babylon</span> <span
-                            class="ko-29-18">678 Beach Blanket Babylon Boulevard (Green Street), San Francisco CA 94133</span>
-                    </div>
-                    <div class="col-md-4 align-right"><span id="box-office" class="ko-49-18">BOX OFFICE</span> <span id="phone" class="ko-29-18">415.421.4222</span>
-                    </div>
-                </div>
-                <div id="bottom-menu" class="row">
-                    <hr id="mobile-nav-separator" class="vanish" />
-                    <div class="col-xs-12 col-sm-9">
-                        {% page_menu "pages/menus/footer.html" %}
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <ul id="social-links" class="list-inline">
-                            <li id="follow-us">
-                                    FOLLOW US:
-                            </li>
-                            <li><a href="https://www.facebook.com/BBBinSF" target="_blank"><img
-                                    src="{% static "img/fb-icon.png" %}"></a></li>
-                            <li><a href="https://twitter.com/beachblanketsf" target="_blank"><img
-                                    src="{% static "img/twitter-icon.png" %}"></a></li>
-                            <li><a href="http://www.youtube.com/user/beachblanketbabylon?feature=results_main"
-                                   target="_blank"><img src="{% static "img/youtube-icon.png" %}"></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div id="footer-get-tickets" class="row">
-                <p>
-                    <a class="hover-white" href="/tickets">Get Tickets Now!</a>
-                </p>
-                <span><a href="/tickets">Click Here</a></span>
-            </div>
-        </div>
-    </footer>
-    {% include "includes/footer_scripts.html" %}
+				<script>
+
+					$('.noclick').on('click', function (event) {
+						if (event.isDefaultPrevented())
+							return;
+
+						//var navMenuText = $('.navbar-menu-text');
+						event.preventDefault();
+						event.stopPropagation();
+					});
+
+				</script>
+
+
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		{% block main %}{% endblock %}
+	</div>
+	<footer>
+		<div class="container-fluid">
+
+			<div id="desktop-footer">
+				<div id="location-info" class="row">
+					<div class="col-md-8"><span class="caps ko-49-18"
+					                            style="margin-right: 15px;">Beach Blanket Babylon</span> <span
+							class="ko-29-18">678 Beach Blanket Babylon Boulevard (Green Street), San Francisco CA 94133</span>
+					</div>
+					<div class="col-md-4 align-right"><span id="box-office" class="ko-49-18">BOX OFFICE</span> <span
+							id="phone" class="ko-29-18">415.421.4222</span>
+					</div>
+				</div>
+				<div id="bottom-menu" class="row">
+					<hr id="mobile-nav-separator" class="vanish"/>
+					<div class="col-xs-12 col-sm-9">
+						{% page_menu "pages/menus/footer.html" %}
+					</div>
+					<div class="col-xs-12 col-sm-3">
+						<ul id="social-links" class="list-inline">
+							<li id="follow-us">
+								FOLLOW US:
+							</li>
+							<li><a href="https://www.facebook.com/BBBinSF" target="_blank"><img
+									src="{% static "img/fb-icon.png" %}"></a></li>
+							<li><a href="https://twitter.com/beachblanketsf" target="_blank"><img
+									src="{% static "img/twitter-icon.png" %}"></a></li>
+							<li><a href="http://www.youtube.com/user/beachblanketbabylon?feature=results_main"
+							       target="_blank"><img src="{% static "img/youtube-icon.png" %}"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="footer-get-tickets" class="row">
+				<p>
+					<a class="hover-white" href="/tickets">Get Tickets Now!</a>
+				</p>
+				<span><a href="/tickets">Click Here</a></span>
+			</div>
+		</div>
+	</footer>
+	{% include "includes/footer_scripts.html" %}
 
 </div>
 {% editable_loader %}

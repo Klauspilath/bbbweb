@@ -1,6 +1,7 @@
 {% load i18n future pages_tags staticfiles %}
 {% spaceless %}
 	{% if page_branch_in_menu %}
+
 		{% if branch_level == 0 %}
 			<ul class="nav navbar-nav">
 				{% for page in page_branch %}
@@ -44,5 +45,6 @@
 				</div>
 			{% endif %}
 		{% endif %}
+
 	{% endif %}
 {% endspaceless %}

@@ -360,7 +360,7 @@ div.get-tickets-button img {
 
 @media (min-width: $screen-sm-min) {
 	.navbar-nav > li.dropdown:hover > .nav-background {
-		display: block;
+		//display: block;
 	}
 }
 
@@ -615,12 +615,7 @@ div.nav-footer > ul > li > a {
 		margin-top: 5px;
 		margin-right: 20px;
 		@include knockout-49(42px);
-
 	}
-
-	//	.navbar-menu-text:hover{
-	//		color: $red;
-	//	}
 
 	.dropdown-menu > li > a {
 		@include knockout-29(42px);
@@ -734,6 +729,10 @@ div.nav-footer > ul > li > a {
 		display: inline-block;
 		@include knockout-49(32px);
 		color: $bright;
+	}
+
+	#bottom-menu{
+		margin-bottom: 100px;
 	}
 }
 
