@@ -40,29 +40,31 @@
 {% spaceless %}
 	{% if page_branch_in_menu %}
 		{% if branch_level == 0 %}
-			<div class="panel-group" id="accordion_{{ branch_level }}" role="tablist" aria-multiselectable="false">
+			<div class="panel-group" id="accordion_{{ branch_level }}_{{ page.html_id }}" role="tablist" aria-multiselectable="false">
 				{% for page in page_branch %}
 					{% if page.in_menu %}
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="heading_{{ page.html_id }}">
-								<h4 class="panel-title">
-									<a data-parent="#accordion_{{ branch_level }}"
+								<span class="panel-title">
+									<a data-parent="#accordion_{{ branch_level }}_{{ page.html_id }}"
 											{% if page.has_children_in_menu %}
                                        data-toggle="collapse"
                                        href="#collapse_{{ page.html_id }}"
                                        aria-controls="collapse_{{ page.html_id }}"
+											{% else %}
+                                       href="{{ page.get_absolute_url }}"
 											{% endif %}
-
 											{% if not page.is_current_or_ascendant %}
                                        aria-expanded="false"
                                        class="collapsed"
 											{% else %}
                                        aria-expanded="true"
+                                       class="active"
 											{% endif %}
 											>
 										{{ page.title }}
 									</a>
-								</h4>
+								</span>
 							</div>
 							{% if page.has_children_in_menu %}
 								<div id="collapse_{{ page.html_id }}"
@@ -83,29 +85,31 @@
 				{% endfor %}
 			</div>
 		{% else %}
-			<div class="panel-group" id="accordion_{{ branch_level }}" role="tablist" aria-multiselectable="false">
+			<div class="panel-group" id="accordion_{{ branch_level }}_{{ page.html_id }}" role="tablist" aria-multiselectable="false">
 				{% for page in page_branch %}
 					{% if page.in_menu %}
 						<div class="panel panel-default">
 							<div class="panel-heading" role="tab" id="heading_{{ page.html_id }}">
-								<h4 class="panel-title">
-									<a data-parent="#accordion_{{ branch_level }}"
+								<span class="panel-title">
+									<a data-parent="#accordion_{{ branch_level }}_{{ page.html_id }}"
 											{% if page.has_children_in_menu %}
                                        data-toggle="collapse"
                                        href="#collapse_{{ page.html_id }}"
                                        aria-controls="collapse_{{ page.html_id }}"
+											{% else %}
+                                       href="{{ page.get_absolute_url }}"
 											{% endif %}
-
 											{% if not page.is_current_or_ascendant %}
                                        aria-expanded="false"
                                        class="collapsed"
 											{% else %}
                                        aria-expanded="true"
+                                       class="active"
 											{% endif %}
 											>
 										{{ page.title }}
 									</a>
-								</h4>
+								</span>
 							</div>
 							<div id="collapse_{{ page.html_id }}"
 							     class="panel-collapse collapse {% if page.is_current_or_ascendant %}in{% endif %}"

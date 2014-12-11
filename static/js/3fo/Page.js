@@ -9,12 +9,15 @@ $(function () {
         this.isMobileAdapted = false;
         this.isDesktopAdapted = false;
         this.initializeResizeListener();
+        this.setMobileMenuListeners();
     };
 
     TFO.__PageInstance.prototype.initializeResizeListener = function () {
         $(window).resize(function () {
+            var sc = $('#screen');
             TFO.Page.setHeroImageHeight();
             TFO.Page.formatNavigation();
+
         });
     };
 
@@ -34,19 +37,24 @@ $(function () {
     TFO.__PageInstance.prototype.setNavigationEvents = function () {
         var $dropdowns = $('li.dropdown');
 
+        $dropdowns.off('mouseenter');
+
         $dropdowns.on('mouseenter', function () {
-            //var sc = $('#screen');
-            //var bg = $(this).children('.nav-background');
-            //
-            //if (sc.offset().left == bg.offset().left) return;
-            //
+            var sc = $('#screen'),
+            bg = $(this).children('.nav-background');
+
+            if (sc.offset().left == bg.offset().left) return;
+
             //var bgl = sc.offset().left - bg.offset().left;
-            //
-            //bg.css('left', bgl + 'px');
+            //bg.css('left', sc.offset().left + 'px');
+
+            bg.css('left',  -1 * $(this).offset().left );
         })
     };
 
     TFO.__PageInstance.prototype.formatNavigation = function () {
+
+        TFO.Page.setNavigationEvents();
 
         if ($(window).width() <= 768 && !TFO.Page.isMobileAdapted) {
            TFO.Page.setMobileNavigation();
@@ -83,12 +91,14 @@ $(function () {
 
         $('#mobile-menu-dropdown').addClass('vanish');
         $('.navbar-menu-text').addClass('vanish');
+        $('#main-menu-dropdown').removeClass('vanish');
+
         TFO.Page.isMobileAdapted = false;
         TFO.Page.isDesktopAdapted = true;
 
     };
 
-    TFO.__PageInstance.prototype.setMobileMenuListers = function(){
+    TFO.__PageInstance.prototype.setMobileMenuListeners = function(){
         var menuButton = $('.navbar-header > button'),
             clickedClass = 'clicked';
 
