@@ -30,15 +30,21 @@
   /* line 35, ../../sass/floorplan.scss */
   #stage-view {
     margin-top: 20px;
+    display: none;
   }
 
-  /* line 39, ../../sass/floorplan.scss */
+  /* line 40, ../../sass/floorplan.scss */
   #layout-3d {
     margin-left: 12%;
     margin-top: 20px;
   }
 
-  /* line 44, ../../sass/floorplan.scss */
+  /* line 45, ../../sass/floorplan.scss */
+  #layout-2d {
+    margin-top: 20px;
+  }
+
+  /* line 49, ../../sass/floorplan.scss */
   #quote {
     display: none;
   }

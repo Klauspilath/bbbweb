@@ -34,10 +34,15 @@
 @media (max-width: $screen-sm-min) {
 	#stage-view{
 		margin-top: 20px;
+		display: none;
 	}
 
 	#layout-3d {
 		margin-left: 12%;
+		margin-top: 20px;
+	}
+
+	#layout-2d {
 		margin-top: 20px;
 	}
 
