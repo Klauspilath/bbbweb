@@ -869,4 +869,10 @@ span.panel-title {
     font-size: 45px;
     padding: 0;
   }
+
+  /* line 712, ../../sass/custom.scss */
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
