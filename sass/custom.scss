@@ -14,6 +14,10 @@ body {
 	@include verlag-light(20px);
 }
 
+#mobile-menu-dropdown{
+	display: none;
+}
+
 @media (max-width: $screen-sm-min) {
 
 	body {

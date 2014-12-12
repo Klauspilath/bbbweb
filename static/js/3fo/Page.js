@@ -71,7 +71,8 @@ $(window).load(function () {
 
         mobileMenu.append($('#bottom-menu'));
         mobileMenu.removeClass('vanish');
-
+        mobileMenu.removeAttr('style');
+        mobileMenu.css('display','block');
         $('#main-menu-dropdown').addClass('vanish');
         $('.navbar-menu-text').removeClass('vanish');
 
@@ -90,7 +91,7 @@ $(window).load(function () {
             $('#box-office').css('display','block');
         }
 
-        $('#mobile-menu-dropdown').addClass('vanish');
+        $('#mobile-menu-dropdown').css('display','none');
         $('.navbar-menu-text').addClass('vanish');
         $('#main-menu-dropdown').removeClass('vanish');
 
@@ -137,8 +138,6 @@ $(window).load(function () {
     };
 
     TFO.Page = new TFO.__PageInstance();
-    TFO.Page.setNavigationEvents();
-    TFO.Page.formatNavigation();
     if (!TFO.globals.constants.IS_HOME) {
         $(window).trigger('resize');
     }
