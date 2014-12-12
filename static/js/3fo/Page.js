@@ -48,7 +48,7 @@ $(function () {
             var bgl = sc.offset().left - bg.offset().left;
             //bg.css('left', sc.offset().left + 'px');
 
-            bg.css('left',  -1 * $(this).offset().left );
+            bg.css('left',  -1 * ($(this).offset().left) + sc.offset().left);
         })
     };
 
