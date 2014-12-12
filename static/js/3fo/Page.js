@@ -87,6 +87,7 @@ $(function () {
             var bottomMenu = $('#bottom-menu');
             bottomMenu.detach();
             deskTopFooter.append(bottomMenu);
+            $('#box-office').css('display','block');
         }
 
         $('#mobile-menu-dropdown').addClass('vanish');
