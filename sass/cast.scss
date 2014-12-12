@@ -72,9 +72,15 @@ h1 {
 	}
 }
 
-@media (max-width: 568px) {
+@media (max-width: $screen-phone) {
 	.cast-member-name {
-		font-size: 20px;
+		font-size: 12px;
+		height: 20px;
+		padding-left: 5px;
+		padding-top: 2px;
+	}
+	.member-overlay img {
+		display: none !important;
 	}
 }
 

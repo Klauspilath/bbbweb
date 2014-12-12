@@ -85,9 +85,17 @@ h1 {
     margin-bottom: 0.6%;
   }
 }
-@media (max-width: 568px) {
+@media (max-width: 480px) {
   /* line 76, ../../sass/cast.scss */
   .cast-member-name {
-    font-size: 20px;
+    font-size: 12px;
+    height: 20px;
+    padding-left: 5px;
+    padding-top: 2px;
+  }
+
+  /* line 82, ../../sass/cast.scss */
+  .member-overlay img {
+    display: none !important;
   }
 }
