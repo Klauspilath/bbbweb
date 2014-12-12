@@ -78,19 +78,24 @@ section.content td {
   text-align: center;
 }
 
-/* line 67, ../../sass/tickets.scss */
+/* line 63, ../../sass/tickets.scss */
+.row-header p {
+  padding: 2px;
+}
+
+/* line 71, ../../sass/tickets.scss */
 section.content > div {
   min-width: 366px;
 }
 
-/* line 72, ../../sass/tickets.scss */
+/* line 76, ../../sass/tickets.scss */
 section > div > div.row {
   position: relative;
   float: left;
   top: 0px;
 }
 
-/* line 78, ../../sass/tickets.scss */
+/* line 82, ../../sass/tickets.scss */
 .showtimes-title {
   font-family: 'Knockout 49 A', 'Knockout 49 B';
   font-weight: 400;
@@ -99,7 +104,7 @@ section > div > div.row {
   margin-top: 42px;
 }
 
-/* line 83, ../../sass/tickets.scss */
+/* line 87, ../../sass/tickets.scss */
 .grey-cell {
   height: 111px;
   margin-right: 10px;
@@ -114,12 +119,12 @@ section > div > div.row {
 }
 
 @media (max-width: 972px) {
-  /* line 90, ../../sass/tickets.scss */
+  /* line 94, ../../sass/tickets.scss */
   #quote {
     display: none;
   }
 }
-/* line 95, ../../sass/tickets.scss */
+/* line 99, ../../sass/tickets.scss */
 a.ticket-links {
   font-family: 'Verlag A', 'Verlag B';
   font-weight: 300;
@@ -128,30 +133,30 @@ a.ticket-links {
   color: #bb281f;
 }
 
-/* line 103, ../../sass/tickets.scss */
+/* line 107, ../../sass/tickets.scss */
 .get-tickets-button {
   margin-top: 75px;
 }
 
-/* line 107, ../../sass/tickets.scss */
+/* line 111, ../../sass/tickets.scss */
 #screen > div > section > div > table > tbody > tr > td:nth-child(2) {
   padding: 0;
 }
 
 @media (max-width: 992px) {
-  /* line 112, ../../sass/tickets.scss */
+  /* line 116, ../../sass/tickets.scss */
   .content {
     padding-left: 5px;
     padding-right: 5px;
   }
 
-  /* line 117, ../../sass/tickets.scss */
+  /* line 121, ../../sass/tickets.scss */
   section.content td {
     padding: 0;
     font-size: 24px;
   }
 
-  /* line 122, ../../sass/tickets.scss */
+  /* line 126, ../../sass/tickets.scss */
   td.bg-light-grey.grey-cell {
     font-size: 20px;
   }

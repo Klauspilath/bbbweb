@@ -552,58 +552,34 @@ span.panel-title {
 		display: block;
 		margin-bottom: 15px
 	}
+
+	.panel-title {
+		text-transform: uppercase;
+	}
+
 	.panel-group {
 		margin-left: 8%;
 	}
 
-	a.active,
-	a.active:hover,
-	a.active:focus {
+	.top-branch > .panel {
+		margin-bottom: 20px;
+	}
+
+	.lower-branch .panel-title{
+		font-size: 32px;
+	}
+
+	.panel-title > a:hover,
+	.panel-title > a:focus {
 		color: $dark-color;
 		text-decoration: none;
 		outline: 0;
 		background-color: transparent;
 	}
 
-	.navbar-nav .open .dropdown-menu > .active > a,
-	.navbar-nav .open .dropdown-menu > .active > a:hover,
-	.navbar-nav .open .dropdown-menu > .active > a:focus {
-		background-color: transparent;
-		color: $dark-color;
-	}
-
-	.navbar-default .navbar-nav > .active > a,
-	.navbar-default .navbar-nav > .active > a:hover,
-	.navbar-default .navbar-nav > .active > a:focus {
-		background-color: $dark-color;
-		color: $dark-color;
-
-		@media (max-width: $screen-md-min) {
-			background-color: transparent;
-		}
-	}
-
 	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus {
 		background-color: $dark-color;
-	}
-
-	.dropdown-menu > .active > a,
-	.dropdown-menu > .active > a:hover,
-	.dropdown-menu > .active > a:focus {
-		background-color: transparent;
-		color: $dark-color;
-	}
-
-	.dropdown-submenu > .dropdown-menu {
-		top: 0;
-		left: 100%;
-		margin-left: 18px;
-		border-top-left-radius: 0;
-	}
-
-	.dropdown .open {
-		background-color: $dark-color !important;
 	}
 
 	.open > a :hover {
@@ -621,11 +597,6 @@ span.panel-title {
 		margin-top: 5px;
 		margin-right: 20px;
 		@include knockout-49(42px);
-	}
-
-	.dropdown-menu > li > a {
-		@include knockout-29(42px);
-		margin-bottom: 21px;
 	}
 
 	.navbar-default .navbar-collapse {
@@ -661,16 +632,6 @@ span.panel-title {
 		float: $reset;
 	}
 
-	.nav > li > a.dropdown-toggle:hover {
-		background-color: inherit;
-		color: $dark-color;
-	}
-
-	li.open > a {
-		color: $dark-color !important;
-
-	}
-
 	.navbar-default .navbar-nav > li > a:hover {
 		color: $dark-color;
 	}
@@ -679,7 +640,7 @@ span.panel-title {
 		background-color: $bright;
 	}
 
-	.navbar-default .navbar-toggle .icon-bar:hover {
+	.navbar-default .navbar-toggle:hover > .icon-bar {
 		background-color: $red;
 	}
 
@@ -719,7 +680,8 @@ span.panel-title {
 		visibility: visible;
 		top: $reset;
 		border-top: 2px solid $bright;
-		margin-bottom: 42px;
+		margin-bottom: 32px;
+		margin-top: 10px;
 	}
 
 	#social-links {
@@ -749,11 +711,3 @@ span.panel-title {
 	}
 }
 
-
-.panel-title > a:hover,
-.panel-title > a:focus {
-	color: $dark-color;
-	text-decoration: none;
-	outline: 0;
-	background-color: transparent;
-}
