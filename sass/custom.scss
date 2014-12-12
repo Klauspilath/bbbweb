@@ -22,7 +22,7 @@ body {
 }
 
 div.cms-content p {
-	padding: 5px 5px 5px 11px;
+	padding: 5px 5px 5px 0;
 }
 
 div.cms-content h3 {
@@ -56,7 +56,7 @@ h1.page-title {
 }
 
 h2, h4, h5 {
-	font-family: 'Knockout 49 A', 'Knockout 49 B';
+	font-family: 'Knockout 49 A', 'Knockout 49 B', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -627,8 +627,7 @@ span.panel-title {
 	}
 
 	.navbar-nav {
-		margin: 0;
-		margin-left: 8%;
+		margin: 0 0 0 8%;
 		float: $reset;
 	}
 
