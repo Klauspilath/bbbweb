@@ -4,6 +4,8 @@
 	<link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
 {% endblock %}
 {% block main %}
+	<div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
+	</div>
 	<section class="content bg-white">
 		<div class="row">
 			{% if page.quote_text != "" %}
@@ -18,17 +20,12 @@
 					</p>
 				</div>
 			{% endif %}
-
 			<h1 class="page-title">
 				{% editable page.title %}
 					{{ page.title|safe }}
 				{% endeditable %}
 			</h1>
-
-
 			{% include "includes/bbb/nye-seating.html" %}
-
-
 		</div>
 		<div class="row">
 			<p class="showtimes-title">
@@ -36,15 +33,15 @@
 			</p>
 
 			<p>
-				<a href=""><img src="{% static "img/finger-red.png" %}"/></a>
+				<a href="/showtimes/floorplan"><img src="{% static "img/finger-red.png" %}"/></a>
 				<a class="ticket-links hover-black" href="/showtimes/floorplan">View the sections</a>
 			</p>
 		</div>
-		 <div class="cms-content row">
-            {% editable page.richtextpage.content %}
-                {{ page.richtextpage.content|richtext_filters|safe }}
-            {% endeditable %}
-        </div>
+		<div class="cms-content row">
+			{% editable page.richtextpage.content %}
+				{{ page.richtextpage.content|richtext_filters|safe }}
+			{% endeditable %}
+		</div>
 
 		{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
 

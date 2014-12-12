@@ -1,4 +1,4 @@
-$(function () {
+$(window).load(function () {
 
     if (typeof TFO === 'undefined') {
         TFO = {};
@@ -137,10 +137,9 @@ $(function () {
     };
 
     TFO.Page = new TFO.__PageInstance();
+    TFO.Page.setNavigationEvents();
+    TFO.Page.formatNavigation();
     if (!TFO.globals.constants.IS_HOME) {
         $(window).trigger('resize');
     }
-
-    TFO.Page.setNavigationEvents();
-    TFO.Page.formatNavigation();
 });
