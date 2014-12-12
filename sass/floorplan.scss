@@ -13,8 +13,7 @@
 }
 
 #layout-3d {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 50px auto -60px;
 }
 
 #stage-view {
@@ -32,7 +31,7 @@
 }
 
 @media (max-width: $screen-sm-min) {
-	#stage-view{
+	#stage-view {
 		margin-top: 20px;
 		display: none;
 	}
@@ -46,8 +45,20 @@
 		margin-top: 20px;
 	}
 
-	#quote{
+	#quote {
 		display: none;
 	}
 
+}
+
+@media (max-width: $screen-phone) {
+	#layout-3d {
+		margin: -60px auto -60px;
+		width: 280px;
+	}
+
+	#layout-2d {
+		margin-top: -60px;
+		width: 350px;
+	}
 }

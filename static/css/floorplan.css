@@ -11,11 +11,10 @@
 
 /* line 15, ../../sass/floorplan.scss */
 #layout-3d {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 50px auto -60px;
 }
 
-/* line 20, ../../sass/floorplan.scss */
+/* line 19, ../../sass/floorplan.scss */
 #stage-view {
   height: 300px;
   width: 380px;
@@ -27,25 +26,38 @@
 }
 
 @media (max-width: 768px) {
-  /* line 35, ../../sass/floorplan.scss */
+  /* line 34, ../../sass/floorplan.scss */
   #stage-view {
     margin-top: 20px;
     display: none;
   }
 
-  /* line 40, ../../sass/floorplan.scss */
+  /* line 39, ../../sass/floorplan.scss */
   #layout-3d {
     margin-left: 12%;
     margin-top: 20px;
   }
 
-  /* line 45, ../../sass/floorplan.scss */
+  /* line 44, ../../sass/floorplan.scss */
   #layout-2d {
     margin-top: 20px;
   }
 
-  /* line 49, ../../sass/floorplan.scss */
+  /* line 48, ../../sass/floorplan.scss */
   #quote {
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  /* line 55, ../../sass/floorplan.scss */
+  #layout-3d {
+    margin: -60px auto -60px;
+    width: 280px;
+  }
+
+  /* line 60, ../../sass/floorplan.scss */
+  #layout-2d {
+    margin-top: -60px;
+    width: 350px;
   }
 }
