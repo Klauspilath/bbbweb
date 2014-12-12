@@ -690,7 +690,7 @@ span.panel-title {
 
   /* line 564, ../../sass/custom.scss */
   .top-branch > .panel {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   /* line 568, ../../sass/custom.scss */
@@ -744,7 +744,7 @@ span.panel-title {
     width: 100%;
     margin: 0;
     opacity: 0.95;
-    padding-top: 60px;
+    padding-top: 28px;
   }
 
   /* line 612, ../../sass/custom.scss */
