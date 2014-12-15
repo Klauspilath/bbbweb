@@ -22,11 +22,15 @@
 						{% editable page.gallery.content %}
 							{{ page.gallery.content|richtext_filters|safe }}
 						{% endeditable %}
+						<div id="back-link" class="row">
+							<img src="{% static "img/back-icon.png" %}"><a href="{{ page.parent.get_absolute_url }}"
+							                                               class="red-link hover-black">back to the
+							cast</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		{% endfor %}
-
 	</section>
 {% endblock %}
 

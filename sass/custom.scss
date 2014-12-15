@@ -75,6 +75,12 @@ a.red {
 	@include red-text();
 }
 
+a.red-link {
+	@include verlag-light(20px);
+	color: $red;
+	margin-left: 15px;
+}
+
 a:hover {
 	text-decoration: none;
 	color: $dark-color;
@@ -162,6 +168,10 @@ a:hover {
 
 .align-center {
 	text-align: center;
+}
+
+#back-link {
+	#margin-top: 20px;
 }
 
 footer {
@@ -360,10 +370,10 @@ div.get-tickets-button img {
 @media (min-width: $screen-sm-min) {
 	@keyframes slide {
 		0% {
-			height:0px
+			height: 0px
 		}
 		50% {
-			height:123px
+			height: 123px
 		}
 		100% {
 			left: 488px;
