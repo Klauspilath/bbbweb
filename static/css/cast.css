@@ -4,17 +4,22 @@
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
-  padding-top: 35px;
+  padding-top: 20px;
   padding-bottom: 50px;
 }
 
 /* line 14, ../../sass/cast.scss */
 h1 {
   margin-bottom: 25px;
-  margin-top: 10px;
 }
 
 /* line 19, ../../sass/cast.scss */
+h1.page-title {
+  height: 106px;
+  margin-top: 0px;
+}
+
+/* line 25, ../../sass/cast.scss */
 .cast-member-name {
   position: absolute;
   color: #ffffff;
@@ -32,7 +37,7 @@ h1 {
   z-index: 1;
 }
 
-/* line 33, ../../sass/cast.scss */
+/* line 39, ../../sass/cast.scss */
 .headshot {
   cursor: pointer;
   max-width: 300px;
@@ -40,7 +45,7 @@ h1 {
   width: 100%;
 }
 
-/* line 41, ../../sass/cast.scss */
+/* line 47, ../../sass/cast.scss */
 .member-overlay {
   position: absolute;
   top: 0;
@@ -48,12 +53,12 @@ h1 {
   height: 100%;
 }
 
-/* line 48, ../../sass/cast.scss */
+/* line 54, ../../sass/cast.scss */
 .member-overlay img {
   opacity: 0.25;
 }
 
-/* line 52, ../../sass/cast.scss */
+/* line 58, ../../sass/cast.scss */
 .member-overlay p {
   width: 100%;
   text-align: center;
@@ -68,25 +73,24 @@ h1 {
   font-size: 24px;
 }
 
-/* line 60, ../../sass/cast.scss */
+/* line 66, ../../sass/cast.scss */
 .content {
-  padding: 0;
-  padding-bottom: 77px;
+  padding: 0 0 77px;
 }
 
-/* line 65, ../../sass/cast.scss */
+/* line 70, ../../sass/cast.scss */
 .red-semi-trans {
   background-color: rgba(187, 40, 31, 0.75);
 }
 
 @media (min-width: 928px) {
-  /* line 70, ../../sass/cast.scss */
+  /* line 75, ../../sass/cast.scss */
   .col-sm-4 {
     margin-bottom: 0.6%;
   }
 }
 @media (max-width: 480px) {
-  /* line 76, ../../sass/cast.scss */
+  /* line 81, ../../sass/cast.scss */
   .cast-member-name {
     font-size: 12px;
     height: 20px;
@@ -94,25 +98,25 @@ h1 {
     padding-top: 2px;
   }
 
-  /* line 82, ../../sass/cast.scss */
+  /* line 87, ../../sass/cast.scss */
   .member-overlay img {
     display: none !important;
   }
 
-  /* line 86, ../../sass/cast.scss */
+  /* line 91, ../../sass/cast.scss */
   .cast-container {
     padding-top: 10px;
     padding-bottom: 15px;
     padding-left: 0px;
   }
 
-  /* line 93, ../../sass/cast.scss */
+  /* line 98, ../../sass/cast.scss */
   h1 {
     margin-bottom: 10px;
     margin-top: 5px;
   }
 
-  /* line 98, ../../sass/cast.scss */
+  /* line 103, ../../sass/cast.scss */
   .content {
     padding-right: 5px;
     padding-left: 5px;

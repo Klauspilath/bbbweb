@@ -7,13 +7,19 @@
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 10px;
-	padding-top: 35px;
+	padding-top: 20px;
 	padding-bottom: 50px;
 }
 
 h1 {
 	margin-bottom: 25px;
-	margin-top: 10px;
+
+}
+
+h1.page-title {
+	height: 106px;
+	//margin-bottom: 25px;
+	margin-top: 0px;
 }
 
 .cast-member-name {
@@ -58,8 +64,7 @@ h1 {
 }
 
 .content {
-	padding: 0;
-	padding-bottom: 77px;
+	padding: 0 0 77px;
 }
 
 .red-semi-trans {

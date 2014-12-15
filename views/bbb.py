@@ -1,4 +1,3 @@
-__author__ = 'keithensign'
 from mezzanine.utils.views import render
 from django.template import loader
 
