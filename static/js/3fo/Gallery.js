@@ -138,10 +138,14 @@ $(window).load(function () {
             $('.thumbnail.' + $(slide).attr('id') + '> img').toggleClass('semi-trans');
             //console.log(thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true");
 
-
             if (thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_END) === "true") {
                 TFO.Gallery.shiftThumbsOnSlide(direction, thumb);
             }
+
+            //if (thumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true") {
+            //    TFO.Gallery.shiftThumbsOnSlide(direction, thumb);
+            //}
+
         });
     };
 
