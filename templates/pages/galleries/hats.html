@@ -4,12 +4,14 @@
     <link rel="stylesheet" href="{% static "css/galleries.css" %}"/>
 {% endblock %}
 {% block main %}
-    <div id="carousel-gallery" class="carousel slide" data-ride="carousel">
+    <div id="carousel-gallery" class="carousel slide bg-black" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
             {% with page.gallery.images.all as images %}
                 {% for image in images %}
-                    <div id="slide-{{ image.id }}" class="item item-div stretch {% if forloop.first %}active{% endif %}"
-                         style="background-image: url('{{ image.file.url }}')">
+                    <div id="slide-{{ image.id }}" class="align-center item item-div {% if forloop.first %}active{% endif %}">
+                        <div class="hat-container">
+                        <img class="img-responsive list-image" src="{{ image.file.url }}">
+                        </div>
                         <div class="carousel-caption show">
                             {{ image.description }}
                         </div>
