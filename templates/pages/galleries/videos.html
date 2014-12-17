@@ -1,10 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static "css/galleries.css" %}"/>
+{% endblock %}
+{% block main %}
+    <div id="carousel-gallery" class="carousel slide bg-black" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            {% with page.gallery.images.all as images %}
+                {% for image in images %}
+                    <div id="slide-{{ image.id }}" class="align-center item item-div {% if forloop.first %}active{% endif %}">
 
-</body>
-</html>
+                        <iframe width="854" height="510" src="{{ image.linkout }}" frameborder="0" allowfullscreen></iframe>
+{#                        <img class="img-responsive list-image" src="{{ image.file.url }}">#}
+
+{#                        <div class="carousel-caption show">#}
+{#                            {{ image.description }}#}
+{#                        </div>#}
+                    </div>
+                {% endfor %}
+            {% endwith %}
+        </div>
+        <div class="left-control">
+            <a class="left carousel-control" href="#carousel-gallery" role="button" data-slide="prev">
+                <img class="gallery-nav-icon-left" src="{% static "img/left-angle.png" %}" alt="previous image">
+            </a>
+        </div>
+        <div class="right-control">
+            <a class="right carousel-control" href="#carousel-gallery" role="button" data-slide="next">
+                <img class="gallery-nav-icon-right" src="{% static "img/right-angle.png" %}" alt="next image">
+            </a>
+        </div>
+    </div>
+    <div id="thumbnails">
+        {% with page.gallery.images.all as images %}
+            {% for image in images %}
+                <div class="thumb-image">
+                    <a id="thumb-{{ image.id }}" data-target="#carousel-gallery" data-slide-to="{{ forloop.counter|add:"-1" }}"
+                       class="thumbnail slide-{{ image.id }}">
+                        <img class="img-responsive semi-trans hover-clear"
+                             src="{{ MEDIA_URL }}{% thumbnail image.file 200 150 %}" alt="{{ image.description }}">
+                    </a>
+                </div>
+            {% endfor %}
+        {% endwith %}
+    </div>
+{% endblock %}
+{% block extra_js %}
+    {{ block.super }}
+    <script src="{% static "js/3fo/Gallery.js" %}" type="text/javascript"></script>
+{% endblock %}
