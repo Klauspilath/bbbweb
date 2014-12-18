@@ -83,7 +83,7 @@ $(window).load(function () {
 
 	TFO.__GalleryInstance.prototype.setThumbnailListeners = function () {
 
-		var thumbImages = $('.thumb-image .thumbnail');
+		var thumbImages = $('.thumb-image-div .thumbnail');
 
 		thumbImages.each(function (index) {
 
@@ -105,14 +105,6 @@ $(window).load(function () {
 				thumb.attr(g.DATA_ATTRIBUTE_START, isStart);
 				thumb.attr(g.DATA_ATTRIBUTE_MOVE_DIRECTION, g.DIRECTION_THUMBSTRIP_BACK);
 			}
-
-			if (index != (thumbImages.length - 1)) {
-
-				thumb.off('click');
-				thumb.on('click', function (event) {
-					g.shiftThumbsOnClick(event);
-				});
-			}
 		});
 
 		// start scrolling
@@ -122,90 +114,52 @@ $(window).load(function () {
 	TFO.__GalleryInstance.prototype.initializeSlideListener = function () {
 		var activeId = $('.item.item-div.active').attr('id');
 
-		$('.thumbnail.' + activeId + '> img').toggleClass('semi-trans');
+		$('#thumb-' + activeId.split('-')[1] + ' > img').toggleClass('semi-trans');
 
 		// as the gallery slider moves, show the the current thumb nail
 		$('#carousel-gallery').on('slide.bs.carousel', function (event) {
 			var gallery = TFO.Gallery,
-				currentSlide = $(event.currentTarget),
+				currentSlide = $('.carousel-inner').children('.active'),
 				currentId = currentSlide.attr('id'),
 				currentThumb = $('#thumb-' + String(currentId).split('-')[1]),
 				nextSlide = $(event.relatedTarget),
 				nextId = nextSlide.attr('id'),
 				nextThumb = $('#thumb-' + String(nextId).split('-')[1]),
 				screen = $('#screen'),
-				thumbNodes = $('.thumb-image .thumbnail');
+				thumbNodes = $('.thumb-image-div .thumbnail'),
+				slider = $('#thumbnails');
 
-			//direction = event.direction,
+			currentThumb.children('.thumb-img').toggleClass('semi-trans');
+			nextThumb.children('.thumb-img').toggleClass('semi-trans');
 
-			// toggle semi transparency
-			currentThumb.toggleClass('semi-trans');
-
-
-			nextThumb.toggleClass('semi-trans');
-
-			//move to the start
-			if (thumbNodes.filter(':last').attr('id') === $(target).attr('id')) {
-				$('#thumbnails').animate({'left': '0px'}, 10, 'linear');
+			if (thumbNodes.filter(':last').attr('id') === $(currentThumb).attr('id')) {
+				slider.animate({left: '0px'}, 10, 'linear');
+				$('.left-control').css('display','none');
 				return;
 			}
 
-			//move left/back
-			if (currentSlide.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_BACK) {
-				$('#thumbnails').animate({'left': '+=' + s.width() + 'px'}, 'slow');
+			if (nextThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) !== gallery.DIRECTION_THUMBSTRIP_NONE) {
+
+				if (currentThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_BACK) {
+					slider.animate({left: '+=' + screen.width() + 'px'}, 'slow');
+				}
+
+				if (currentThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_FORWARD) {
+					slider.animate({left: '+=' + (-1 * screen.width()) + 'px'}, 'slow');
+
+
+				}
 			}
 
-			if (currentSlide.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_FORWARD) {
-				$('#thumbnails').animate({'left': '+=' + (-1 * s.width()) + 'px'}, 'slow');
+			if (thumbNodes.filter(':first').attr('id') === $(nextThumb).attr('id')) {
+				$('.left-control').css('display','none');
+			} else {
+				$('.left-control').css('display','block');
 			}
 
-			//console.log(currentThumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true");
-
-			//if (currentThumb.attr(TFO.Gallery.DATA_ATTRIBUTE_END) === "true") {
-			//    TFO.Gallery.shiftThumbsOnSlide(direction, currentThumb);
-			//}
-
-			//if (currentThumb.attr(TFO.Gallery.DATA_ATTRIBUTE_START) === "true") {
-			//    TFO.Gallery.shiftThumbsOnSlide(direction, currentThumb);
-			//}
 
 		});
 	};
-
-
-	// this needs to work in revers
-	TFO.__GalleryInstance.prototype.shiftThumbsOnSlide = function (direction, target) {
-
-		console.log(direction + ':' + $(target).attr('id'));
-
-		var s = $('#screen'),
-			thumbNodes = $('.thumb-image .thumbnail');
-
-		//go back to the start
-		if (thumbNodes.filter(':last').attr('id') === $(target).attr('id')) {
-			$('#thumbnails').animate({'left': '0px'}, 10, 'linear');
-			return;
-		}
-
-		if (direction === this.DIRECTION_THUMBSTRIP_FORWARD) {
-			$('#thumbnails').animate({'left': '+=' + (-1 * s.width()) + 'px'}, 'slow');
-			return;
-		}
-
-		if (direction === this.DIRECTION_THUMBSTRIP_BACK) {
-			$('#thumbnails').animate({'left': '+=' + s.width() + 'px'}, 'slow');
-		}
-	};
-
-	// garbage
-	TFO.__GalleryInstance.prototype.shiftThumbsOnClick = function (event) {
-		console.log(event.currentTarget);
-
-		// set a state on the class so the carousel will cycle, but not only move the
-		// thumbs by the currentMaxThumbs -1
-
-	};
-
 
 	/*create instance*/
 	TFO.Gallery = new TFO.__GalleryInstance();

@@ -68,13 +68,15 @@ $(function () {
     TFO.__PageInstance.prototype.setMobileNavigation = function () {
 
         var mobileMenu = $('#mobile-menu-dropdown');
-
+        var socialLinks = $('#social-links');
+        socialLinks.detach();
         mobileMenu.append($('#bottom-menu'));
         mobileMenu.removeClass('vanish');
         mobileMenu.removeAttr('style');
+        $('.nav-footer').append(socialLinks);
         $('#main-menu-dropdown').addClass('vanish');
         $('.navbar-menu-text').removeClass('vanish');
-
+        $('#footer-box-office').removeClass('vanish');
         TFO.Page.isMobileAdapted = true;
         TFO.Page.isDesktopAdapted = false;
 
@@ -85,14 +87,17 @@ $(function () {
 
         if (deskTopFooter.children('#bottom-menu').length == 0) {
             var bottomMenu = $('#bottom-menu');
+            var socialLinks = $('#social-links');
+            socialLinks.detach();
             bottomMenu.detach();
             deskTopFooter.append(bottomMenu);
+            $('#footer-right').append(socialLinks);
         }
 
         $('#mobile-menu-dropdown').addClass('vanish');
         $('.navbar-menu-text').addClass('vanish');
         $('#main-menu-dropdown').removeClass('vanish');
-
+        $('#footer-box-office').addClass('vanish');
         TFO.Page.isMobileAdapted = false;
         TFO.Page.isDesktopAdapted = true;
 

@@ -92,7 +92,7 @@ section.content > div {
 section > div > div.row {
   position: relative;
   float: left;
-  top: 0px;
+  top: 0;
 }
 
 /* line 82, ../../sass/tickets.scss */

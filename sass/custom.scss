@@ -1,3 +1,4 @@
+@import "bootstrap/mixins/opacity";
 @import "bootstrap/variables";
 @import "global-vars";
 @import "fonts";
@@ -138,11 +139,11 @@ a:hover {
 }
 
 .opacity-fifty {
-	opacity: 0.5;
+	@include opacity(0.5);
 }
 
 .opacity-eighty {
-	opacity: 0.8;
+	@include opacity(0.8);
 }
 
 .bg-clear {
@@ -709,7 +710,10 @@ span.panel-title {
 
 	#social-links {
 		float: none;
-		margin-left: 7%;
+	}
+
+	ul#social-links > li {
+		margin-right: 10px;
 	}
 
 	#box-office {
