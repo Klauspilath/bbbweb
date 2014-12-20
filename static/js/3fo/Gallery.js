@@ -23,6 +23,7 @@ $(window).load(function () {
 	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_MOVE_DIRECTION = 'data-move-direction';
 	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_START = 'data-start';
 	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_END = 'data-end';
+	TFO.__GalleryInstance.prototype.DATA_ATTRIBUTE_SLIDE_TO = 'data-slide-to';
 	TFO.__GalleryInstance.prototype.currentMaxThumbs = 5;
 	TFO.__GalleryInstance.prototype.initializeResizeListener = function () {
 
@@ -138,7 +139,25 @@ $(window).load(function () {
 				return;
 			}
 
-			if (nextThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) !== gallery.DIRECTION_THUMBSTRIP_NONE) {
+			//if(nextThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_FORWARD
+			//	&& currentThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_BACK
+			//	&& nextThumb.attr(gallery.DATA_ATTRIBUTE_SLIDE_TO) > currentThumb.attr(gallery.DATA_ATTRIBUTE_SLIDE_TO)
+			//	&& event.direction !== gallery.DIRECTION_THUMBSTRIP_BACK
+			//)
+			//{
+			//	return;
+			//}
+
+			if(currentThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_FORWARD
+				&& nextThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_BACK
+				&& currentThumb.attr(gallery.DATA_ATTRIBUTE_SLIDE_TO) > nextThumb.attr(gallery.DATA_ATTRIBUTE_SLIDE_TO)
+				&& event.direction === gallery.DIRECTION_THUMBSTRIP_BACK
+			) {
+				return;
+			}
+
+			if (nextThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) !== gallery.DIRECTION_THUMBSTRIP_NONE &&
+				currentThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) !== gallery.DIRECTION_THUMBSTRIP_NONE) {
 
 				if (currentThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_BACK) {
 					slider.animate({left: '+=' + screen.width() + 'px'}, 'slow');
@@ -146,8 +165,6 @@ $(window).load(function () {
 
 				if (currentThumb.attr(gallery.DATA_ATTRIBUTE_MOVE_DIRECTION) === gallery.DIRECTION_THUMBSTRIP_FORWARD) {
 					slider.animate({left: '+=' + (-1 * screen.width()) + 'px'}, 'slow');
-
-
 				}
 			}
 
@@ -156,8 +173,6 @@ $(window).load(function () {
 			} else {
 				$('.left-control').css('display','block');
 			}
-
-
 		});
 	};
 
