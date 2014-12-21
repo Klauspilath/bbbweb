@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django import template
-from mezzanine.galleries.models import Gallery
+from bbb.galleries.models import Gallery
 
 register = template.Library()
 
