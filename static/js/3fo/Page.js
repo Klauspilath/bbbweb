@@ -4,20 +4,55 @@ $(function () {
         TFO = {};
     }
 
-    TFO.__PageInstance = function () {
+    TFO.__PageInstance = function (){
+
+    };
+
+    TFO.__PageInstance.STATIC_IMG_PATH = '/static/img/';
+
+    TFO.__PageInstance.prototype.init = function () {
 
         this.isMobileAdapted = false;
         this.isDesktopAdapted = false;
-        this.initializeResizeListener();
         this.setMobileMenuListeners();
+        this.setImageMouseovers();
+        this.initializeResizeListener();
     };
 
     TFO.__PageInstance.prototype.initializeResizeListener = function () {
         $(window).resize(function () {
-            var sc = $('#screen');
             TFO.Page.setHeroImageHeight();
             TFO.Page.formatNavigation();
+        });
+    };
 
+    TFO.__PageInstance.prototype.setImageMouseovers = function () {
+        var fb = document.getElementById('fb-icon'),
+            twitter = document.getElementById('twitter-icon'),
+            youtube = document.getElementById('youtube-icon');
+
+        $(fb).on('mouseover', function () {
+            event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'fb-icon-hover.png';
+        });
+
+        $(fb).on('mouseout', function () {
+            event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'fb-icon.png';
+        });
+
+        $(twitter).on('mouseover', function () {
+           event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'twitter-icon-hover.png';
+        });
+
+        $(twitter).on('mouseout', function () {
+            event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'twitter-icon.png';
+        });
+
+        $(youtube).on('mouseover', function () {
+            event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'youtube-icon-hover.png';
+        });
+
+        $(youtube).on('mouseout', function () {
+            event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'youtube-icon.png';
         });
     };
 
@@ -41,14 +76,14 @@ $(function () {
 
         $dropdowns.on('mouseenter', function () {
             var sc = $('#screen'),
-            bg = $(this).children('.nav-background');
+                bg = $(this).children('.nav-background');
 
             if (sc.offset().left == bg.offset().left) return;
 
             var bgl = sc.offset().left - bg.offset().left;
             //bg.css('left', sc.offset().left + 'px');
 
-            bg.css('left',  -1 * ($(this).offset().left) + sc.offset().left);
+            bg.css('left', -1 * ($(this).offset().left) + sc.offset().left);
         })
     };
 
@@ -57,7 +92,7 @@ $(function () {
         TFO.Page.setNavigationEvents();
 
         if ($(window).width() <= 768 && !TFO.Page.isMobileAdapted) {
-           TFO.Page.setMobileNavigation();
+            TFO.Page.setMobileNavigation();
         }
 
         if ($(window).width() >= 769 && !TFO.Page.isDesktopAdapted) {
@@ -103,7 +138,7 @@ $(function () {
 
     };
 
-    TFO.__PageInstance.prototype.setMobileMenuListeners = function(){
+    TFO.__PageInstance.prototype.setMobileMenuListeners = function () {
         var menuButton = $('.navbar-header > button'),
             clickedClass = 'clicked';
 
@@ -141,10 +176,11 @@ $(function () {
     };
 
     TFO.Page = new TFO.__PageInstance();
+
+    TFO.Page.init();
+
     if (!TFO.globals.constants.IS_HOME) {
         $(window).trigger('resize');
     }
 
-    TFO.Page.setNavigationEvents();
-    TFO.Page.formatNavigation();
 });
