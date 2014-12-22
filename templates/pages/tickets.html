@@ -23,7 +23,7 @@
 
 	<h1 class="page-title">
 		{% editable page.title %}
-			How to Get Tickets {#{{ page.title|safe }}#}
+			{{ page.title|safe }}
 		{% endeditable %}
 	</h1>
 	<p class="showtimes-title">
@@ -50,10 +50,10 @@
 
 	</div>
 	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
-{#	<p style="margin-bottom: 30px">#}
-{#		{% editable page.richtextpage.content %}#}
-{#			{{ page.richtextpage.content|richtext_filters|safe }}#}
-{#		{% endeditable %}#}
-{#	</p>#}
+	<p style="margin-bottom: 30px">
+		{% editable page.richtextpage.content %}
+			{{ page.richtextpage.content|richtext_filters|safe }}
+		{% endeditable %}
+	</p>
 	</section>
 {% endblock %}
