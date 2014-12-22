@@ -8,9 +8,9 @@
         <div class="carousel-inner" role="listbox">
             {% with page.gallery.images.all as images %}
                 {% for image in images %}
-                    <div id="slide-{{ image.id }}" class="align-center item item-div {% if forloop.first %}active{% endif %}">
+                    <div id="slide-{{ image.id }}" class="align-center item item-div video-slide  {% if forloop.first %}active{% endif %}">
 
-                        <iframe width="854" height="510" src="{{ image.linkout }}" frameborder="0" allowfullscreen></iframe>
+                        <iframe class="youtube-player embed-responsive-item" src="{{ image.linkout }}" frameborder="0" allowfullscreen></iframe>
 {#                        <img class="img-responsive list-image" src="{{ image.file.url }}">#}
 
 {#                        <div class="carousel-caption show">#}

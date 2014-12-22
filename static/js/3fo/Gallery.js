@@ -57,7 +57,7 @@ $(window).load(function () {
             }
 
             clearTimeout(timer);
-            window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 500);
+            window.timer = setTimeout(TFO.Gallery.setThumbnailListeners, 5000);
         });
     };
 
