@@ -37,7 +37,7 @@
                     <a id="thumb-{{ image.id }}" data-target="#carousel-gallery" data-slide-to="{{ forloop.counter|add:"-1" }}"
                        class="thumbnail slide-{{ image.id }}">
                         <img class="img-responsive semi-trans hover-clear thumb-img"
-                             src="{{ MEDIA_URL }}{% thumbnail image.file 60 60 %}" alt="{{ image.description }}">
+                             src="{{ MEDIA_URL }}{% thumbnail image.file 200 150 %}" alt="{{ image.description }}">
                     </a>
                 </div>
             {% endfor %}
