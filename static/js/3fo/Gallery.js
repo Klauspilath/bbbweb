@@ -134,6 +134,12 @@ $(window).load(function () {
                 return;
             }
 
+            if (thumbNodes.filter(':first').attr('id') === $(nextThumb).attr('id')) {
+                $('.left-control').css('display', 'none');
+            } else {
+                $('.left-control').css('display', 'block');
+            }
+            
             if(nextThumb.attr(gallery.DATA_ATTRIBUTE_SET_ID) == currentThumb.attr(gallery.DATA_ATTRIBUTE_SET_ID))
                 return;
 
@@ -149,11 +155,7 @@ $(window).load(function () {
                 }
             }
 
-            if (thumbNodes.filter(':first').attr('id') === $(nextThumb).attr('id')) {
-                $('.left-control').css('display', 'none');
-            } else {
-                $('.left-control').css('display', 'block');
-            }
+
         });
     };
 
