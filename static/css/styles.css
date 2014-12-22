@@ -896,15 +896,20 @@ span.panel-title {
   #bottom-menu {
     margin-bottom: 100px;
   }
+
+  /* line 733, ../../sass/custom.scss */
+  a.active {
+    color: #000000;
+  }
 }
 @media (max-width: 480px) {
-  /* line 735, ../../sass/custom.scss */
+  /* line 740, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 45px;
     padding: 0;
   }
 
-  /* line 740, ../../sass/custom.scss */
+  /* line 745, ../../sass/custom.scss */
   .content {
     padding-left: 20px;
     padding-right: 20px;

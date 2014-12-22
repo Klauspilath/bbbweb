@@ -729,6 +729,11 @@ span.panel-title {
 	#bottom-menu {
 		margin-bottom: 100px;
 	}
+
+	a.active {
+		color: #000000;
+	}
+
 }
 
 @media (max-width: $screen-phone) {

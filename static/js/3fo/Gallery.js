@@ -139,7 +139,7 @@ $(window).load(function () {
             } else {
                 $('.left-control').css('display', 'block');
             }
-            
+
             if(nextThumb.attr(gallery.DATA_ATTRIBUTE_SET_ID) == currentThumb.attr(gallery.DATA_ATTRIBUTE_SET_ID))
                 return;
 
