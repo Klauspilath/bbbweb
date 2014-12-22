@@ -17,6 +17,7 @@ $(function () {
         this.setMobileMenuListeners();
         this.setImageMouseovers();
         this.initializeResizeListener();
+        this.formatNavigation();
     };
 
     TFO.__PageInstance.prototype.initializeResizeListener = function () {
