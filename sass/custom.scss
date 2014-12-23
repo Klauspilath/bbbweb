@@ -731,7 +731,37 @@ span.panel-title {
 	}
 
 	a.active {
-		color: #000000;
+		color: $dark-color;
+	}
+
+	.navbar-header{
+		background-color: $dark-color;
+	}
+
+	.navbar-header.fix {
+
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 4;
+	}
+
+	.navbar-default {
+		background-color: transparent;
+	}
+
+	#mobile-menu-dropdown.fix {
+		display: block;
+		position: fixed;
+		top: 60px;
+		height: 100%;
+		overflow-y: scroll;
+		background-color: $red;
+		width: 100%;
+	}
+
+	header.fix{
+		visibility: collapse;
 	}
 
 }

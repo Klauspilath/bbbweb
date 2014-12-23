@@ -901,15 +901,49 @@ span.panel-title {
   a.active {
     color: #000000;
   }
+
+  /* line 737, ../../sass/custom.scss */
+  .navbar-header {
+    background-color: #000000;
+  }
+
+  /* line 741, ../../sass/custom.scss */
+  .navbar-header.fix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+  }
+
+  /* line 749, ../../sass/custom.scss */
+  .navbar-default {
+    background-color: transparent;
+  }
+
+  /* line 753, ../../sass/custom.scss */
+  #mobile-menu-dropdown.fix {
+    display: block;
+    position: fixed;
+    top: 60px;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #bb281f;
+    width: 100%;
+  }
+
+  /* line 763, ../../sass/custom.scss */
+  header.fix {
+    visibility: collapse;
+  }
 }
 @media (max-width: 480px) {
-  /* line 740, ../../sass/custom.scss */
+  /* line 770, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 45px;
     padding: 0;
   }
 
-  /* line 745, ../../sass/custom.scss */
+  /* line 775, ../../sass/custom.scss */
   .content {
     padding-left: 20px;
     padding-right: 20px;
