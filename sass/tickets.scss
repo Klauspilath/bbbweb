@@ -129,3 +129,14 @@ a:hover {
 
 }
 
+@media screen {
+	section.content td {
+		padding: 2px;
+		font-size: 20px;
+	}
+
+	table.pricing-grid{
+		margin-left: -5px;
+	}
+}
+

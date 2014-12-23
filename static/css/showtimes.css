@@ -101,3 +101,10 @@ a.ticket-links {
     font-size: 20px;
   }
 }
+@media screen {
+  /* line 94, ../../sass/showtimes.scss */
+  .grey-cell, .column-header {
+    width: 90px;
+    height: 90px;
+  }
+}

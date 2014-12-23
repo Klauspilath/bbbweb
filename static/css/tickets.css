@@ -161,3 +161,15 @@ a.ticket-links {
     font-size: 20px;
   }
 }
+@media screen {
+  /* line 133, ../../sass/tickets.scss */
+  section.content td {
+    padding: 2px;
+    font-size: 20px;
+  }
+
+  /* line 138, ../../sass/tickets.scss */
+  table.pricing-grid {
+    margin-left: -5px;
+  }
+}

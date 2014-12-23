@@ -115,7 +115,6 @@ $(function () {
 		socialLinks.detach();
 		mobileMenu.append($('#bottom-menu'));
 		mobileMenu.removeClass('vanish');
-		mobileMenu.removeAttr('style');
 
 		$('.nav-footer').append(socialLinks);
 		$('#main-menu-dropdown').addClass('vanish');
@@ -199,6 +198,9 @@ $(function () {
 			menuButton.slideToggle(function(){
 				$(window).trigger('scroll');
 			});
+
+			if(menuButton.attr('style'))
+				menuButton.removeAttr('style');
 
 			menuButton.toggleClass(TFO.Page.CLICK_TOGGLE_SELECTOR);
 

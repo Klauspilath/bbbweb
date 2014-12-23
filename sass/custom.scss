@@ -760,6 +760,10 @@ span.panel-title {
 		width: 100%;
 	}
 
+	#mobile-menu-dropdown.hide{
+		display: none;
+	}
+
 	header.fix{
 		visibility: collapse;
 	}

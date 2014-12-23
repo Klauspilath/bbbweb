@@ -932,18 +932,23 @@ span.panel-title {
   }
 
   /* line 763, ../../sass/custom.scss */
+  #mobile-menu-dropdown.hide {
+    display: none;
+  }
+
+  /* line 767, ../../sass/custom.scss */
   header.fix {
     visibility: collapse;
   }
 }
 @media (max-width: 480px) {
-  /* line 770, ../../sass/custom.scss */
+  /* line 774, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 45px;
     padding: 0;
   }
 
-  /* line 775, ../../sass/custom.scss */
+  /* line 779, ../../sass/custom.scss */
   .content {
     padding-left: 20px;
     padding-right: 20px;
