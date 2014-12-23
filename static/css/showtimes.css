@@ -107,4 +107,9 @@ a.ticket-links {
     width: 90px;
     height: 90px;
   }
+
+  /* line 99, ../../sass/showtimes.scss */
+  .showtimes-title {
+    font-size: 29px;
+  }
 }
