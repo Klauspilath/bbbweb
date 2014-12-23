@@ -10,7 +10,7 @@
                 {% for image in images %}
                     <div id="slide-{{ image.id }}" class="align-center item item-div {% if forloop.first %}active{% endif %}">
                         <div class="hat-container">
-                        <img class="img-responsive list-image" src="{{ image.file.url }}">
+                        <img class="responsive-height list-image" src="{{ image.file.url }}">
                         </div>
                         <div class="carousel-caption show">
                             {{ image.description }}
