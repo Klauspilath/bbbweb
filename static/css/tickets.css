@@ -178,4 +178,15 @@ a.ticket-links {
   td {
     border: solid 4px #ffffff;
   }
+
+  /* line 148, ../../sass/tickets.scss */
+  td.bg-light-grey.grey-cell {
+    font-size: 16px;
+  }
+
+  /* line 152, ../../sass/tickets.scss */
+  p.general-info {
+    width: 303px;
+    margin-left: 9px;
+  }
 }
