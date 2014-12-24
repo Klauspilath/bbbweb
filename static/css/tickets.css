@@ -171,5 +171,11 @@ a.ticket-links {
   /* line 138, ../../sass/tickets.scss */
   table.pricing-grid {
     margin-left: -5px;
+    width: 320px;
+  }
+
+  /* line 144, ../../sass/tickets.scss */
+  td {
+    border: solid 4px #ffffff;
   }
 }
