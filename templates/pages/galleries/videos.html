@@ -10,7 +10,7 @@
                 {% for image in images %}
                     <div id="slide-{{ image.id }}" class="align-center item item-div video-slide  {% if forloop.first %}active{% endif %}">
 
-                        <iframe class="youtube-player embed-responsive-item" src="{{ image.linkout }}" frameborder="0" allowfullscreen></iframe>
+                        <iframe id="player-{{ image.id }}" class="youtube-player embed-responsive-item" src="{{ image.linkout }}?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 {#                        <img class="img-responsive list-image" src="{{ image.file.url }}">#}
 
 {#                        <div class="carousel-caption show">#}
@@ -47,5 +47,9 @@
 {% endblock %}
 {% block extra_js %}
     {{ block.super }}
+    <script>
+        TFO.globals.constants.IS_VIDEO_GALLERY = true;
+    </script>
+{#    <script src="https://www.youtube.com/iframe_api"></script>#}
     <script src="{% static "js/3fo/Gallery.js" %}" type="text/javascript"></script>
 {% endblock %}

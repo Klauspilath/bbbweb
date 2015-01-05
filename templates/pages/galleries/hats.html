@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{% static "css/galleries.css" %}"/>
 {% endblock %}
 {% block main %}
-    <div id="carousel-gallery" class="carousel slide bg-black" data-ride="carousel">
+    <div id="carousel-gallery" class="carousel slide bg-black" data-ride="carousel" data-pause="click">
         <div class="carousel-inner" role="listbox">
             {% with page.gallery.images.all as images %}
                 {% for image in images %}
