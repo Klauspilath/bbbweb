@@ -428,8 +428,10 @@ div.get-tickets-button img {
 	z-index: 100;
 }
 
-.navbar-nav > li > .dropdown-menu {
-	margin-top: 30px;
+.navbar-nav > li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+
+    margin-top: 20px !important;
 }
 
 .navbar-default {
@@ -734,7 +736,7 @@ span.panel-title {
 		color: $dark-color;
 	}
 
-	.navbar-header{
+	.navbar-header {
 		background-color: $dark-color;
 	}
 
@@ -760,11 +762,11 @@ span.panel-title {
 		width: 100%;
 	}
 
-	#mobile-menu-dropdown.hide{
+	#mobile-menu-dropdown.hide {
 		display: none;
 	}
 
-	header.fix{
+	header.fix {
 		visibility: collapse;
 	}
 
