@@ -40,27 +40,27 @@ $(function () {
 		/*turn this into a loop*/
 
 		$(fb).on('mouseover', function () {
-			event.currentTarget.src = TFO.Page.STATIC_IMG_PATH + 'fb-icon-hover.png';
+			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'fb-icon-hover.png';
 		});
 
 		$(fb).on('mouseout', function () {
-			event.currentTarget.src = TFO.Page.STATIC_IMG_PATH + 'fb-icon.png';
+			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'fb-icon.png';
 		});
 
 		$(twitter).on('mouseover', function () {
-			event.currentTarget.src = TFO.Page.STATIC_IMG_PATH + 'twitter-icon-hover.png';
+			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'twitter-icon-hover.png';
 		});
 
 		$(twitter).on('mouseout', function () {
-			event.currentTarget.src = TFO.Page.STATIC_IMG_PATH + 'twitter-icon.png';
+			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'twitter-icon.png';
 		});
 
 		$(youtube).on('mouseover', function () {
-			event.currentTarget.src = TFO.Page.STATIC_IMG_PATH + 'youtube-icon-hover.png';
+			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'youtube-icon-hover.png';
 		});
 
 		$(youtube).on('mouseout', function () {
-			event.currentTarget.src = TFO.Page.STATIC_IMG_PATH + 'youtube-icon.png';
+			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'youtube-icon.png';
 		});
 	};
 

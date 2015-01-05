@@ -27,7 +27,7 @@
                 {% endfor %}
             </ul>
         {% else %}
-            <ul class="dropdown-menu" style="margin-top: 20px !important;">
+            <ul class="dropdown-menu" {% if branch_level == 1 %}style="margin-top: 20px !important;"{% endif %}>
                 {% for page in page_branch %}
                     {% if page.in_menu %}
                         <li class="{% if page.has_children_in_menu %}dropdown-submenu{% endif %}

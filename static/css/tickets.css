@@ -6,12 +6,12 @@ h1 {
 /* line 17, ../../sass/tickets.scss */
 table.pricing-grid {
   width: 100%;
-  border-spacing: 10px 10px;
 }
 
-/* line 22, ../../sass/tickets.scss */
+/* line 21, ../../sass/tickets.scss */
 td {
   border: solid 10px #ffffff;
+  border-left: 0px;
 }
 
 /* line 26, ../../sass/tickets.scss */
@@ -144,47 +144,47 @@ a.ticket-links {
 }
 
 @media (max-width: 992px) {
-  /* line 116, ../../sass/tickets.scss */
-  .content {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  /* line 121, ../../sass/tickets.scss */
+  /* line 118, ../../sass/tickets.scss */
   section.content td {
     padding: 0;
     font-size: 24px;
   }
 
-  /* line 126, ../../sass/tickets.scss */
+  /* line 123, ../../sass/tickets.scss */
   td.bg-light-grey.grey-cell {
     font-size: 20px;
   }
 }
-@media screen {
-  /* line 133, ../../sass/tickets.scss */
+@media (max-width: 480px) {
+  /* line 131, ../../sass/tickets.scss */
+  .content {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* line 136, ../../sass/tickets.scss */
   section.content td {
     padding: 2px;
     font-size: 20px;
   }
 
-  /* line 138, ../../sass/tickets.scss */
+  /* line 141, ../../sass/tickets.scss */
   table.pricing-grid {
     margin-left: -5px;
     width: 320px;
   }
 
-  /* line 144, ../../sass/tickets.scss */
+  /* line 147, ../../sass/tickets.scss */
   td {
     border: solid 4px #ffffff;
   }
 
-  /* line 148, ../../sass/tickets.scss */
+  /* line 151, ../../sass/tickets.scss */
   td.bg-light-grey.grey-cell {
     font-size: 16px;
   }
 
-  /* line 152, ../../sass/tickets.scss */
+  /* line 155, ../../sass/tickets.scss */
   p.general-info {
     width: 303px;
     margin-left: 9px;

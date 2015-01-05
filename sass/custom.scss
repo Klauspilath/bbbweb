@@ -525,6 +525,11 @@ div.nav-footer > ul > li > a {
 	color: $dark-color;
 }
 
+
+.dropdown-submenu > .dropdown-menu {
+	margin-top: 0 !important;
+}
+
 @media (max-width: $screen-md) {
 	footer {
 		padding-left: 10px;
