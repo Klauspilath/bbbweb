@@ -959,4 +959,10 @@ span.panel-title {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  /* line 790, ../../sass/custom.scss */
+  #screen > div > section > div > p {
+    padding-right: 20px;
+    margin-right: 36px;
+  }
 }
