@@ -121,3 +121,14 @@ img.img-responsive.list-image {
 .left-control {
 	display: none;
 }
+
+@media (max-width: $screen-phone) {
+	.carousel-control.right, .carousel-control.left {
+		background-image: none;
+		height: 221px;
+		width: 56px;
+		position: absolute;
+		display: block;
+		top: 12px;
+	}
+}

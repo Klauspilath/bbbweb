@@ -166,3 +166,15 @@ img.img-responsive.list-image {
 .left-control {
   display: none;
 }
+
+@media (max-width: 480px) {
+  /* line 126, ../../sass/galleries.scss */
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    height: 221px;
+    width: 56px;
+    position: absolute;
+    display: block;
+    top: 12px;
+  }
+}

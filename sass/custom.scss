@@ -429,9 +429,9 @@ div.get-tickets-button img {
 }
 
 .navbar-nav > li.dropdown:hover > ul.dropdown-menu {
-    display: block;
+	display: block;
 
-    margin-top: 20px !important;
+	margin-top: 20px !important;
 }
 
 .navbar-default {
@@ -524,7 +524,6 @@ div.nav-footer > ul > li > a {
 	background-color: transparent;
 	color: $dark-color;
 }
-
 
 .dropdown-submenu > .dropdown-menu {
 	margin-top: 0 !important;
@@ -787,5 +786,6 @@ span.panel-title {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
 }
 
