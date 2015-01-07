@@ -698,7 +698,7 @@ span.panel-title {
 	div.nav-footer ul {
 		list-style-type: none;
 		display: block;
-		@include knockout-49(32px);
+		@include knockout-49(20px);
 		margin-left: 5%;
 	}
 
@@ -736,7 +736,7 @@ span.panel-title {
 
 	#follow-us {
 		display: inline-block;
-		@include knockout-49(32px);
+		@include knockout-49(20px);
 		color: $bright;
 	}
 
