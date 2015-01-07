@@ -14,10 +14,20 @@
 	margin-bottom: 40px;
 }
 
+.scholarship-winners h3 {
+	margin-top: 20px;
+}
+
+@media (max-width: 2000px) {
+	.page-title {
+		margin-bottom: 50px;
+	}
+}
+
 @media (max-width: $screen-sm-min) {
 
 	.listing-content {
-		padding-left: 0px;
+		padding-left: 0;
 		width: 350px;
 		padding-top: 30px;
 	}
@@ -40,3 +50,4 @@
 	}
 
 }
+
