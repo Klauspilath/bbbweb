@@ -224,7 +224,7 @@ $(function () {
     TFO.Page = new TFO.__PageInstance();
 
     TFO.Page.init();
-    
+
     $(window).load(function () {
         $(window).trigger('resize');
     });
