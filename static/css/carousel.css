@@ -100,14 +100,15 @@ div.get-tickets-button {
     margin-left: auto;
     margin-right: auto;
     bottom: 60px;
+    max-width: 100%;
   }
 
-  /* line 96, ../../sass/carousel.scss */
+  /* line 97, ../../sass/carousel.scss */
   .carousel-caption {
     display: none;
   }
 
-  /* line 100, ../../sass/carousel.scss */
+  /* line 101, ../../sass/carousel.scss */
   div.get-tickets-button {
     bottom: 184px;
     left: inherit;
@@ -116,7 +117,7 @@ div.get-tickets-button {
     position: relative;
   }
 
-  /* line 109, ../../sass/carousel.scss */
+  /* line 110, ../../sass/carousel.scss */
   #scroll-indicator {
     display: none;
   }
