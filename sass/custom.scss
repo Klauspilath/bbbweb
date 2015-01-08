@@ -86,11 +86,20 @@ a:hover {
 	color: $dark-color;
 }
 
+
 .content a {
 	@include red-text();
 }
 
 .content a:hover {
+	@include dark-text();
+}
+
+.get-tickets-button a {
+	@include white-text();
+}
+
+.get-tickets-button a:hover {
 	@include dark-text();
 }
 
@@ -775,7 +784,7 @@ span.panel-title {
 	}
 
 	#mobile-menu-dropdown.hide {
-		display: none;
+		//display: none;
 	}
 
 	header.fix {

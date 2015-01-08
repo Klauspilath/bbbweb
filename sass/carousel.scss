@@ -86,13 +86,11 @@ div.get-tickets-button {
 @media (max-width: $screen-sm-min) {
 
 	.carousel-indicators {
-		left: initial;
-		bottom: 6%;
+		left: inherit;
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
-		width: 99px;
-		position: relative;
+		bottom: 60px;
 	}
 
 	.carousel-caption {
@@ -100,36 +98,16 @@ div.get-tickets-button {
 	}
 
 	div.get-tickets-button {
-		bottom: 155px;
-		left: initial;
+		bottom: 184px;
+		left: inherit;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
+
 	}
 
-	#scroll-indicator{
+	#scroll-indicator {
 		display: none;
-	}
-}
-
-@media (max-width: $screen-phone) {
-
-	.carousel-indicators {
-		left: 35%;
-		bottom: 60px;
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		width: 99px;
-		position: absolute;
-	}
-
-	div.get-tickets-button {
-		bottom: 110px;
-		left: 17%;
-		margin-left: auto;
-		margin-right: auto;
-		position: absolute;
 	}
 
 }
