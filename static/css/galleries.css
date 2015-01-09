@@ -146,7 +146,6 @@
   margin-left: auto;
   margin-right: auto;
   height: 100%;
-  max-height: 100% !important;
 }
 
 /* line 110, ../../sass/galleries.scss */
@@ -154,21 +153,22 @@ img.responsive-height {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
+  display: block;
 }
 
-/* line 116, ../../sass/galleries.scss */
+/* line 117, ../../sass/galleries.scss */
 img.img-responsive.list-image {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 121, ../../sass/galleries.scss */
+/* line 122, ../../sass/galleries.scss */
 .left-control {
   display: none;
 }
 
 @media (max-width: 480px) {
-  /* line 126, ../../sass/galleries.scss */
+  /* line 127, ../../sass/galleries.scss */
   .carousel-control.right, .carousel-control.left {
     background-image: none;
     height: 221px;

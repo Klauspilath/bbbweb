@@ -1,6 +1,5 @@
-
-
 $(function() {
+
 	if (typeof TFO === 'undefined') {
 		TFO = {};
 	}
@@ -8,7 +7,6 @@ $(function() {
 	TFO.__HomeInstance = function () {
 		this.initResize();
 	};
-
 
 	TFO.__HomeInstance.prototype.initResize = function(){
 

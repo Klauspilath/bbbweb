@@ -9,6 +9,7 @@ $(window).load(function () {
 	TFO.__GalleryInstance = function () {
 		this.initializeResizeListener();
 		this.initializeSlideListener();
+		this.trackGestures(document.getElementById('carousel-gallery'));
 
 		$('.item').on('click', function () {
 			$('#carousel-gallery').carousel('pause');
@@ -40,7 +41,7 @@ $(window).load(function () {
 				thumbImage = $('.thumbnail > img'),
 				galleryInstance = TFO.Gallery;
 
-			$('.carousel').carousel('pause');
+			//$('.carousel').carousel('pause');
 
 			if (($(window).scrollTop() === 0)) TFO.Gallery.setGalleryHeight();
 
@@ -85,7 +86,6 @@ $(window).load(function () {
 		var setId = 0;
 		var G = TFO.Gallery;
 
-
 		thumbImages.each(function (index) {
 
 			var isStart = index == 0 ? false : !(Boolean(index % G.currentMaxThumbs)),
@@ -119,7 +119,6 @@ $(window).load(function () {
 			var c = $('.carousel');
 			c.carousel('pause');
 		});
-
 	};
 
 	TFO.__GalleryInstance.prototype.initializeSlideListener = function () {
@@ -172,6 +171,22 @@ $(window).load(function () {
 		});
 	};
 
+	TFO.__GalleryInstance.prototype.trackGestures = function(element){
+		var tracker = new Hammer(element);
+
+		tracker.on('swipe',function(event){
+			var c = $('#carousel-gallery');
+
+			if(event.direction == Hammer.DIRECTION_LEFT)
+				c.carousel('next');
+
+			if(event.direction == Hammer.DIRECTION_RIGHT)
+				c.carousel('prev');
+
+		});
+	};
+
+
 	TFO.__GalleryInstance.prototype.initYoutubeAPI = function () {
 		var tag = document.createElement('script');
 		var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -210,6 +225,8 @@ function onYouTubeIframeAPIReady() {
 			}
 		);
 
+		TFO.Gallery.trackGestures(document.getElementById($(players[i]).attr('id')));
+
 		TFO.Gallery.videos.push(t);
 	}
 
@@ -223,7 +240,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	console.log(event.target.getVideoUrl())
+	console.log(event.target.getVideoUrl());
 
 	//TFO.Gallery.videos.push(event.target);
 }
@@ -240,7 +257,6 @@ function onPlayerStateChange(event) {
 		}
 	}
 }
-
 
 $(function () {
 	//onYouTubeIframeAPIReady();
