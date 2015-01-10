@@ -7,6 +7,7 @@ $(function() {
 	TFO.__HomeInstance = function () {
 		this.initResize();
         this.trackGestures(document.getElementById('home-gallery'));
+        this.setClickHandler();
 	};
 
 	TFO.__HomeInstance.prototype.initResize = function(){
