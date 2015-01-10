@@ -20,20 +20,20 @@
 			</p>
 		</div>
 	{% endif %}
-
 	<h1 class="page-title">
 		{% editable page.title %}
 			{{ page.title|safe }}
 		{% endeditable %}
 	</h1>
+	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
 	<p class="showtimes-title">
 		Ticket Prices
 	</p>
 	{% include "includes/bbb/pricing-grid.html" %}
-	<p class="showtimes-title">
-		For the Holiday Shows only, we have added a Very Special seating section
-	</p>
-	{% include "includes/bbb/special-seatingrid.html" %}
+{#	<p class="showtimes-title">#}
+{#		For the Holiday Shows only, we have added a Very Special seating section#}
+{#	</p>#}
+{#	{% include "includes/bbb/special-seatingrid.html" %}#}
 	</div>
 	<div class="row">
 		<p class="showtimes-title">
