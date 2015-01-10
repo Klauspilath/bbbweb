@@ -6,6 +6,7 @@ $(function() {
 
 	TFO.__HomeInstance = function () {
 		this.initResize();
+        this.trackGestures(document.getElementById('home-gallery'));
 	};
 
 	TFO.__HomeInstance.prototype.initResize = function(){
@@ -37,6 +38,24 @@ $(function() {
 
 		//$('.top-container').css('margin-top',$(window).height() - hBase + 'px' );
 	};
+
+
+    TFO.__HomeInstance.prototype.trackGestures = function(element){
+		var tracker = new Hammer(element);
+
+		tracker.on('swipe',function(event){
+			var c = $('#home-gallery');
+
+			if(event.direction == Hammer.DIRECTION_LEFT)
+				c.carousel('next');
+
+			if(event.direction == Hammer.DIRECTION_RIGHT)
+				c.carousel('prev');
+
+		});
+	};
+
+    
 
 	//create instance
 	TFO.Home = new TFO.__HomeInstance();
