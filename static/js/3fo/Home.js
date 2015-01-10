@@ -55,7 +55,13 @@ $(function() {
 		});
 	};
 
-    
+    TFO.__HomeInstance.prototype.setClickHandler = function(){
+        var c = $('#home-gallery');
+
+        c.on('click', function(event){
+            $(event.currentTarget).carousel('pause');
+        })
+    };
 
 	//create instance
 	TFO.Home = new TFO.__HomeInstance();
