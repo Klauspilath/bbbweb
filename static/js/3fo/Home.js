@@ -60,11 +60,11 @@ $(function() {
         var c = $('#home-gallery');
 
         c.on('click', function(event){
-            $(event.currentTarget).carousel('pause');
+             $('#home-gallery').carousel('pause');
         });
 
         $('.item').on('click touchstart', function(event){
-            $(event.currentTarget).carousel('pause');
+             $('#home-gallery').carousel('pause');
         });
     };
 
