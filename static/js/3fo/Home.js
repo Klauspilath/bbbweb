@@ -60,7 +60,11 @@ $(function() {
 
         c.on('click', function(event){
             $(event.currentTarget).carousel('pause');
-        })
+        });
+
+        $('.item').on('click touchstart', function(event){
+            $(event.currentTarget).carousel('pause');
+        });
     };
 
 	//create instance
