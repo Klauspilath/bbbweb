@@ -221,46 +221,44 @@ function onYouTubeIframeAPIReady(event) {
 
 	TFO.Gallery.videos = [];
 
-	for (var i = 0; i < layers.length; i++) {
+	for (var i = 0; i < players.length; i++) {
 		var t = new YT.Player($(players[i]).attr('id'),
 			{
 				events: {
-					'onReady': onPlayerReady,
 					'onStateChange': onPlayerStateChange
 				}
 			});
+		TFO.Gallery.videos.push(t);
 		/*
 		 */
 		TFO.Gallery.trackGestures(document.getElementById($(layers[i]).attr('id')), 'swipe');
-
-		TFO.Gallery.videos.push(t);
 	}
 
-	for (var k = 0; k < layers.length; k++) {
-		var layer = new Hammer(document.getElementById($(layers[k]).attr('id')));
-		layer.on('tap click', function (event) {
+	for (var i = 0; i < players.length; i++) {
+		var layer = new Hammer(document.getElementById($(layers[i]).attr('id')));
+		layer.on('tap', function (event) {
+			var overlay = event.target;
 			for (var k = 0; k < TFO.Gallery.videos.length; k++) {
-				var v = TFO.Gallery.videos[k];
+				//var v = TFO.Gallery.videos[k];
 
-				if (v.d.id == $(layer).attr('data-player')) {
-					alert('should click');
-					//v.trigger('click');
+				if (TFO.Gallery.videos[k].d.id == $(overlay).attr('data-player')) {
+					TFO.Gallery.videos[k].playVideo();
 				}
 			}
 		});
 	}
 
-	$('.video-overlay').on('click', function (event) {
+	layers.on('click', function (event) {
 		var video = $('#' + $(event.currentTarget).attr('data-player'));
-
+		//alert('in click should pause all');
 		for (var i = 0; i < TFO.Gallery.videos.length; i++) {
 			var v = TFO.Gallery.videos[i];
-			alert('in click should pause all');
-			//v.pauseVideo();
+			console.log('in click should pause all');
+			TFO.Gallery.videos[i].pauseVideo();
 
-			if (v.d.id == video.attr('id')) {
-				//v.playVideo();
-				alert('play ' + v.d.id + '==' + video.attr('id'));
+			if (TFO.Gallery.videos[i].d.id == video.attr('id')) {
+				TFO.Gallery.videos[i].playVideo();
+				console.log('play ' + v.d.id + '==' + video.attr('id'));
 			}
 		}
 	});
@@ -274,25 +272,23 @@ function onYouTubeIframeAPIReady(event) {
 	});
 }
 
-
-function onPlayerReady(event) {
-	console.log('onPlayerReady ' + event.target.getVideoUrl());
-
-	//TFO.Gallery.videos.push(event.target);
-}
+//
+//function onPlayerReady(event) {
+//	console.log('onPlayerReady ' + event.target.getVideoUrl());
+//}
 
 
 function onPlayerStateChange(event) {
 	console.log('onPlayerStateChange');
 
-	//if (event.data == YT.PlayerState.PLAYING) {
-	//
-	//	var temp = event.target.getVideoUrl();
-	//
-	//	for (var i = 0; i < TFO.Gallery.videos.length; i++) {
-	//		//if (TFO.Gallery.videos[i].getVideoUrl() != temp) TFO.Gallery.videos[i].pauseVideo();
-	//	}
-	//}
+	if (event.data == YT.PlayerState.PLAYING) {
+
+		var temp = event.target.getVideoUrl();
+
+		for (var i = 0; i < TFO.Gallery.videos.length; i++) {
+			if (TFO.Gallery.videos[i].getVideoUrl() != temp) TFO.Gallery.videos[i].pauseVideo();
+		}
+	}
 }
 
 $(function () {
