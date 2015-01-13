@@ -270,6 +270,7 @@ function onYouTubeIframeAPIReady(event) {
 			}
 		}
 	});
+	alert('api loaded and initialized.');
 }
 
 //
