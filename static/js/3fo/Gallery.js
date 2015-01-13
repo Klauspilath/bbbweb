@@ -254,7 +254,7 @@ function onYouTubeIframeAPIReady(event) {
 		for (var i = 0; i < TFO.Gallery.videos.length; i++) {
 			var v = TFO.Gallery.videos[i];
 			console.log('in click should pause all');
-			TFO.Gallery.videos[i].pauseVideo();
+			//TFO.Gallery.videos[i].pauseVideo();
 
 			if (TFO.Gallery.videos[i].d.id == video.attr('id')) {
 				TFO.Gallery.videos[i].playVideo();
