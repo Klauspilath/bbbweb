@@ -100,6 +100,16 @@
 	background-position: 50%;
 }
 
+.video-overlay{
+	height: 100%;
+	width: 100%;
+	background-color: $red-semi-trans;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
 .hat-container {
 	margin-left: auto;
 	margin-right: auto;

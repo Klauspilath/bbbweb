@@ -142,13 +142,24 @@
 }
 
 /* line 103, ../../sass/galleries.scss */
+.video-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(187, 40, 31, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* line 113, ../../sass/galleries.scss */
 .hat-container {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
 }
 
-/* line 110, ../../sass/galleries.scss */
+/* line 120, ../../sass/galleries.scss */
 img.responsive-height {
   margin-left: auto;
   margin-right: auto;
@@ -156,19 +167,19 @@ img.responsive-height {
   display: block;
 }
 
-/* line 117, ../../sass/galleries.scss */
+/* line 127, ../../sass/galleries.scss */
 img.img-responsive.list-image {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 122, ../../sass/galleries.scss */
+/* line 132, ../../sass/galleries.scss */
 .left-control {
   display: none;
 }
 
 @media (max-width: 480px) {
-  /* line 127, ../../sass/galleries.scss */
+  /* line 137, ../../sass/galleries.scss */
   .carousel-control.right, .carousel-control.left {
     background-image: none;
     height: 221px;
