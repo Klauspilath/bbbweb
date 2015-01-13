@@ -230,7 +230,7 @@ function onYouTubeIframeAPIReady(event) {
 				}
 			});
 		/*
-			*/
+		 */
 		TFO.Gallery.trackGestures(document.getElementById($(layers[i]).attr('id')), 'swipe');
 
 		TFO.Gallery.videos.push(t);
@@ -265,16 +265,14 @@ function onYouTubeIframeAPIReady(event) {
 		}
 	});
 
-}
-
-
-c.carousel('cycle').on('slide.bs.carousel', function () {
-	if (TFO.Gallery.videos.length > 0) {
-		for (var i = 0; i < TFO.Gallery.videos.length; i++) {
-			TFO.Gallery.videos[i].pauseVideo();
+	c.carousel('cycle').on('slide.bs.carousel', function () {
+		if (TFO.Gallery.videos.length > 0) {
+			for (var i = 0; i < TFO.Gallery.videos.length; i++) {
+				TFO.Gallery.videos[i].pauseVideo();
+			}
 		}
-	}
-});
+	});
+}
 
 
 function onPlayerReady(event) {
