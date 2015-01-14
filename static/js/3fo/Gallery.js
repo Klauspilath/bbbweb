@@ -239,11 +239,12 @@ function onYouTubeIframeAPIReady(event) {
 		layer.on('tap', function (event) {
 			var overlay = event.target;
 			$(overlay).hide();
+			event.preventDefault();
 			for (var k = 0; k < TFO.Gallery.videos.length; k++) {
 				//var v = TFO.Gallery.videos[k];
 
 				if (TFO.Gallery.videos[k].d.id == $(overlay).attr('data-player')) {
-					TFO.Gallery.videos[k].playVideo();
+					//TFO.Gallery.videos[k].playVideo();
 				}
 			}
 		});
@@ -258,7 +259,7 @@ function onYouTubeIframeAPIReady(event) {
 			//TFO.Gallery.videos[i].pauseVideo();
 
 			if (TFO.Gallery.videos[i].d.id == video.attr('id')) {
-				TFO.Gallery.videos[i].playVideo();
+				//TFO.Gallery.videos[i].playVideo();
 				console.log('play ' + v.d.id + '==' + video.attr('id'));
 			}
 		}
