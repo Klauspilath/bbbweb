@@ -178,6 +178,7 @@ $(window).load(function () {
 
 		tracker.on(gesture, function (event) {
 			var c = $('#carousel-gallery');
+			c.carousel('pause');
 
 			if (event.direction == Hammer.DIRECTION_LEFT)
 				c.carousel('next');
