@@ -238,12 +238,12 @@ function onYouTubeIframeAPIReady(event) {
 		var layer = new Hammer(document.getElementById($(layers[i]).attr('id')));
 		layer.on('tap', function (event) {
 			var overlay = event.target;
+			$(overlay).hide();
 			for (var k = 0; k < TFO.Gallery.videos.length; k++) {
 				//var v = TFO.Gallery.videos[k];
 
 				if (TFO.Gallery.videos[k].d.id == $(overlay).attr('data-player')) {
 					TFO.Gallery.videos[k].playVideo();
-					$('#' + $(overlay).attr('data-player')).dispatchEvent(new MouseEvent('click', {"bubbles":true, "cancelable":false}));
 				}
 			}
 		});
