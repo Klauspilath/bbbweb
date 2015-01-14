@@ -9,6 +9,7 @@ $(window).load(function () {
 	TFO.__GalleryInstance = function () {
 		this.initializeResizeListener();
 		this.initializeSlideListener();
+
 		this.trackGestures(document.getElementById('carousel-gallery'), 'swipe');
 
 		$('.item').on('click', function () {
@@ -231,10 +232,10 @@ function onYouTubeIframeAPIReady(event) {
 		TFO.Gallery.videos.push(t);
 		/*
 		 */
-		TFO.Gallery.trackGestures(document.getElementById($(layers[i]).attr('id')), 'swipe');
+		TFO.Gallery.trackGestures(document.getElementById($(players[i]).attr('id')), 'swipe');
 	}
 
-	for (var i = 0; i < players.length; i++) {
+	/*for (var i = 0; i < players.length; i++) {
 		var layer = new Hammer(document.getElementById($(layers[i]).attr('id')));
 		layer.on('tap', function (event) {
 			var overlay = event.target;
@@ -264,7 +265,7 @@ function onYouTubeIframeAPIReady(event) {
 			}
 		}
 	});
-
+*/
 	c.carousel('cycle').on('slide.bs.carousel', function () {
 		if (TFO.Gallery.videos.length > 0) {
 			for (var i = 0; i < TFO.Gallery.videos.length; i++) {
@@ -272,7 +273,7 @@ function onYouTubeIframeAPIReady(event) {
 			}
 		}
 	});
-	alert('api loaded and initialized.');
+	//alert('api loaded and initialized.');
 }
 
 //

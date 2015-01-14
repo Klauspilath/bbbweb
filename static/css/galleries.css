@@ -145,21 +145,22 @@
 .video-overlay {
   height: 100%;
   width: 100%;
-  background-color: rgba(187, 40, 31, 0.75);
+  background-color: transparent;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  display: none;
 }
 
-/* line 113, ../../sass/galleries.scss */
+/* line 114, ../../sass/galleries.scss */
 .hat-container {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
 }
 
-/* line 120, ../../sass/galleries.scss */
+/* line 121, ../../sass/galleries.scss */
 img.responsive-height {
   margin-left: auto;
   margin-right: auto;
@@ -167,19 +168,19 @@ img.responsive-height {
   display: block;
 }
 
-/* line 127, ../../sass/galleries.scss */
+/* line 128, ../../sass/galleries.scss */
 img.img-responsive.list-image {
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 132, ../../sass/galleries.scss */
+/* line 133, ../../sass/galleries.scss */
 .left-control {
   display: none;
 }
 
 @media (max-width: 480px) {
-  /* line 137, ../../sass/galleries.scss */
+  /* line 138, ../../sass/galleries.scss */
   .carousel-control.right, .carousel-control.left {
     background-image: none;
     height: 221px;
