@@ -243,7 +243,7 @@ function onYouTubeIframeAPIReady(event) {
 
 				if (TFO.Gallery.videos[k].d.id == $(overlay).attr('data-player')) {
 					TFO.Gallery.videos[k].playVideo();
-					$('#' + $(overlay).attr('data-player')).trigger('click');
+					$('#' + $(overlay).attr('data-player')).dispatchEvent(new MouseEvent('click', {"bubbles":true, "cancelable":false}));
 				}
 			}
 		});
