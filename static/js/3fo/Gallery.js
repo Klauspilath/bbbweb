@@ -169,7 +169,6 @@ $(window).load(function () {
 					slider.animate({left: '+=' + (-1 * screen.width()) + 'px'}, 'slow');
 				}
 			}
-
 		});
 	};
 
@@ -187,7 +186,6 @@ $(window).load(function () {
 				c.carousel('prev');
 
 		});
-
 	};
 
 
@@ -197,8 +195,6 @@ $(window).load(function () {
 		tag.src = "https://www.youtube.com/iframe_api";
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 		console.log('load youtube API');
-
-
 	};
 
 	TFO.Gallery = new TFO.__GalleryInstance();
@@ -211,7 +207,6 @@ $(window).load(function () {
 	} else {
 		$('#carousel-gallery').carousel('cycle');
 	}
-
 });
 
 function onYouTubeIframeAPIReady(event) {
@@ -231,42 +226,10 @@ function onYouTubeIframeAPIReady(event) {
 				}
 			});
 		TFO.Gallery.videos.push(t);
-		/*
-		 */
+
 		TFO.Gallery.trackGestures(document.getElementById($(players[i]).attr('id')), 'swipe');
 	}
 
-	/*for (var i = 0; i < players.length; i++) {
-		var layer = new Hammer(document.getElementById($(layers[i]).attr('id')));
-		layer.on('tap', function (event) {
-			var overlay = event.target;
-			$(overlay).hide();
-			event.preventDefault();
-			for (var k = 0; k < TFO.Gallery.videos.length; k++) {
-				//var v = TFO.Gallery.videos[k];
-
-				if (TFO.Gallery.videos[k].d.id == $(overlay).attr('data-player')) {
-					//TFO.Gallery.videos[k].playVideo();
-				}
-			}
-		});
-	}
-
-	layers.on('click', function (event) {
-		var video = $('#' + $(event.currentTarget).attr('data-player'));
-		//alert('in click should pause all');
-		for (var i = 0; i < TFO.Gallery.videos.length; i++) {
-			var v = TFO.Gallery.videos[i];
-			console.log('in click should pause all');
-			//TFO.Gallery.videos[i].pauseVideo();
-
-			if (TFO.Gallery.videos[i].d.id == video.attr('id')) {
-				//TFO.Gallery.videos[i].playVideo();
-				console.log('play ' + v.d.id + '==' + video.attr('id'));
-			}
-		}
-	});
-*/
 	c.carousel('cycle').on('slide.bs.carousel', function () {
 		if (TFO.Gallery.videos.length > 0) {
 			for (var i = 0; i < TFO.Gallery.videos.length; i++) {
@@ -274,13 +237,7 @@ function onYouTubeIframeAPIReady(event) {
 			}
 		}
 	});
-	//alert('api loaded and initialized.');
 }
-
-//
-//function onPlayerReady(event) {
-//	console.log('onPlayerReady ' + event.target.getVideoUrl());
-//}
 
 
 function onPlayerStateChange(event) {

@@ -30,6 +30,7 @@ $(function () {
 			TFO.Page.setHeroImageHeight();
 			TFO.Page.formatNavigation();
 		});
+
 	};
 
 	TFO.__PageInstance.prototype.setImageMouseovers = function () {
@@ -100,9 +101,10 @@ $(function () {
 
 	TFO.__PageInstance.prototype.formatNavigation = function () {
 
-		TFO.Page.setNavigationEvents(['mouseenter','touchstart','touchmove']);
+		var mql = window.matchMedia("(orientation: portrait)");
+		TFO.Page.setNavigationEvents(['mouseenter', 'touchstart', 'touchmove']);
 
-		if ($(window).width() <= 768 && !TFO.Page.isMobileAdapted) {
+		if (($(window).width() <= 768 || mql.matches) && !TFO.Page.isMobileAdapted) {
 			TFO.Page.formatMobileNavigation();
 		}
 

@@ -690,6 +690,10 @@ span.panel-title {
 		background-color: $red;
 	}
 
+	.navbar-toggle{
+		display: block;
+	}
+
 	.navbar-toggle .icon-bar {
 		display: block;
 		width: 32px;
@@ -758,6 +762,7 @@ span.panel-title {
 
 	.navbar-header {
 		background-color: $dark-color;
+		width:100%;
 	}
 
 	.navbar-header.fix {

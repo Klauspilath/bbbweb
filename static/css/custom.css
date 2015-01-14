@@ -844,6 +844,11 @@ span.panel-title {
   }
 
   /* line 693, ../../sass/custom.scss */
+  .navbar-toggle {
+    display: block;
+  }
+
+  /* line 697, ../../sass/custom.scss */
   .navbar-toggle .icon-bar {
     display: block;
     width: 32px;
@@ -853,12 +858,12 @@ span.panel-title {
     margin-top: 18px;
   }
 
-  /* line 702, ../../sass/custom.scss */
+  /* line 706, ../../sass/custom.scss */
   #quote {
     display: none;
   }
 
-  /* line 706, ../../sass/custom.scss */
+  /* line 710, ../../sass/custom.scss */
   div.nav-footer ul {
     list-style-type: none;
     display: block;
@@ -869,17 +874,17 @@ span.panel-title {
     margin-left: 5%;
   }
 
-  /* line 713, ../../sass/custom.scss */
+  /* line 717, ../../sass/custom.scss */
   .nav-footer ul li {
     padding: 0;
   }
 
-  /* line 717, ../../sass/custom.scss */
+  /* line 721, ../../sass/custom.scss */
   #footer-get-tickets {
     margin-top: 15px;
   }
 
-  /* line 721, ../../sass/custom.scss */
+  /* line 725, ../../sass/custom.scss */
   #mobile-nav-separator {
     height: 1px;
     width: 89%;
@@ -892,22 +897,22 @@ span.panel-title {
     margin-top: 12px;
   }
 
-  /* line 733, ../../sass/custom.scss */
+  /* line 737, ../../sass/custom.scss */
   #social-links {
     float: none;
   }
 
-  /* line 737, ../../sass/custom.scss */
+  /* line 741, ../../sass/custom.scss */
   ul#social-links > li {
     margin-right: 10px;
   }
 
-  /* line 741, ../../sass/custom.scss */
+  /* line 745, ../../sass/custom.scss */
   #box-office {
     display: block;
   }
 
-  /* line 745, ../../sass/custom.scss */
+  /* line 749, ../../sass/custom.scss */
   #follow-us {
     display: inline-block;
     font-family: 'Knockout 49 A', 'Knockout 49 B';
@@ -917,22 +922,23 @@ span.panel-title {
     color: #ffffff;
   }
 
-  /* line 751, ../../sass/custom.scss */
+  /* line 755, ../../sass/custom.scss */
   #bottom-menu {
     margin-bottom: 100px;
   }
 
-  /* line 755, ../../sass/custom.scss */
+  /* line 759, ../../sass/custom.scss */
   a.active {
     color: #000000;
   }
 
-  /* line 759, ../../sass/custom.scss */
+  /* line 763, ../../sass/custom.scss */
   .navbar-header {
     background-color: #000000;
+    width: 100%;
   }
 
-  /* line 763, ../../sass/custom.scss */
+  /* line 768, ../../sass/custom.scss */
   .navbar-header.fix {
     position: fixed;
     top: 0;
@@ -940,12 +946,12 @@ span.panel-title {
     z-index: 4;
   }
 
-  /* line 771, ../../sass/custom.scss */
+  /* line 776, ../../sass/custom.scss */
   .navbar-default {
     background-color: transparent;
   }
 
-  /* line 775, ../../sass/custom.scss */
+  /* line 780, ../../sass/custom.scss */
   #mobile-menu-dropdown.fix {
     display: block;
     position: fixed;
@@ -956,25 +962,25 @@ span.panel-title {
     width: 100%;
   }
 
-  /* line 789, ../../sass/custom.scss */
+  /* line 794, ../../sass/custom.scss */
   header.fix {
     visibility: collapse;
   }
 }
 @media (max-width: 480px) {
-  /* line 796, ../../sass/custom.scss */
+  /* line 801, ../../sass/custom.scss */
   .navbar-nav > li > a {
     font-size: 45px;
     padding: 0;
   }
 
-  /* line 801, ../../sass/custom.scss */
+  /* line 806, ../../sass/custom.scss */
   .content {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  /* line 806, ../../sass/custom.scss */
+  /* line 811, ../../sass/custom.scss */
   #screen > div > section > div > p {
     padding-right: 20px;
     margin-right: 36px;
