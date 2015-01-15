@@ -229,7 +229,7 @@ function onYouTubeIframeAPIReady(event) {
 function onPlayerStateChange(event) {
 
 	if (event.data == YT.PlayerState.PLAYING) {
-
+		$('#carousel-gallery').carousel('pause');
 		var temp = event.target.getVideoUrl();
 
 		for (var i = 0; i < TFO.Gallery.videos.length; i++) {
