@@ -35,9 +35,6 @@ $(function() {
 		if(TFO.globals.constants.IS_HOME) {
 			hBase = 100;
 		}
-		console.log("hBase:" + hBase);
-
-		//$('.top-container').css('margin-top',$(window).height() - hBase + 'px' );
 	};
 
 

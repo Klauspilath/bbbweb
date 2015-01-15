@@ -385,22 +385,8 @@ div.get-tickets-button img {
 }
 
 @media (min-width: $screen-sm-min) {
-	@keyframes slide {
-		0% {
-			height: 0px
-		}
-		50% {
-			height: 123px
-		}
-		100% {
-			left: 488px;
-			top: 0;
-		}
-	}
-
 	.navbar-nav > li.dropdown:hover > .nav-background {
 		display: block;
-		//animation: slide .5s ease-out .1s
 	}
 }
 

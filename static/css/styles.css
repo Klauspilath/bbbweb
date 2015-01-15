@@ -1,988 +1,243 @@
-/* line 6, ../../sass/custom.scss */
-body {
-  background-color: #bb281f;
-  font-weight: normal;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
-  padding: 0;
-  line-height: initial;
-  color: #000000;
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 20px;
-}
-
-@media (max-width: 768px) {
-  /* line 20, ../../sass/custom.scss */
-  body {
-    font-size: 18px;
-  }
-}
-/* line 25, ../../sass/custom.scss */
-div.cms-content p {
-  padding: 10px 0;
-}
-
-/* line 29, ../../sass/custom.scss */
-div.cms-content h3 {
-  padding-top: 40px;
-}
-
-/* line 34, ../../sass/custom.scss */
-header {
-  text-align: center;
-}
-
-/* line 38, ../../sass/custom.scss */
-h3 {
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 34px;
-  padding: 0;
-  margin: 0;
-}
-
-/* line 44, ../../sass/custom.scss */
-#screen > div > section > div > div > h3 {
-  margin-bottom: 30px;
-}
-
-/* line 48, ../../sass/custom.scss */
-h1 {
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 58px;
-  padding: 0;
-  margin: 0;
-}
-
-/* line 54, ../../sass/custom.scss */
-h1.page-title {
-  height: 106px;
-}
-
-/* line 58, ../../sass/custom.scss */
-h2, h4, h5 {
-  font-family: 'Knockout 49 A', 'Knockout 49 B', "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-/* line 62, ../../sass/custom.scss */
-p {
-  margin: 5px 0 0 0;
-}
-
-/* line 66, ../../sass/custom.scss */
-a {
-  color: #ffffff;
-}
-
-/* line 70, ../../sass/custom.scss */
-#location-info {
-  color: #ffffff;
-}
-
-/* line 74, ../../sass/custom.scss */
-a.red {
-  color: #bb281f;
-}
-
-/* line 78, ../../sass/custom.scss */
-a.red-link {
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 20px;
-  color: #bb281f;
-  margin-left: 15px;
-}
-
-/* line 84, ../../sass/custom.scss */
-a:hover {
-  text-decoration: none;
-  color: #000000;
-}
-
-/* line 90, ../../sass/custom.scss */
-.content a {
-  color: #bb281f;
-}
-
-/* line 94, ../../sass/custom.scss */
-.content a:hover {
-  color: #000000;
-}
-
-/* line 98, ../../sass/custom.scss */
-.get-tickets-button a {
-  color: #ffffff;
-}
-
-/* line 102, ../../sass/custom.scss */
-.get-tickets-button a:hover {
-  color: #000000;
-}
-
-/* line 106, ../../sass/custom.scss */
-.vanish {
-  visibility: hidden;
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: 0;
-}
-
-/* line 114, ../../sass/custom.scss */
-.click {
-  cursor: pointer;
-}
-
-/* line 118, ../../sass/custom.scss */
-.white-text-force {
-  color: #ffffff !important;
-}
-
-/* line 122, ../../sass/custom.scss */
-.dark-grey-text {
-  color: #666;
-}
-
-/* line 126, ../../sass/custom.scss */
-.grey-text {
-  color: #a2a2a2;
-}
-
-/* line 130, ../../sass/custom.scss */
-.red {
-  color: #bb281f;
-}
-
-/* line 134, ../../sass/custom.scss */
-.bg-white {
-  background-color: #ffffff;
-}
-
-/* line 138, ../../sass/custom.scss */
-.bg-red {
-  background-color: #bb281f;
-}
-
-/* line 142, ../../sass/custom.scss */
-.bg-light-grey {
-  background-color: #ebebeb;
-}
-
-/* line 146, ../../sass/custom.scss */
-.caps {
-  text-transform: uppercase;
-}
-
-/* line 150, ../../sass/custom.scss */
-.ko-49-18 {
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-}
-
-/* line 154, ../../sass/custom.scss */
-.ko-29-18 {
-  font-family: 'Knockout 29 A', 'Knockout 29 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-}
-
-/* line 158, ../../sass/custom.scss */
-.opacity-fifty {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-
-/* line 162, ../../sass/custom.scss */
-.opacity-eighty {
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-}
-
-/* line 166, ../../sass/custom.scss */
-.bg-clear {
-  background-color: initial !important;
-}
-
-/* line 170, ../../sass/custom.scss */
-.bg-black {
-  background-color: #000000 !important;
-}
-
-/* line 174, ../../sass/custom.scss */
-.hover-black:hover {
-  color: #000000 !important;
-}
-
-/* line 178, ../../sass/custom.scss */
-.hover-white:hover {
-  color: #ffffff !important;
-}
-
-/* line 182, ../../sass/custom.scss */
-.align-right {
-  text-align: right;
-}
-
-/* line 186, ../../sass/custom.scss */
-.align-center {
-  text-align: center;
-}
-
-/* line 190, ../../sass/custom.scss */
-#back-link {
-  margin-top: 20px;
-}
-
-/* line 194, ../../sass/custom.scss */
-footer {
-  background-color: #bb281f;
-  border: 0;
-  margin-top: 15px;
-  padding: 15px 0 30px;
-}
-
-/* line 201, ../../sass/custom.scss */
-table {
-  padding: 0;
-  margin: 0;
-  max-width: 900px;
-}
-
-/* line 207, ../../sass/custom.scss */
-.zero-table * {
-  border: none;
-  border-collapse: collapse;
-  padding: 0;
-  margin: 0;
-  font-size: 0;
-  line-height: 0;
-}
-
-/* line 216, ../../sass/custom.scss */
-section.content td {
-  padding-bottom: 30px;
-}
-
-/* line 220, ../../sass/custom.scss */
-#page-title {
-  margin-bottom: 40px;
-}
-
-/* line 224, ../../sass/custom.scss */
-#hero-image {
-  height: 100%;
-  max-height: 100% !important;
-  width: 1000px;
-  max-width: 100% !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-/* line 234, ../../sass/custom.scss */
-#screen > div > section > div > table > tbody > tr > td:nth-child(1) {
-  max-width: 300px;
-  min-width: 180px;
-}
-
-/* line 239, ../../sass/custom.scss */
-#screen > div > section > div > table > tbody > tr > td:nth-child(2) {
-  max-width: 600px;
-  padding-left: 20px;
-}
-
-/* line 244, ../../sass/custom.scss */
-#screen {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-
-/* line 251, ../../sass/custom.scss */
-#footer-get-tickets {
-  text-transform: uppercase;
-  margin-top: 60px;
-  text-align: center;
-}
-
-/* line 257, ../../sass/custom.scss */
-#footer-get-tickets > p > a {
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 28px;
-  color: #000000;
-}
-
-/* line 262, ../../sass/custom.scss */
-#footer-get-tickets > span > a {
-  font-family: 'Knockout 29 A', 'Knockout 29 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  color: #ffffff;
-}
-
-/* line 267, ../../sass/custom.scss */
-#logo {
-  margin: 10px 20px 3px 10px;
-}
-
-/* line 271, ../../sass/custom.scss */
-#icons {
-  margin-bottom: -38px;
-}
-
-/* line 275, ../../sass/custom.scss */
-.content {
-  padding: 20px 50px 50px;
-}
-
-/* line 279, ../../sass/custom.scss */
-.copy {
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 20px;
-}
-
-/* line 283, ../../sass/custom.scss */
-.copy p em {
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: italic;
-  font-size: 20px;
-}
-
-/* line 287, ../../sass/custom.scss */
-.presentation-copy {
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 24px;
-  margin-top: 25px;
-}
-
-/* line 296, ../../sass/custom.scss */
-.presentation-copy p em {
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: italic;
-  font-size: 24px;
-}
-
-/* line 301, ../../sass/custom.scss */
-#quote {
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 38px;
-  color: #bb281f;
-  background: no-repeat top;
-  text-align: center;
-  width: 280px;
-  height: 220px;
-  float: right;
-  padding-top: 52px;
-}
-
-/* line 312, ../../sass/custom.scss */
-.byline {
-  font-family: 'Knockout 29 A', 'Knockout 29 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
-  color: #000000;
-}
-
-/* line 317, ../../sass/custom.scss */
-div.get-tickets-button {
-  background-color: #bb281f;
-  border-radius: 10px;
-  border: 1px solid #bb281f;
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 26px;
-  color: #ffffff;
-  width: 232px !important;
-  min-width: 232px !important;
-  padding: 5px;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-top: 30px;
-}
-
-/* line 331, ../../sass/custom.scss */
-div.get-tickets-button img {
-  margin-bottom: 2px;
-  margin-right: 2px;
-}
-
-/* line 337, ../../sass/custom.scss */
-.row {
-  margin: 0;
-}
-
-/* line 341, ../../sass/custom.scss */
-.container-fluid {
-  padding: 0;
-}
-
-/* line 345, ../../sass/custom.scss */
-.dropdown-menu {
-  position: absolute;
-  left: 32px;
-  z-index: 1000;
-  float: left;
-  min-width: 160px;
-  padding: 0;
-  margin: 0;
-  font-size: 19px;
-  list-style: none;
-  background-color: transparent;
-  border: 0;
-  border-radius: initial;
-  -webkit-box-shadow: initial;
-  box-shadow: initial;
-  background-clip: initial;
-}
-
-/* line 363, ../../sass/custom.scss */
-.dropdown-submenu > a:after {
-  border: 0;
-}
-
-/* line 367, ../../sass/custom.scss */
-.dropdown-menu > li > a {
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-/* line 372, ../../sass/custom.scss */
-.nav-background {
-  height: 247px;
-  position: absolute;
-  width: 1001px;
-  background-color: #bb281f;
-  z-index: 2;
-  opacity: 0.9;
-  display: none;
-}
-
-/* line 382, ../../sass/custom.scss */
-.dropdown-image {
-  float: right;
-  opacity: 0.25;
-}
-
-@media (min-width: 768px) {
-  @keyframes slide {
-    0% {
-      height: 0px;
-    }
-    50% {
-      height: 123px;
-    }
-    100% {
-      left: 488px;
-      top: 0;
-    }
-  }
-  /* line 401, ../../sass/custom.scss */
-  .navbar-nav > li.dropdown:hover > .nav-background {
-    display: block;
-  }
-}
-/* line 407, ../../sass/custom.scss */
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {
-  background-color: inherit;
-  color: #000000;
-}
-
-/* line 413, ../../sass/custom.scss */
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: initial;
-}
-
-/* line 418, ../../sass/custom.scss */
-.navbar-default .navbar-nav > li > a {
-  color: #ffffff;
-}
-
-/* line 422, ../../sass/custom.scss */
-.navbar-header {
-  height: 40px;
-  margin: 0 !important;
-}
-
-/* line 427, ../../sass/custom.scss */
-.nav > li {
-  display: inline-block;
-}
-
-/* line 432, ../../sass/custom.scss */
-.navbar-nav {
-  margin-left: auto;
-  margin-right: auto;
-  width: 830px;
-}
-
-/* line 438, ../../sass/custom.scss */
-.navbar {
-  border-radius: 0;
-  border: 0;
-  margin: 0;
-  min-height: 40px;
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 19px;
-  z-index: 100;
-}
-
-/* line 447, ../../sass/custom.scss */
-.navbar-nav > li.dropdown:hover > ul.dropdown-menu {
-  display: block;
-  margin-top: 20px !important;
-}
-
-/* line 453, ../../sass/custom.scss */
-.navbar-default {
-  background-color: #000000;
-  border-color: initial;
-  border: 0;
-}
-
-/* line 459, ../../sass/custom.scss */
-.navbar-nav > li > a {
-  padding: 0;
-  line-height: initial;
-}
-
-/* line 464, ../../sass/custom.scss */
-.nav > li > a {
-  position: relative;
-  display: inline-block;
-  padding: 8.5px 50px;
-}
-
-/* line 470, ../../sass/custom.scss */
-li.open > a {
-  color: #bb281f !important;
-}
-
-/* line 474, ../../sass/custom.scss */
-.navbar-default .navbar-nav > li > a:hover {
-  color: #bb281f;
-}
-
-/* line 478, ../../sass/custom.scss */
-.navbar-toggle {
-  height: 45px;
-}
-
-/* line 482, ../../sass/custom.scss */
-.nav > li > a.dropdown-toggle:hover {
-  background-color: inherit;
-  color: #bb281f;
-}
-
-/* line 488, ../../sass/custom.scss */
-.editable-link, .editable-form {
-  font-family: sans-serif;
-}
-
-/* line 492, ../../sass/custom.scss */
-.navbar-toggle {
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-right: 20px;
-}
-
-/* line 501, ../../sass/custom.scss */
-.nav-footer {
-  margin: 0 auto;
-  display: block;
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-/* line 508, ../../sass/custom.scss */
-.nav-footer ul {
-  margin-left: 0;
-  vertical-align: top;
-  width: auto;
-  margin-right: 10px;
-}
-
-/* line 515, ../../sass/custom.scss */
-div.nav-footer > ul {
-  list-style-type: disc;
-  color: #ffffff;
-}
-
-/* line 520, ../../sass/custom.scss */
-div.nav-footer > ul > li > a {
-  margin-right: 11px;
-}
-
-/* line 524, ../../sass/custom.scss */
-#social-links {
-  float: right;
-}
-
-/* line 528, ../../sass/custom.scss */
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  background-color: transparent;
-  color: #bb281f;
-}
-
-/* line 535, ../../sass/custom.scss */
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  text-decoration: none;
-  outline: 0;
-  background-color: transparent;
-  color: #000000;
-}
-
-/* line 544, ../../sass/custom.scss */
-.dropdown-submenu > .dropdown-menu {
-  margin-top: 0 !important;
-}
-
-@media (max-width: 992px) {
-  /* line 549, ../../sass/custom.scss */
-  footer {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-/* line 555, ../../sass/custom.scss */
-#mobile-nav-separator {
-  height: 0;
-  width: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-}
-
-/* line 567, ../../sass/custom.scss */
-#follow-us {
-  display: none;
-}
-
-/* line 571, ../../sass/custom.scss */
-span.panel-title {
-  font-size: 34px;
-}
-
-@media (max-width: 768px) {
-  /* line 577, ../../sass/custom.scss */
-  h1 {
-    font-size: 48px;
-  }
-
-  /* line 581, ../../sass/custom.scss */
-  h3 {
-    font-size: 25px;
-  }
-
-  /* line 585, ../../sass/custom.scss */
-  h1.page-title {
-    height: initial;
-  }
-
-  /* line 589, ../../sass/custom.scss */
-  #icons {
-    display: none;
-  }
-
-  /* line 593, ../../sass/custom.scss */
-  #location-info {
-    display: none;
-  }
-
-  /* line 597, ../../sass/custom.scss */
-  .nav > li {
-    position: relative;
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  /* line 603, ../../sass/custom.scss */
-  .panel-title {
-    text-transform: uppercase;
-  }
-
-  /* line 607, ../../sass/custom.scss */
-  .panel-group {
-    margin-left: 5%;
-  }
-
-  /* line 611, ../../sass/custom.scss */
-  .top-branch > .panel {
-    margin-bottom: 15px;
-  }
-
-  /* line 615, ../../sass/custom.scss */
-  .lower-branch .panel-title {
-    font-size: 32px;
-  }
-
-  /* line 619, ../../sass/custom.scss */
-  .panel-title > a:hover,
-  .panel-title > a:focus {
-    color: #000000;
-    text-decoration: none;
-    outline: 0;
-    background-color: transparent;
-  }
-
-  /* line 627, ../../sass/custom.scss */
-  .navbar-default .navbar-toggle:hover,
-  .navbar-default .navbar-toggle:focus {
-    background-color: #000000;
-  }
-
-  /* line 632, ../../sass/custom.scss */
-  .open > a :hover {
-    background-color: #000000;
-  }
-
-  /* line 636, ../../sass/custom.scss */
-  .navbar-header {
-    text-align: right;
-    height: 60px;
-  }
-
-  /* line 641, ../../sass/custom.scss */
-  .navbar-menu-text {
-    color: #fff;
-    display: inline-block;
-    margin-top: 5px;
-    margin-right: 20px;
-    font-family: 'Knockout 49 A', 'Knockout 49 B';
-    font-weight: 400;
-    font-style: normal;
-    font-size: 42px;
-  }
-
-  /* line 649, ../../sass/custom.scss */
-  .navbar-default .navbar-collapse {
-    background-color: #bb281f;
-    position: absolute;
-    z-index: 3;
-    width: 100%;
-    margin: 0;
-    opacity: 0.95;
-    padding-top: 28px;
-  }
-
-  /* line 659, ../../sass/custom.scss */
-  .carousel-indicators {
-    bottom: 2%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
-
-  /* line 667, ../../sass/custom.scss */
-  .carousel-caption {
-    display: none;
-  }
-
-  /* line 671, ../../sass/custom.scss */
-  .navbar-nav > li > a {
-    font-size: 52px;
-    padding: 0;
-  }
-
-  /* line 676, ../../sass/custom.scss */
-  .navbar-nav {
-    margin: 0 0 0 8%;
-    float: initial;
-  }
-
-  /* line 681, ../../sass/custom.scss */
-  .navbar-default .navbar-nav > li > a:hover {
-    color: #000000;
-  }
-
-  /* line 685, ../../sass/custom.scss */
-  .navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffffff;
-  }
-
-  /* line 689, ../../sass/custom.scss */
-  .navbar-default .navbar-toggle:hover > .icon-bar {
-    background-color: #bb281f;
-  }
-
-  /* line 693, ../../sass/custom.scss */
-  .navbar-toggle {
-    display: block;
-  }
-
-  /* line 697, ../../sass/custom.scss */
-  .navbar-toggle .icon-bar {
-    display: block;
-    width: 32px;
-    height: 5px;
-    border-radius: 0;
-    margin-bottom: 6px;
-    margin-top: 18px;
-  }
-
-  /* line 706, ../../sass/custom.scss */
-  #quote {
-    display: none;
-  }
-
-  /* line 710, ../../sass/custom.scss */
-  div.nav-footer ul {
-    list-style-type: none;
-    display: block;
-    font-family: 'Knockout 49 A', 'Knockout 49 B';
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    margin-left: 5%;
-  }
-
-  /* line 717, ../../sass/custom.scss */
-  .nav-footer ul li {
-    padding: 0;
-  }
-
-  /* line 721, ../../sass/custom.scss */
-  #footer-get-tickets {
-    margin-top: 15px;
-  }
-
-  /* line 725, ../../sass/custom.scss */
-  #mobile-nav-separator {
-    height: 1px;
-    width: 89%;
-    position: relative;
-    color: #ffffff;
-    visibility: visible;
-    top: initial;
-    border-top: 2px solid #ffffff;
-    margin-bottom: 30px;
-    margin-top: 12px;
-  }
-
-  /* line 737, ../../sass/custom.scss */
-  #social-links {
-    float: none;
-  }
-
-  /* line 741, ../../sass/custom.scss */
-  ul#social-links > li {
-    margin-right: 10px;
-  }
-
-  /* line 745, ../../sass/custom.scss */
-  #box-office {
-    display: block;
-  }
-
-  /* line 749, ../../sass/custom.scss */
-  #follow-us {
-    display: inline-block;
-    font-family: 'Knockout 49 A', 'Knockout 49 B';
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    color: #ffffff;
-  }
-
-  /* line 755, ../../sass/custom.scss */
-  #bottom-menu {
-    margin-bottom: 100px;
-  }
-
-  /* line 759, ../../sass/custom.scss */
-  a.active {
-    color: #000000;
-  }
-
-  /* line 763, ../../sass/custom.scss */
-  .navbar-header {
-    background-color: #000000;
-    width: 100%;
-  }
-
-  /* line 768, ../../sass/custom.scss */
-  .navbar-header.fix {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 4;
-  }
-
-  /* line 776, ../../sass/custom.scss */
-  .navbar-default {
-    background-color: transparent;
-  }
-
-  /* line 780, ../../sass/custom.scss */
-  #mobile-menu-dropdown.fix {
-    display: block;
-    position: fixed;
-    top: 60px;
-    height: 100%;
-    overflow-y: scroll;
-    background-color: #bb281f;
-    width: 100%;
-  }
-
-  /* line 794, ../../sass/custom.scss */
-  header.fix {
-    visibility: collapse;
-  }
-}
-@media (max-width: 480px) {
-  /* line 801, ../../sass/custom.scss */
-  .navbar-nav > li > a {
-    font-size: 45px;
-    padding: 0;
-  }
-
-  /* line 806, ../../sass/custom.scss */
-  .content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  /* line 811, ../../sass/custom.scss */
-  #screen > div > section > div > p {
-    padding-right: 20px;
-    margin-right: 36px;
-  }
-}
+body { background-color: #bb281f; font-weight: normal; font-style: normal; -webkit-font-smoothing: antialiased; margin: 0; padding: 0; line-height: initial; color: #000000; font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 20px; }
+
+@media (max-width: 768px) { body { font-size: 18px; } }
+div.cms-content p { padding: 10px 0; }
+
+div.cms-content h3 { padding-top: 40px; }
+
+header { text-align: center; }
+
+h3 { font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 34px; padding: 0; margin: 0; }
+
+#screen > div > section > div > div > h3 { margin-bottom: 30px; }
+
+h1 { font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 58px; padding: 0; margin: 0; }
+
+h1.page-title { height: 106px; }
+
+h2, h4, h5 { font-family: 'Knockout 49 A', 'Knockout 49 B', "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+p { margin: 5px 0 0 0; }
+
+a { color: #ffffff; }
+
+#location-info { color: #ffffff; }
+
+a.red { color: #bb281f; }
+
+a.red-link { font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 20px; color: #bb281f; margin-left: 15px; }
+
+a:hover { text-decoration: none; color: #000000; }
+
+.content a { color: #bb281f; }
+
+.content a:hover { color: #000000; }
+
+.get-tickets-button a { color: #ffffff; }
+
+.get-tickets-button a:hover { color: #000000; }
+
+.vanish { visibility: hidden; height: 0; width: 0; position: absolute; top: 0; }
+
+.click { cursor: pointer; }
+
+.white-text-force { color: #ffffff !important; }
+
+.dark-grey-text { color: #666; }
+
+.grey-text { color: #a2a2a2; }
+
+.red { color: #bb281f; }
+
+.bg-white { background-color: #ffffff; }
+
+.bg-red { background-color: #bb281f; }
+
+.bg-light-grey { background-color: #ebebeb; }
+
+.caps { text-transform: uppercase; }
+
+.ko-49-18 { font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 18px; }
+
+.ko-29-18 { font-family: 'Knockout 29 A', 'Knockout 29 B'; font-weight: 400; font-style: normal; font-size: 18px; }
+
+.opacity-fifty { opacity: 0.5; filter: alpha(opacity=50); }
+
+.opacity-eighty { opacity: 0.8; filter: alpha(opacity=80); }
+
+.bg-clear { background-color: initial !important; }
+
+.bg-black { background-color: #000000 !important; }
+
+.hover-black:hover { color: #000000 !important; }
+
+.hover-white:hover { color: #ffffff !important; }
+
+.align-right { text-align: right; }
+
+.align-center { text-align: center; }
+
+#back-link { margin-top: 20px; }
+
+footer { background-color: #bb281f; border: 0; margin-top: 15px; padding: 15px 0 30px; }
+
+table { padding: 0; margin: 0; max-width: 900px; }
+
+.zero-table * { border: none; border-collapse: collapse; padding: 0; margin: 0; font-size: 0; line-height: 0; }
+
+section.content td { padding-bottom: 30px; }
+
+#page-title { margin-bottom: 40px; }
+
+#hero-image { height: 100%; max-height: 100% !important; width: 1000px; max-width: 100% !important; background-size: cover; background-repeat: no-repeat; background-position: 50%; }
+
+#screen > div > section > div > table > tbody > tr > td:nth-child(1) { max-width: 300px; min-width: 180px; }
+
+#screen > div > section > div > table > tbody > tr > td:nth-child(2) { max-width: 600px; padding-left: 20px; }
+
+#screen { max-width: 1000px; margin-left: auto; margin-right: auto; overflow: hidden; }
+
+#footer-get-tickets { text-transform: uppercase; margin-top: 60px; text-align: center; }
+
+#footer-get-tickets > p > a { font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 28px; color: #000000; }
+
+#footer-get-tickets > span > a { font-family: 'Knockout 29 A', 'Knockout 29 B'; font-weight: 400; font-style: normal; font-size: 14px; color: #ffffff; }
+
+#logo { margin: 10px 20px 3px 10px; }
+
+#icons { margin-bottom: -38px; }
+
+.content { padding: 20px 50px 50px; }
+
+.copy { font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 20px; }
+
+.copy p em { font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: italic; font-size: 20px; }
+
+.presentation-copy { font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 24px; margin-top: 25px; }
+
+.presentation-copy p em { font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: italic; font-size: 24px; }
+
+#quote { font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 38px; color: #bb281f; background: no-repeat top; text-align: center; width: 280px; height: 220px; float: right; padding-top: 52px; }
+
+.byline { font-family: 'Knockout 29 A', 'Knockout 29 B'; font-weight: 400; font-style: normal; font-size: 16px; color: #000000; }
+
+div.get-tickets-button { background-color: #bb281f; border-radius: 10px; border: 1px solid #bb281f; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 26px; color: #ffffff; width: 232px !important; min-width: 232px !important; padding: 5px; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 30px; }
+
+div.get-tickets-button img { margin-bottom: 2px; margin-right: 2px; }
+
+.row { margin: 0; }
+
+.container-fluid { padding: 0; }
+
+.dropdown-menu { position: absolute; left: 32px; z-index: 1000; float: left; min-width: 160px; padding: 0; margin: 0; font-size: 19px; list-style: none; background-color: transparent; border: 0; border-radius: initial; -webkit-box-shadow: initial; box-shadow: initial; background-clip: initial; }
+
+.dropdown-submenu > a:after { border: 0; }
+
+.dropdown-menu > li > a { color: #ffffff; text-transform: uppercase; }
+
+.nav-background { height: 247px; position: absolute; width: 1001px; background-color: #bb281f; z-index: 2; opacity: 0.9; display: none; }
+
+.dropdown-image { float: right; opacity: 0.25; }
+
+@media (min-width: 768px) { .navbar-nav > li.dropdown:hover > .nav-background { display: block; } }
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus { background-color: inherit; color: #000000; }
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form { border-color: initial; }
+
+.navbar-default .navbar-nav > li > a { color: #ffffff; }
+
+.navbar-header { height: 40px; margin: 0 !important; }
+
+.nav > li { display: inline-block; }
+
+.navbar-nav { margin-left: auto; margin-right: auto; width: 830px; }
+
+.navbar { border-radius: 0; border: 0; margin: 0; min-height: 40px; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 19px; z-index: 100; }
+
+.navbar-nav > li.dropdown:hover > ul.dropdown-menu { display: block; margin-top: 20px !important; }
+
+.navbar-default { background-color: #000000; border-color: initial; border: 0; }
+
+.navbar-nav > li > a { padding: 0; line-height: initial; }
+
+.nav > li > a { position: relative; display: inline-block; padding: 8.5px 50px; }
+
+li.open > a { color: #bb281f !important; }
+
+.navbar-default .navbar-nav > li > a:hover { color: #bb281f; }
+
+.navbar-toggle { height: 45px; }
+
+.nav > li > a.dropdown-toggle:hover { background-color: inherit; color: #bb281f; }
+
+.editable-link, .editable-form { font-family: sans-serif; }
+
+.navbar-toggle { padding: 0; border: 0; background-color: transparent; margin-top: 0; margin-bottom: 0; margin-right: 20px; }
+
+.nav-footer { margin: 0 auto; display: block; font-family: 'Verlag A', 'Verlag B'; font-weight: 400; font-style: normal; font-size: 12px; text-transform: uppercase; }
+
+.nav-footer ul { margin-left: 0; vertical-align: top; width: auto; margin-right: 10px; }
+
+div.nav-footer > ul { list-style-type: disc; color: #ffffff; }
+
+div.nav-footer > ul > li > a { margin-right: 11px; }
+
+#social-links { float: right; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { background-color: transparent; color: #bb281f; }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus { text-decoration: none; outline: 0; background-color: transparent; color: #000000; }
+
+.dropdown-submenu > .dropdown-menu { margin-top: 0 !important; }
+
+@media (max-width: 992px) { footer { padding-left: 10px; padding-right: 10px; } }
+#mobile-nav-separator { height: 0; width: 0; visibility: hidden; position: absolute; top: 0; }
+
+#follow-us { display: none; }
+
+span.panel-title { font-size: 34px; }
+
+@media (max-width: 768px) { h1 { font-size: 48px; }
+  h3 { font-size: 25px; }
+  h1.page-title { height: initial; }
+  #icons { display: none; }
+  #location-info { display: none; }
+  .nav > li { position: relative; display: block; margin-bottom: 15px; }
+  .panel-title { text-transform: uppercase; }
+  .panel-group { margin-left: 5%; }
+  .top-branch > .panel { margin-bottom: 15px; }
+  .lower-branch .panel-title { font-size: 32px; }
+  .panel-title > a:hover, .panel-title > a:focus { color: #000000; text-decoration: none; outline: 0; background-color: transparent; }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { background-color: #000000; }
+  .open > a :hover { background-color: #000000; }
+  .navbar-header { text-align: right; height: 60px; }
+  .navbar-menu-text { color: #fff; display: inline-block; margin-top: 5px; margin-right: 20px; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 42px; }
+  .navbar-default .navbar-collapse { background-color: #bb281f; position: absolute; z-index: 3; width: 100%; margin: 0; opacity: 0.95; padding-top: 28px; }
+  .carousel-indicators { bottom: 2%; text-align: center; margin-left: auto; margin-right: auto; width: 100%; }
+  .carousel-caption { display: none; }
+  .navbar-nav > li > a { font-size: 52px; padding: 0; }
+  .navbar-nav { margin: 0 0 0 8%; float: initial; }
+  .navbar-default .navbar-nav > li > a:hover { color: #000000; }
+  .navbar-default .navbar-toggle .icon-bar { background-color: #ffffff; }
+  .navbar-default .navbar-toggle:hover > .icon-bar { background-color: #bb281f; }
+  .navbar-toggle { display: block; }
+  .navbar-toggle .icon-bar { display: block; width: 32px; height: 5px; border-radius: 0; margin-bottom: 6px; margin-top: 18px; }
+  #quote { display: none; }
+  div.nav-footer ul { list-style-type: none; display: block; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 20px; margin-left: 5%; }
+  .nav-footer ul li { padding: 0; }
+  #footer-get-tickets { margin-top: 15px; }
+  #mobile-nav-separator { height: 1px; width: 89%; position: relative; color: #ffffff; visibility: visible; top: initial; border-top: 2px solid #ffffff; margin-bottom: 30px; margin-top: 12px; }
+  #social-links { float: none; }
+  ul#social-links > li { margin-right: 10px; }
+  #box-office { display: block; }
+  #follow-us { display: inline-block; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 20px; color: #ffffff; }
+  #bottom-menu { margin-bottom: 100px; }
+  a.active { color: #000000; }
+  .navbar-header { background-color: #000000; width: 100%; }
+  .navbar-header.fix { position: fixed; top: 0; width: 100%; z-index: 4; }
+  .navbar-default { background-color: transparent; }
+  #mobile-menu-dropdown.fix { display: block; position: fixed; top: 60px; height: 100%; overflow-y: scroll; background-color: #bb281f; width: 100%; }
+  header.fix { visibility: collapse; } }
+@media (max-width: 480px) { .navbar-nav > li > a { font-size: 45px; padding: 0; }
+  .content { padding-left: 20px; padding-right: 20px; }
+  #screen > div > section > div > p { padding-right: 20px; margin-right: 36px; } }

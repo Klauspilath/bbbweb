@@ -1,124 +1,26 @@
-/* line 5, ../../sass/cast.scss */
-.cast-container {
-  max-width: 933px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
+.cast-container { max-width: 933px; margin-left: auto; margin-right: auto; padding-left: 10px; padding-top: 20px; padding-bottom: 50px; }
 
-/* line 14, ../../sass/cast.scss */
-h1 {
-  margin-bottom: 25px;
-}
+h1 { margin-bottom: 25px; }
 
-/* line 19, ../../sass/cast.scss */
-h1.page-title {
-  height: 106px;
-  margin-top: 0px;
-}
+h1.page-title { height: 106px; margin-top: 0px; }
 
-/* line 25, ../../sass/cast.scss */
-.cast-member-name {
-  position: absolute;
-  color: #ffffff;
-  width: 100%;
-  padding-top: 10px;
-  padding-left: 10px;
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 24px;
-  bottom: 0;
-  max-height: 46px;
-  max-width: 300px;
-  height: 46px;
-  z-index: 1;
-}
+.cast-member-name { position: absolute; color: #ffffff; width: 100%; padding-top: 10px; padding-left: 10px; font-family: 'Verlag A', 'Verlag B'; font-weight: 400; font-style: normal; font-size: 24px; bottom: 0; max-height: 46px; max-width: 300px; height: 46px; z-index: 1; }
 
-/* line 39, ../../sass/cast.scss */
-.headshot {
-  cursor: pointer;
-  max-width: 300px;
-  cursor: pointer;
-  width: 100%;
-}
+.headshot { cursor: pointer; max-width: 300px; cursor: pointer; width: 100%; }
 
-/* line 47, ../../sass/cast.scss */
-.member-overlay {
-  position: absolute;
-  top: 0;
-  display: none;
-  height: 100%;
-}
+.member-overlay { position: absolute; top: 0; display: none; height: 100%; }
 
-/* line 54, ../../sass/cast.scss */
-.member-overlay img {
-  opacity: 0.25;
-}
+.member-overlay img { opacity: 0.25; }
 
-/* line 58, ../../sass/cast.scss */
-.member-overlay p {
-  width: 100%;
-  text-align: center;
-  color: #ffffff;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  position: absolute;
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 24px;
-}
+.member-overlay p { width: 100%; text-align: center; color: #ffffff; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); position: absolute; font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 24px; }
 
-/* line 66, ../../sass/cast.scss */
-.content {
-  padding: 0 0 77px;
-}
+.content { padding: 0 0 77px; }
 
-/* line 70, ../../sass/cast.scss */
-.red-semi-trans {
-  background-color: rgba(187, 40, 31, 0.75);
-}
+.red-semi-trans { background-color: rgba(187, 40, 31, 0.75); }
 
-@media (min-width: 928px) {
-  /* line 75, ../../sass/cast.scss */
-  .col-sm-4 {
-    margin-bottom: 0.6%;
-  }
-}
-@media (max-width: 480px) {
-  /* line 81, ../../sass/cast.scss */
-  .cast-member-name {
-    font-size: 12px;
-    height: 20px;
-    padding-left: 6px;
-    padding-top: 2px;
-  }
-
-  /* line 87, ../../sass/cast.scss */
-  .member-overlay img {
-    display: none !important;
-  }
-
-  /* line 91, ../../sass/cast.scss */
-  .cast-container {
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-left: 0px;
-  }
-
-  /* line 98, ../../sass/cast.scss */
-  h1 {
-    margin-bottom: 10px;
-    margin-top: 5px;
-  }
-
-  /* line 103, ../../sass/cast.scss */
-  .content {
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-}
+@media (min-width: 928px) { .col-sm-4 { margin-bottom: 0.6%; } }
+@media (max-width: 480px) { .cast-member-name { font-size: 12px; height: 20px; padding-left: 6px; padding-top: 2px; }
+  .member-overlay img { display: none !important; }
+  .cast-container { padding-top: 10px; padding-bottom: 15px; padding-left: 0px; }
+  h1 { margin-bottom: 10px; margin-top: 5px; }
+  .content { padding-right: 5px; padding-left: 5px; } }

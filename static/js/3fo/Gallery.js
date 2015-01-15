@@ -42,8 +42,6 @@ $(window).load(function () {
 				thumbImage = $('.thumbnail > img'),
 				galleryInstance = TFO.Gallery;
 
-			//$('.carousel').carousel('pause');
-
 			if (($(window).scrollTop() === 0)) TFO.Gallery.setGalleryHeight();
 
 			if (screenWidth < galleryInstance.DEFAULT_SCREEN_WIDTH && screenWidth > galleryInstance.MOBILE_MEDIUM_WIDTH) {
@@ -184,23 +182,18 @@ $(window).load(function () {
 
 			if (event.direction == Hammer.DIRECTION_RIGHT)
 				c.carousel('prev');
-
 		});
 	};
-
 
 	TFO.__GalleryInstance.prototype.initYoutubeAPI = function () {
 		var tag = document.createElement('script');
 		var firstScriptTag = document.getElementsByTagName('script')[0];
 		tag.src = "https://www.youtube.com/iframe_api";
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-		console.log('load youtube API');
 	};
 
 	TFO.Gallery = new TFO.__GalleryInstance();
-	console.log('window totally loaded.');
 	$(window).trigger('resize');
-	console.log('resize triggered.');
 
 	if (TFO.globals.constants.IS_VIDEO_GALLERY) {
 		TFO.Gallery.initYoutubeAPI();
@@ -210,7 +203,6 @@ $(window).load(function () {
 });
 
 function onYouTubeIframeAPIReady(event) {
-	console.log('api ready');
 	var c = $('#carousel-gallery');
 	var players = $('.youtube-player');
 	var layers = $('.video-overlay');
@@ -220,13 +212,8 @@ function onYouTubeIframeAPIReady(event) {
 
 	for (var i = 0; i < players.length; i++) {
 		var t = new YT.Player($(players[i]).attr('id'),
-			{
-				events: {
-					'onStateChange': onPlayerStateChange
-				}
-			});
+			{events: {'onStateChange': onPlayerStateChange}});
 		TFO.Gallery.videos.push(t);
-
 		TFO.Gallery.trackGestures(document.getElementById($(players[i]).attr('id')), 'swipe');
 	}
 
@@ -239,9 +226,7 @@ function onYouTubeIframeAPIReady(event) {
 	});
 }
 
-
 function onPlayerStateChange(event) {
-	console.log('onPlayerStateChange');
 
 	if (event.data == YT.PlayerState.PLAYING) {
 
@@ -252,10 +237,3 @@ function onPlayerStateChange(event) {
 		}
 	}
 }
-
-$(function () {
-	//onYouTubeIframeAPIReady();
-	console.log('document.ready ');
-});
-
-

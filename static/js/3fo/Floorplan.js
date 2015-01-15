@@ -54,9 +54,7 @@ TFO.__FloorPlanInstance.prototype.setSectionListeners = function () {
 };
 
 TFO.__FloorPlanInstance.prototype.updateStage = function (event) {
-    console.log(this.cooridinates[event.data.target]);
     $("#stage-view").css("background-position", "0 -" + this.cooridinates[event.data.target]);
-
 };
 
 //create instance

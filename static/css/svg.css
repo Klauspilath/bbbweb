@@ -1,48 +1,17 @@
-/* line 3, ../../sass/svg.scss */
-.yellow-fill {
-  fill: #bb281f;
-}
+.yellow-fill { fill: #bb281f; }
 
-/* line 7, ../../sass/svg.scss */
-.white-fill {
-  fill: #ffffff;
-}
+.white-fill { fill: #ffffff; }
 
-/* line 11, ../../sass/svg.scss */
-.grey-fill {
-  fill: #a2a2a2;
-}
+.grey-fill { fill: #a2a2a2; }
 
-/* line 15, ../../sass/svg.scss */
-.hover-black:hover {
-  fill: #000000;
-}
+.hover-black:hover { fill: #000000; }
 
-/* line 19, ../../sass/svg.scss */
-.hover-yellow:hover {
-  fill: #bb281f;
-}
+.hover-yellow:hover { fill: #bb281f; }
 
-/* line 23, ../../sass/svg.scss */
-.hover-white:hover {
-  fill: #ffffff;
-}
+.hover-white:hover { fill: #ffffff; }
 
-/* line 27, ../../sass/svg.scss */
-.hover-semi-trans {
-  -webkit-transition: opacity 200ms;
-  -moz-transition: opacity 200ms;
-  -ms-transition: opacity 200ms;
-  -o-transition: opacity 200ms;
-  transition: opacity 200ms;
-}
+.hover-semi-trans { -webkit-transition: opacity 200ms; -moz-transition: opacity 200ms; -ms-transition: opacity 200ms; -o-transition: opacity 200ms; transition: opacity 200ms; }
 
-/* line 35, ../../sass/svg.scss */
-.hover-semi-trans:hover {
-  opacity: 0.8;
-}
+.hover-semi-trans:hover { opacity: 0.8; }
 
-/* line 39, ../../sass/svg.scss */
-svg {
-  cursor: pointer;
-}
+svg { cursor: pointer; }

@@ -1,192 +1,43 @@
-/* line 13, ../../sass/tickets.scss */
-h1 {
-  margin-bottom: 25px;
-}
+h1 { margin-bottom: 25px; }
 
-/* line 17, ../../sass/tickets.scss */
-table.pricing-grid {
-  width: 100%;
-}
+table.pricing-grid { width: 100%; }
 
-/* line 21, ../../sass/tickets.scss */
-td {
-  border: solid 10px #ffffff;
-  border-left: 0px;
-}
+td { border: solid 10px #ffffff; border-left: 0px; }
 
-/* line 26, ../../sass/tickets.scss */
-td > p {
-  margin: 0px 0 0 0px;
-}
+td > p { margin: 0px 0 0 0px; }
 
-/* line 30, ../../sass/tickets.scss */
-section.content td {
-  padding: 0;
-}
+section.content td { padding: 0; }
 
-/* line 34, ../../sass/tickets.scss */
-.column-header {
-  height: 111px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  min-width: 100% !important;
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 34px;
-  color: #ffffff;
-  max-width: 120px !important;
-  width: 120px;
-}
+.column-header { height: 111px; margin-right: 10px; margin-bottom: 10px; text-align: center; min-width: 100% !important; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 34px; color: #ffffff; max-width: 120px !important; width: 120px; }
 
-/* line 42, ../../sass/tickets.scss */
-.section-column-header {
-  height: 111px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  min-width: 100% !important;
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 34px;
-  color: #ffffff;
-  width: 222px !important;
-  max-width: 222px !important;
-}
+.section-column-header { height: 111px; margin-right: 10px; margin-bottom: 10px; text-align: center; min-width: 100% !important; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 34px; color: #ffffff; width: 222px !important; max-width: 222px !important; }
 
-/* line 50, ../../sass/tickets.scss */
-.row-header {
-  height: 111px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  min-width: 100% !important;
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 24px;
-  color: #ffffff;
-  width: 222px !important;
-  max-width: 222px !important;
-}
+.row-header { height: 111px; margin-right: 10px; margin-bottom: 10px; text-align: center; min-width: 100% !important; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 24px; color: #ffffff; width: 222px !important; max-width: 222px !important; }
 
-/* line 58, ../../sass/tickets.scss */
-.column-header p, .grey-cell p, .row-header p {
-  vertical-align: middle;
-  text-align: center;
-}
+.column-header p, .grey-cell p, .row-header p { vertical-align: middle; text-align: center; }
 
-/* line 63, ../../sass/tickets.scss */
-.row-header p {
-  padding: 2px;
-}
+.row-header p { padding: 2px; }
 
-/* line 71, ../../sass/tickets.scss */
-section.content > div {
-  min-width: 366px;
-}
+section.content > div { min-width: 366px; }
 
-/* line 76, ../../sass/tickets.scss */
-section > div > div.row {
-  position: relative;
-  float: left;
-  top: 0;
-}
+section > div > div.row { position: relative; float: left; top: 0; }
 
-/* line 82, ../../sass/tickets.scss */
-.showtimes-title {
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 34px;
-  margin-top: 42px;
-}
+.showtimes-title { font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 34px; margin-top: 42px; }
 
-/* line 87, ../../sass/tickets.scss */
-.grey-cell {
-  height: 111px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  min-width: 100% !important;
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 24px;
-  color: #000000;
-}
+.grey-cell { height: 111px; margin-right: 10px; margin-bottom: 10px; text-align: center; min-width: 100% !important; font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 24px; color: #000000; }
 
-@media (max-width: 972px) {
-  /* line 94, ../../sass/tickets.scss */
-  #quote {
-    display: none;
-  }
-}
-/* line 99, ../../sass/tickets.scss */
-a.ticket-links {
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 20px;
-  color: #bb281f;
-}
+@media (max-width: 972px) { #quote { display: none; } }
+a.ticket-links { font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 20px; color: #bb281f; }
 
-/* line 107, ../../sass/tickets.scss */
-.get-tickets-button {
-  margin-top: 75px;
-}
+.get-tickets-button { margin-top: 75px; }
 
-/* line 111, ../../sass/tickets.scss */
-#screen > div > section > div > table > tbody > tr > td:nth-child(2) {
-  padding: 0;
-}
+#screen > div > section > div > table > tbody > tr > td:nth-child(2) { padding: 0; }
 
-@media (max-width: 992px) {
-  /* line 118, ../../sass/tickets.scss */
-  section.content td {
-    padding: 0;
-    font-size: 24px;
-  }
-
-  /* line 123, ../../sass/tickets.scss */
-  td.bg-light-grey.grey-cell {
-    font-size: 20px;
-  }
-}
-@media (max-width: 480px) {
-  /* line 131, ../../sass/tickets.scss */
-  .content {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  /* line 136, ../../sass/tickets.scss */
-  section.content td {
-    padding: 2px;
-    font-size: 20px;
-  }
-
-  /* line 141, ../../sass/tickets.scss */
-  table.pricing-grid {
-    margin-left: -5px;
-    width: 320px;
-  }
-
-  /* line 147, ../../sass/tickets.scss */
-  td {
-    border: solid 4px #ffffff;
-  }
-
-  /* line 151, ../../sass/tickets.scss */
-  td.bg-light-grey.grey-cell {
-    font-size: 16px;
-  }
-
-  /* line 155, ../../sass/tickets.scss */
-  p.general-info {
-    width: 303px;
-    margin-left: 9px;
-  }
-}
+@media (max-width: 992px) { section.content td { padding: 0; font-size: 24px; }
+  td.bg-light-grey.grey-cell { font-size: 20px; } }
+@media (max-width: 480px) { .content { padding-left: 5px; padding-right: 5px; }
+  section.content td { padding: 2px; font-size: 20px; }
+  table.pricing-grid { margin-left: -5px; width: 320px; }
+  td { border: solid 4px #ffffff; }
+  td.bg-light-grey.grey-cell { font-size: 16px; }
+  p.general-info { width: 303px; margin-left: 9px; } }

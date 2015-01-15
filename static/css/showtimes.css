@@ -1,116 +1,22 @@
-/* line 14, ../../sass/showtimes.scss */
-.column-header {
-  width: 111px;
-  height: 111px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  display: table;
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 34px;
-  color: #ffffff;
-}
+.column-header { width: 111px; height: 111px; margin-right: 10px; margin-bottom: 10px; text-align: center; display: table; font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 34px; color: #ffffff; }
 
-/* line 20, ../../sass/showtimes.scss */
-.column-header p, .grey-cell p {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
+.column-header p, .grey-cell p { display: table-cell; vertical-align: middle; text-align: center; }
 
-/* line 26, ../../sass/showtimes.scss */
-section.content > div {
-  max-width: 900px;
-  min-width: 366px;
-}
+section.content > div { max-width: 900px; min-width: 366px; }
 
-/* line 31, ../../sass/showtimes.scss */
-section > div > div.row {
-  position: relative;
-  float: left;
-  top: 0;
-}
+section > div > div.row { position: relative; float: left; top: 0; }
 
-/* line 37, ../../sass/showtimes.scss */
-#quote {
-  text-align: center;
-  z-index: 10;
-  position: initial;
-  width: 280px;
-  float: right;
-  margin-top: 140px;
-  margin-right: -13px;
-}
+#quote { text-align: center; z-index: 10; position: initial; width: 280px; float: right; margin-top: 140px; margin-right: -13px; }
 
-/* line 47, ../../sass/showtimes.scss */
-.showtimes-title {
-  font-family: 'Knockout 49 A', 'Knockout 49 B';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 34px;
-  margin-top: 42px;
-}
+.showtimes-title { font-family: 'Knockout 49 A', 'Knockout 49 B'; font-weight: 400; font-style: normal; font-size: 34px; margin-top: 42px; }
 
-/* line 52, ../../sass/showtimes.scss */
-.grey-cell {
-  width: 111px;
-  height: 111px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  display: table;
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 24px;
-  color: #000000;
-}
+.grey-cell { width: 111px; height: 111px; margin-right: 10px; margin-bottom: 10px; text-align: center; display: table; font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 24px; color: #000000; }
 
-@media (max-width: 972px) {
-  /* line 59, ../../sass/showtimes.scss */
-  #quote {
-    display: none;
-  }
-}
-/* line 64, ../../sass/showtimes.scss */
-a.ticket-links {
-  font-family: 'Verlag A', 'Verlag B';
-  font-weight: 300;
-  font-style: normal;
-  font-size: 20px;
-  color: #bb281f;
-}
+@media (max-width: 972px) { #quote { display: none; } }
+a.ticket-links { font-family: 'Verlag A', 'Verlag B'; font-weight: 300; font-style: normal; font-size: 20px; color: #bb281f; }
 
-@media (max-width: 992px) {
-  /* line 74, ../../sass/showtimes.scss */
-  section.content td {
-    padding: 0;
-    font-size: 24px;
-  }
-
-  /* line 79, ../../sass/showtimes.scss */
-  td.bg-light-grey.grey-cell {
-    font-size: 20px;
-  }
-}
-@media (max-width: 480px) {
-  /* line 91, ../../sass/showtimes.scss */
-  .content {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  /* line 97, ../../sass/showtimes.scss */
-  .grey-cell, .column-header {
-    width: 90px;
-    height: 90px;
-  }
-
-  /* line 102, ../../sass/showtimes.scss */
-  .showtimes-title {
-    font-size: 29px;
-    padding-right: 33px !important;
-  }
-}
+@media (max-width: 992px) { section.content td { padding: 0; font-size: 24px; }
+  td.bg-light-grey.grey-cell { font-size: 20px; } }
+@media (max-width: 480px) { .content { padding-left: 5px; padding-right: 5px; }
+  .grey-cell, .column-header { width: 90px; height: 90px; }
+  .showtimes-title { font-size: 29px; padding-right: 33px !important; } }

@@ -30,38 +30,22 @@ $(function () {
 			TFO.Page.setHeroImageHeight();
 			TFO.Page.formatNavigation();
 		});
-
 	};
 
 	TFO.__PageInstance.prototype.setImageMouseovers = function () {
 		var fb = document.getElementById('fb-icon'),
 			twitter = document.getElementById('twitter-icon'),
-			youtube = document.getElementById('youtube-icon');
+			youtube = document.getElementById('youtube-icon'),
+			elements = [fb, twitter, youtube];
 
-		/*turn this into a loop*/
+		elements.forEach(function(element) {
+			$(element).on('mouseover', function () {
+				event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + $(element).attr('id') + '-hover.png';
+			});
 
-		$(fb).on('mouseover', function () {
-			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'fb-icon-hover.png';
-		});
-
-		$(fb).on('mouseout', function () {
-			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'fb-icon.png';
-		});
-
-		$(twitter).on('mouseover', function () {
-			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'twitter-icon-hover.png';
-		});
-
-		$(twitter).on('mouseout', function () {
-			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'twitter-icon.png';
-		});
-
-		$(youtube).on('mouseover', function () {
-			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'youtube-icon-hover.png';
-		});
-
-		$(youtube).on('mouseout', function () {
-			event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + 'youtube-icon.png';
+			$(element).on('mouseout', function () {
+				event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + $(element).attr('id') + '.png';
+			});
 		});
 	};
 
@@ -86,15 +70,9 @@ $(function () {
 				var sc = $('#screen'),
 					bg = $(this).children('.nav-background');
 
-				console.log('in the event:' + event.type);
-
 				if (sc.offset().left == bg.offset().left) return;
-				console.log('did not exit the event handler');
-
 				var bgl = sc.offset().left - bg.offset().left;
-
 				bg.css('left', -1 * ($(this).offset().left) + sc.offset().left);
-				console.log('position:' + (-1 * ($(this).offset().left) + sc.offset().left));
 			});
 		}
 	};
@@ -169,7 +147,6 @@ $(function () {
 			$(selector).removeClass('fix');
 		}
 	};
-
 
 	TFO.__PageInstance.prototype.setMobileMenuListeners = function () {
 		this.setMobileClickListener();
