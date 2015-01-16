@@ -39,11 +39,11 @@ $(function () {
 			elements = [fb, twitter, youtube];
 
 		elements.forEach(function(element) {
-			$(element).on('mouseover', function () {
+			$(element).on('mouseover', function (event) {
 				event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + $(element).attr('id') + '-hover.png';
 			});
 
-			$(element).on('mouseout', function () {
+			$(element).on('mouseout', function (event) {
 				event.currentTarget.src = TFO.__PageInstance.STATIC_IMG_PATH + $(element).attr('id') + '.png';
 			});
 		});
