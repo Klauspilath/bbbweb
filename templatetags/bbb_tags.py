@@ -13,9 +13,20 @@ def get_gallery(name):
 
 
 @register.inclusion_tag('includes/tags/get-tickets-button.html')
-def get_tickets_button(link, target=None):
-    return_target = False
-    if target is not None:
-        return_target = target
+def get_tickets_button(link, **kwargs):
 
-    return {"link": link, "target": return_target}
+    return_target = False
+    return_phone = False
+
+    if kwargs is not None:
+
+        if kwargs['target']:
+            return_target = True
+
+        if kwargs['link_phone'] is not "":
+            return_phone = True
+
+
+
+
+    return {"link": link, "target": return_target, "link_phone": return_phone}

@@ -25,7 +25,7 @@
 			{{ page.title|safe }}
 		{% endeditable %}
 	</h1>
-	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
+	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true"  %}
 	<p class="showtimes-title">
 		Ticket Prices
 	</p>
@@ -49,7 +49,7 @@
 		<h3 style="margin-top: 20px">For accessibility information call 415.421.4222 or email the Box Office</h3>
 
 	</div>
-	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" "_blank" %}
+	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true"  %}
 	<p style="margin-bottom: 30px">
 		{% editable page.richtextpage.content %}
 			{{ page.richtextpage.content|richtext_filters|safe }}

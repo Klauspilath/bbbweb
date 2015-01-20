@@ -1,9 +1,6 @@
 {% load pages_tags mezzanine_tags i18n future staticfiles %}
-
-
-    <div class="get-tickets-button">
-        <a href="{{ link }}" {% if target %}target="{{ target }}{% endif %}">
-        <img src="{% static "img/finger.png" %}"> Get Tickets Now!
-        </a>
-    </div>
-
+<div class="get-tickets-button">
+    <a href="{{ link }}"
+       {% if link_phone %}class="dial-out"{% endif %}
+       {% if target %}target="{{ target }}"{% endif %}><img class="finger-icon" src="{% static "img/finger.png" %}">Get Tickets Now!</a>
+</div>

@@ -6,7 +6,8 @@
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="{% block meta_keywords %}{% metablock %}{% endmetablock %}{% endblock %}">
     <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <title>{% block meta_title %}{{ page.meta_title }}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+    <title>{% block meta_title %}{{ page.meta_title }}{% endblock %}{% if settings.SITE_TITLE %} |
+        {{ settings.SITE_TITLE }}{% endif %}</title>
     <link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
     {% compress css %}
         <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7494932/640386/css/fonts.css"/>
@@ -21,19 +22,26 @@
         <script src="{% static "js/bootstrap.min.js" %}"></script>
         <script src="{% static "js/bootstrap-extras.js" %}"></script>
         <script src="{% static "js/modernizer/modernizr.js" %}"></script>
+        <script src="{% static "js/detectizr/detectizr.min.js" %}"></script>
         <script>
-            if (typeof TFO === 'undefined') {TFO = {};}
 
-            TFO.globals = function () {};
+
+            if (typeof TFO === 'undefined') {
+                TFO = {};
+            }
+
+            TFO.globals = function () {
+            };
 
             TFO.globals.constants = {};
 
-            if (Modernizr.touch && window.navigator.userAgent.indexOf('Windows NT') < 0) {
-                TFO.globals.constants.IS_DESKTOP = false;
+            TFO.globals.constants.IS_DESKTOP = false;
+            TFO.globals.constants.IS_MOBILE = false;
+
+            if(Modernizr.mobile){
                 TFO.globals.constants.IS_MOBILE = true;
             } else {
                 TFO.globals.constants.IS_DESKTOP = true;
-                TFO.globals.constants.IS_MOBILE = false;
             }
 
             TFO.globals.constants.IS_HOME = false;
@@ -54,7 +62,7 @@
 <body id="{% block body_id %}body{% endblock %}">
 <div id="screen">
     <header>
-        <a href="/" ><img id="logo" src="{% static "img/logo.png" %}" alt="Musical revue in San Francisco"></a>
+        <a href="/"><img id="logo" src="{% static "img/logo.png" %}" alt="Musical revue in San Francisco"></a>
         <img id="icons" src="{% static "img/head-icons.png" %}">
     </header>
     <nav>

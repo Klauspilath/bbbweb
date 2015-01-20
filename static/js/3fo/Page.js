@@ -11,7 +11,9 @@ $(function () {
 	TFO.__PageInstance.STATIC_IMG_PATH = '/static/img/';
 	TFO.__PageInstance.FIXED_NAVIGATION_SELECTOR = '.fix';
 	TFO.__PageInstance.CLICK_TOGGLE_SELECTOR = 'clicked';
-
+	TFO.__PageInstance.PHONE_LINK_SELECTOR = '.dial-out';
+	TFO.__PageInstance.PHONE_NUMBER = '415-421-4222';
+;
 	TFO.__PageInstance.prototype.init = function () {
 
 		this.isMobileAdapted = false;
@@ -107,6 +109,15 @@ $(function () {
 
 		TFO.Page.isMobileAdapted = true;
 		TFO.Page.isDesktopAdapted = false;
+
+		if(TFO.globals.constants.IS_MOBILE)
+			TFO.Page.updateTicketLinksForMobile();
+	};
+
+	TFO.__PageInstance.prototype.updateTicketLinksForMobile = function(){
+		var links = $(TFO.__PageInstance.PHONE_LINK_SELECTOR);
+		links.attr('href','tel:' + TFO.__PageInstance.PHONE_NUMBER);
+		links.removeAttr('target');
 	};
 
 	TFO.__PageInstance.prototype.formatDesktopNavigation = function () {
