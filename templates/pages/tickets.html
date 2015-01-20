@@ -35,20 +35,7 @@
 {#	</p>#}
 {#	{% include "includes/bbb/special-seatingrid.html" %}#}
 	</div>
-	<div class="row">
-		<p class="showtimes-title">
-			Floorplan
-		</p>
-		<p>
-			<a href=""><img src="{% static "img/finger-red.png" %}"/></a>
-			<a class="ticket-links hover-black" href="/showtimes/floorplan">View the sections</a>
-		</p>
-	</div>
-	<div class="row">
 
-		<h3 style="margin-top: 20px">For accessibility information call 415.421.4222 or email the Box Office</h3>
-
-	</div>
 	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true"  %}
 	<p style="margin-bottom: 30px">
 		{% editable page.richtextpage.content %}
