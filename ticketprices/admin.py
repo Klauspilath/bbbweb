@@ -1,22 +1,20 @@
-from copy import deepcopy
 from django.contrib import admin
 from .models import Section, WeekDay, TicketPrice
 
 
-class SectionInline(admin.ModelAdmin):
+class SectionInput(admin.ModelAdmin):
     model = Section
     list_display = 'name'
 
 
-class WeekDayInline(admin.ModelAdmin):
+class WeekDayInput(admin.ModelAdmin):
     model = WeekDay
     list_display = 'name'
 
 
 class TickPriceAdmin(admin.ModelAdmin):
-    section = SectionInline
-    week_day = WeekDayInline
-
+    section = SectionInput
+    week_day = WeekDayInput
 
 admin.site.register(Section)
 admin.site.register(WeekDay)
