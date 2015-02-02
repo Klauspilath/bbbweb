@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import Section, WeekDay, TicketPrice
+from mezzanine.core.admin import TabularDynamicInlineAdmin
 
-
-class SectionInput(admin.ModelAdmin):
+class SectionInput(TabularDynamicInlineAdmin):
     model = Section
     list_display = 'name'
 

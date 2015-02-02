@@ -51,6 +51,7 @@ urlpatterns += patterns('', url("^$", "mezzanine.pages.views.page", {"slug": "/"
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
+    ("^", include("bbb.weeklyshowtimes.urls")),
     ("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
@@ -68,6 +69,9 @@ urlpatterns += patterns('', url("^$", "mezzanine.pages.views.page", {"slug": "/"
     # need to use the ``SITE_PREFIX`` setting as well.
 
     # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
+
+
+
 
 )
 

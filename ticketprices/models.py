@@ -1,9 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from mezzanine.core.models import Orderable
 
 
-class Section(models.Model):
+class Section(Orderable):
     name = models.CharField(max_length=40,
                             verbose_name=_("Seating Section"),
                             blank=True,
@@ -16,10 +17,13 @@ class Section(models.Model):
     class Meta:
         verbose_name = _("Section")
         verbose_name_plural = _("Sections")
-        ordering = ("name",)
+        ordering = ("order",)
+
+    def save(self, *args, **kwargs):
+        super(Section, self).save(*args, **kwargs)
 
 
-class WeekDay(models.Model):
+class WeekDay(Orderable):
     name = models.CharField(max_length=10,
                             verbose_name=_("Day of Week"),
                             blank=True,
@@ -32,7 +36,11 @@ class WeekDay(models.Model):
     class Meta:
         verbose_name = _("Day of Week")
         verbose_name_plural = _("Days")
-        ordering = ("name",)
+        ordering = ("order",)
+
+
+    def save(self, *args, **kwargs):
+        super(WeekDay, self).save(*args, **kwargs)
 
 
 class TicketPrice(models.Model):
