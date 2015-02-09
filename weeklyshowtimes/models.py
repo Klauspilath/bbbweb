@@ -1,9 +1,10 @@
 from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from mezzanine.core.models import Orderable
 
 # Create your models here.
-class ShowTimeWeekDay(models.Model):
+class ShowTimeWeekDay(Orderable):
     name = models.CharField(max_length=10,
                             verbose_name=_("Day of Week"),
                             blank=True,
@@ -16,7 +17,7 @@ class ShowTimeWeekDay(models.Model):
     class Meta:
         verbose_name = _("Day of Week")
         verbose_name_plural = _("Days")
-
+        ordering = ("_order",)
 
 
 class ShowTime(models.Model):
