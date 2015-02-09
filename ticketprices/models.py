@@ -17,7 +17,7 @@ class Section(Orderable):
     class Meta:
         verbose_name = _("Section")
         verbose_name_plural = _("Sections")
-        ordering = ("order",)
+
 
     def save(self, *args, **kwargs):
         super(Section, self).save(*args, **kwargs)
@@ -36,7 +36,6 @@ class WeekDay(Orderable):
     class Meta:
         verbose_name = _("Day of Week")
         verbose_name_plural = _("Days")
-        ordering = ("order",)
 
 
     def save(self, *args, **kwargs):
