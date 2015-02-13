@@ -1,56 +1,54 @@
 {% extends "pages/page.html" %}
 {% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
 {% block extra_css %}
-	<link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
 {% endblock %}
 {% block main %}
-	<div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
-	</div>
-	<section class="content bg-white">
-		<div class="row">
-			{% if page.quote_text != "" %}
-				<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
-					{% editable page.quote_text %}
-						{{ page.quote_text|safe }}
-					{% endeditable %}
-					<p class="byline">
-						{% editable page.quote_byline %}
-							{{ page.quote_byline|safe }}
-						{% endeditable %}
-					</p>
-				</div>
-			{% endif %}
-			<h1 class="page-title">
-				{% editable page.title %}
-					{{ page.title|safe }}
-				{% endeditable %}
-			</h1>
+    <div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
+    </div>
+    <section class="content bg-white">
+        <div class="row">
+            {% if page.quote_text != "" %}
+                <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+                    {% editable page.quote_text %}
+                        {{ page.quote_text|safe }}
+                    {% endeditable %}
+                    <p class="byline">
+                        {% editable page.quote_byline %}
+                            {{ page.quote_byline|safe }}
+                        {% endeditable %}
+                    </p>
+                </div>
+            {% endif %}
+            <h1 class="page-title">
+                {% editable page.title %}
+                    {{ page.title|safe }}
+                {% endeditable %}
+            </h1>
 
-			<div class="row cms-content">
-				<p class="general-info">
-					We have once again added a very popular special seating section just for
-					the holiday shows, one of the premier bay area entertainment activities
-					in San Francisco.
-				</p>
-			</div>
-			{% include "includes/bbb/pricing-grid.html" %}
-			{% include "includes/bbb/holiday-schedule-grid.html" %}
-		</div>
-		<div class="row">
-			<p class="showtimes-title">
-				Floorplan
-			</p>
+            <div class="row cms-content">
+                {% editable page.richtextpage.content %}
+                    {{ page.richtextpage.content|richtext_filters|safe }}
+                {% endeditable %}
+            </div>
+            {% include "includes/bbb/pricing-grid.html" %}
+            {% include "includes/bbb/holiday-schedule-grid.html" %}
+        </div>
+        <div class="row">
+            <p class="showtimes-title">
+                Floorplan
+            </p>
 
-			<p>
-				<a href=""><img src="{% static "img/finger-red.png" %}"/></a>
-				<a class="ticket-links hover-black" href="/weeklyshowtimes/floorplan">View the sections</a>
-			</p>
-		</div>
-		<div class="cms-content row">
-			{% editable page.richtextpage.content %}
-				{{ page.richtextpage.content|richtext_filters|safe }}
-			{% endeditable %}
-		</div>
-		{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true"  %}
-	</section>
+            <p>
+                <a href=""><img src="{% static "img/finger-red.png" %}"/></a>
+                <a class="ticket-links hover-black" href="/weeklyshowtimes/floorplan">View the sections</a>
+            </p>
+        </div>
+{#        <div class="cms-content row">#}
+{#            {% editable page.richtextpage.content %}#}
+{#                {{ page.richtextpage.content|richtext_filters|safe }}#}
+{#            {% endeditable %}#}
+{#        </div>#}
+        {% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true" %}
+    </section>
 {% endblock %}
