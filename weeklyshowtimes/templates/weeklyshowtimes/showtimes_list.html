@@ -3,14 +3,15 @@
 
 {% block showtimes %}
     {% regroup object_list by week_day.name as week_days %}
+    <div class="row">
     {% for day in week_days %}
-        <div class="row">
+
             <div class="bg-red col-sm-2 column-header">
                 <p>{{ day.grouper }}</p>
             </div>
-        </div>
-    {% endfor %}
 
+    {% endfor %}
+	</div>
     <div class="row">
         {% for day in week_days %}
             {% if forloop.counter <= 5 %}
