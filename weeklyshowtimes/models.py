@@ -14,8 +14,8 @@ class ShowTimeWeekDay(Orderable):
     name = models.CharField(max_length=10,
                             verbose_name=_("Day of Week"),
                             blank=True,
-                            null=False,
-                            editable=False)
+                            null=True,
+                            editable=True)
 
     def __str__(self):
         return self.name
@@ -27,7 +27,7 @@ class ShowTimeWeekDay(Orderable):
 
 
 class ShowTimeSchedule(models.Model):
-    name = models.CharField(max_length=10,
+    name = models.CharField(max_length=100,
                             verbose_name=_("Schedule Group"),
                             blank=False,
                             null=False,
@@ -49,7 +49,7 @@ class ShowTimeSchedule(models.Model):
         verbose_name_plural = _("Schedules")
 
 
-class ShowTime(models.Model):
+class ShowTime(Orderable):
     schedule = models.ForeignKey(ShowTimeSchedule)
 
     week_day = models.ForeignKey(ShowTimeWeekDay)
@@ -67,4 +67,5 @@ class ShowTime(models.Model):
     class Meta:
         verbose_name = _("Show Time")
         verbose_name_plural = _("Show Times")
+        ordering = ("week_day","_order")
 
