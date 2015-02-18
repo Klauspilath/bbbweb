@@ -2,7 +2,6 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from mezzanine.core.models import Orderable
-from django.forms.widgets import RadioSelect
 
 
 STATUS_CHOICES = (
@@ -16,7 +15,7 @@ class ShowTimeWeekDay(Orderable):
                             verbose_name=_("Day of Week"),
                             blank=True,
                             null=False,
-                            editable=True)
+                            editable=False)
 
     def __str__(self):
         return self.name

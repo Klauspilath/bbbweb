@@ -1,111 +1,122 @@
 {% extends "pages/page.html" %}
 {% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static "css/showtimes.css" %}"/>
+	<link rel="stylesheet" href="{% static "css/showtimes.css" %}"/>
 {% endblock %}
 {% block main %}
-    <div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
-    </div>
-    <section class="content bg-white">
-        <div class="row">
-             {% if page.quote_text != ""%}
-             <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
-                {% editable page.quote_text %}
-                    {{ page.quote_text|safe }}
-                {% endeditable %}
-                <p class="byline">
-                    {% editable page.quote_byline %}
-                        {{ page.quote_byline|safe }}
-                    {% endeditable %}
-                </p>
-            </div>
-            {% endif %}
-            <h1 class="page-title">When is the Show?</h1>
+	<div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
+	</div>
+	<section class="content bg-white">
 
-            <p class="showtimes-title">
-                Current Showtimes
-            </p>
-            {% block showtimes %}{% endblock %}
-        </div>
-{#        <div class="row">#}
-{#            <p class="showtimes-title">#}
-{#                Showtimes after November 23rd#}
-{#            </p>#}
-{#            <div class="row">#}
-{#                <div class="bg-red col-sm-2 column-header">#}
-{#                    <p>Wed</p>#}
-{#                </div>#}
-{#                <div class="bg-red col-sm-2 column-header">#}
-{#                    <p>Thu</p>#}
-{#                </div>#}
-{#                <div class="bg-red col-sm-2 column-header">#}
-{#                    <p>Fri</p>#}
-{#                </div>#}
-{#                <div class="bg-red col-sm-2 column-header">#}
-{#                    <p>Sat</p>#}
-{#                </div>#}
-{#                <div class="bg-red col-sm-2 column-header">#}
-{#                    <p>Sun</p>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row">#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <p>5:00pm</p>#}
-{#                </div>#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <p>8:00pm <br />21+</p>#}
-{#                </div>#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <p>6:30pm</p>#}
-{#                </div>#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <p>6:30pm</p>#}
-{#                </div>#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <p>2:00pm </p>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="row">#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <P>8:00pm <br />21+</P>#}
-{#                </div>#}
-{#                <div class="col-sm-2 grey-cell">#}
-{#                </div>#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                   <p> 9:30pm <br />21+</p>#}
-{#                </div>#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <p>9:30pm <br />21+</p>#}
-{#                </div>#}
-{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
-{#                    <p>5:00pm</p>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        <div class="row">#}
-{#            <p class="showtimes-title">#}
-{#                Our Holiday Show goes on sale Monday, September 8th#}
-{#            </p>#}
-{#            <p>#}
-{#                <a  href=""><img src="{% static "img/finger-red.png" %}" /></a>#}
-{#                <a class="ticket-links hover-black"  href="/showtimes/holidays">view our holiday calendar</a>#}
-{#            </p>#}
-{#        </div>#}
-{#        <div class="row">#}
-{#            <p class="showtimes-title">#}
-{#                New Year’s Eve tickets go on sale Monday, November 3rd#}
-{#            </p>#}
-{#            <p>#}
-{#                <a href="/tickets"><img src="{% static "img/finger-red.png" %}" /></a>#}
-{#                <a href="/tickets" class="ticket-links hover-black">View Ticket Prices</a>#}
-{#            </p>#}
-{#        </div>#}
-    	 <div class="row">
-            <p style="margin-top: 30px">
-                <a href="/tickets"><img src="{% static "img/finger-red.png" %}" /></a>
-                <a href="/tickets" class="ticket-links hover-black">View Ticket Prices</a>
-            </p>
-        </div>
-         {% get_tickets_button "/tickets" link_phone="true"|lower target=""%}
-    </section>
+
+		<div class="row">
+			{% if page.quote_text != "" %}
+				<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+					{% editable page.quote_text %}
+						{{ page.quote_text|safe }}
+					{% endeditable %}
+					<p class="byline">
+						{% editable page.quote_byline %}
+							{{ page.quote_byline|safe }}
+						{% endeditable %}
+					</p>
+				</div>
+			{% endif %}
+			<h1 class="page-title">When is the Show?</h1>
+
+			<p style="margin-bottom: 30px">
+				{% editable page.richtextpage.content %}
+					{{ page.richtextpage.content|richtext_filters|safe }}
+				{% endeditable %}
+			</p>
+
+			<p class="showtimes-title">
+				Current Showtimes
+			</p>
+			{% block showtimes %}{% endblock %}
+		</div>
+
+
+
+		{#        <div class="row">#}
+		{#            <p class="showtimes-title">#}
+		{#                Showtimes after November 23rd#}
+		{#            </p>#}
+		{#            <div class="row">#}
+		{#                <div class="bg-red col-sm-2 column-header">#}
+		{#                    <p>Wed</p>#}
+		{#                </div>#}
+		{#                <div class="bg-red col-sm-2 column-header">#}
+		{#                    <p>Thu</p>#}
+		{#                </div>#}
+		{#                <div class="bg-red col-sm-2 column-header">#}
+		{#                    <p>Fri</p>#}
+		{#                </div>#}
+		{#                <div class="bg-red col-sm-2 column-header">#}
+		{#                    <p>Sat</p>#}
+		{#                </div>#}
+		{#                <div class="bg-red col-sm-2 column-header">#}
+		{#                    <p>Sun</p>#}
+		{#                </div>#}
+		{#            </div>#}
+		{#            <div class="row">#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <p>5:00pm</p>#}
+		{#                </div>#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <p>8:00pm <br />21+</p>#}
+		{#                </div>#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <p>6:30pm</p>#}
+		{#                </div>#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <p>6:30pm</p>#}
+		{#                </div>#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <p>2:00pm </p>#}
+		{#                </div>#}
+		{#            </div>#}
+		{#            <div class="row">#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <P>8:00pm <br />21+</P>#}
+		{#                </div>#}
+		{#                <div class="col-sm-2 grey-cell">#}
+		{#                </div>#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                   <p> 9:30pm <br />21+</p>#}
+		{#                </div>#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <p>9:30pm <br />21+</p>#}
+		{#                </div>#}
+		{#                <div class="bg-light-grey col-sm-2 grey-cell">#}
+		{#                    <p>5:00pm</p>#}
+		{#                </div>#}
+		{#            </div>#}
+		{#        </div>#}
+		{#        <div class="row">#}
+		{#            <p class="showtimes-title">#}
+		{#                Our Holiday Show goes on sale Monday, September 8th#}
+		{#            </p>#}
+		{#            <p>#}
+		{#                <a  href=""><img src="{% static "img/finger-red.png" %}" /></a>#}
+		{#                <a class="ticket-links hover-black"  href="/showtimes/holidays">view our holiday calendar</a>#}
+		{#            </p>#}
+		{#        </div>#}
+		{#        <div class="row">#}
+		{#            <p class="showtimes-title">#}
+		{#                New Year’s Eve tickets go on sale Monday, November 3rd#}
+		{#            </p>#}
+		{#            <p>#}
+		{#                <a href="/tickets"><img src="{% static "img/finger-red.png" %}" /></a>#}
+		{#                <a href="/tickets" class="ticket-links hover-black">View Ticket Prices</a>#}
+		{#            </p>#}
+		{#        </div>#}
+		<div class="row">
+			<p style="margin-top: 30px">
+				<a href="/tickets"><img src="{% static "img/finger-red.png" %}"/></a>
+				<a href="/tickets" class="ticket-links hover-black">View Ticket Prices</a>
+			</p>
+		</div>
+		{% get_tickets_button "/tickets" link_phone="true"|lower target="" %}
+	</section>
 {% endblock %}
