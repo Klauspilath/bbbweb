@@ -1,8 +1,6 @@
-from django.shortcuts import render
 from django.views.generic import ListView
 from .models import TicketPrice
-# Create your views here.
-
 
 class TicketList(ListView):
     model = TicketPrice
+    template_name = "ticketprices/ticketprices_list.html"

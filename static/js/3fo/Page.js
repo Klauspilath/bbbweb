@@ -12,7 +12,7 @@ $(function () {
 	TFO.__PageInstance.FIXED_NAVIGATION_SELECTOR = '.fix';
 	TFO.__PageInstance.CLICK_TOGGLE_SELECTOR = 'clicked';
 	TFO.__PageInstance.PHONE_LINK_SELECTOR = '.dial-out';
-	TFO.__PageInstance.PHONE_NUMBER = '415-421-4222';
+	TFO.__PageInstance.PHONE_NUMBER = '1-415-421-4222';
 ;
 	TFO.__PageInstance.prototype.init = function () {
 

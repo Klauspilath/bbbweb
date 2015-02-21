@@ -1,21 +1,18 @@
 {% extends "pages/showtimes.html" %}
 {% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
-
 {% block showtimes %}
+{#    add schedules#}
     {% regroup object_list by week_day.name as week_days %}
     <div class="row">
         {% for day in week_days %}
-
             <div class="bg-red col-sm-2 column-header">
                 <p>{{ day.grouper }}</p>
             </div>
-
         {% endfor %}
     </div>
     <div class="row">
         {% regroup object_list by week_day.name as week_days %}
         {% for day in week_days %}
-
                 {% for show in day.list %}
                     {% if forloop.counter == 1 %}
                         <div class="bg-light-grey col-sm-2 grey-cell">
@@ -23,44 +20,23 @@
                         </div>
                     {% endif %}
                 {% endfor %}
-
         {% endfor %}
     </div>
     <div class="row">
         {% regroup object_list by week_day.name as week_days %}
         {% for day in week_days %}
-
             {% if day.list|length > 1 %}
             {% for show in day.list %}
                 {% if forloop.counter > 1  %}
-
                     <div class="bg-light-grey col-sm-2 grey-cell">
                         <p>{{ show.time }} <br/>{{ show.age_limit }}</p>
                     </div>
-
                 {% endif %}
             {% endfor %}
             {% else %}
             	<div class="col-sm-2 grey-cell">
-
                 </div>
             {% endif %}
-
-
         {% endfor %}
     </div>
-    {#            {% regroup object_list by country as country_list %}#}
-    {##}
-    {#            <ul>#}
-    {#                {% for country in country_list %}#}
-    {#                    <li>{{ country.grouper }}#}
-    {#                        <ul>#}
-    {#                            {% for item in country.list %}#}
-    {#                                <li>{{ item.name }}: {{ item.population }}</li>#}
-    {#                            {% endfor %}#}
-    {#                        </ul>#}
-    {#                    </li>#}
-    {#                {% endfor %}#}
-    {#            </ul>#}
-
 {% endblock %}

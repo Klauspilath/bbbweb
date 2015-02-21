@@ -4,11 +4,11 @@ from django.utils.translation import ugettext_lazy as _
 from mezzanine.core.models import Orderable
 
 
-
 STATUS_CHOICES = (
     ("1", 'Active'),
     ("0", 'Inactive'),
 )
+
 
 class Section(Orderable):
     name = models.CharField(max_length=40,
@@ -18,7 +18,7 @@ class Section(Orderable):
                             editable=True)
 
     def __str__(self):
-        return (self.name)
+        return self.name
 
     class Meta:
         verbose_name = _("Section")
@@ -43,7 +43,6 @@ class WeekDay(Orderable):
         verbose_name = _("Day of Week")
         verbose_name_plural = _("Days")
         ordering = ("_order",)
-
 
     def save(self, *args, **kwargs):
         super(WeekDay, self).save(*args, **kwargs)
@@ -80,6 +79,5 @@ class TicketPrice(models.Model):
     class Meta:
         verbose_name = _("Ticket Price")
         verbose_name_plural = _("Ticket Prices")
+        ordering = ("section", "week_day")
 
-    def __str__(self):
-        return "%s -- %s -- %s" % (self.section.name, self.week_day.name, self.price)

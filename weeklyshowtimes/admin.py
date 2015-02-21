@@ -29,7 +29,7 @@ class ShowTimeAdmin(admin.ModelAdmin):
     def week_day_name(self):
         return "%s" % self.week_day.name
 
-    list_display = [schedule_name, week_day_name, 'time']
+    list_display = ['schedule', 'week_day', 'time']
 
 
 admin.site.register(ShowTimeWeekDay)

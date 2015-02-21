@@ -28,7 +28,7 @@ class WeekDayForm(admin.ModelAdmin):
 class TickPriceAdmin(admin.ModelAdmin):
     section = SectionForm
     week_day = WeekDayForm
-
+    list_display = ['schedule', 'section', 'week_day', 'price']
 
 admin.site.register(TicketsSchedule)
 admin.site.register(Section)

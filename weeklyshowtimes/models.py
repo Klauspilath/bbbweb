@@ -64,8 +64,13 @@ class ShowTime(Orderable):
                                  blank=True,
                                  null=False)
 
+    def __str__(self):
+        return "%s -- %s -- %s" % (self.schedule, self.week_day, self.time)
+
     class Meta:
         verbose_name = _("Show Time")
         verbose_name_plural = _("Show Times")
-        ordering = ("week_day","_order")
+        ordering = ("week_day", "_order")
+
+
 

@@ -1,0 +1,44 @@
+{% extends "pages/tickets.html" %}
+{% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
+{% block ticketprices %}
+
+
+    <table class="pricing-grid">
+        <tbody>
+        <tr>
+            <td class="bg-red section-column-header"><p class="">Section</p></td>
+
+            {% regroup object_list by section.name as sections %}
+            {% for section in sections %}
+
+                {% if forloop.first %}
+                    {% for ticket in section.list %}
+                        <td class="bg-red column-header"><p>{{ ticket.week_day }}</p></td>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </tr>
+
+
+        {% for section in sections %}
+            <tr>
+                <td class="bg-red row-header"><p>{{ section.grouper }}</p></td>
+
+
+
+                {% for ticket in section.list %}
+
+                    <td class="bg-light-grey grey-cell"><p>{{ ticket.price }}</p></td>
+
+
+
+                {% endfor %}
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+

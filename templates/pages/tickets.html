@@ -1,46 +1,49 @@
 {% extends "pages/page.html" %}
 {% load bbb_tags pages_tags mezzanine_tags i18n future staticfiles %}
 {% block extra_css %}
-	<link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
+    <link rel="stylesheet" href="{% static "css/tickets.css" %}"/>
 {% endblock %}
 {% block main %}
-	<div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
+    <div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.featured_image }}')">
     </div>
-	<section class="content bg-white">
-	<div class="row">
-	{% if page.quote_text != "" %}
-		<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
-			{% editable page.quote_text %}
-				{{ page.quote_text|safe }}
-			{% endeditable %}
-			<p class="byline">
-				{% editable page.quote_byline %}
-					{{ page.quote_byline|safe }}
-				{% endeditable %}
-			</p>
-		</div>
-	{% endif %}
-	<h1 class="page-title">
-		{% editable page.title %}
-			{{ page.title|safe }}
-		{% endeditable %}
-	</h1>
-	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true"  %}
-	<p class="showtimes-title">
-		Ticket Prices
-	</p>
-	{% include "includes/bbb/pricing-grid.html" %}
-{#	<p class="showtimes-title">#}
-{#		For the Holiday Shows only, we have added a Very Special seating section#}
-{#	</p>#}
-{#	{% include "includes/bbb/special-seatingrid.html" %}#}
-	</div>
+    <section class="content bg-white">
+        <div class="row">
+            {% if page.quote_text != "" %}
+                <div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
+                    {% editable page.quote_text %}
+                        {{ page.quote_text|safe }}
+                    {% endeditable %}
+                    <p class="byline">
+                        {% editable page.quote_byline %}
+                            {{ page.quote_byline|safe }}
+                        {% endeditable %}
+                    </p>
+                </div>
+            {% endif %}
+            <h1 class="page-title">
+                {% editable page.title %}
+                    {{ page.title|safe }}
+                {% endeditable %}
+            </h1>
+            {% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true" %}
+            <p class="showtimes-title">
+                Ticket Prices
+            </p>
+            {% block ticketprices %}{% endblock %}
 
-	{% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true"  %}
-	<p style="margin-bottom: 30px">
-		{% editable page.richtextpage.content %}
-			{{ page.richtextpage.content|richtext_filters|safe }}
-		{% endeditable %}
-	</p>
-	</section>
+
+            {#	{% include "includes/bbb/pricing-grid.html" %}#}
+            {#	<p class="showtimes-title">#}
+            {#		For the Holiday Shows only, we have added a Very Special seating section#}
+            {#	</p>#}
+            {#	{% include "includes/bbb/special-seatingrid.html" %}#}
+        </div>
+
+        {% get_tickets_button "http://webtixs.easytixs.com/BeachBlanketBabylon/?key=7011-GTH567" target="_blank"|lower link_phone="true" %}
+        <p style="margin-bottom: 30px">
+            {% editable page.richtextpage.content %}
+                {{ page.richtextpage.content|richtext_filters|safe }}
+            {% endeditable %}
+        </p>
+    </section>
 {% endblock %}
