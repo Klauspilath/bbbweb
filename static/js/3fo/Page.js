@@ -81,7 +81,16 @@ $(function () {
 
 	TFO.__PageInstance.prototype.formatNavigation = function () {
 
-		var mql = window.matchMedia("(orientation: portrait)");
+
+        var mql = {};
+
+
+        if (window.hasOwnProperty('matchMedia')){
+           mql = window.matchMedia("(orientation: portrait)")
+        } else {
+            mql['matches'] = false;
+        }
+
 		TFO.Page.setNavigationEvents(['mouseenter', 'touchstart', 'touchmove']);
 
 		if (($(window).width() <= 768 || mql.matches) && !TFO.Page.isMobileAdapted) {
