@@ -52,6 +52,7 @@ urlpatterns += patterns('', url("^$", "mezzanine.pages.views.page", {"slug": "/"
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
     ("^", include("bbb.weeklyshowtimes.urls")),
+    ("^", include("bbb.ticketprices.urls")),
     ("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
