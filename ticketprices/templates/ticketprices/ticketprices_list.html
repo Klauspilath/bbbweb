@@ -6,14 +6,14 @@
     <table class="pricing-grid">
         <tbody>
         <tr>
-            <td class="bg-red section-column-header"><p class="">Section</p></td>
+            <td class="bg-red section-column-header" width="30%"><p class="">Section</p></td>
 
             {% regroup object_list by section.name as sections %}
             {% for section in sections %}
 
                 {% if forloop.first %}
                     {% for ticket in section.list %}
-                        <td class="bg-red column-header"><p>{{ ticket.week_day }}</p></td>
+                        <td class="bg-red column-header" width="17.5%"><p>{{ ticket.week_day }}</p></td>
                     {% endfor %}
                 {% endif %}
             {% endfor %}
