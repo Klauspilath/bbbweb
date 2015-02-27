@@ -327,13 +327,13 @@
 	<polygon points="104.5,197.2 31.5,197.2 31.5,194.9 102.2,194.9 102.2,183.4 104.5,183.4 	"/>
 </g>
 <g id="overlays">
-	<rect id="FRONT" x="31.5" y="197.2" width="243" height="191.5"/>
-	<rect id="REAR" x="30.6" y="391" width="246" height="103.6"/>
-	<rect id="LEFT_BOX" x="336.6" y="177" width="38.7" height="198.6"/>
-	<rect id="RIGHT_BOX" x="544.8" y="176.6" width="38.7" height="198.6"/>
-	<rect id="CYRIL" x="374.5" y="335.7" width="169.7" height="39.9"/>
-	<rect id="CENTER_BOX" x="373.1" y="377.8" width="172.5" height="28.4"/>
-	<rect id="CENTER_BALCONY" x="335.5" y="408.5" width="245.5" height="59.6"/>
-	<rect id="REAR_BALCONY" x="336.6" y="470.6" width="246.4" height="95"/>
+	<rect id="FRONT" x="31.5" y="197.2" width="243" height="191.5" onmouseover="top.TFO.FloorPlan.updateStage(evt,'FRONT')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')" />
+	<rect id="REAR" x="30.6" y="391" width="246" height="103.6" onmouseover="top.TFO.FloorPlan.updateStage(evt,'REAR')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')"/>
+	<rect id="LEFT_BOX" x="336.6" y="177" width="38.7" height="198.6" onmouseover="top.TFO.FloorPlan.updateStage(evt,'LEFT_BOX')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')"/>
+	<rect id="RIGHT_BOX" x="544.8" y="176.6" width="38.7" height="198.6" onmouseover="top.TFO.FloorPlan.updateStage(evt,'RIGHT_BOX')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')"/>
+	<rect id="CYRIL" x="374.5" y="335.7" width="169.7" height="39.9" onmouseover="top.TFO.FloorPlan.updateStage(evt,'CYRIL')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')"/>
+	<rect id="CENTER_BOX" x="373.1" y="377.8" width="172.5" height="28.4" onmouseover="top.TFO.FloorPlan.updateStage(evt,'CENTER_BOX')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')"/>
+	<rect id="CENTER_BALCONY" x="335.5" y="408.5" width="245.5" height="59.6" onmouseover="top.TFO.FloorPlan.updateStage(evt,'CENTER_BALCONY')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')"/>
+	<rect id="REAR_BALCONY" x="336.6" y="470.6" width="246.4" height="95" onmouseover="top.TFO.FloorPlan.updateStage(evt,'REAR_BALCONY')" onclick="top.TFO.FloorPlan.updateStage(evt,'FRONT')"/>
 </g>
 </svg>

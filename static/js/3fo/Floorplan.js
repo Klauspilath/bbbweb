@@ -45,16 +45,17 @@ TFO.__FloorPlanInstance.prototype.setSectionListeners = function () {
             function (event) {
                 var section_event = document.createEvent("Event");
                 section_event.initEvent("section_triggered", true, false);
-                section_event.data = {
-                    "target": event.currentTarget.id
-                };
+                section_event.data = [{
+                    "thing" : event.currentTarget.id
+                }];
                 top.TFO.FloorPlan.updateStage(section_event);
             });
     }
 };
 
-TFO.__FloorPlanInstance.prototype.updateStage = function (event) {
-    $("#stage-view").css("background-position", "0 -" + this.cooridinates[event.data.target]);
+TFO.__FloorPlanInstance.prototype.updateStage = function (event,section) {
+    //alert('over');
+    $("#stage-view").css("background-position", "0 -" + this.cooridinates[section]);
 };
 
 //create instance
