@@ -7,10 +7,12 @@
 }
 
 .carousel-indicators {
-	left: 50px;
+
 	bottom: 139px;
-	text-align: $reset;
-	margin-left: $reset;
+	left: 50px;
+	text-align: inherit;
+	margin-left: inherit;
+	width: inherit;
 }
 
 .carousel-indicators li {
@@ -38,7 +40,7 @@
 	z-index: 10;
 	color: $bright;
 	@include verlag-light(16px);
-	right: $reset !important;
+	right: inherit;
 	text-align: $reset;
 	text-shadow: $reset;
 	padding: 0 !important;
@@ -72,7 +74,7 @@ div.get-tickets-button {
 }
 
 #scroll-indicator {
-	position: absolute;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	bottom: 60px;
@@ -112,3 +114,5 @@ div.get-tickets-button {
 	}
 
 }
+
+
