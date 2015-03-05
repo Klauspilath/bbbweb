@@ -11,8 +11,25 @@
 {% endblock %}
 
 {% block main %}
-<div class="panel panel-danger">
-	<div class="panel-heading"><h3 class="panel-title">{% trans "Error" %}</h3></div>
-	<div class="panel-body">{% trans "Sorry, an error occurred." %}</div>
-</div>
+
+    <div id="hero-image" style="background-image: url('/static/media/uploads/page_header/404-image.jpg')">
+    </div>
+    <section class="content bg-white">
+        <div class="row">
+            <h1 class="page-title">
+
+                    OOPS! You've caught us with our hats off!!
+
+            </h1>
+
+                <div class="cms-content">
+
+                    <p><strong>It looks like you&rsquo;ve stumbled upon a page that does not exist. Now what? Don't panic. Join us at <em>Steve Silver's Beach Blanket Babylon</em> by clicking the link below.</strong></p>
+<div class="get-tickets-button"><a href="/" class="dial-out"><img class="finger-icon" src="/static/img/finger.png" />&nbsp;&nbsp;Home Page</a></div>
+
+                </div>
+
+        </div>
+    </section>
+
 {% endblock %}
