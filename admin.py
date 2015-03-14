@@ -29,22 +29,16 @@ admin.site.unregister(Link)
 admin.site.register(Link, NewLinkAdmin)
 
 form_fieldsets = deepcopy(FormAdmin.fieldsets)
-form_fieldsets[0][1]["fields"] += ["show_sig_confirm", "signature_content", ]
+form_fieldsets[0][1]["fields"] += ["show_sig_confirm", "signature_content", "featured_image", "silhouette_image",
+                                   "quote_text", "quote_byline", ]
 
 
 class NewFormAdmin(FormAdmin):
     fieldsets = form_fieldsets
     inlines = (FieldAdmin,)
 
+
 FormAdmin.fieldsets = form_fieldsets
 
 admin.site.unregister(Form)
 admin.site.register(Form, NewFormAdmin)
-
-
-
-
-
-
-
-
