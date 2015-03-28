@@ -2,7 +2,7 @@ from copy import deepcopy
 from django.contrib import admin
 from mezzanine.pages.admin import PageAdmin
 from mezzanine.pages.models import RichTextPage
-from mezzanine.forms.models import Form, Field
+from mezzanine.forms.models import Form
 from mezzanine.forms.admin import FormAdmin, FieldAdmin
 
 from mezzanine.pages.models import Link
@@ -18,7 +18,7 @@ admin.site.unregister(RichTextPage)
 admin.site.register(RichTextPage, PageAdmin)
 
 link_fieldsets = deepcopy(LinkAdmin.fieldsets)
-link_fieldsets[0][1]["fields"] += ("feature_image",)
+link_fieldsets[0][1]["fields"] += ("new_window", "feature_image", )
 
 
 class NewLinkAdmin(LinkAdmin):
