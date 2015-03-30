@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from django import template
+from mezzanine.conf import settings
 from bbb.galleries.models import Gallery
 
 register = template.Library()
@@ -16,17 +17,17 @@ def get_gallery(name):
 @register.inclusion_tag('includes/tags/get-tickets-button.html')
 def get_tickets_button(link, **kwargs):
     return_target = False
-    return_phone = False
+    return_link = link
+
+    if link == "none":
+        return_link = settings.TICKETS_BOX_OFFICE_PURCHASE_URL
 
     if kwargs is not None:
 
-        if kwargs['target']:
+        if kwargs['target'] == "true":
             return_target = True
 
-        if kwargs['link_phone'] is not "":
-            return_phone = True
-
-    return {"link": link, "target": return_target, "link_phone": return_phone}
+    return {"link": return_link, "target": return_target, "link_phone": settings.TICKETS_ENABLE_MOBILE_CALLS}
 
 
 @register.inclusion_tag('includes/tags/submit-button.html')

@@ -46,7 +46,7 @@
                 {% endfor %}
             {% endwith %}
         </ol>
-        {% get_tickets_button "/tickets" link_phone="true"|lower target=""%}
+        {% get_tickets_button "/tickets" target="false" %}
         <a href="#content"><img id="scroll-indicator" src="{% static "img/right-angle.png" %}" alt="scroll to the bottom"></a>
     </div>
     <section class="content bg-white">
