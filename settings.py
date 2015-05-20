@@ -42,6 +42,13 @@ from __future__ import absolute_import, unicode_literals
 #     (3, "Footer", "pages/menus/footer.html"),
 # )
 
+PAGE_MENU_TEMPLATES = (
+    (1, "Top navigation bar", "pages/menus/dropdown.html"),
+    (2, "Left-hand tree", "pages/menus/tree.html"),
+    (3, "Footer", "pages/menus/footer.html"),
+    (4, "Mobile", "pages/menus/responsive-mobile.html"),
+)
+
 # A sequence of fields that will be injected into Mezzanine's (or any
 # library's) models. Each item in the sequence is a four item sequence.
 # The first two items are the dotted path to the model and its field
@@ -74,6 +81,84 @@ from __future__ import absolute_import, unicode_literals
 #
 
 EXTRA_MODEL_FIELDS = (
+
+
+    (
+        "mezzanine.forms.models.Form.signature_content",
+        "mezzanine.core.fields.RichTextField",
+        ("Signature Content",),
+        {
+            "blank": True,
+            "null": True,
+            "max_length": 1000,
+        }
+    ),
+
+    (
+        "mezzanine.forms.models.Form.show_sig_confirm",
+        "BooleanField",
+        ("Require Signature Verification",),
+        {
+            "blank": "True",
+            "null": False,
+            "default": True
+        }
+    ),
+
+
+    (
+        "mezzanine.pages.models.Form.featured_image",
+        "mezzanine.core.fields.FileField",
+        ("Hero image",),
+        {"blank": True,
+         "null": True,
+         "upload_to": "page_header",
+         "format": "Image",
+         "max_length": 255,
+         },
+    ),
+
+    (
+        "mezzanine.pages.models.Form.silhouette_image",
+        "mezzanine.core.fields.FileField",
+        ("Quote Background Image",),
+        {"blank": True,
+         "null": True,
+         "upload_to": "page_silhouette",
+         "format": "Image",
+         "max_length": 255,
+         },
+    ),
+
+    (
+        "mezzanine.pages.models.Form.quote_text",
+        "CharField",
+        ("Quote Text",),
+        {"blank": True,
+         "null": True,
+         "max_length": 255,
+         },
+    ),
+
+    (
+        "mezzanine.pages.models.Form.quote_byline",
+        "CharField",
+        ("By-line",),
+        {"blank": True,
+         "null": True,
+         "max_length": 255,
+         },
+    ),
+
+    (
+        "mezzanine.pages.models.Link.new_window",
+        "BooleanField",
+        ("Open Link in New Window",),
+        {"blank": "True",
+         "null": False,
+         "default": False
+         },
+    ),
 
     (
         "mezzanine.pages.models.Link.feature_image",
@@ -151,7 +236,7 @@ EXTRA_MODEL_FIELDS = (
 
 # If True, the south application will be automatically added to the
 # INSTALLED_APPS setting.
-USE_SOUTH = True
+USE_SOUTH = False
 
 
 ########################
@@ -170,7 +255,7 @@ MAX_UPLOAD_SIZE = "104857600"
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -179,10 +264,10 @@ ALLOWED_HOSTS = []
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = None
+TIME_ZONE = "America/Los_Angeles"
 
 # If you set this to True, Django will use timezone-aware datetimes.
-USE_TZ = False
+USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -211,7 +296,7 @@ USE_I18N = False
 # Tuple of IP addresses, as strings, that:
 #   * See debug comments, when DEBUG is true
 #   * Receive x-headers
-INTERNAL_IPS = ("127.0.0.1",)
+INTERNAL_IPS = ("127.0.0.1","0.0.0.0",)
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -231,7 +316,8 @@ STATICFILES_FINDERS = (
 
 # The numeric mode to set newly-uploaded files to. The value should be
 # a mode you'd pass directly to os.chmod.
-FILE_UPLOAD_PERMISSIONS = 0o644
+FILE_UPLOAD_PERMISSIONS = 0o664
+
 
 
 #############
@@ -349,7 +435,8 @@ INSTALLED_APPS = (
     #"mezzanine.twitter",
     "bbb.galleries",
     "bbb.templatetags",
-    #"bbb.mezzanine_people",
+    "bbb.ticketprices",
+    "bbb.weeklyshowtimes",
     "bbb",
 
     #"mezzanine.accounts",
