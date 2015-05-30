@@ -26,6 +26,10 @@
                 {% endeditable %}
             </h1>
             {% get_tickets_button "none" target="true" %}
+		        <div class="get-tickets-button call-for-tickets visible-xs-block">
+		            <img class="finger-icon" src="/static/img/finger.png">
+		            <a href="tel:+14154214222" target="_blank">Call for tickets!</a>
+		        </div>
             <p class="showtimes-title">
                 Ticket Prices
             </p>
@@ -42,7 +46,7 @@
         {% get_tickets_button "none" target="true" %}
         <div class="get-tickets-button call-for-tickets visible-xs-block">
             <img class="finger-icon" src="/static/img/finger.png">
-            <a href="tel:(415) 421-4222" target="_blank">Call for tickets!</a>
+            <a href="tel:+14154214222" target="_blank">Call for tickets!</a>
         </div>
         <p style="margin-bottom: 30px">
             {% editable page.richtextpage.content %}
