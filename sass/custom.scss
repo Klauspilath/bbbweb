@@ -232,13 +232,11 @@ section.content td {
 }
 
 #screen > div > section > div > table > tbody > tr > td:nth-child(1) {
-	max-width: 300px;
-	min-width: 180px;
+	width: 30%;
 }
 
-#screen > div > section > div > table > tbody > tr > td:nth-child(2) {
-	max-width: 600px;
-	padding-left: 20px;
+#screen > div > section > div > table > tbody > tr > td {
+	width: 17.5%;
 }
 
 #screen {
