@@ -3,7 +3,11 @@ from __future__ import unicode_literals
 from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
+from mezzanine.conf import settings
+from mezzanine.core.sitemaps import DisplayableSitemap
 
+class HttpsDisplayableSitemap(DisplayableSitemap):
+    protocol=('https')
 
 admin.autodiscover()
 
@@ -75,6 +79,13 @@ urlpatterns += patterns('', url("^$", "mezzanine.pages.views.page", {"slug": "/"
 
 
 )
+
+# Django's sitemap app.
+if "django.contrib.sitemaps" in settings.INSTALLED_APPS:
+    sitemaps = {"sitemaps": {"all": HttpsDisplayableSitemap}}
+    urlpatterns += patterns("django.contrib.sitemaps.views",
+        ("^sitemap\.xml$", "sitemap", sitemaps)
+    )
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
