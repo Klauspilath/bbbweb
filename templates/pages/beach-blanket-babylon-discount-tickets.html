@@ -1,0 +1,38 @@
+{% extends "pages/page.html" %}
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static "css/listings.css" %}"/>
+{% endblock %}
+{% block main %}
+    <div id="hero-image" style="background-image: url('{% static "media/" %}{{ page.gallery.hero_image }}')">
+    </div>
+    <section class="content bg-white">
+        <h1 class="page-title">
+            {% editable page.title %}
+                {{ page.title|safe }}
+            {% endeditable %}
+        </h1>
+        {% for image in page.gallery.images.all %}
+            <div class="row listing-row">
+                <div class="col-xs-12 col-sm-4">
+                    <img class="img-responsive list-image" src="{{ MEDIA_URL }}{% thumbnail image.file 300 225 %}">
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <div class="listing-content">
+                    <h3>{{ image.description }}</h3>
+                    {{ image.content }}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+
+{#        <div class="row">#}
+{#            {% editable page.gallery.content %}#}
+{#                {{ page.gallery.content|richtext_filters|safe }}#}
+{#            {% endeditable %}#}
+{#        </div>#}
+
+    </section>
+{% endblock %}
+
