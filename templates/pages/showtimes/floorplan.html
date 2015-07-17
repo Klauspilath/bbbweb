@@ -23,6 +23,9 @@
 			<div class="col-xs-12 col-sm-8">
 				<object id="layout-3d" type="image/svg+xml" data="{% static "svg/floorplan_3d.svg" %}" data-next="/" width="100%"></object>
 			</div>
+			<div class="col-xs-12" id="view-large">
+				<a href="{% static "svg/largeplan.html" %}" target="_blank">View large version of floorplans ></a>
+			</div>
 			<div class="col-xs-12 col-sm-4">
 				<div id="quote" style="background-image: url('{% static "media/" %}{{ page.silhouette_image }}')">
 					{% editable page.quote_text %}

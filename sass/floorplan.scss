@@ -26,6 +26,10 @@
 	margin-top: 50px;
 }
 
+#view-large {
+	display: none;
+}
+
 @media handheld {
 
 }
@@ -60,5 +64,9 @@
 	#layout-2d {
 		margin-top: -60px;
 		width: 350px;
+	}
+
+	#view-large {
+		display: block;
 	}
 }
